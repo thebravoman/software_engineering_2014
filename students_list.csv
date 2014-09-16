@@ -1,4 +1,4 @@
-class,number,first_name,middle_name,last_name,email
+﻿class,number,first_name,middle_name,last_name,email
 а,10,Иво,Валериев,Вълчев,Ivo.V.Valchev@gmail.com
 a,28,Християн,Петьов,Веляков,hriso1997@abv.bg
 a,14,Красен,Руменов,Ангелов,krassen22@gmail.com
@@ -19,3 +19,4 @@ a,24,Симеон,Владимиров,Шопкин,simeon.shopkin@hotmail.com
 б,23,Мартин,Иванов,Григоров,martin.holy.grigorov@gmail.com
 б,4,Валентин,Станимиров,Върбанов,valentin.varbanov@gmail.com
 a,10,Ивелин,Данков,Славчев,ivelin.slavchev97@gmail.com
+б,12,Давид,Лъчезаров,Георгиев,david_georgiev@mail.bg
