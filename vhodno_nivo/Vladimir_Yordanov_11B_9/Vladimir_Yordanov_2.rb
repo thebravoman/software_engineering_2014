@@ -1,7 +1,3 @@
-print "X: "
-x = gets.to_i
-print "Y: "
-
 begin
 y = gets.to_i
 end until x < y
@@ -14,5 +10,4 @@ for i in x..y
   end
 end
 
-print "Result is: "
 print sum
