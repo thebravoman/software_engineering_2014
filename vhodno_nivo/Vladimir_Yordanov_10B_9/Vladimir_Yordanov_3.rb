@@ -14,14 +14,10 @@ def isprime(var)
 end     #for counter
 
 x = gets.to_i
-
 begin
   y = gets.to_i
 end until x < y
 
-
 for i in x..y
   isprime(i)
 end
-
-
