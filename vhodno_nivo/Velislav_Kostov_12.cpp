@@ -1,38 +1,28 @@
 #include <iostream>
 
-/* sum[+x,+y] */
-int sumPositiveInterval(int start, int end){
-    int sum = 0;
-    if(start > end)
-        std::swap(start, end);
-    for(; start <= end; start++)
-        sum += start;
-    return sum;
-}
-
 int main(int argc, char* argv[]){
-    int x = 0;
-    while(!(x > 0 && x < 10))
+    int x, y, w, h;
+    x = y = w = h = 0;
+    while(!((x > 0 && y > 0) && (w > 0 && h > 0))){
         std::cin >> x;
-    int array[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        std::cin >> y;
+        std::cin >> w;
+        std::cin >> h;
+    }
+    int rectangleArea = x * y;
+    int sampleArea = w * h;
+    int slices = rectangleArea / sampleArea;
     
-    for(int element = 0, n = 0; element < (sizeof(array)/sizeof(int)); element++){
-        for(int counter = 0; ; counter++){
-            //'counter' must be greater than 'n' 
-            //in order to acquire the next divident in the interval
-            if((counter % x == 0) && (counter > n)){
-                n = counter;
-                array[element] = sumPositiveInterval(0, n);
-                break;
-            }
+    std::cout << "Slices: " << slices << std::endl;
+    if(slices > 0){
+        int coords[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        for(int i = 0, x2 = 0; x2 < x; i++, x2 += w){
+            if(x2 != 0 && x2 != x){
+                coords[i] = x2;
+                std::cout << coords[i] << std::endl;
+            }  
         }
     }
     
-    /*
-    for(auto e : array) //ranged for loop (-std=c++11)
-        std::cout << e << std::endl;  
-    */
-    for(int i = 0; i < (sizeof(array)/sizeof(int)); i++)
-        std::cout << array[i] << std::endl;
     return 0;
 }
