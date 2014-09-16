@@ -10,11 +10,24 @@ public class Stefan_Iliev_17 {
 		long longArray[] = new long[10];//This time i won't shit on the compiler ;}}}
 		int longArrayPos = 0;
 		resetFibonacci(); //For the sake of pretty code.
-		while (longArrayPos != longArray.length) { //Make that pc QQ.
+		while (longArrayPos < 2) { //Make that pc QQ.
 			if (nextFibonacci() % 10 == input) {  
 				longArray[longArrayPos++] = currentFibonacci;
 			}
-		}
+		} //Fibonaccies found.
+		if (!(input % 2 == 0)) {					//Protecting
+			if (!(input % 5 == 0)) {			   //Protecting again
+				for (int i = 3; longArrayPos != longArray.length; i+=2) { //Optimized. Kinda.
+					if (isPrime(i)) {									// Check if the number is prime
+						if (i % 10 == input) {							// the last digit check .-. MAGIC 
+							longArray[longArrayPos++] = i;				// and feeding the array
+						}												//not to forget the brackets ;D
+					}
+				}
+			} else {
+				longArray[longArrayPos++] = 5;
+			}
+		} else System.out.println("No odd numbers end with even number");
 		printArray(longArray);
 	}
 	private static long currentFibonacci; //This is vile sorcery. Don't troll it (if you don't know how :D).
