@@ -16,8 +16,9 @@ int main() {
             arr[arr_counter++] = num;
         }
     }
-
-    if(x % 2 != 0 && x != 5) {
+    if(x == 5) {
+        arr[arr_counter++] = 5;
+    } else if(x % 2 != 0) {
         for(num = 1; arr_counter != 10; num++) {
             if(prime(num) && end_on_x(num, x)) {
                 arr[arr_counter++] = num;
