@@ -14,7 +14,6 @@ int main () {
 				break;
 			}
 			if((i+2)>(twin_pr+2)/2){
-				cout<<twin_pr<<"\n";
 				check=1;
 				break;
 			}
