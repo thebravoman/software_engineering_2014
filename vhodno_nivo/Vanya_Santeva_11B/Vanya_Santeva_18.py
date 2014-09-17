@@ -26,3 +26,4 @@ for i in a:
 for i in a:
     isPrime(i) #I don't print them, because
                #it isn't written to
+               
