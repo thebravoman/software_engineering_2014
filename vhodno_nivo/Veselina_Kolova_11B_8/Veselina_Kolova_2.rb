@@ -1,7 +1,7 @@
 x = gets.to_i
 y = gets.to_i
 
-while x >= y do
+while x > y do
 	x = gets.to_i
 	y = gets.to_i
 end

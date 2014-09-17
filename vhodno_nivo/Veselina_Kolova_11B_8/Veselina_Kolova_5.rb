@@ -1,7 +1,7 @@
 x = gets.to_i
 
-unless x > 0 && x < 10 then
-	x = gets.to_i
+while x < 0 || x > 10 do
+	x = gets.to_i 
 end
 
 arr = Array.new(10)
