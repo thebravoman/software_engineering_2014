@@ -15,7 +15,7 @@ public class Stefan_Iliev_17 {
 				longArray[longArrayPos++] = currentFibonacci;
 			}
 		} //Fibonaccies found.
-		if (!(input % 2 == 0)) {					//Protecting
+		if (!((input & 1) == 0)) {					//Protecting
 			if (!(input % 5 == 0)) {			   //Protecting again
 				for (int i = 3; longArrayPos != longArray.length; i+=2) { //Optimized. Kinda.
 					if (isPrime(i)) {									// Check if the number is prime
@@ -54,7 +54,9 @@ public class Stefan_Iliev_17 {
 	}
 	private static int result;
 	public static boolean isPrime(int number) {
-		if (number % 2 == 0) return false; 		     //No even number is prime :} Learn to #math Not sure if optimization or not, but by a wild guess, skipping the loop is always better.
+		if ((number & 1) == 0)
+			if (number == 2) return true; 
+			else return false; 	 		     //No even number is prime :} Learn to #math Not sure if optimization or not, but by a wild guess, skipping the loop is always better.
 		else if (number != 5) {
 			if (number % 10 == 5 || number % 10 == 0) return false; //Well, learn to finger math. Woah, that sounds wrong :}:}
 		} else return true;						   //The number is 5. :} #magicTheGathering.
