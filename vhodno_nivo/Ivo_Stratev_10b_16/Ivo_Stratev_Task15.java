@@ -11,16 +11,13 @@ public class Ivo_Stratev_Task15 {
 		
 		int sum = 0;
 		arry = new int[10];
-		System.out.print("[");
 		for(int i=1;i<11;i++){
 			for(int j=0;j<1000;j++){
 				if (j%(i*x)==0)
 					sum = sum +j;
 			}
 			arry[(i - 1)] = sum;
-			if(i == 10) {
-				System.out.print(arry[(i - 1)] + "]");
-			}else System.out.print(arry[(i - 1)] + ", ");			
+			System.out.println(arry[(i - 1)]);
 		}
 	}
 }

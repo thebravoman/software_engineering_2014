@@ -11,14 +11,11 @@ public class Ivo_Stratev_Task16 {
 		
 		int j = 0;
 		arry = new int[10];
-		System.out.print("[");
 		for(int i=0;;i++) {
 			if(j > 9) break;
 			if((isPrime(i)) && (i%10 == x)) {
 				arry[j] = i;
-				if(j == 9) {
-					System.out.print(arry[j] + "]");
-				}else System.out.print(arry[j] + ", ");	
+				System.out.println(arry[j]);
 				j++;	
 			}
 		}		
