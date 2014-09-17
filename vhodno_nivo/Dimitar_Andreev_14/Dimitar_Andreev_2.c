@@ -14,7 +14,7 @@ int main()
         {
             printf("4isloto x trqbva da e po-malko ot 4isloto y");
             printf("vavedete cqloto 4islo x\n");
-            scanf("%d",&n);
+            scanf("%d",&x);
             printf("vavedete cqloto 4islo y\n");
             scanf("%d",&y);
         }
