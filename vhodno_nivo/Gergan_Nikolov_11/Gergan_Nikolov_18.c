@@ -9,20 +9,25 @@ int main()
 		scanf("%d", &x);
 	}while(x < 0);	
 
-	int num = 0;
-	int num1 = num + 1;
+	int num = 1;
 	int array[10];
 	int i = 0;
+	int j = 0;
 
 	do
 	{
-		if (num1 % x == 0)
+		if (x % num == 0)
 		{
-			array[i] = num1;
+			array[i] = num;
 			i++;
+			j++;		
+		}
+		
+		if (num >= x)
+		{
+			break;
 		}
 		num += 2;
-		num1 = num + 1;	
 	}while(i < 10);	
 
 	i = 0;
@@ -32,7 +37,7 @@ int main()
 	{
 		printf("%d\n", array[i]);
 		i++;
-	}while(i < 10);
+	}while(i < j);
 
 	i = 0;
 	int c;
@@ -53,7 +58,7 @@ int main()
 			printf("%d is prime.\n", array[i]);
 		}	
 		i++;
-	}while(i < 10);
+	}while(i < j);
 	
 	return 0;
 }
