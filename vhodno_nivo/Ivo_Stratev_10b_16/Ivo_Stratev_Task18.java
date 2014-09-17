@@ -11,7 +11,7 @@ public class Ivo_Stratev_Task18 {
 		
 		int j = 0;
 		arry = new long[10];
-		for(long i=0;;i++) {
+		for(long i=1;;i+=2) {
 			if(j > 9) break;
 			if((i%2 == 1) && (x%i == 0)) {
 				arry[j] = i;
