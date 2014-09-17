@@ -1,6 +1,6 @@
 x = gets.to_i
 
-while x <= 0 || x > 10 do
+while x < 0 || x > 10 do
 	x = gets.to_i 
 end
 
