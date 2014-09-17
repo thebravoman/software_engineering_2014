@@ -14,13 +14,13 @@ int main()
     cout<<"Enter x>0  :";
     cin>>x;
    }while(x<0);
-int i=x-1;
+int i=0;
     do
       {
           i++;
          if (i%2!=0)
           {
-            if(i%x==0)
+            if(x%i==0)
               {
                 j++;
                 h++;
