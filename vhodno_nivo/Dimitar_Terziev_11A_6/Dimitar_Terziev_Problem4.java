@@ -22,7 +22,7 @@ class Range_Fib_Problem4 {
 				fib2+=fib1;
 				System.out.print(fib1);
 			}
-			if(fib1<y && fib2<y){
+			if(fib1<y || fib2<y){
 				System.out.print(" ");
 			}
 			turn=!turn;
