@@ -2,7 +2,7 @@
  
 int main()
 {
-   int x,y,i,c,b;
+   int x,y,c,b;
    b=0;
    
     printf("vavedete cqloto 4islo x\n");
