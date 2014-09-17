@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Task 2</title>
+	<style type="text/css">
+		#x, #y{ width: 200px; }
+	</style>
+	<script type="text/javascript">
+		function calculate(){
+			var x = parseInt(document.getElementById('x').value);
+			var y = parseInt(document.getElementById('y').value);
+			var error = 0;
+			if(x>y){
+				error = "Y must be bigger than X";
+			}
+			if(isNaN(x)||isNaN(y)){
+				error = "X and Y must be integers";
+			}
+			//We need to find the numbers that are dividable to 17 and add them to a SUM variable
+			if(error == 0){
+				var SUM = 0;
+				for(var i=x;i<=y;i++){
+					var temp = i/17;
+					if(temp==parseInt(temp)){
+						SUM+=i;
+					}
+				}
+				var error=  "The result is: " + SUM;
+			}
+			//Showing result
+			
+			document.getElementById('result').innerHTML=error;
+			
+		}
+	</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>Enter X:</td>
+			<td><input type="text" id="x"></td>
+		</tr>
+		<tr>
+			<td>Enter Y:</td>
+			<td><input type="text" id="y"></td>
+		</tr>
+		<tr>
+			<td colspan="2"><button onClick="calculate();">Calculate</button></td>
+		</tr>
+	</table>
+	<div id="result"></div>
+</body>
+</html>
