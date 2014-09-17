@@ -37,7 +37,7 @@ int main(int argc, char* argv[]){
         }
     }
     
-    //If no primes were found still end the output, else an extra std::endl is added to std::cout
+    //If no primes were found still end the output, else and extra std::endl is added
     std::cout << std::endl;
     
     return 0;

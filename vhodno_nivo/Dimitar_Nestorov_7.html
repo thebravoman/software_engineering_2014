@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Task 7</title>
+	<style type="text/css">
+		#x, #y{ width: 200px; }
+	</style>
+	<script type="text/javascript">
+		function randomIntFromInterval(min,max){
+		    return Math.floor(Math.random()*(max-min+1)+min);
+		}
+		function calculate(){
+			var x = parseInt(document.getElementById('x').value);
+			var error = 0;
+			if(!(0<x&&x<100)){
+				error = "X must be bigger than 0 and smaller than 100";
+			}
+			if(isNaN(x)){
+				error = "X must be an integer";
+			}
+			//We need to do some stuffs
+			if(error == 0){
+				var randomArr = [];
+				for(var i=0; i<10; i++){
+					randomArr.push(randomIntFromInterval(x, 100));
+				}
+
+				for(i=1; i<randomArr.length; i++){
+					randomArr.splice(i,1);
+				}
+
+
+				error="All randoms: ";
+				
+				for(i=0; i<randomArr.length; i++){
+					error=error+randomArr[i]+" ";
+				}
+
+			}
+			//Showing result
+			
+			document.getElementById('result').innerHTML=error;
+			
+		}
+	</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>Enter X:</td>
+			<td><input type="text" id="x"></td>
+		</tr>
+		<tr>
+			<td colspan="2"><button onClick="calculate();">Create Random Numbers</button></td>
+		</tr>
+	</table>
+	<div id="result"></div>
+</body>
+</html>
