@@ -2,8 +2,8 @@
  
 int main()
 {
-   int x,y,i,c;
-   i=0;
+   int x,y,i,c,b;
+   b=0;
    
     printf("vavedete cqloto 4islo x\n");
     scanf("%d",&x);
@@ -18,14 +18,14 @@ int main()
             printf("vavedete cqloto 4islo y\n");
             scanf("%d",&y);
         }
-
-    for ( c = x ; c <= y ; c++ )
+    printf("4islata zavar6va6ti na 3 v intervala [x,y] sa:\n  ");
+    for ( c = 1 ; c <= y ; c++ )
         {
-            if (c%17==0)
+            b=c%10;
+            if(b==3)
             {
-                i=i+c;
+                printf("%d",c);
             }
         }
-    printf("sumata na 4islata delq6tise na 17 e = %d",i);
     return 0;
 }
