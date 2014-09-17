@@ -3,7 +3,7 @@
 int main()
 {
    int first = 0, second = 1, next, c;
-   int x,y,i,c;
+   int x,y,i;
    
    printf("vavedete cqloto 4islo x\n");
    scanf("%d",&x);
