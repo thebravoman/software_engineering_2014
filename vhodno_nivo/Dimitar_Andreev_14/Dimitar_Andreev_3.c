@@ -19,7 +19,7 @@ int main()
             scanf("%d",&y);
         }
     printf("4islata zavar6va6ti na 3 v intervala [x,y] sa:\n  ");
-    for ( c = 1 ; c <= y ; c++ )
+    for ( c = x ; c <= y ; c++ )
         {
             b=c%10;
             if(b==3)
