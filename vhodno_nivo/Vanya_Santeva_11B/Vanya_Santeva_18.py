@@ -2,9 +2,9 @@ def isPrime(n): #copy-paste from the internet wo :D
     if n < 2:
         return False
     for i in range(2,int(n**0.5)+1):
-        if n%i==0:
-            return False
-		return True
+      if n%i==0:
+        return False
+    return True
 
 x = int(raw_input('X: '))
 
@@ -26,4 +26,3 @@ for i in a:
 for i in a:
     isPrime(i) #I don't print them, because
                #it isn't written to
-               
