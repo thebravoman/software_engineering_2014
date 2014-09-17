@@ -25,5 +25,6 @@ int main()
 	{
 		printf("%d\n", holder[x]);
 	}
+	return 0;
 	
 }
