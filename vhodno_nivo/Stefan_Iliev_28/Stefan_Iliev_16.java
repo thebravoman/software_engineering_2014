@@ -8,12 +8,12 @@ public class Stefan_Iliev_16 {
 		System.out.println("Please, enter a number between 0 and 10 exclusive.Preferably not even one :}");
 		int input = getProtectedInputInt(1, 9);
 		int intArray[],intArrayPos = 0;
-		if (input % 2 == 0) {															//Check if the user is a monkey. Or my grandmother ;-;
+		if ((input & 1) == 0) {															//Check if the user is a monkey. Or my grandmother ;-;
 			System.out.println("No prime number ends with "+Integer.toString(input));  //Informs my grandmother that she is bad at math.
 		} else if (input == 5) {													  //Check for party killers.
 			System.out.println("The answer is 5. Don't make my program cry plz :{"); //Throw them out!!!!!!!!!!!!. That dot op :{
 		} else { 																	//My grandmother took her math tests :} Time for fun.Not. 
-			intArray = new int[10];
+			intArray = new int[10]; 					//Pump that memory ;}
 			for (int i = 0;;i++) {
 				if (isPrime(i)) {                      //ILOVEMAGIC.
 					if (i % 10 == input) {            //LEL. DO WE GET THE LAST DIGIT HERE? YESH WE DO. OH WAIT , THERE IS MORE !!! WE COMPARE IT TO THE INPUT NUMBER :O :O :O PROGRAMMING PLZ
@@ -39,7 +39,9 @@ public class Stefan_Iliev_16 {
 	}
 	private static int result;
 	public static boolean isPrime(int number) {
-		if (number % 2 == 0) return false; 		     //No even number is prime :} Learn to #math Not sure if optimization or not, but by a wild guess, skipping the loop is always better.
+		if ((number & 1) == 0)
+			if (number == 2) return true; 
+			else return false; 			     //No even number is prime :} Learn to #math Not sure if optimization or not, but by a wild guess, skipping the loop is always better.
 		else if (number != 5) {
 			if (number % 10 == 5 || number % 10 == 0) return false; //Well, learn to finger math. Woah, that sounds wrong :}:}
 		} else return true;						   //The number is 5. :} #magicTheGathering.

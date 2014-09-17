@@ -11,10 +11,15 @@ public class Stefan_Iliev_18 {
 		long longArray[] = new long[10]; 		  //As always ... ARRAY. I'll call it girlfriend from now on. 
 		int longArrayPos = 0;					 //That C initialization. Like this is not java ;-;
 		
-		for (int i = 1 ; longArrayPos < longArray.length && i < input/2 ; i+=2) { //Lame stuff again. OH REVERSE COMMENT ! :OOOOOOOOOOOOO
-			if (input % i == 0) {				 //*insert lyrics here*
-				longArray[longArrayPos++] = i; 	//Lame stuff.
+		if (!isPrime(input)) {
+			for (int i = 1 ; longArrayPos < longArray.length && i < input/2 ; i+=2) { //Lame stuff again. OH REVERSE COMMENT ! :OOOOOOOOOOOOO
+				if (input % i == 0) {				 //*insert lyrics here*
+					longArray[longArrayPos++] = i; 	//Lame stuff.
+				}
 			}
+		} else {
+			longArray[longArrayPos++] = 1;
+			longArray[longArrayPos++] = input;
 		}
 		printArray(longArray);
 		System.out.println("And the prime numbers are:");
@@ -56,7 +61,9 @@ public class Stefan_Iliev_18 {
 	}
 	private static long result;
 	public static boolean isPrime(long number) {
-		if (number % 2 == 0) return false; 		     //No even number is prime :} Learn to #math Not sure if optimization or not, but by a wild guess, skipping the loop is always better.
+		if ((number & 1) == 0)
+			if (number == 2) return true; 
+			else return false; 		     //No even number is prime (except 2) :} Learn to #math Not sure if optimization or not, but by a wild guess, skipping the loop is always better.
 		else if (number != 5) {
 			if (number % 10 == 5 || number % 10 == 0) return false; //Well, learn to finger math. Woah, that sounds wrong :}:}
 		} else return true;						   //The number is 5. :} #magicTheGathering.
