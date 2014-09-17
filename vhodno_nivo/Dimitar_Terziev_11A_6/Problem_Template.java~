@@ -1,7 +1,0 @@
-import java.util.Scanner;
-class OddSum {
-	public static void main (String[] args) {
-		Scanner input = new Scanner (System.in);
-		
-	}
-}
