@@ -1,7 +1,3 @@
-//x[0;+inf), v masiv da se suhranqt purvite 10 nechetni
-//deliteli na x i da se izvedat, kato ot tezi 10 chisla se
-//namerqt prostite
-
 #include <stdio.h>
 
 int checkFoPrime(int x);
@@ -51,7 +47,7 @@ int main(){
         }
     }
 
-    //print all numbers
+    //print prime numbers
     printf("\nPrimes: ");
     for(i=0; i<primeArrPos; i++){
         printf("%d ", primes[i]);
