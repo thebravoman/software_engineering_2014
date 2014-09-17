@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Task 3</title>
+	<style type="text/css">
+		#x, #y{ width: 200px; }
+	</style>
+	<script type="text/javascript">
+	    function isPrime(n) {
+
+		   // If n is less than 2 or not an integer then by definition cannot be prime.
+		   if (n < 2) {return false}
+		   if (n != Math.round(n)) {return false}
+
+		   // Now assume that n is prime, we will try to prove that it is not.
+		   var isPrime = true;
+
+		   // Now check every whole number from 2 to the square root of n. If any of these divides n exactly, n cannot be prime.
+		   for (var i = 2; i <= Math.sqrt(n); i++) {
+		      if (n % i == 0) {isPrime = false; break;}
+		   }
+
+		   // Finally return whether n is prime or not.
+		   return isPrime;
+		}
+		function calculate(){
+			var x = parseInt(document.getElementById('x').value);
+			var y = parseInt(document.getElementById('y').value);
+			var error = 0;
+			if(x>y){
+				error = "Y must be bigger than X";
+			}
+			if(isNaN(x)||isNaN(y)){
+				error = "X and Y must be integers";
+			}
+			//We need to find the numbers that are ending on 3 and add them to a SUM array
+			if(error == 0){
+				var SUM = [];
+				for(var i=x; i<=y; i++){
+					if(i.toString().slice(-1)=="3"){
+						SUM.push(i);
+					}
+				}
+				
+				error="All primes ending on 3 between "+x+" and "+y+": ";
+				//Then we need to drop all numbers that are not primes
+				for(i=0; i<SUM.length-1; i++){
+					if(isPrime(SUM[i])){
+						error=error+SUM[i]+" ";
+					}
+				}
+
+			}
+			//Showing result
+			
+			document.getElementById('result').innerHTML=error;
+			
+		}
+	</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>Enter X:</td>
+			<td><input type="text" id="x"></td>
+		</tr>
+		<tr>
+			<td>Enter Y:</td>
+			<td><input type="text" id="y"></td>
+		</tr>
+		<tr>
+			<td colspan="2"><button onClick="calculate();">Calculate</button></td>
+		</tr>
+	</table>
+	<div id="result"></div>
+</body>
+</html>
