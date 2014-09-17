@@ -1,0 +1,39 @@
+import java.util.Scanner;
+import java.math.*;
+class Fib_Arr_Problem1 {
+	public static void main (String[] args) {
+		Scanner input = new Scanner (System.in);
+		BigInteger fib_1 = new BigInteger("1");
+	 	BigInteger fib_2 = new BigInteger("1");
+		BigInteger [] fib_array = new BigInteger [10];
+		int x = input.nextInt();
+		int i = 0;
+		boolean l=false;
+		while(i<9){
+			if(l){
+				fib_1=fib_1.add(fib_2);
+				BigInteger f = new BigInteger(Integer.toString(x));
+				if(fib_2.mod(f)==new BigInteger("0")){
+					fib_array[i]=fib_1;
+					i++;
+				}
+			}else{
+				fib_2=fib_2.add(fib_1);
+				BigInteger f = new BigInteger(Integer.toString(x));
+				if(fib_2.mod(f)==new BigInteger("0")){
+					fib_array[i]=fib_2;
+					i++;
+				}
+			}
+			l=!l;
+		}
+		System.out.print(fib_array[9]);
+		System.out.print("\n");
+		for(int counter = 0;counter < 10;counter ++){
+			System.out.print(fib_array[counter]);
+			if(counter+1<10){
+				System.out.print(" ");
+			}
+		}
+	}
+}
