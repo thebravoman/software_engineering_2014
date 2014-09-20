@@ -2,7 +2,7 @@ homeworks = Array.new
 i = 0
 counter = 0
 
-#-- Writing the programs number in an array --
+#-- Writing the number of the programs in an array --
 Dir.glob("/path/**/*.*") do |my_text_file| 
 
 #splitting names by "_" and "." 
