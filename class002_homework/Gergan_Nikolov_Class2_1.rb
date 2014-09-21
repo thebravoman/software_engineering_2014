@@ -41,9 +41,6 @@ end
 i = 1
 
 while i <= 19 do
-	puts "#{i} == #{count[i]}"
+	puts "#{i}, #{count[i]}"
 	i = i + 1
 end
-
-puts "Directory: #{path}"
-puts "All files: #{all_files}" 
