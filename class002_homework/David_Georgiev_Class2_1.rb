@@ -4,7 +4,7 @@
 	b = [1..1000]
 	c = [1..1000]
 	
-	Dir.glob("/home/tehtri/school/software_engineering_2014/**/*.*") do |my_text_file|
+	Dir.glob("#{pathToDirectory}/*.*") do |my_text_file|
 	
 	s = my_text_file.split(/_/)
 	number = s.last.split(/\./).first
