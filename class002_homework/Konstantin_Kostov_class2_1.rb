@@ -1,5 +1,5 @@
 c=Array.new(20,0)
-Dir.glob("/home/kosio345/Documents/software_engineering_2014/vhodno_nivo/*.*") do |my_text_file|
+Dir.glob("/home/kosio345/Documents/software_engineering_2014/vhodno_nivo/**/*.*") do |my_text_file|
   s = my_text_file.split(/_/)
   number= s.last.split(/\./).first
   if number.length < 3
