@@ -17,6 +17,7 @@ Dir.glob(path + "/**/*\.*") do |fn|
 	next if str == nil		#skip iteration if regex returns nil
 	str = str[/\d+/]		#gets only the number matched
 	str = str.to_i			#converts the number to integer
+	next if str < taskStart or str > taskEnd	#skip iteration if file name is wrong
 	
 	tasks[str] = tasks[str] + 1
 end
