@@ -1,50 +1,33 @@
-information = Hash.new{|hash, key| arr[key] = Array.new}
-i = 1
+# Class 2 Homework - 11. grade, ELSYS 2014/2015
+# Petko '3phase' Bozhinov
+# Task 2
 
-Dir.glob("D:/Git/RubyHw1/hwc.rb/checks/vhodno_nivo/*") do |item|
-  
-	  #puts "working on: #{item}... \n"
-	  short_name = item.split('/').last.split('D:/Git/RubyHw1/hwc.rb/checks/vhodno_nivo/')
-	  short_name = short_name.last.split('.').first.split('_')
-	  name = short_name[0] + " "
-	  if short_name[1]==nil || short_name[2] == nil
-		  	next
-	  end
-	  name = name + short_name[1] + " "
-	  number = short_name[2]
-	  Dir.glob("D:/Git/RubyHw1/hwc.rb/checks/vhodno_nivo/#{short_name[0]}_#{short_name[1]}_#{number}/*.*") do |my_text_file|
-	  	task = my_text_file.split('/').last.split('D:/Git/RubyHw1/hwc.rb/checks/vhodno_nivo/').last.split('.').first.split('_')
-		task = task[2]
-		if task != nil
-			if information["#{short_name[0]} #{short_name[1]}"] != nil		
-				task = task.split('Task').last
-				information = {"#{short_name[0]} #{short_name[1]}" => arr[]}
-				arr.push("#{task}")
-				i += 1
-			else
-				i = 1;
-				task = task.split('Task').last
-				information = {"#{short_name[0]} #{short_name[1]}" => arr[]}
-				arr.push("#{task}")	
-				i += 1
-			end
-		end 
-	  end 
+information = Hash.new{|hsh,key| hsh[key] = []}
+sum = Hash.new{}
+points = 0
 
-	  #information.each do |key, value|
-	  #	puts "Name: " + key
-	  #	puts "Task: " + value + ";\n\n"
-	  #end
-
-	  #information.each{ |key,value| puts "Name: #{key} #{value}\n" }
-
-	  information.each do |key, value|
-		  puts key
-		  value.each do |k,v|
-		    puts v
-		  end
-	  end
-
-	  # output fail
-
+Dir.glob("D:/Git/RubyHw1/hwc.rb/checks/vhodno_nivo/*/*") do |my_text_file| 
+  short_name = my_text_file.split('/').last.split('D:/Git/RubyHw1/hwc.rb/checks/vhodno_nivo/')
+  short_name = short_name.last.split('.').first.split("_")
+  task = short_name[2]
+  if task
+  	task = task.split('Task').last.to_i
+  else
+  	next
+  end
+  if !sum["#{short_name[0]} #{short_name[1]}"]
+  	points = 0
+  end
+  information["#{short_name[0]} #{short_name[1]}"].push("#{task}")
+  points += task.to_i
+  sum["#{short_name[0]} #{short_name[1]}"] = points
 end
+  
+  information.each{ |k,v| 
+  	print "#{k} " 
+  	v.each{ |key,value| 
+  		print "#{key}, "
+  	}
+  	print sum["#{k}"]
+  	puts "\n"
+  }
