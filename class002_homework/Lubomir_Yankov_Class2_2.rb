@@ -9,7 +9,7 @@ Dir.glob("C:/Users/Lubomir/Documents/GitHub/software_engineering_2014/vhodno_niv
 	student = name.collect{|x| "#{name[0]}"+" #{name[1]}"}
 	student_name = "#{student[0]}"
 	taskint = task.to_i
-	if hash[student_name] != nil					#Ako sushtestvuva v hasha go updatevame ako ne create i update i taka za vseki fail
+	if hash[student_name] != nil					
 		currentUserFiles = hash[student_name]
 		currentUserFiles << task
 		sum[i]+=taskint
