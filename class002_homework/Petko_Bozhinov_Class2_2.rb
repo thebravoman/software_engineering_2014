@@ -1,4 +1,6 @@
-information = Hash.new{|hash, key| arr[key] = Array.new}
+information = Hash.new{|hsh,key| hsh[key] = []}
+summary = Hash.new
+sum = 0
 i = 1
 
 Dir.glob("D:/Git/RubyHw1/hwc.rb/checks/vhodno_nivo/*") do |item|
@@ -13,36 +15,25 @@ Dir.glob("D:/Git/RubyHw1/hwc.rb/checks/vhodno_nivo/*") do |item|
 	  name = name + short_name[1] + " "
 	  number = short_name[2]
 	  Dir.glob("D:/Git/RubyHw1/hwc.rb/checks/vhodno_nivo/#{short_name[0]}_#{short_name[1]}_#{number}/*.*") do |my_text_file|
-	  	task = my_text_file.split('/').last.split('D:/Git/RubyHw1/hwc.rb/checks/vhodno_nivo/').last.split('.').first.split('_')
-		task = task[2]
-		if task != nil
-			if information["#{short_name[0]} #{short_name[1]}"] != nil		
+		  	task = my_text_file.split('/').last.split('D:/Git/RubyHw1/hwc.rb/checks/vhodno_nivo/').last.split('.').first.split('_')
+			task = task[2]
+			if task != nil
 				task = task.split('Task').last
-				information = {"#{short_name[0]} #{short_name[1]}" => arr[]}
-				arr.push("#{task}")
-				i += 1
-			else
-				i = 1;
-				task = task.split('Task').last
-				information = {"#{short_name[0]} #{short_name[1]}" => arr[]}
-				arr.push("#{task}")	
-				i += 1
-			end
-		end 
+				information["#{short_name[0]} #{short_name[1]}"].push("#{task}")
+				#sum += task.to_i
+			end 
 	  end 
-
-	  #information.each do |key, value|
-	  #	puts "Name: " + key
-	  #	puts "Task: " + value + ";\n\n"
-	  #end
-
-	  #information.each{ |key,value| puts "Name: #{key} #{value}\n" }
-
+	 
 	  information.each do |key, value|
-		  puts key
+		  puts "Name: " + key + " "
 		  value.each do |k,v|
-		    puts v
+		    puts "Task: " + k + "\n"
 		  end
+		  #summary.each do |key2, value2|
+		  #	if key2.eql?key == true
+		  #		puts "Grade: " + value2
+		  #	end
+		  #end
 	  end
 
 	  # output fail
