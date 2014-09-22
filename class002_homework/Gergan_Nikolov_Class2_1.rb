@@ -2,7 +2,6 @@
 i = 1; #Counter for documents
 documents = Array.new(19)
 count = Array.new(19)
-all_files = 0; #Counter for all files
 
 while i <= 19 do
 	documents[i] = i
@@ -35,7 +34,6 @@ Dir.glob(path) do |my_text_file|
 		count[second_pick.first.to_i] = val
 	end
 
-	all_files = all_files + 1
 end
 
 i = 1
