@@ -24,10 +24,10 @@ Dir.glob("D:/Git/RubyHw1/hwc.rb/checks/vhodno_nivo/*/*") do |my_text_file|
 end
   
   information.each{ |k,v| 
-  	puts "#{k}" 
+  	print "#{k} " 
   	v.each{ |key,value| 
-  		puts "#{key}"
+  		print "#{key}, "
   	}
-  	puts "The sum of the points of the submited homeworks is: " 
-  	puts sum["#{k}"]
+  	print sum["#{k}"]
+  	puts "\n"
   }
