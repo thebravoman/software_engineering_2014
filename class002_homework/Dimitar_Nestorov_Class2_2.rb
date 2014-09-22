@@ -12,8 +12,6 @@ Dir.glob(pathToHomeworks + "**/*.*") do |myFile|
         end
     end
 end
-puts hashmap.inspect
-
 hashmap.each{|x,y|
     z=0
     y = y.split(",").uniq
