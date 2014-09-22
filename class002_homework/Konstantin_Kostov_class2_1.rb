@@ -9,6 +9,6 @@ Dir.glob("/home/kosio345/Documents/software_engineering_2014/vhodno_nivo/**/*.*"
     end
     end
     end
-  for i in 2..19 do
+  for i in 1..19 do
     puts "#{i},#{c[i]}"
 end
