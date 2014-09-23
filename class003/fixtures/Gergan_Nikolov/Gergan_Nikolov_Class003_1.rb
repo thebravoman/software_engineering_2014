@@ -1,21 +1,19 @@
 #Variables
-i = 1; #Counter for documents
-documents = Array.new(19)
-count = Array.new(19)
+i = 2; #Counter for documents
+documents = Array.new(18)
+count = Array.new(18)
 
-while i <= 19 do
+while i <= 18 do
 	documents[i] = i
 	i = i + 1
 end #Add all elements names.
 
-i = 1
+i = 2
 
-while i <= 19 do
+while i <= 18 do
 	count[i] = 0
 	i = i + 1
 end 
-
-puts "#{ARGV.first}"
 
 Dir.glob("#{ARGV.first}/**/*.*") do |my_text_file|
 	#puts "Working on: #{my_text_file}..."
@@ -35,9 +33,29 @@ Dir.glob("#{ARGV.first}/**/*.*") do |my_text_file|
 
 end
 
-i = 1
+i = 2
 
-while i <= 19 do
-	puts "#{i}, #{count[i]}"
+while i <= 18 do
+	print "#{i}"
+
+	if i < 18 
+		print ", "
+	end
+
 	i = i + 1
 end
+
+puts ""
+i = 2
+
+while i <= 18 do
+	print "#{count[i]}"
+	
+	if i < 18 
+		print ", "
+	end
+
+	i = i + 1
+end
+
+puts ""
