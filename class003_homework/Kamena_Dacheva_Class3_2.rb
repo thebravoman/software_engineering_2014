@@ -4,7 +4,7 @@ directory = ARGV[0]
 
 Dir.glob("#{directory}*/*") do |my_repository|
         name_dir = my_repository.split("/")
-        name = name_dir.last.split("_", 2).first
+        name = name_dir.last.split("_").first
         sir_name_dir = name_dir.last.split("_", 2)
         sir_name = sir_name_dir.last.split("_").first
         program_dir = my_repository.split("_")
