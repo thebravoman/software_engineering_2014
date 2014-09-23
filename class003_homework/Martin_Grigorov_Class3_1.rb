@@ -1,6 +1,6 @@
 a = Array.new(20,0)
-k = 0
-g = 0
+k = 1
+g = 1
 ARGV.each do |argv|
 	Dir.glob("#{argv}/**/*.*") do |my_text_file|
 		#puts "working on: #{my_text_file}..."
@@ -14,9 +14,9 @@ ARGV.each do |argv|
 	end
 end
 
-while k <= 18 do
+while k <= 17 do
 	k = k + 1
-	if k == 19
+	if k == 18
 		puts"#{k}"
 	else
 		print"#{k},"
@@ -24,9 +24,9 @@ while k <= 18 do
 	
 end
 
-while g <= 18 do
+while g <= 17 do
 	g = g + 1
-	if g == 19
+	if g == 18
 		puts"#{a[g]}"
 	else
 		print"#{a[g]}," 
