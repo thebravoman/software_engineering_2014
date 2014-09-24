@@ -1,10 +1,10 @@
 justahash=Hash.new("");
 path_to_folder="" 
-ARGV.each do|v| 
+ARGV.each do |v| 
   path_to_folder = v
-  puts path_to_folder + "*/*"
 end
 Dir.glob(path_to_folder + "/*/*") do |my_text_file|
+#puts "ASDASDASDASD"
  #THE WHOLE FILE (without the pathing to it)
   wholefile = my_text_file.split("/").last
  #TASK NUMBER 
