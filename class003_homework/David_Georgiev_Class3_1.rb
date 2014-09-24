@@ -21,7 +21,7 @@
 				c[i] = number.to_i
 			end
 		end
-		for k in 1..19
+		for k in 2..18
 			ii = 0
 			b[k] = 0
 			for j in 1..i
@@ -31,19 +31,19 @@
 				end
 			end
 		end
-		for i in 1..k
+		for i in 2..k
 			if i == k
 				puts ",#{i}"
 			else	
-				if i == 1
+				if i == 2
 					print "#{i}"	
 				else
 					print ",#{i}"
 				end
 			end
 		end
-		for i in 1..k
-			if i == 1
+		for i in 2..k
+			if i == 2
 				print "#{b[i]}"
 			else 
 				if i == k
