@@ -6,7 +6,7 @@ Dir.glob("#{ARGV[0]}*/*.*") do |file_1|
 	first_Name = splitted[1].split("\/").last
 	second_Name = splitted[2]
 	taskNumber = file_1.split("_").last.split("\.").first
-	hash[first_Name + " " + second_Name] += taskNumber + ","
+	person[first_Name + " " + second_Name] += taskNumber + ","
 
 end
 	
