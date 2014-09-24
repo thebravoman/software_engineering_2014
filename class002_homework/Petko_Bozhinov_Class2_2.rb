@@ -24,9 +24,9 @@ Dir.glob("D:/Git/RubyHw1/hwc.rb/checks/vhodno_nivo/*/*") do |my_text_file|
 end
   
   information.each{ |k,v| 
-  	print "#{k} " 
+  	print "#{k}," 
   	v.each{ |key,value| 
-  		print "#{key}, "
+  		print "#{key},"
   	}
   	print sum["#{k}"]
   	puts "\n"
