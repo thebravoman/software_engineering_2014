@@ -1,6 +1,6 @@
 array=Array.new(19,0)  
 
-Dir.glob("/home/hriso/Desktop/hris/*.*") do |my_text_file|
+Dir.glob("/home/ivancheva/GitHub/software_engineering_2014/vhodno_nivo/*/*.*") do |my_text_file|
 	#puts "Working on: #{my_text_file}..."
 	
 	s=my_text_file.split(/_/) 
