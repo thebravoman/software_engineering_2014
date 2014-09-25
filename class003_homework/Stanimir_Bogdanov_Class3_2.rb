@@ -9,19 +9,17 @@ Dir.glob("#{dir_path}**/*") do |file|
     last_name = fields[1]
     problem_num = fields[2]
     if fields.length == 3
-      if first_name.gsub(/[a-zA-Z]/, '').length == 0 &&
-        last_name.gsub(/[a-zA-Z]/, '').length == 0 && 
-        problem_num.to_i.to_s == problem_num && 
+      if problem_num.to_i.to_s == problem_num && 
         problem_num.to_i > 1 && problem_num.to_i < 19 
-          unless hash[first_name+'_'+last_name].include? problem_num.to_i
-            hash[first_name+'_'+last_name].push problem_num.to_i
+          unless hash[first_name.capitalize+'_'+last_name.capitalize].include? problem_num.to_i
+            hash[first_name.capitalize+'_'+last_name.capitalize].push problem_num.to_i
           end
       end
     end
   end 
 end
-hash.each do |key, value|
-  print "#{key.split('_').first.capitalize} #{key.split('_').last.capitalize},"
+Hash[hash.sort].each do |key, value|
+  print "#{key.split('_').first} #{key.split('_').last},"
   sum = 0
   value.sort.each do |i| 
     print "#{i},"
