@@ -1,4 +1,0 @@
-Dir.glob('/home/dtrz/software_engineering_2014/vhodno_nivo/Dimitar_Terziev_11A_6/*').each do |entry|
-	puts "sfadflkja"
-   File.rename("#{entry}", ("#{entry}".sub('Problem','')))
-end
