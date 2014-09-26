@@ -2,7 +2,6 @@ hash = Hash.new
 extensions = [".c", ".html", ".cc", ".cpp", ".py", ".java", ".rb"]
 exercise = ["2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18"]
 sum = Hash.new
-i = 0
 k = 0
 sum[0] = 0
 Dir.glob("#{ARGV[0]}/**/*.*") do |myFile|
@@ -36,7 +35,6 @@ Dir.glob("#{ARGV[0]}/**/*.*") do |myFile|
 	end
 end
 sorted_hash = hash.sort_by {|student_name, value| student_name}
-#hash.sort_by {|student_name, value| student_name }
 
 	sorted_hash.each do |student_name, value| 
 		value.each do |e|
@@ -45,5 +43,4 @@ sorted_hash = hash.sort_by {|student_name, value| student_name}
 		end
 		value = value.sort
 		puts "#{student_name},#{value.join(",")},#{sum[student_name]}"
-		#i+=1
-end
+	end
