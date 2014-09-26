@@ -21,7 +21,7 @@ for task_num in 2..max
 	end;
 end
 
-for task_num in 2..max++
+for task_num in 2..max
 	print "#{homework_array[task_num]}"
 	if task_num < max
 		print ","
