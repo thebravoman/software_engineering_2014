@@ -10,7 +10,7 @@ Dir.glob("#{ARGV[0]}/*") do |my_folder|
 	Dir.glob("#{ARGV[0]}/#{name_folder_user}/*.*") do |my_text_file|
 		#puts "#{my_text_file}"
 		tasks = my_text_file.split('/')[-1]
-		number_task = tasks.split('.')[0].split("_")[-1]
+		number_task = tasks.split('.')[0].split('_')[-1]
 		#all_tasks = all_tasks + ","+ number_task # old version
 		if name_folder_user.split('_').length == 3 
 			if number_task.to_i > 1 && number_task.to_i < 19
