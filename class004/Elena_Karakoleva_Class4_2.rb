@@ -11,10 +11,11 @@ Dir.glob("#{dir}/**/*.*") do |file|
 	last_name = file.split(/\//).last.split(/_/, 2).last.split("_").first.capitalize
 	task_number = file.split(/\//).last.split("_").last.split(".").first
 	file_split = file.split(/\//).last
+        p = wordcount(file_split)
 
-	p = wordcount(file_split)
-	if p == 3 
-		if (task_number.to_i >1) &&(task_number.to_i < 19)	
+	if ((first_name == "") || (first_name == " ")) 
+	  elsif p == 3 
+		if (task_number.to_i >1) &&(task_number.to_i < 19)
 			student["#{first_name} #{last_name}"] << task_number.to_i
 		end
 	end
