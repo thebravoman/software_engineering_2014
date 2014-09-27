@@ -1,6 +1,7 @@
 # Class 4 - 11. grade, ELSYS 2014/2015
 # Petko '3phase' Bozhinov
 # Task 3
+# not sorting output data && not tested on linux
 
 information = Hash.new{|hsh,key| hsh[key] = []}
 sum = Hash.new{}
