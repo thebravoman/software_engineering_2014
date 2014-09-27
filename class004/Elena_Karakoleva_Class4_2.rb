@@ -23,7 +23,7 @@ end
 student.sort.each do |key,values|
 	print "#{key}"
 	sum = 0 
-		values.sort!.each do |x|
+		values.sort!.uniq.each do |x|
 			print ",#{x}"
 			sum += x
 		end
