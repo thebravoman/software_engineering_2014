@@ -13,7 +13,7 @@ Dir.glob("#{dir}/**/*.*") do |file|
 	file_split = file.split(/\//).last
         p = wordcount(file_split)
 
-	if ((first_name == "") || (first_name == " ")) 
+	if ((first_name == "") || (first_name == " ") || (last_name == "") || (last_name == " "))
 	  elsif p == 3 
 		if (task_number.to_i >1) &&(task_number.to_i < 19)
 			student["#{first_name} #{last_name}"] << task_number.to_i
