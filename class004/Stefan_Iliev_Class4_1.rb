@@ -16,7 +16,7 @@ class Script
 			if number.length < 3   #Checks if the number is 2 digits long. Tasks can only be between 1-19 so only two digits. This also eliminates the 11B 11A and etc. The downside is that it wont check Task1 Task2 Problem1 .. etc
 				number = number.to_i #Converts to integer.This strips it from other chars and unrequired symbols. The strip is not required because we already check if the string is length complaint.
 				if number != 0 and number.between?(2,18) #Continue only if the number is between the possible tasks.Else we assume that it's not a homework file.
-					puts "Added"
+				#	puts "Added"
 					$submitedHomeworks[number] = $submitedHomeworks[number].to_i + 1 #($submitedHomeworks[number].to_i + 1).to_s #Increases the number of task X solved.
 					$submitedHomeworks[21] = $submitedHomeworks[21].to_i + 1 #($submitedHomeworks[21].to_i + 1).to_s             #Increases the total number of homeworks solved. This way we dont need to sum all the arr elements.
 				end
