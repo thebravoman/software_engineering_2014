@@ -3,7 +3,7 @@ class Script
 	$submitedHomeworks = Array.new(21,0) #Global because i still can't find good ruby tutorial.
 	def checkDirectory(pathToDirectory,extType)
 		Dir.glob("#{pathToDirectory}/**/*.*") do |fileName|
-		  puts "Working on: #{fileName.split(/\//).last}" #Good for manual check on which files it worked and what mistakes it could've made.
+		#  puts "Working on: #{fileName.split(/\//).last}" #Good for manual check on which files it worked and what mistakes it could've made.
 		  executeAction(fileName,extType) #Call the action for the script.
 		end
 	end
@@ -41,13 +41,13 @@ end
 	homeWorkScript = Script.new() #Initialize
 	pathToDirectory = ARGV.shift || "err1"
 	if pathToDirectory.eql? "err1"
-		puts "No directory specified. Executing in current directory ..."
+	#	puts "No directory specified. Executing in current directory ..."
 		pathToDirectory = "./"
 	end 
 	extension = ARGV.shift || "err2"
 	extension = extension.split(/\./).last
 	if extension.eql? "err2"
-		puts "No extension specified. Checking by default ..."
+	#	puts "No extension specified. Checking by default ..."
 	end 
 	homeWorkScript.checkDirectory("#{pathToDirectory}","#{extension}") #Checks current directory with default extension
 	homeWorkScript.print
