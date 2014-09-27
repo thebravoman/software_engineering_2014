@@ -12,6 +12,7 @@ Dir.glob("#{ARGV[0]}/*") do |my_folder|
 		tasks = my_text_file.split('/')[-1]
 		number_task = tasks.split('.')[0].split('_')[-1]
 		#all_tasks = all_tasks + ","+ number_task # old version
+		#sum = sum + number_task # old version
 		if name_folder_user.split('_').length == 3 
 			if number_task.to_i > 1 && number_task.to_i < 19
 				hash[name].push number_task.to_i
