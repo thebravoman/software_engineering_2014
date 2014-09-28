@@ -4,9 +4,12 @@ Dir.glob("#{ARGV[0]}/*.*") do |file|
 	firstName = file.split("/").last.split("_").first
 	lastName = file.split("/").last.split("_", 2).last.split("_").first
 	taskNumber = file.split("_").last.split(".").first
-	#extension = file.split(".").last
 	if taskNumber.to_i.to_s == taskNumber
-		hash[firstName.capitalize + " " + lastName.capitalize] << taskNumber.to_i
+		if taskNumber.to_i >= 2 && taskNumber.to_i <= 18
+			if !firstName.empty? && !lastName.empty?
+				hash[firstName.capitalize + " " + lastName.capitalize] << taskNumber.to_i
+			end
+		end
 	end
 end
 
