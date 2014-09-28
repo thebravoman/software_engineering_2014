@@ -1,7 +1,6 @@
 student = Hash.new{ |name, programs| name[programs] = []}
 sum_pr = 0
 directory = ARGV[0]
-length = 0
 
 Dir.glob("#{directory}/**/*") do |my_repository|
 
