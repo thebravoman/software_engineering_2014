@@ -20,7 +20,7 @@ Dir.glob(path_to_folder + "/**/*") do |my_text_file|
   short_name = short_name.last.split('.')
   short_name = short_name.first.split("_")
   task = short_name[2].to_i
-  if !task || !short_name[1]
+  if task == '' || short_name[0] == '' || short_name[1] == ''
     next
   else
     if tasks.include? "#{task}"
