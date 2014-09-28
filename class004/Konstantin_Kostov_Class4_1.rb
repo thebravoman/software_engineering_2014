@@ -1,4 +1,3 @@
-c=Array.new(20,0)
 Dir.glob("#{ARGV.first}/**/*.*") do |my_text_file|
 s = my_text_file.split(/_/)
 number= s.last.split(/\./).first
@@ -10,9 +9,15 @@ end
 end
 end
 for i in 2..18 do
-print "#{i},"
+print "#{i}"
+if i <18 
+print (",") 
+end
 end
 print("\n")
 for i in 2..18 do
-print "#{c[i]},"
+print "#{c[i]}"
+if i<18
+printf(",")
+end
 end
