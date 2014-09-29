@@ -1,24 +1,28 @@
 #include <stdio.h>
-
 int main(){
-	int x,y,z,sum = 0,counter1;
+int x,y,z,sum = 0, m=1,n=1;
 	while(1){
-		printf("Enter the two numbers");
-		scanf("%d %d",&x,&y);
+	printf("Enter the two numbers");
+	scanf("%d %d",&x,&y);
+
 		if(x<y){
-			break;
-		}
+	break;
 	}
-	counter1 = x;
+}
+
 	z = x;
+
 	while(1){
-		sum = x+z;
-		x=z;
-		z=sum;
+	sum = m+n;
+	m=n;
+	n=sum;
 		if(sum>y){
-			break;
-		}
-		printf("%d/", sum);
+	break;
 	}
-	return 0;
+if(sum > x){
+printf("%d/", sum);
+}
+}
+printf("\n");
+return 0;
 }
