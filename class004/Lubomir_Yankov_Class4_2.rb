@@ -1,9 +1,8 @@
 hash = Hash.new
-sum = Hash.new
 exercise = ["2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18"]
 i = 0
 k = 0
-sum[0] = 0
+sum = 0
 Dir.glob("#{ARGV[0]}/**/*.*") do |myFile|
 	short_name = myFile.split('/').last
 	full_name = myFile.split('/').last.split('.').first.split('_')
@@ -18,13 +17,10 @@ Dir.glob("#{ARGV[0]}/**/*.*") do |myFile|
 				if hash[student_name] != nil					
 					currentUserFiles = hash[student_name]
 					currentUserFiles << task.to_i
-					sum[student_name]+=task.to_i
 				else 
-					sum[student_name] = 0
 					hash[student_name] = []
 					currentUserFiles = hash[student_name]
 					currentUserFiles << task.to_i
-					sum[student_name]+=task.to_i
 					hash[student_name]=currentUserFiles
 				end
 			end
@@ -32,12 +28,10 @@ Dir.glob("#{ARGV[0]}/**/*.*") do |myFile|
 	end
 sorted_hash = hash.sort_by {|student_name, value| student_name}
 	sorted_hash.each do |student_name, value| 
+		value = value.sort.uniq
 		value.each do |e|
-			value[k].to_i
-			k+=1
+		sum += e.to_i
 		end
-		
-		value = value.sort
-		puts "#{student_name},#{value.join(",")},#{sum[student_name]}"
-
+		puts "#{student_name},#{value.join(",")},#{sum}"
+		sum = 0
 	end
