@@ -16,6 +16,8 @@ end
 
 puts 18
 
-for i in 2..18
+for i in 2..17
 	print "#{ary[i]},"
 end
+
+print ary[18]
