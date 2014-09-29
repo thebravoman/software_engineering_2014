@@ -1,49 +1,30 @@
 student = Hash.new{ |name, programs| name[programs] = []}
-sum_pr = 0
 directory = ARGV[0]
 
 Dir.glob("#{directory}/**/*") do |my_repository|
+        name_dir = my_repository.split("/").last
+        name = name_dir.split("_").first.capitalize
+        sir_name_dir = name_dir.split("_", 2).last
+        sir_name = sir_name_dir.split("_").first.capitalize
+        program_dir = my_repository.split("_").last
+        program = program_dir.split(".").first
 
-        name_dir = my_repository.split("/")
-        name = name_dir.last.split("_").first
-        sir_name_dir = name_dir.last.split("_", 2)
-        sir_name = sir_name_dir.last.split("_").first
-        program_dir = my_repository.split("_")
-        program = program_dir.last.split(".").first
-
-	word_list = name_dir.last
-	counter = 0
-	if word_list.include? "_"
-		counter = word_list.count "\\_"
-	end
-	
+	if name_dir.include? "_" then counter = name_dir.count "_" end
 	i = 2
-	boolean = 0
-	while (i <= 18) do
-		if program.to_i == i
-			boolean = 1
-		end	
+	bool = false
+	2.upto(18) {  
+		if program.to_i == i then bool = true end 
 		i += 1
-	end
-
-	if ((name == "" || name == " ") || (sir_name == "" || sir_name == " ")) 
-	else
-		if (boolean == 1) && (counter == 2)
-			student["#{name} #{sir_name}"] << program.to_i
-		end
-	end
+	}
+	student["#{name} #{sir_name}"] << program.to_i if ((bool == true) && (counter == 2) && (name != "") && (name != " ") && (sir_name != "") && (sir_name != " "))
 end
 
 student.sort.each do |name, programs|
-
+	sum_pr = 0
        	print "#{name},"
 	programs.uniq.sort.each do |pr| 
-		print pr
-		print ","
+		print "#{pr},"
 		sum_pr += pr
 	end
-
-        print sum_pr
-	puts
-        sum_pr = 0
+        puts sum_pr
 end
