@@ -1,6 +1,6 @@
 student = Hash.new{ |name, programs| name[programs] = []}
 
-Dir.glob("fixtures/*") do |file|
+Dir.glob("#{ARGV[0]}/**/*.*") do |file|
 	
 	name = file.split("/").last.split("_").first
 	last_name = file.split("/").last.split("_", 2).last.split("_").first

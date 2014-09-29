@@ -5,7 +5,6 @@
 tasks = ["2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18"]
 information = Hash.new{|hsh,key| hsh[key] = []}
 sortedHash = Hash.new{|hsh1 ,key1| hsh1[key1] = []}
-sum = Hash.new{}
 points = 0
 path_to_folder = ''
 ARGV.each do|v| 
@@ -28,12 +27,7 @@ Dir.glob(path_to_folder + "/**/*") do |my_text_file|
         short_name[0] = short_name[0].capitalize
         short_name[1] = short_name[1].capitalize
         task = task.to_i
-    	  if !sum["#{short_name[0]} #{short_name[1]}"]
-    	  	points = 0
-    	  end
-    	  information["#{short_name[0]} #{short_name[1]}"] << task
-    	  points += task.to_i
-    	  sum["#{short_name[0]} #{short_name[1]}"] = points
+    	information["#{short_name[0]} #{short_name[1]}"] << task
       end
     end
   end
@@ -41,9 +35,12 @@ end
   sortedHash = information.sort
   sortedHash.sort.each{ |k,v| 
   	print "#{k}," 
+  	points = 0
+  	v = v.uniq
   	v.sort.each{ |key| 
+  	  points += key.to_i
       print "#{key},"
   	}
-  	print sum["#{k}"]
+  	print points
   	puts "\n"
   }

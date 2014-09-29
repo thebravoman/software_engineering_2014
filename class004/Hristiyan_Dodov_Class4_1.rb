@@ -11,10 +11,10 @@ if taskEnd == 0; taskEnd = 18; end
 #nullify to prevent errors
 for i in taskStart..taskEnd do tasks[i] = 0; end
 
-Dir.glob(path + "/**/*\.*") do |fn|
-	str = fn[/[A-Z a-z]+_[A-Z a-z]+_\d+\.[^~]+$/]
-	#matches multipleLetters_multipleLetters_number.extension(~ excluded)
-	
+Dir.glob(path + "**/*\.*") do |fn|
+	str = fn[/\/[A-Za-z]+_[A-Za-z]+_\d+\.[^~]+$/]
+	#matches /multipleLetters_multipleLetters_number.extension(~ excluded)
+
 	next if str == nil		#skip iteration if regex returns nil
 	str = str[/\d+\./]		#gets only the number
 	str = str.to_i			#converts the number to integer
@@ -26,11 +26,11 @@ end
 for i in taskStart..taskEnd do
 	if i == taskStart; print "#{i}"; else print ",#{i}"; end
 end
+
 puts
 
 for i in taskStart..taskEnd do
 	if i == taskStart; print "#{tasks[i]}"; else print ",#{tasks[i]}"; end
 end
-puts
 
 $end
