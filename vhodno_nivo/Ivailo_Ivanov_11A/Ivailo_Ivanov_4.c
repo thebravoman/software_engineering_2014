@@ -4,7 +4,6 @@ int x,y,z,sum = 0, m=1,n=1;
 	while(1){
 	printf("Enter the two numbers");
 	scanf("%d %d",&x,&y);
-
 		if(x<y){
 	break;
 	}
