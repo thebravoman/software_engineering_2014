@@ -5,10 +5,10 @@ Dir.glob(ARGV[0] + "*.rb") do |program|
 	    program_output = `ruby #{program} #{fixture}`
 	    expected_result_file = File.open("#{fixture}/expected_results2.csv", "r")
 	    expected_result_content = IO.read(expected_result_file)
-	    if program_output == expected_result_content
-	   	  puts "#{program} works correctly"
+	    if program_output.gsub(/\s/, '') == expected_result_content.gsub(/\s/, '')
+	   	  puts "#{program.split('/').last} WORKS WITH #{fixture.split('/').last}"
 	    else
-	      puts "#{program} does not work correctly"
+	      puts "#{program.split('/').last} DOES NOT WORK WITH #{fixture.split('/').last}"
 	    end
 
 	    expected_result_file.close
