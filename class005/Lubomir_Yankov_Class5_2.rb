@@ -1,4 +1,3 @@
-student = Hash.new 
 Dir.glob(ARGV[0] + "*.rb") do |script_file|
 	Dir.glob(ARGV[1] + "**") do |fixture|
 		p2_compare = ""
