@@ -1,5 +1,5 @@
 student = Hash.new{ |name, programs| name[programs] = []}
-Dir.glob("fixtures/*") do |my_file|
+Dir.glob("#{ARGV[0]}/*.*") do |my_file|
   name = my_file.split("/").last.split("_").first
   last_name = my_file.split("/").last.split("_", 2).last.split("_").first
   number = my_file.split("_").last.split(".").first
@@ -15,6 +15,3 @@ student.sort.each do |name, programs|
   end
   puts sum
 end
-
-
-#{ARGV[0]}/*.*
