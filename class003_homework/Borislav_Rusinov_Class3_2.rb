@@ -1,4 +1,4 @@
-hash = Hash.new("");
+hash = Hash.new("")
 b=ARGV[0]
 Dir.glob("#{b}/*/*.*")  do |my_text_file|
 first_name = my_text_file.split(/\//)
