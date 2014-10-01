@@ -3,12 +3,14 @@
 # Task 5
 
 require 'csv'
-DEFAULT_PATH = 'D:/GitClone/software_engineering_2014'
-Dir.glob("#{DEFAULT_PATH}/" + ARGV[0] + "*.rb") do |script_file|
-  Dir.glob("#{DEFAULT_PATH}/" + ARGV[1] + "*") do |fixture|
+Dir.glob(ARGV[0] + "*.rb") do |script_file|
+  Dir.glob(ARGV[1] + "*") do |fixture|
 	student_grade = script_file.split('/').last.split('.').first.split('_').last.to_i
 	if student_grade == 2
 		output = %x{ruby #{script_file} #{fixture}}
+		if output.end_with? "\n"
+			output = output[0..-2]
+		end
 	  	if File.exists?("#{fixture}/expected_results2.csv")
 	  		file = File.open("#{fixture}/expected_results2.csv","r")
 	  		contents = file.read
