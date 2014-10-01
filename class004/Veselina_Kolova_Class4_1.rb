@@ -4,7 +4,7 @@ Dir.glob("#{ARGV[0]}/**/*.*") do |f|
 
 	tn = f.split(/_/).last.split(/\./).first.to_i
 
-	if File.extname(f) != ".class" && !f.include?("~") then
+	if File.extname(f) != ".class" && !f.include?("~") && tn.between?(2, 18) then
 		tasks[tn] += 1
 	end
 
