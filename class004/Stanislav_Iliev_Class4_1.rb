@@ -5,7 +5,7 @@ ARGV.each do |dir|
 	Dir.glob("#{dir}/**/*.*") do |my_text_file|
 		s = my_text_file.split(/_/).last.split(/\./).first
 		task_count = s.to_i
-		if task_count < max++
+		if task_count < max
 			homework_array[task_count] += 1
 		end
 	end
