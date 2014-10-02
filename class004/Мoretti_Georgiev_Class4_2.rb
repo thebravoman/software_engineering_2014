@@ -8,9 +8,7 @@ Dir.glob("#{ARGV[0]}/*.*") do |fileName|
 	taskNum = fileName.split("_").last.split(".").first
 
 		if taskNum.to_i.to_s == taskNum
-
-			hash[firstName.capitalize + " " + lastName.capitalize] << taskNumber.to_i
-
+			student[firstName.capitalize + " " + lastName.capitalize] << taskNum.to_i
 		end
 end
 

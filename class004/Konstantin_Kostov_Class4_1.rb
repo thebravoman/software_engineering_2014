@@ -4,7 +4,7 @@
   number= s.last.split(/\./).first
   if number.length < 3
         i=number.to_i
-  if i<=20
+  if i<20
         c[i]=c[i]+1
     end
     end

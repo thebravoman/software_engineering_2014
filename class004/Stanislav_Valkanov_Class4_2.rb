@@ -9,7 +9,10 @@ zad = ""
 path = ARGV[0]
   Dir.glob(path + "**/*.*") do |my_text_file|
     short_name = my_text_file.split('/').last.split('.').first
-    name = short_name.split("_")[0]+"_"+short_name.split("_")[1]
+		name = short_name.split("_")[0]
+		if short_name.split("_")[1]
+			name = name + "_" + short_name.split("_")[1]
+		end
     if short_name.split('_').last.split('.').first.to_i < 19 and short_name.split('_').last.split('.').first.to_i > 1
   Dir.glob(path + "#{name}*.*") do |o|  
     zad = zad + o.split('_').last.split('.').first+","

@@ -11,9 +11,10 @@ Dir.glob("#{ARGV.first}/*.*") do |my_text_file|
   s = my_text_file.split(/_/)
   s = s.last.split(/\./).first
   s = s.to_i
-	arrayCount = s - 1 
-
-  array[arrayCount] += 1
+  if (2..18).include? s 
+	  arrayCount = s - 1 
+	  array[arrayCount] += 1
+  end
 	
 end
 
