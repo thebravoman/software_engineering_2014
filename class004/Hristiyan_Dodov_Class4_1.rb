@@ -11,7 +11,7 @@ if taskEnd == 0; taskEnd = 18; end
 #nullify to prevent errors
 for i in taskStart..taskEnd do tasks[i] = 0; end
 
-Dir.glob(path + "**/*\.*") do |fn|
+Dir.glob(path + "/**/*\.*") do |fn|
 	str = fn[/\/[A-Za-z]+_[A-Za-z]+_\d+\.[^~]+$/]
 	#matches /multipleLetters_multipleLetters_number.extension(~ excluded)
 

@@ -1,4 +1,4 @@
-acceptable_extensions = [ '.c', '.cpp', '.rb', '.py', '.java', '.html' ]
+acceptable_extensions = [ '.c', '.cpp', '.cc', '.rb', '.py', '.java', '.html', '.js', '.pas' ]
 hash = Hash.new { |hash, key| hash[key] = Array.new }
 dir_path = ARGV[0]
 Dir.glob("#{dir_path}/**/*.*") do |file|
