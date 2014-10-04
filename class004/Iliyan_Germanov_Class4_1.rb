@@ -1,4 +1,4 @@
-task_counter = Array.new(17,0)
+task_counter = Array.new(18,0)
 def is_number(o)
     true if Integer(o) rescue false
 end
@@ -12,7 +12,7 @@ Dir.glob(ARGV[0] + "/**/*.*") do |path|
 		s = path.split(/_/)
 		task_number = s.last.split(/\./).first
 		if is_number(task_number) && all_letters(target_file[0]) && all_letters(target_file[1])
-			if task_number.to_i > 0 and task_number.to_i < 19 
+			if task_number.to_i > 1 and task_number.to_i < 19 
 				task_counter[task_number.to_i - 2] += 1 
 			end
 		end
