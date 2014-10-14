@@ -29,8 +29,15 @@ Dir.glob(ARGV[0]+"*2.rb").each do |script_file|
 			end
 	end
 end
+=begin
+hash_map = -> THIS ONE WORKS
+		{
+			key:student1
+			value: {F1:1,F2:0,F3:1,F4:0}	
+		}
+=end
 CSV.open("results.csv", "w") do |csv|
-		results.each_key do |key|
+	results.each_key do |key|
 		csv << [key,results[key].values].flatten
 	end
 end
