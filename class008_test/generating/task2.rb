@@ -11,7 +11,7 @@ class Task2 < Task
 			:in_which_order => "ASC",
 			:expected=>
 "L5le1,F5le9
-L5le2,F5le2,
+L5le2,F5le2
 L5le3,F5le3
 "
 		}
