@@ -1,5 +1,8 @@
-Name,Result,Task,Expected,Output
-../results/a/results/Denis_Trenchev_4_b4c3f5.rb,0,"Develop a program named FirstName_LastName_ClassNumber_b4c3f5.rb
+Name,Result,Program error,Task,Expected,Output csv
+../results/a/results/Denis_Trenchev_4_b4c3f5.rb,0,"../results/a/results/Denis_Trenchev_4_b4c3f5.rb:31:in `block in <main>': undefined local variable or method `arr' for main:Object (NameError)
+	from ../results/a/results/Denis_Trenchev_4_b4c3f5.rb:25:in `glob'
+	from ../results/a/results/Denis_Trenchev_4_b4c3f5.rb:25:in `<main>'
+","Develop a program named FirstName_LastName_ClassNumber_b4c3f5.rb
 
 1. you are given two arguments for a folders with files;
 1.1 if there are other arguments they should be discarded;
@@ -16,8 +19,8 @@ Name,Result,Task,Expected,Output
 ","L5le1,F5le9
 L5le2,F5le2
 L5le3,F5le3
-",No result.csv file was found
-../results/a/results/Marian_Belchev_17_ad26e0.rb,0,"Develop a program named FirstName_LastName_ClassNumber_ad26e0.rb
+",No such file or directory - result.csv. No result.csv file was found.
+../results/a/results/Marian_Belchev_17_ad26e0.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_ad26e0.rb
 
 1. you are given two arguments for a folders with files;
 1.1 if there are other arguments they should be discarded;
@@ -33,8 +36,11 @@ L5le3,F5le3
 
 ","L5le4,F5le4
 LastName3,FirstName3
-",No result.csv file was found
-../results/a/results/Ivelin_Slavchev_10_835552.rb,0,"Develop a program named FirstName_LastName_ClassNumber_835552.rb
+",No such file or directory - result.csv. No result.csv file was found.
+../results/a/results/Ivelin_Slavchev_10_835552.rb,0,"../results/a/results/Ivelin_Slavchev_10_835552.rb:33:in `block in <main>': undefined local variable or method `digit' for main:Object (NameError)
+	from ../results/a/results/Ivelin_Slavchev_10_835552.rb:28:in `each'
+	from ../results/a/results/Ivelin_Slavchev_10_835552.rb:28:in `<main>'
+","Develop a program named FirstName_LastName_ClassNumber_835552.rb
 
 1. you are given two arguments for a folders with files;
 1.1 if there are other arguments they should be discarded;
@@ -54,8 +60,11 @@ F10letter2_L10letter2.rb,24
 F10letter3_L10letter4.rb,24
 F10letters_L10letters.rb,24
 invalid.rb,10
-",No result.csv file was found
-../results/a/results/Stanislav_Valkanov_25_4482c1.rb,0,"Develop a program named FirstName_LastName_ClassNumber_4482c1.rb
+",No such file or directory - result.csv. No result.csv file was found.
+../results/a/results/Stanislav_Valkanov_25_4482c1.rb,0,"../results/a/results/Stanislav_Valkanov_25_4482c1.rb:23:in `block in <main>': undefined method `length' for nil:NilClass (NoMethodError)
+	from ../results/a/results/Stanislav_Valkanov_25_4482c1.rb:18:in `glob'
+	from ../results/a/results/Stanislav_Valkanov_25_4482c1.rb:18:in `<main>'
+","Develop a program named FirstName_LastName_ClassNumber_4482c1.rb
 
 1. you are given an argument for a folder with files;
 1.1 if there are other arguments they should be discarded
@@ -73,8 +82,13 @@ invalid.rb,10
 ","F5le9,L5le1
 F5le3,L5le3
 F5le2,L5le2
-",No result.csv file was found
-../results/a/results/Petko_Bozhinov_21_954dc6.rb,0,"Develop a program named FirstName_LastName_ClassNumber_954dc6.rb
+",No such file or directory - result.csv. No result.csv file was found.
+../results/a/results/Petko_Bozhinov_21_954dc6.rb,0,"../results/a/results/Petko_Bozhinov_21_954dc6.rb:30:in `block (2 levels) in <main>': undefined method `numeric?' for nil:NilClass (NoMethodError)
+	from ../results/a/results/Petko_Bozhinov_21_954dc6.rb:27:in `glob'
+	from ../results/a/results/Petko_Bozhinov_21_954dc6.rb:27:in `block in <main>'
+	from ../results/a/results/Petko_Bozhinov_21_954dc6.rb:25:in `glob'
+	from ../results/a/results/Petko_Bozhinov_21_954dc6.rb:25:in `<main>'
+","Develop a program named FirstName_LastName_ClassNumber_954dc6.rb
 
 1. you are given two arguments for a folders with files;
 1.1 if there are other arguments they should be discarded;
@@ -91,8 +105,16 @@ F5le2,L5le2
 ","L5le1,F5le9
 L5le2,F5le2
 L5le3,F5le3
-",No result.csv file was found
-../results/a/results/Nikola_Marinov_20_add57e.rb,0,"Develop a program named FirstName_LastName_ClassNumber_add57e.rb
+",No such file or directory - result.csv. No result.csv file was found.
+../results/a/results/Nikola_Marinov_20_add57e.rb,0,"../results/a/results/Nikola_Marinov_20_add57e.rb:29: syntax error, unexpected '=', expecting keyword_end
+ array(count) = []
+               ^
+../results/a/results/Nikola_Marinov_20_add57e.rb:43: syntax error, unexpected '=', expecting keyword_end
+ array(count) = []
+               ^
+../results/a/results/Nikola_Marinov_20_add57e.rb:49: syntax error, unexpected '}'
+../results/a/results/Nikola_Marinov_20_add57e.rb:55: syntax error, unexpected $end, expecting '}'
+","Develop a program named FirstName_LastName_ClassNumber_add57e.rb
 
 1. you are given two arguments for a folders with files;
 1.1 if there are other arguments they should be discarded;
@@ -108,8 +130,8 @@ L5le3,F5le3
 ","F10letter3_L10letter4_3,12
 F10letter2_L10letter2_6,11
 F10letter1_L10letter1_7,11
-",No result.csv file was found
-../results/a/results/Georgi_Ivanov_3_871529.rb,1,"Develop a program named FirstName_LastName_ClassNumber_871529.rb
+",No such file or directory - result.csv. No result.csv file was found.
+../results/a/results/Georgi_Ivanov_3_871529.rb,1,,"Develop a program named FirstName_LastName_ClassNumber_871529.rb
 
 1. you are given an argument for a folder with files;
 1.1 if there are other arguments they should be discarded
@@ -131,7 +153,7 @@ F5le2,L5le2
 F5le3,L5le3
 F5le2,L5le2
 "
-../results/a/results/Radoslav_Kostadinov_22_772118.rb,0,"Develop a program named FirstName_LastName_ClassNumber_772118.rb
+../results/a/results/Radoslav_Kostadinov_22_772118.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_772118.rb
 
 1. you are given two arguments for a folders with files;
 1.1 if there are other arguments they should be discarded;
@@ -230,7 +252,12 @@ L5le1,F5le9
 LastName1,FirstName1
 LastName3,FirstName3
 "
-../results/a/results/Simeon_Shopkin_23_56a835.rb,0,"Develop a program named FirstName_LastName_ClassNumber_56a835.rb
+../results/a/results/Simeon_Shopkin_23_56a835.rb,0,"../results/a/results/Simeon_Shopkin_23_56a835.rb:26:in `block (2 levels) in <main>': undefined method `split' for [""F10letter3"", ""L10letter4""]:Array (NoMethodError)
+	from ../results/a/results/Simeon_Shopkin_23_56a835.rb:22:in `glob'
+	from ../results/a/results/Simeon_Shopkin_23_56a835.rb:22:in `block in <main>'
+	from ../results/a/results/Simeon_Shopkin_23_56a835.rb:21:in `glob'
+	from ../results/a/results/Simeon_Shopkin_23_56a835.rb:21:in `<main>'
+","Develop a program named FirstName_LastName_ClassNumber_56a835.rb
 
 1. you are given two arguments for a folders with files;
 1.1 if there are other arguments they should be discarded;
@@ -250,8 +277,12 @@ F10letter3_L10letter4.rb,24
 F10letters_L10letters.rb,24
 FirstName3_LastName3Invalid.rb,31
 FirstName3Invalid_LastName3Invalid.rb,37
-",No result.csv file was found
-../results/a/results/Ivo_Valchev_11_6c8bd9.rb,0,"Develop a program named FirstName_LastName_ClassNumber_6c8bd9.rb
+",No such file or directory - result.csv. No result.csv file was found.
+../results/a/results/Ivo_Valchev_11_6c8bd9.rb,0,"../results/a/results/Ivo_Valchev_11_6c8bd9.rb:23: syntax error, unexpected tIDENTIFIER, expecting keyword_then or ';' or '\n'
+...== 5 and !isNum!=nil hash_fold1.include?(name[0])
+...                               ^
+../results/a/results/Ivo_Valchev_11_6c8bd9.rb:26: syntax error, unexpected keyword_end, expecting $end
+","Develop a program named FirstName_LastName_ClassNumber_6c8bd9.rb
 
 1. you are given two arguments for a folders with files;
 1.1 if there are other arguments they should be discarded;
@@ -268,8 +299,8 @@ FirstName3Invalid_LastName3Invalid.rb,37
 ","L5le1,F5le9
 L5le2,F5le2
 L5le3,F5le3
-",No result.csv file was found
-../results/a/results/Kristina_Pironkova_15_890ba0.rb,0,"Develop a program named FirstName_LastName_ClassNumber_890ba0.rb
+",No such file or directory - result.csv. No result.csv file was found.
+../results/a/results/Kristina_Pironkova_15_890ba0.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_890ba0.rb
 
 1. you are given an argument for a folder with files;
 1.1 if there are other arguments they should be discarded
@@ -288,8 +319,8 @@ L5le3,F5le3
 F10letter4,L10letter4
 F10letter2,L10letter2
 F10letter1,L10letter1
-",No result.csv file was found
-../results/a/results/Hristo_Dachev_29_4a196f.rb,0,"Develop a program named FirstName_LastName_ClassNumber_4a196f.rb
+",No such file or directory - result.csv. No result.csv file was found.
+../results/a/results/Hristo_Dachev_29_4a196f.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_4a196f.rb
 
 1. you are given two arguments for a folders with files;
 1.1 if there are other arguments they should be discarded;
@@ -310,14 +341,18 @@ F10letter3_L10letter4.rb,24
 F10letters_L10letters.rb,24
 invalid.rb,10
 ","invalid.rb,10
-F10letter1_L10letter1.rb,24
 F10letter3_L10letter4.rb,24
 F10letter2_L10letter2.rb,24
 F10letters_L10letters.rb,24
+F10letter1_L10letter1.rb,24
 FirstName3_LastName3Invalid.rb,30
 FirstName3Invalid_LastName3Invalid.rb,37
 "
-../results/a/results/Dimitar_Nestorov_7_0d5526.rb,0,"Develop a program named FirstName_LastName_ClassNumber_0d5526.rb
+../results/a/results/Dimitar_Nestorov_7_0d5526.rb,0,"../results/a/results/Dimitar_Nestorov_7_0d5526.rb:42:in `block in <main>': undefined method `-@' for "" L10letter2"":String (NoMethodError)
+	from ../results/a/results/Dimitar_Nestorov_7_0d5526.rb:42:in `each'
+	from ../results/a/results/Dimitar_Nestorov_7_0d5526.rb:42:in `sort_by'
+	from ../results/a/results/Dimitar_Nestorov_7_0d5526.rb:42:in `<main>'
+","Develop a program named FirstName_LastName_ClassNumber_0d5526.rb
 
 1. you are given an argument for a folder with files;
 1.1 if there are other arguments they should be discarded
@@ -336,8 +371,8 @@ FirstName3Invalid_LastName3Invalid.rb,37
 F10letter4,L10letter4
 F10letter2,L10letter2
 F10letter1,L10letter1
-",No result.csv file was found
-../results/a/results/Lubomir_Yankov_16_650c0b.rb,0,"Develop a program named FirstName_LastName_ClassNumber_650c0b.rb
+",No such file or directory - result.csv. No result.csv file was found.
+../results/a/results/Lubomir_Yankov_16_650c0b.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_650c0b.rb
 
 1. you are given two arguments for a folders with files;
 1.1 if there are other arguments they should be discarded;
@@ -353,8 +388,11 @@ F10letter1,L10letter1
 ","F10letter3_L10letter4_3,12
 F10letter2_L10letter2_6,11
 F10letter1_L10letter1_7,11
-",No result.csv file was found
-../results/a/results/Tihomir_Lidanski_27_dafd44.rb,0,"Develop a program named FirstName_LastName_ClassNumber_dafd44.rb
+",No such file or directory - result.csv. No result.csv file was found.
+../results/a/results/Tihomir_Lidanski_27_dafd44.rb,0,"../results/a/results/Tihomir_Lidanski_27_dafd44.rb:18: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+	name = file.split (""/"")last.split(""."")
+	                           ^
+","Develop a program named FirstName_LastName_ClassNumber_dafd44.rb
 
 1. you are given two arguments for a folders with files;
 1.1 if there are other arguments they should be discarded;
@@ -370,9 +408,9 @@ F10letter1_L10letter1_7,11
 ","F10letter3_L10letter4_3,12
 F10letter2_L10letter2_6,11
 F10letter1_L10letter1_7,11
-",No result.csv file was found
-../results/a/results/Kalin_Marinov_14_12_bce70c.rb,0,Can not be determined because of hex 12 and number 14,Can not be determined since the hex is 12. Check file name format,No result.csv file was found
-../results/a/results/Stanislav_Gospodinov_26_b36abb.rb,0,"Develop a program named FirstName_LastName_ClassNumber_b36abb.rb
+",No such file or directory - result.csv. No result.csv file was found.
+../results/a/results/Kalin_Marinov_14_12_bce70c.rb,,,No such file or directory - ../results/a/expects/12.csv. Can not be determined because of hex 12 and number 14,No such file or directory - ../results/a/expects/12.csv. Can not be determined since the hex is 12. Check file name format,
+../results/a/results/Stanislav_Gospodinov_26_b36abb.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_b36abb.rb
 
 1. you are given an argument for a folder with files;
 1.1 if there are other arguments they should be discarded
@@ -390,9 +428,9 @@ F10letter1_L10letter1_7,11
 ","F5le9,L5le1
 F5le2,L5le2
 F5le3,L5le3
-",No result.csv file was found
-../results/a/results/Borislav_Rusinov_2_6fb3ad.rb,0,Can not be determined because of hex 6fb3ad and number 2,Can not be determined since the hex is 6fb3ad. Check file name format,No result.csv file was found
-../results/a/results/Moretti_Georgiev_19_b7f153.rb,0,"Develop a program named FirstName_LastName_ClassNumber_b7f153.rb
+",No such file or directory - result.csv. No result.csv file was found.
+../results/a/results/Borislav_Rusinov_2_6fb3ad.rb,,,No such file or directory - ../results/a/tests/2_6fb3ad.txt. Can not be determined because of hex 6fb3ad and number 2,No such file or directory - ../results/a/tests/2_6fb3ad.txt. Can not be determined since the hex is 6fb3ad. Check file name format,
+../results/a/results/Moretti_Georgiev_19_b7f153.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_b7f153.rb
 
 1. you are given an argument for a folder with files;
 1.1 if there are other arguments they should be discarded
@@ -416,7 +454,12 @@ F10letters,L10letters
 ""F10letter3, L10letter4""
 ""F10letters, L10letters""
 "
-../results/a/results/Momchil_Angelov_18_d8aa65.rb,0,"Develop a program named FirstName_LastName_ClassNumber_d8aa65.rb
+../results/a/results/Momchil_Angelov_18_d8aa65.rb,0,"../results/a/results/Momchil_Angelov_18_d8aa65.rb:34: warning: found = in conditional, should be ==
+../results/a/results/Momchil_Angelov_18_d8aa65.rb:50: warning: found = in conditional, should be ==
+../results/a/results/Momchil_Angelov_18_d8aa65.rb:44:in `block in <main>': undefined local variable or method `short' for main:Object (NameError)
+	from ../results/a/results/Momchil_Angelov_18_d8aa65.rb:40:in `glob'
+	from ../results/a/results/Momchil_Angelov_18_d8aa65.rb:40:in `<main>'
+","Develop a program named FirstName_LastName_ClassNumber_d8aa65.rb
 
 1. you are given two arguments for a folders with files;
 1.1 if there are other arguments they should be discarded;
@@ -436,8 +479,8 @@ F10letter2_L10letter2.rb,24
 F10letter3_L10letter4.rb,24
 F10letters_L10letters.rb,24
 invalid.rb,10
-",No result.csv file was found
-../results/a/results/Kamena_Dacheva_13_0af18f.rb,0,"Develop a program named FirstName_LastName_ClassNumber_0af18f.rb
+",No such file or directory - result.csv. No result.csv file was found.
+../results/a/results/Kamena_Dacheva_13_0af18f.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_0af18f.rb
 
 1. you are given an argument for a folder with files;
 1.1 if there are other arguments they should be discarded
@@ -459,7 +502,7 @@ F5le2,L5le2
 F5le2,L5le2
 F5le9,L5le1
 "
-../results/a/results/Stanimir_Bogdanov_24_ca514d.rb,0,"Develop a program named FirstName_LastName_ClassNumber_ca514d.rb
+../results/a/results/Stanimir_Bogdanov_24_ca514d.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_ca514d.rb
 
 1. you are given an argument for a folder with files;
 1.1 if there are other arguments they should be discarded
@@ -485,23 +528,8 @@ F10letter3,L10letter4
 F10letter2,L10letter2
 F10letter1,L10letter1
 "
-../results/a/results/Veselin_Dechev_11A2_5f1c22.rb,0,Can not be determined because of hex 5f1c22 and number 11A2,Can not be determined since the hex is 5f1c22. Check file name format,"F10letter1,L10letter1.rb
-F10letter1,L10letter1
-F10letter2,L10letter2
-F10letter2,L10letter2.rb
-F10letter3,L10letter4.rb
-F10letter3,L10letter4
-F10letters,L10letters
-F10letters,L10letters.rb
-F5le2,L5le2
-F5le9,L5le1
-Firstname1,Lastname1
-Firstname2,Lastname2
-Firstname3,Lastname3invalid.rb
-Firstname3invalid,Lastname3invalid.rb
-Invalid.rb,Invalid.rb
-"
-../results/a/results/Dimitar_Terziev_6_88db52.rb,0,"Develop a program named FirstName_LastName_ClassNumber_88db52.rb
+../results/a/results/Veselin_Dechev_11A2_5f1c22.rb,,,No such file or directory - ../results/a/tests/11A2_5f1c22.txt. Can not be determined because of hex 5f1c22 and number 11A2,No such file or directory - ../results/a/tests/11A2_5f1c22.txt. Can not be determined since the hex is 5f1c22. Check file name format,
+../results/a/results/Dimitar_Terziev_6_88db52.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_88db52.rb
 
 1. you are given an argument for a folder with files;
 1.1 if there are other arguments they should be discarded
