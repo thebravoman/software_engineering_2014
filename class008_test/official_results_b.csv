@@ -1,0 +1,463 @@
+Name,Result,Program error,Task,Expected,Output csv
+../results/b/results/Stanislav_Iliev_26_627d43.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_627d43.rb
+
+1. you are given two arguments for a folders with files;
+1.1 if there are other arguments they should be discarded;
+2. file names in this folders are in the form First_Last_digits.rb; 
+3. find  the students that are only in the first folder and not in the second. A student is in both folders if it there is a file with the same First and Last Name. Digits might be different;
+4. Sort the result by Last name ;
+5. Produce a result in CSV format named result.csv:
+
+	LastName1,FirstName1
+	LastName2,FirstName2
+	...
+	LastNameN,FirstNameN
+
+","LastName4,FirstName4
+L5le3_3,F5le3
+","F10letters_L10letters.rb
+FirstName3Invalid_LastName3Invalid.rb
+F5le2_L5le2_1.rb
+FirstName1_LastName1_8888.rb
+F10letter1_L10letter1.rb
+F10letter2_L10letter2_6.rb
+F10letter3_L10letter4_3.rb
+FirstName3_LastName3_8888.rb
+F10letter3_L10letter4.rb
+F5le4_L5le4_3.rb
+F10letters_L10letters_8.rb
+invalid.rb
+F5le9_L5le1_1.rb
+F10letter1_L10letter1_7.rb
+FirstName2_LastName2_8888.rb
+F10letter2_L10letter2.rb
+"
+../results/b/results/Iliyan_Germanov_17_f8b0d9.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_f8b0d9.rb
+
+1. you are given two arguments for a folders with files;
+1.1 if there are other arguments they should be discarded;
+2. file names in this folders are in the form First_Last_digits.rb; 
+3. find  the students that are only in the first folder and not in the second. A student is in both folders if it there is a file with the same First and Last Name. Digits might be different;
+4. Sort the result by Last name ;
+5. Produce a result in CSV format named result.csv:
+
+	LastName1,FirstName1
+	LastName2,FirstName2
+	...
+	LastNameN,FirstNameN
+
+","LastName4,FirstName4
+L5le3_3,F5le3
+","L5le3,F5le3
+"
+../results/b/results/Stefan_Iliev_28_d77aee.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_d77aee.rb
+
+1. you are given two arguments for a folders with files;
+1.1 if there are other arguments they should be discarded;
+2. Find all the files from both folders that are not in the format FirsrName_LastName_digit.rb. If there are duplicates the file must be written only once. If two files are of the same lenght those files should be sorted in ASC order;
+3. Calculate the length of their names (including extensions).;
+4. Sort the result by length ;
+5. Produce a result in CSV format named result.csv:
+
+			File1,3
+			File2,4
+			...
+			FileN,3
+","invalid.rb,10
+F10letter1_L10letter1.rb,24
+F10letter2_L10letter2.rb,24
+F10letter3_L10letter4.rb,24
+F10letters_L10letters.rb,24
+FirstName3_LastName3Invalid.rb,31
+FirstName3Invalid_LastName3Invalid.rb,37
+",No such file or directory - result.csv. No result.csv file was found.
+../results/b/results/Nikolay_Mihailov_25_f70059.rb,0,"../results/b/results/Nikolay_Mihailov_25_f70059.rb:26:in `block in <main>': undefined method `each' for ""F10letter3_L10letter4.rb"":String (NoMethodError)
+	from ../results/b/results/Nikolay_Mihailov_25_f70059.rb:18:in `glob'
+	from ../results/b/results/Nikolay_Mihailov_25_f70059.rb:18:in `<main>'
+","Develop a program named FirstName_LastName_ClassNumber_f70059.rb
+
+1. you are given two arguments for a folders with files;
+1.1 if there are other arguments they should be discarded;
+2. Find all the files from both folders that have exactly 7 digits from 0 to 9 in their names excluding extension. If there are duplicates the file must be written only once.;
+3. Calculate the length of their names (including extensions) divided by 2 rounded to the smalles number;
+4. Sort the result by File name ;
+5. Produce a result in CSV format named result.csv:
+
+			File1,3
+			File2,4
+			...
+			FileN,3
+","F10letter3_L10letter4_3,12
+F10letter2_L10letter2_6,11
+F10letter1_L10letter1_7,11
+",No such file or directory - result.csv. No result.csv file was found.
+../results/b/results/Borislav_Stratev_2_a65be5.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_a65be5.rb
+
+1. you are given two arguments for a folders with files;
+1.1 if there are other arguments they should be discarded;
+2. file names in this folders are in the form First_Last_digits.rb; 
+3. find  the students that are only in the first folder and not in the second. A student is in both folders if it there is a file with the same First and Last Name. Digits might be different;
+4. Sort the result by Last name ;
+5. Produce a result in CSV format named result.csv:
+
+	LastName1,FirstName1
+	LastName2,FirstName2
+	...
+	LastNameN,FirstNameN
+
+","LastName4,FirstName4
+L5le3_3,F5le3
+",No such file or directory - result.csv. No result.csv file was found.
+../results/b/results/Lili_Kokalova_22_e0ea9c.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_e0ea9c.rb
+
+1. you are given two arguments for a folders with files;
+1.1 if there are other arguments they should be discarded;
+2. file names in this folders are in the form First_Last_digits.rb; 
+3. find  the students that are only in the second folder and not in the first. A student is in both folders if it there is a file with the same First and Last Name. Digits might be different;
+4. Sort the result by First name ;
+5. Produce a result in CSV format named result.csv:
+
+	LastName1,FirstName1
+	LastName2,FirstName2
+	...
+	LastNameN,FirstNameN
+
+","L5le4,F5le4
+LastName3,FirstName3
+","F10letters,L10letters.rb
+FirstName3,LastName3Invalid.rb
+FirstName3Invalid,LastName3Invalid.rb
+F5le2,L5le2
+FirstName1,LastName1
+F10letter1,L10letter1.rb
+F10letter2,L10letter2
+FirstName3,LastName3
+F5le4,L5le4
+F10letters,L10letters
+invalid.rb,invalid.rb
+F5le9,L5le1
+F10letter1,L10letter1
+FirstName2,LastName2
+F10letter2,L10letter2.rb
+F10letters,L10letters.rb
+F5le2,L5le2
+FirstName1,LastName1
+F10letter1,L10letter1.rb
+F10letter2,L10letter2
+F10letter3,L10letter4
+F10letter3,L10letter4.rb
+F5le4,L5le4
+F10letters,L10letters
+invalid.rb,invalid.rb
+F5le9,L5le1
+F10letter1,L10letter1
+FirstName2,LastName2
+F10letter2,L10letter2.rb
+F10letters,L10letters.rb
+FirstName3,LastName3Invalid.rb
+FirstName3Invalid,LastName3Invalid.rb
+F5le2,L5le2
+FirstName1,LastName1
+F10letter1,L10letter1.rb
+F10letter3,L10letter4
+FirstName3,LastName3
+F10letter3,L10letter4.rb
+F5le4,L5le4
+F10letters,L10letters
+invalid.rb,invalid.rb
+F5le9,L5le1
+F10letter1,L10letter1
+FirstName2,LastName2
+F10letters,L10letters.rb
+FirstName3,LastName3Invalid.rb
+FirstName3Invalid,LastName3Invalid.rb
+F5le2,L5le2
+FirstName1,LastName1
+F10letter1,L10letter1.rb
+F10letter3,L10letter4
+FirstName3,LastName3
+F10letter3,L10letter4.rb
+F5le4,L5le4
+F10letters,L10letters
+invalid.rb,invalid.rb
+F5le9,L5le1
+F10letter1,L10letter1
+FirstName2,LastName2
+F10letters,L10letters.rb
+FirstName3,LastName3Invalid.rb
+FirstName3Invalid,LastName3Invalid.rb
+F5le2,L5le2
+FirstName1,LastName1
+F10letter1,L10letter1.rb
+F10letter2,L10letter2
+F10letter3,L10letter4
+FirstName3,LastName3
+F10letter3,L10letter4.rb
+F5le4,L5le4
+F10letters,L10letters
+invalid.rb,invalid.rb
+F5le9,L5le1
+F10letter1,L10letter1
+FirstName2,LastName2
+F10letter2,L10letter2.rb
+F10letters,L10letters.rb
+FirstName3,LastName3Invalid.rb
+FirstName3Invalid,LastName3Invalid.rb
+F5le2,L5le2
+FirstName1,LastName1
+F10letter1,L10letter1.rb
+F10letter2,L10letter2
+FirstName3,LastName3
+F5le4,L5le4
+F10letters,L10letters
+invalid.rb,invalid.rb
+F5le9,L5le1
+F10letter1,L10letter1
+FirstName2,LastName2
+F10letter2,L10letter2.rb
+F10letters,L10letters.rb
+FirstName3,LastName3Invalid.rb
+FirstName3Invalid,LastName3Invalid.rb
+F5le2,L5le2
+FirstName1,LastName1
+F10letter1,L10letter1.rb
+F10letter2,L10letter2
+F10letter3,L10letter4
+FirstName3,LastName3
+F10letter3,L10letter4.rb
+F5le4,L5le4
+F10letters,L10letters
+F5le9,L5le1
+F10letter1,L10letter1
+FirstName2,LastName2
+F10letter2,L10letter2.rb
+F10letters,L10letters.rb
+FirstName3,LastName3Invalid.rb
+FirstName3Invalid,LastName3Invalid.rb
+F5le2,L5le2
+F10letter1,L10letter1.rb
+F10letter2,L10letter2
+F10letter3,L10letter4
+FirstName3,LastName3
+F10letter3,L10letter4.rb
+F5le4,L5le4
+F10letters,L10letters
+invalid.rb,invalid.rb
+F5le9,L5le1
+F10letter1,L10letter1
+FirstName2,LastName2
+F10letter2,L10letter2.rb
+F10letters,L10letters.rb
+FirstName3,LastName3Invalid.rb
+FirstName3Invalid,LastName3Invalid.rb
+F5le2,L5le2
+FirstName1,LastName1
+F10letter2,L10letter2
+F10letter3,L10letter4
+FirstName3,LastName3
+F10letter3,L10letter4.rb
+F5le4,L5le4
+F10letters,L10letters
+invalid.rb,invalid.rb
+F5le9,L5le1
+FirstName2,LastName2
+F10letter2,L10letter2.rb
+FirstName3,LastName3Invalid.rb
+FirstName3Invalid,LastName3Invalid.rb
+F5le2,L5le2
+FirstName1,LastName1
+F10letter1,L10letter1.rb
+F10letter2,L10letter2
+F10letter3,L10letter4
+FirstName3,LastName3
+F10letter3,L10letter4.rb
+F5le4,L5le4
+invalid.rb,invalid.rb
+F5le9,L5le1
+F10letter1,L10letter1
+FirstName2,LastName2
+F10letter2,L10letter2.rb
+FirstName3,LastName3Invalid.rb
+FirstName3Invalid,LastName3Invalid.rb
+F5le2,L5le2
+FirstName1,LastName1
+F10letter1,L10letter1.rb
+F10letter2,L10letter2
+F10letter3,L10letter4
+FirstName3,LastName3
+F10letter3,L10letter4.rb
+F5le4,L5le4
+invalid.rb,invalid.rb
+F5le9,L5le1
+F10letter1,L10letter1
+FirstName2,LastName2
+F10letter2,L10letter2.rb
+F10letters,L10letters.rb
+FirstName3,LastName3Invalid.rb
+FirstName3Invalid,LastName3Invalid.rb
+F5le2,L5le2
+FirstName1,LastName1
+F10letter2,L10letter2
+F10letter3,L10letter4
+FirstName3,LastName3
+F10letter3,L10letter4.rb
+F5le4,L5le4
+F10letters,L10letters
+invalid.rb,invalid.rb
+F5le9,L5le1
+FirstName2,LastName2
+F10letter2,L10letter2.rb
+F10letters,L10letters.rb
+FirstName3,LastName3Invalid.rb
+FirstName3Invalid,LastName3Invalid.rb
+F5le2,L5le2
+FirstName1,LastName1
+F10letter1,L10letter1.rb
+F10letter2,L10letter2
+F10letter3,L10letter4
+FirstName3,LastName3
+F10letter3,L10letter4.rb
+F5le4,L5le4
+F10letters,L10letters
+invalid.rb,invalid.rb
+F10letter1,L10letter1
+FirstName2,LastName2
+F10letter2,L10letter2.rb
+F10letters,L10letters.rb
+F5le2,L5le2
+FirstName1,LastName1
+F10letter1,L10letter1.rb
+F10letter2,L10letter2
+F10letter3,L10letter4
+FirstName3,LastName3
+F10letter3,L10letter4.rb
+F5le4,L5le4
+F10letters,L10letters
+invalid.rb,invalid.rb
+F5le9,L5le1
+F10letter1,L10letter1
+FirstName2,LastName2
+F10letter2,L10letter2.rb
+F10letters,L10letters.rb
+FirstName3,LastName3Invalid.rb
+FirstName3Invalid,LastName3Invalid.rb
+F5le2,L5le2
+FirstName1,LastName1
+F10letter1,L10letter1.rb
+F10letter2,L10letter2
+F10letter3,L10letter4
+FirstName3,LastName3
+F10letter3,L10letter4.rb
+F5le4,L5le4
+F10letters,L10letters
+invalid.rb,invalid.rb
+F5le9,L5le1
+F10letter1,L10letter1
+F10letter2,L10letter2.rb
+F10letters,L10letters.rb
+FirstName3,LastName3Invalid.rb
+FirstName3Invalid,LastName3Invalid.rb
+FirstName1,LastName1
+F10letter1,L10letter1.rb
+F10letter2,L10letter2
+F10letter3,L10letter4
+FirstName3,LastName3
+F10letter3,L10letter4.rb
+F5le4,L5le4
+F10letters,L10letters
+invalid.rb,invalid.rb
+F5le9,L5le1
+F10letter1,L10letter1
+FirstName2,LastName2
+F10letter2,L10letter2.rb
+"
+../results/b/results/David_Georgiev_12_1eea4f.rb,0,"../results/b/results/David_Georgiev_12_1eea4f.rb:20:in `block in <main>': undefined method `length' for nil:NilClass (NoMethodError)
+	from ../results/b/results/David_Georgiev_12_1eea4f.rb:17:in `glob'
+	from ../results/b/results/David_Georgiev_12_1eea4f.rb:17:in `<main>'
+","Develop a program named FirstName_LastName_ClassNumber_1eea4f.rb
+
+1. you are given an argument for a folder with files;
+1.1 if there are other arguments they should be discarded
+2. file names in this folder are in the form First_Last_digits.rb; 
+3. find all the students that have 5 letters in their second name;
+4. Sort the result by Last Name ASC.
+5. Produce a result in CSV format named result.csv:
+
+		FirstName1,LastName1
+		FirstName2,LastName2
+		...
+		FirstNameN,LastNameN
+
+
+","F5le9,L5le1
+F5le2,L5le2
+F5le3,L5le3
+",No such file or directory - result.csv. No result.csv file was found.
+../results/b/results/Valentin_Varbanov_4_041472.rb,0,"../results/b/results/Valentin_Varbanov_4_041472.rb:57:in `block in <main>': undefined local variable or method `name' for main:Object (NameError)
+	from ../results/b/results/Valentin_Varbanov_4_041472.rb:44:in `each'
+	from ../results/b/results/Valentin_Varbanov_4_041472.rb:44:in `<main>'
+","Develop a program named FirstName_LastName_ClassNumber_041472.rb
+
+1. you are given two arguments for a folders with files;
+1.1 if there are other arguments they should be discarded;
+2. file names in this folders are in the form First_Last_digits.rb; 
+3. find  the students that are only in the first folder and not in the second. A student is in both folders if it there is a file with the same First and Last Name. Digits might be different;
+4. Sort the result by Last name ;
+5. Produce a result in CSV format named result.csv:
+
+	LastName1,FirstName1
+	LastName2,FirstName2
+	...
+	LastNameN,FirstNameN
+
+","LastName4,FirstName4
+L5le3_3,F5le3
+",No such file or directory - result.csv. No result.csv file was found.
+../results/b/results/Vladimir_Yordanov_9_4bbed0.rb,0,"../results/b/results/Vladimir_Yordanov_9_4bbed0.rb:26:in `block in <main>': undefined method `length' for nil:NilClass (NoMethodError)
+	from ../results/b/results/Vladimir_Yordanov_9_4bbed0.rb:18:in `glob'
+	from ../results/b/results/Vladimir_Yordanov_9_4bbed0.rb:18:in `<main>'
+","Develop a program named FirstName_LastName_ClassNumber_4bbed0.rb
+
+1. you are given an argument for a folder with files;
+1.1 if there are other arguments they should be discarded
+2. file names in this folder are in the form First_Last_digits.rb; 
+3. find all the students that have 5 letters in their second name;
+4. Sort the result by Last Name ASC.
+5. Produce a result in CSV format named result.csv:
+
+		FirstName1,LastName1
+		FirstName2,LastName2
+		...
+		FirstNameN,LastNameN
+
+
+","F5le9,L5le1
+F5le2,L5le2
+F5le3,L5le3
+",No such file or directory - result.csv. No result.csv file was found.
+../results/b/results/Veselina_Kolova_8_65630e.rb,0,"../results/b/results/Veselina_Kolova_8_65630e.rb:23: syntax error, unexpected tIDENTIFIER, expecting keyword_then or ';' or '\n'
+...le.extname(text_file) text_file.include?("".rb"") && text_file...
+...                               ^
+../results/b/results/Veselina_Kolova_8_65630e.rb:23: syntax error, unexpected tCONSTANT, expecting keyword_end
+...t(/\./).first.to_i.is_a Integer then
+...                               ^
+../results/b/results/Veselina_Kolova_8_65630e.rb:31: syntax error, unexpected keyword_end, expecting $end
+","Develop a program named FirstName_LastName_ClassNumber_65630e.rb
+
+1. you are given an argument for a folder with files;
+1.1 if there are other arguments they should be discarded
+2. file names in this folder are in the form First_Last_digits.rb; 
+3. find all the students that have 5 letters in their second name;
+4. Sort the result by First name DESC.
+5. Produce a result in CSV format named result.csv:
+
+		FirstName1,LastName1
+		FirstName2,LastName2
+		...
+		FirstNameN,LastNameN
+
+
+","F5le9,L5le1
+F5le3,L5le3
+F5le2,L5le2
+",No such file or directory - result.csv. No result.csv file was found.
