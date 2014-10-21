@@ -320,7 +320,7 @@ F10letter4,L10letter4
 F10letter2,L10letter2
 F10letter1,L10letter1
 ",No such file or directory - result.csv. No result.csv file was found.
-../results/a/results/Hristo_Dachev_29_4a196f.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_4a196f.rb
+../results/a/results/Hristo_Dachev_29_4a196f.rb,1,,"Develop a program named FirstName_LastName_ClassNumber_4a196f.rb
 
 1. you are given two arguments for a folders with files;
 1.1 if there are other arguments they should be discarded;
@@ -430,7 +430,7 @@ F5le2,L5le2
 F5le3,L5le3
 ",No such file or directory - result.csv. No result.csv file was found.
 ../results/a/results/Borislav_Rusinov_2_6fb3ad.rb,,,No such file or directory - ../results/a/tests/2_6fb3ad.txt. Can not be determined because of hex 6fb3ad and number 2,No such file or directory - ../results/a/tests/2_6fb3ad.txt. Can not be determined since the hex is 6fb3ad. Check file name format,
-../results/a/results/Moretti_Georgiev_19_b7f153.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_b7f153.rb
+../results/a/results/Moretti_Georgiev_19_b7f153.rb,1,,"Develop a program named FirstName_LastName_ClassNumber_b7f153.rb
 
 1. you are given an argument for a folder with files;
 1.1 if there are other arguments they should be discarded
@@ -480,7 +480,7 @@ F10letter3_L10letter4.rb,24
 F10letters_L10letters.rb,24
 invalid.rb,10
 ",No such file or directory - result.csv. No result.csv file was found.
-../results/a/results/Kamena_Dacheva_13_0af18f.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_0af18f.rb
+../results/a/results/Kamena_Dacheva_13_0af18f.rb,1,,"Develop a program named FirstName_LastName_ClassNumber_0af18f.rb
 
 1. you are given an argument for a folder with files;
 1.1 if there are other arguments they should be discarded
@@ -502,7 +502,7 @@ F5le2,L5le2
 F5le2,L5le2
 F5le9,L5le1
 "
-../results/a/results/Stanimir_Bogdanov_24_ca514d.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_ca514d.rb
+../results/a/results/Stanimir_Bogdanov_24_ca514d.rb,1,,"Develop a program named FirstName_LastName_ClassNumber_ca514d.rb
 
 1. you are given an argument for a folder with files;
 1.1 if there are other arguments they should be discarded
@@ -547,4 +547,4 @@ F10letter1,L10letter1
 ","F5le9,L5le1
 F5le2,L5le2
 F5le3,L5le3
-",""
+",
