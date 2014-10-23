@@ -42,7 +42,7 @@ F5le3,L5le3
 F5le2,L5le2
 F5le3,L5le3
 "
-../../class010_test/b/results/Mladen_Karadimov_24_9514d0.rb,0,"../../class010_test/b/results/Mladen_Karadimov_24_9514d0.rb:23:in `block in <main>': undefined method `length' for nil:NilClass (NoMethodError)
+../../class010_test/b/results/Mladen_Karadimov_24_9514d0.rb,1,"../../class010_test/b/results/Mladen_Karadimov_24_9514d0.rb:23:in `block in <main>': undefined method `length' for nil:NilClass (NoMethodError)
 	from ../../class010_test/b/results/Mladen_Karadimov_24_9514d0.rb:21:in `glob'
 	from ../../class010_test/b/results/Mladen_Karadimov_24_9514d0.rb:21:in `<main>'
 ","Develop a program named FirstName_LastName_ClassNumber_9514d0.rb
@@ -263,7 +263,7 @@ F5le2,L5le2
 F5le3,L5le3
 F5le2,L5le2
 "
-../../class010_test/b/results/Velislav_Kostov_7_cf02f6.rb,0,"../../class010_test/b/results/Velislav_Kostov_7_cf02f6.rb:20:in `block in <main>': undefined method `length' for nil:NilClass (NoMethodError)
+../../class010_test/b/results/Velislav_Kostov_7_cf02f6.rb,1,"../../class010_test/b/results/Velislav_Kostov_7_cf02f6.rb:20:in `block in <main>': undefined method `length' for nil:NilClass (NoMethodError)
 	from ../../class010_test/b/results/Velislav_Kostov_7_cf02f6.rb:19:in `each'
 	from ../../class010_test/b/results/Velislav_Kostov_7_cf02f6.rb:19:in `<main>'
 ","Develop a program named FirstName_LastName_ClassNumber_cf02f6.rb
