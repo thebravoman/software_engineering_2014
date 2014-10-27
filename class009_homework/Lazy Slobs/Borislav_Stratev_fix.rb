@@ -32,7 +32,6 @@ Dir.glob("#{ARGV[0]}/*.rb") do |dir_file_name_1|
 		if(first_name_1 == first_name_2) and (last_name_1 == last_name_2)
 			res = 0	
 		end
-		
 	end
 	if(res == 1)
 		h[last_name_1] = first_name_1
