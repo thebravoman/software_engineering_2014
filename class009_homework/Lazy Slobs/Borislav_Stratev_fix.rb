@@ -12,7 +12,6 @@
 #	...
 #	LastNameN,FirstNameN
 
-i = 0
 a = Array.new
 h = Hash.new
 Dir.glob("#{ARGV[0]}/*.rb") do |dir_file_name_1|
@@ -38,7 +37,6 @@ Dir.glob("#{ARGV[0]}/*.rb") do |dir_file_name_1|
 	if(res == 1)
 		h[last_name_1] = first_name_1
 	end
-	i+=1	
 end	
 
 require 'csv'
