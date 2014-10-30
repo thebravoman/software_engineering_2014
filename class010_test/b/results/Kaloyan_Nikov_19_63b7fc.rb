@@ -24,7 +24,7 @@ first_last.sort!
 
 CSV.open("result.csv", "w") do |csv|
 	first_last.each do |element|
-		csv << [element]
+		csv << element.split(",")
 	end
 end
 

@@ -147,7 +147,7 @@ F5le2,L5le2
 F5le3,L5le3
 F5le2,L5le2
 "
-../../class010_test/b/results/Gergan_Nikolov_11_2c8b41.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_2c8b41.rb
+../../class010_test/b/results/Gergan_Nikolov_11_2c8b41.rb,1,,"Develop a program named FirstName_LastName_ClassNumber_2c8b41.rb
 
 1. you are given two arguments for a folders with files;
 1.1 if there are other arguments they should be discarded;
@@ -212,8 +212,8 @@ invalid.rb,10
 ","L5le1,F5le8
 L5le2,F5le2
 L5le3,F5le3
-",""
-../../class010_test/b/results/Valentin_Varbanov_4_30049b.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_30049b.rb
+",
+../../class010_test/b/results/Valentin_Varbanov_4_30049b.rb,1,,"Develop a program named FirstName_LastName_ClassNumber_30049b.rb
 
 1. you are given two arguments for a folders with files;
 1.1 if there are other arguments they should be discarded;
@@ -301,7 +301,7 @@ F5le2,L5le2
 
 ","L5le4,F5le4
 LastName3,FirstName3
-",""
+",
 ../../class010_test/b/results/Stanislav_Iliev_26_f844cc.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_f844cc.rb
 
 1. you are given an argument for a folder with files;
@@ -508,7 +508,7 @@ F5le3,L5le3
 F5le2,L5le2
 F5le3,L5le3
 "
-../../class010_test/b/results/Lili_Kokalova_22_18aed9.rb,0,"../../class010_test/b/results/Lili_Kokalova_22_18aed9.rb:24:in `block in <main>': undefined method `length' for nil:NilClass (NoMethodError)
+../../class010_test/b/results/Lili_Kokalova_22_18aed9.rb,1,"../../class010_test/b/results/Lili_Kokalova_22_18aed9.rb:24:in `block in <main>': undefined method `length' for nil:NilClass (NoMethodError)
 	from ../../class010_test/b/results/Lili_Kokalova_22_18aed9.rb:20:in `glob'
 	from ../../class010_test/b/results/Lili_Kokalova_22_18aed9.rb:20:in `<main>'
 ","Develop a program named FirstName_LastName_ClassNumber_18aed9.rb
