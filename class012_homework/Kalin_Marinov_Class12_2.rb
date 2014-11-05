@@ -24,6 +24,3 @@ CSV.open("temp.csv", "w") do |csv|
 		csv << [key] + value.values
 	end
 end
-
-#false if uploaded after Mon, 29 Sep 2014 20:00:00
-#./class004/ ./class004_homework/
