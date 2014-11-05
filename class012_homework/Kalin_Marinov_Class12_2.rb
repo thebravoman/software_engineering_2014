@@ -18,7 +18,7 @@ Dir.glob(ARGV[0] + "/*2.rb") do |program_name|
 	end
 end
 
-CSV.open("temp.csv", "w") do |csv|
+CSV.open("results.csv", "w") do |csv|
 	csv << [" "] + names.first.last.keys
 	names.sort_by{ |key, value| key }.each do |key, value| 	
 		csv << [key] + value.values
