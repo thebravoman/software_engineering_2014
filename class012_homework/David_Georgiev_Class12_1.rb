@@ -25,7 +25,7 @@ count += 1
 	end
 end
 end
-CSV.open("/home/tehtri/results.csv","w") do |csv|
+CSV.open("results.csv","w") do |csv|
 	csv << ["Name",results.first[1].keys].flatten
 	results.keys.each do |key|
 		csv << [key,results[key].values].flatten	
