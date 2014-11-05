@@ -7,7 +7,7 @@ Dir.glob(ARGV[0]+"*2.rb").each do |script_file|
 
 
  commit_time = `git log --until=Sep--29--2014--20:00:00 #{script_file}`
-//puts commit_time
+#puts commit_time
  if !commit_time.empty?
  	results[script_file_name] = Hash.new
  	count += 1
