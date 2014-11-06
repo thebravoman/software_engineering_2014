@@ -2,15 +2,15 @@
 # JustCrew
 
 require 'csv'
-entry_level = Array.new									# Array with results from entry level
-task002 = Array.new									# Array with results from task2
-task003 = Array.new									# Array with results from task3
-task004 = Array.new									# Array with results from task4
-task009 = Array.new									# Array with results from task9
-task012 = Array.new									# Array with results from task12
-repo_loc = ARGV[0] 									# Default location of the repository 
-current_element = 0 									# Var used while looping in entry level folder
-i = 0 											# Checks the amount of the submitted programs entry level
+entry_level = Array.new
+task002 = Array.new
+task003 = Array.new
+task004 = Array.new
+task009 = Array.new
+task012 = Array.new
+repo_loc = ARGV[0] 
+current_element = 0
+i = 0 
 results = Hash.new			
 
 Dir.glob("#{repo_loc}vhodno_nivo/*/") do |entr_level| 
