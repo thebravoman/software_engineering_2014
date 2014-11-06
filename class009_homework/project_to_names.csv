@@ -10,4 +10,6 @@ puts_team_name,Ivo Valchev
 JustCrew,Nikola Marinov
 JustCrew,Petko Bozhinov
 JustCrew,Tihomir Lidanski
-Programmable_Logics,Kalin Marinov
+require'teamName',Lubomir Yankov
+require'teamName',Ivelin Slavchev
+require'teamName',Krassen Angelov
