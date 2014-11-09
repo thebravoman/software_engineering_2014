@@ -111,7 +111,7 @@ CSV.foreach("#{ARGV[0]}/class009_homework/project_to_names.csv") do |row|
 end
 
 teamms.each do |k, v|
-	next if k == "Studen_Name"
+	next if k == "Student_Name"
 	folder["009"].each do |f|
 		sf = f.split("/").last.split(".").first
 
