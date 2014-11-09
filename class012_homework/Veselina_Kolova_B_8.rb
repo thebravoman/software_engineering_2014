@@ -93,7 +93,7 @@ end
 
 teamms = Hash.new
 CSV.foreach("#{ARGV[0]}/class009_homework/project_to_names.csv") do |row|
-	if row.length == 2 && !row == nil then
+	if row.length == 2 then
 		if row[0].split(" ").length > 1 then
 			r0 = "#{row[0].split(" ")[0]}" + "_" + "#{row[0].split(" ")[1]}"
 		else
@@ -119,7 +119,7 @@ teamms.each do |k, v|
 			results[k] = student()
 		end
 
-		if "#{teamms[v]}" == "#{results[sf]}"
+		if v == sf
 			results[k]["009"] =  1
 		end
 
