@@ -19,16 +19,18 @@ def convertTeamNames(repoPath)
 	content = File.read("#{repoPath}/class009_homework/project_to_names.csv").split("\n")
 	content.each do |line|
 		teamName = line.split(",").first
-		teamNames[teamName] = Array.new if not teamNames.has_key? teamName
-		studentName = line.split(",")[1]
-		studentName = studentName.split(" ").first + "_" + studentName.split(" ")[1]
-		teamNames[teamName] << studentName
+		if teamName != nil
+			teamNames[teamName] = Array.new if not teamNames.has_key? teamName
+			studentName = line.split(",")[1] 
+			studentName = studentName.split(" ").first + "_" + studentName.split(" ")[1] if studentName != nil
+			teamNames[teamName] << studentName
+		end
 	end
 	return teamNames
 end
 
 def onTime(path, deadline)
-	log = `git log #{deadline} #{path}`
+	log = `git log #{deadline} #{path}` 
 	if log.empty? 
 		return 0
 	else
@@ -43,6 +45,7 @@ def initResult(results, student, homework)
 	end
 	return results
 end
+
 
 def check(results, path, student, deadline, homework)
 	if onTime(path, deadline) == 1
@@ -134,7 +137,8 @@ results = convertResult(results, homeworks)
 
 CSV.open("results_Iliyan_Germanov_B_17.csv", "w") do |csv|
 	csv << ["", "", homeworks].flatten
-	results.keys.each do |key|
-		csv << [key.split("_").first, key.split("_")[1], results[key].values].flatten if key != nil
+	results.keys.sort.each do |key|
+		csv << [key.split("_").first, key.split("_")[1], results[key]["VH"],
+		results[key]["002"], results[key]["003"], results[key]["004"], results[key]["009"], results[key]["012"]].flatten 
 	end
 end
