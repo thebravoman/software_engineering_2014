@@ -22,7 +22,7 @@ homework12_res = Array.new()#finally 12-th array
 
 #Funtions
 def onTime(targetPath, dead_month, dead_date, dead_time)
-	logLines = Array.new
+	logLines = Array.new#why another array 13
 	log = `git log #{targetPath}`
 
 	log.split("\n").each do |line|
@@ -176,9 +176,9 @@ array_count = 0
 	#Check via mapping
 
 
-mapping = Array.new()
-mapping_res = Array.new()
-mapping_keys = Array.new()
+mapping = Array.new()#and more
+mapping_res = Array.new()#and more
+mapping_keys = Array.new()#and more this is the 16-th
 
 CSV.foreach(ARGV[0]+"/class009_homework/project_to_names.csv") do |row|
 	if row.last != "Student Name" && row.last != nil
