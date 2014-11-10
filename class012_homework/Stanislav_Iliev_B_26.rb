@@ -96,7 +96,7 @@ for i in 0..4
 	folder += 1
 end
 
-CSV.open("results_Stanislav_Iliev_B_1.csv","w") do |csv|
+CSV.open("results_Stanislav_Iliev_B_26.csv","w") do |csv|
 	csv << classes
 	result.keys.each do |key|
 		key_split = key.split(",")
