@@ -131,6 +131,9 @@ end
 
 
 CSV.open("results_Momchil_Angelov_A_18.csv", "w") do |csv|
+
+csv << [,,"VH", "002", "003", "004", "012" ]
+
 students.each do |element|
 	csv << element
 end
