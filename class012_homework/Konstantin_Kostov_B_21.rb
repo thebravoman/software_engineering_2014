@@ -70,6 +70,25 @@ result[name][folder] = 1
 end
 end
 end
+team_names = CSV.read("../class009_homework/project_to_names.csv")[0, 2]
+
+Dir.glob(ARGV[0]+"class009_homework/*.*").each do |file|	
+	name = file.split(/\//).last.split(/./) 
+	log = `git log --until=Oct--27--2014--20:00:00 #{file}`
+	i = 0;
+	team_names.keys.each do |key|
+  		if key == name
+			names_student[i] == key
+			i++
+		end
+	end 
+	if !log.empty?
+		result[name][folder] = 2
+	elsif log.empty?
+		result[name][folder] = 1
+	end
+	
+end
 
 CSV.open("results2.csv","w") do |csv|
 csv << classes
