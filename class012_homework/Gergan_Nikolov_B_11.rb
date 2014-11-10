@@ -5,7 +5,6 @@ file_count = 0
 array_count = 0
 folder = 0
 path = "SWAG"
-tmp = "SWEG"
 
 students_list = Array.new()
 vhodno_nivo = Array.new()
@@ -42,12 +41,12 @@ def onTime(targetPath, dead_month, dead_date, dead_time)
 	return true
 end	
 
-Dir.glob(ARGV[0]+"/class004_homework/**").each do |folder|
-	if File.directory?(folder)
-		if folder.split('/').last != nil
-			students_list[array_count] = folder.split('/').last
-			array_count += 1
-		end
+Dir.glob(ARGV[0]+"/class004/**").each do |file|
+	if file.split('/').last != nil
+		s = file.split('/').last
+		s1 = s.split('_')[0] + "_" + s.split('_')[1]
+		students_list[array_count] = s1
+		array_count += 1
 	end
 end
 
@@ -179,10 +178,10 @@ mapping_res = Array.new()
 mapping_keys = Array.new()
 
 CSV.foreach(ARGV[0]+"/class009_homework/project_to_names.csv") do |row|
-	if row.last != "Student Name"
+	if row.last != "Student Name" && row.last != nil
 		mapping.push(row.last.split(' ').first + "_" + row.last.split(' ').last)
 	end
-	if row.first != "Project Name"
+	if row.first != "Project Name" && row.first != nil
 		mapping_keys.push(row.first)
 	end
 end
@@ -192,14 +191,7 @@ array_count = 0
 
 while array_count <= students_list.length
 	if mapping.include?(students_list[array_count]) == true
-		path = ARGV[0]+"/class009_homework/"+mapping_keys[array_count]+".pdf"
-		if File.exist?(path)
-			if onTime(path, "Oct", 27, 20)
-				mapping_res[array_count] = 2
-			else
-				mapping_res[array_count] = 1
-			end
-		end
+		mapping_res[array_count] = 1
 	else
 		mapping_res[array_count] = 0
 	end
@@ -240,9 +232,9 @@ array_count = 0
 
 #CSV
 CSV.open("result.csv", "w") do |csv|
-	csv << [" ", "Vhodno Nivo", "002", "003", "004", "009", "012"]
+	csv << [" ", " ", "VH", "002", "003", "004", "009", "012"]
 	while array_count < students_list.length
-		csv << [students_list[array_count], vhodno_nivo_res[array_count], homework2_res[array_count], homework3_res[array_count], homework4_res[array_count], mapping_res[array_count], homework12_res[array_count]]
+		csv << [students_list[array_count].split('_').first, students_list[array_count].split('_').last, vhodno_nivo_res[array_count], homework2_res[array_count], homework3_res[array_count], homework4_res[array_count], mapping_res[array_count], homework12_res[array_count]]
 		array_count += 1
 	end
 end
