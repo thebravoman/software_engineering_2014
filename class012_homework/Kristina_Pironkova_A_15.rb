@@ -39,6 +39,7 @@ end
 		if i == 3 then git_log = `git log --until=29.09.2014:20:00:00 #{directory}` end #class004
 		#if i == 4 then git_log = `git log --until=27.10.2014:20:00:00 #{directory}` end #class009
 		if i == 4 then git_log = `git log --until=10.11.2014:20:00:00 #{directory}` end #class012
+			
 
 			if !git_log.empty?
 				results[script_file][folder] = 2
@@ -49,9 +50,9 @@ end
 		folder += 1
 end
 
-CSV.open("results_Borislav_Rusinov_A_1.csv	","w") do |csv|
-csv << mainRow
-results.keys.sort.each do |key|
-csv << [key, results[key]].flatten
-end
+CSV.open("results_Kristina_Pironkova_A_15.csv","w") do |csv|
+	csv << mainRow
+		results.keys.sort.each do |key|
+			csv << [key, results[key]].flatten
+		end
 end

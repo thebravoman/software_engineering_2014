@@ -112,9 +112,9 @@ end
 data.each { |key, value| data[key][5] = nil }
 
 system("git checkout master -q")
-check_folder(ARGV[0] + 'class012_homework/', data, 5, /^[a-zA-Z0-9]+_[a-zA-Z0-9]+_Class12_[12].rb$/, 1)
+check_folder(ARGV[0] + 'class012_homework/', data, 5, /^[a-zA-Z0-9]+_[a-zA-Z0-9]+_[AB]_\d+.rb$/, 1)
 system('git checkout `git rev-list -1 --before="Nov 10 2014 20:00" master` -q')
-check_folder(ARGV[0] + 'class012_homework/', data, 5, /^[a-zA-Z0-9]+_[a-zA-Z0-9]+_Class12_[12].rb$/, 2)
+check_folder(ARGV[0] + 'class012_homework/', data, 5, /^[a-zA-Z0-9]+_[a-zA-Z0-9]+_[AB]_\d+.rb$/, 2)
 
 data.each do |key, value|
 	data[key].each_with_index do |res, i|
@@ -126,7 +126,7 @@ system("git checkout master -q")
 Dir.chdir current_path
 
 data = data.sort
-CSV.open("results_Stanimir_Bogdanov_A_11.csv","w") do |csv|
+CSV.open("results_Stanimir_Bogdanov_A_24.csv","w") do |csv|
 	csv << ["First Name", "Last Name" , "VH", "002", "003", "004", "009", "012"].flatten
 	data.each do |key, value|
 		csv << [key.split("_").first, key.split("_").last, value].flatten
