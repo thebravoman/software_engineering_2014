@@ -83,7 +83,6 @@ for i in 0..4
 			team = teamname_name_array[0]
 			if File.exist? "#{ARGV[0]}class009_homework/#{team}.pdf"
 				log = `git log --until=27.10.2014:20:00:00 #{ARGV[0]}class009_homework/#{team}.pdf`
-				puts log
 				if !log.empty?
 					result[name][folder] = 2
 				elsif log.empty?
