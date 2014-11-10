@@ -127,7 +127,7 @@ count = 0
 
 end
 
-
+students = students.sort_by {|el| [el[0], el[1]]}
 
 
 CSV.open("results_Momchil_Angelov_A_18.csv", "w") do |csv|
