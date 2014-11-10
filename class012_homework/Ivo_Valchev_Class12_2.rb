@@ -126,7 +126,7 @@ system("git checkout master -q")
 Dir.chdir current_path
 
 data = data.sort
-CSV.open("results_Stanimir_Bogdanov_A_11.csv","w") do |csv|
+CSV.open("results_Ivo_Valchevv_A_11.csv","w") do |csv|
 	csv << ["First Name", "Last Name" , "VH", "002", "003", "004", "009", "012"].flatten
 	data.each do |key, value|
 		csv << [key.split("_").first, key.split("_").last, value].flatten
