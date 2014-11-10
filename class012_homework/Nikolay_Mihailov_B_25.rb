@@ -118,7 +118,7 @@ end
 
 CSV.open("results_Nikolay_Mihailov_B_25.csv","w") do |csv|
 	csv << classes
-	result.keys.each do |key|
+	result.keys.sort.each do |key|
 		if key.include? ','
 			key_split = key.split(",")
 		end
