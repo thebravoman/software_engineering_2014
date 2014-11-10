@@ -191,7 +191,7 @@ array_count = 0
 
 while array_count <= students_list.length
 	if mapping.include?(students_list[array_count]) == true
-		mapping_res[array_count] = 1
+		mapping_res[array_count] = 2
 	else
 		mapping_res[array_count] = 0
 	end
@@ -231,7 +231,7 @@ end
 array_count = 0
 
 #CSV
-CSV.open("result.csv", "w") do |csv|
+CSV.open("Mladen_Karadimov_B_24.csv", "w") do |csv|
 	csv << [" ", " ", "VH", "002", "003", "004", "009", "012"]
 	while array_count < students_list.length
 		csv << [students_list[array_count].split('_').first, students_list[array_count].split('_').last, vhodno_nivo_res[array_count], homework2_res[array_count], homework3_res[array_count], homework4_res[array_count], mapping_res[array_count], homework12_res[array_count]]
