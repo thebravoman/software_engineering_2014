@@ -73,7 +73,7 @@ Dir.glob(ARGV[0]+"class004/*.*").each do |file|
 end
 
 folder +=1
-team_names = CSV.read("../class009_homework/project_to_names.csv")[1, 53]
+team_names = CSV.read("../class009_homework//project_to_names.csv")[1, 53]
 Dir.glob(ARGV[0]+"class009_homework//*.pdf").each do |file|	
 	name = file.split(/\//).last.split(".").first
 	i = 0
@@ -116,7 +116,7 @@ end
 #result_sorted = Hash[result.sort_by{|hash, key| hash[key] hash}.reverce] 
 #result_sorted = result.keys.sort.reverce 
 
-CSV.open("results2.csv","w") do |csv|
+CSV.open("results_Nikolay_Mihailov_B_25.csv","w") do |csv|
 	csv << classes
 	result.keys.each do |key|
 		if key.include? ','
