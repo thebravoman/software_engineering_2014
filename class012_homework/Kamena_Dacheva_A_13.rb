@@ -5,7 +5,7 @@ teams_hash  = Hash.new { |hash, key| hash[key] = [] }
 time_hash   = Hash.new { |hash, key| hash[key] = [] }
 student_all = Hash.new { |name, programs| name[programs] = [] }
 student_time= Hash.new { |name, programs| name[programs] = [] }
-firstLine   = "FirstName LastName","VH","002","003","004","009","012"
+firstLine   = " ","VH","002","003","004","009","012"
 folder_name = ["vhodno_nivo","class002_homework", "class003_homework","class004","class009_homework","class012_homework"]
 folder = 0
 
