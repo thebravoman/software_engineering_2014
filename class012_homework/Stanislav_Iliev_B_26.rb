@@ -88,8 +88,8 @@ for i in 0..4
 					result[name][folder] = 1
 				end
 			end
-			k += 1
 		end
+		k += 1
 	end
 	folder += 1
 end
