@@ -70,26 +70,27 @@ for i in 0..4
 	elsif i == 3
 		name_list = File.open(ARGV[0]+"class009_homework/project_to_names.csv")
 		file_read = name_list.readlines
-		file_read.each do |red|
-			red_array[nz] = red
-			nz += 1
-		end
 		for i in 0..file_read.length
-			teamname_name_array = red_array[k].split(",")
+			file_read.each do |red|
+				red_array[nz] = red
+				nz += 1
+			end
+			line = red_array[k]
+			teamname_name_array = line.split(",")
 			names = teamname_name_array[1].split(" ")
 			first_name = names[0]; last_name = names[1]
 			name = first_name + "," + last_name
 			team = teamname_name_array[0]
 			if File.exist? "#{ARGV[0]}class009_homework/#{team}.pdf"
-				log = `git log --until=27.10.2014:20:00:00#{ARGV[0]}class009_homework/#{team}.pdf`
+				log = `git log #{ARGV[0]}class009_homework/#{team}.pdf`
 				if !log.empty?
 					result[name][folder] = 2
 				elsif log.empty?
 					result[name][folder] = 1
 				end
 			end
+			k += 1
 		end
-		k += 1
 	end
 	folder += 1
 end
