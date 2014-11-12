@@ -43,9 +43,9 @@ end
 
 Dir.glob(ARGV[0]+"/class004/**").each do |file|
 	if file.split('/').last != nil
-		s = file.split('/').last
-		s1 = s.split('_')[0] + "_" + s.split('_')[1]
-		students_list[array_count] = s1
+		file = file.split('/').last.split('_')
+		file = file[0] + '_' + file[1]
+		students_list[array_count] = file
 		array_count += 1
 	end
 end
@@ -191,7 +191,7 @@ array_count = 0
 
 while array_count <= students_list.length
 	if mapping.include?(students_list[array_count]) == true
-		mapping_res[array_count] = 1
+		mapping_res[array_count] = 2
 	else
 		mapping_res[array_count] = 0
 	end
@@ -231,10 +231,11 @@ end
 array_count = 0
 
 #CSV
-CSV.open("result_Gergan_Nikolov_B_11.csv", "w") do |csv|
+CSV.open("results_Mladen_Karadimov_B_24.csv", "w") do |csv|
 	csv << [" ", " ", "VH", "002", "003", "004", "009", "012"]
 	while array_count < students_list.length
 		csv << [students_list[array_count].split('_').first, students_list[array_count].split('_').last, vhodno_nivo_res[array_count], homework2_res[array_count], homework3_res[array_count], homework4_res[array_count], mapping_res[array_count], homework12_res[array_count]]
 		array_count += 1
 	end
 end
+

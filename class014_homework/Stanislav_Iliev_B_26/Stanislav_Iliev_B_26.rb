@@ -1,6 +1,7 @@
 require 'csv'
+require './write_csv.rb'
+require './write_html.rb'
 
-classes = " "," ","VH","002","003","004","009","012"
 folder_name = ["class002_homework", "class003_homework","class004","class009_homework","class012_homework"]
 result = Hash.new{|hash, key| hash[key] = [0,0,0,0,0,0]}
 folder = 0; prg_count = 0; i = 0; k = 0; nz = 0
@@ -95,10 +96,10 @@ for i in 0..4
 	folder += 1
 end
 
-CSV.open("results_Stanislav_Iliev_B_26.csv","w") do |csv|
-	csv << classes
-	result.keys.each do |key|
-		key_split = key.split(",")
-		csv << [key_split,result[key]].flatten
+if ARGV[1] == "-o"
+	if ARGV[2] == "csv"
+		write_to_CSV(result)
+	elsif ARGV[2] == "html"
+		write_to_HTML(result)
 	end
 end

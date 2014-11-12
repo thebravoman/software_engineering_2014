@@ -5,23 +5,24 @@ file_count = 0
 array_count = 0
 folder = 0
 path = "SWAG"
+#path = String.new
 
-students_list = Array.new()
-vhodno_nivo = Array.new()
-vhodno_nivo_res = Array.new()
-vhodno_nivo_full = Array.new()
-homework2 = Array.new()
-homework2_res = Array.new()
-homework3 = Array.new()
-homework3_res = Array.new()
-homework4 = Array.new()
-homework4_res = Array.new()
-homework12 = Array.new()
-homework12_res = Array.new()
+students_list = Array.new()#array
+vhodno_nivo = Array.new()#and another array
+vhodno_nivo_res = Array.new()#and another
+vhodno_nivo_full = Array.new()#not my idea
+homework2 = Array.new()#5-th array
+homework2_res = Array.new()#wtf
+homework3 = Array.new()#wtf
+homework3_res = Array.new()#wtf
+homework4 = Array.new()#wtf
+homework4_res = Array.new()#wtf
+homework12 = Array.new()#wtf
+homework12_res = Array.new()#finally 12-th array
 
 #Funtions
 def onTime(targetPath, dead_month, dead_date, dead_time)
-	logLines = Array.new
+	logLines = Array.new#why another array 13
 	log = `git log #{targetPath}`
 
 	log.split("\n").each do |line|
@@ -34,9 +35,9 @@ def onTime(targetPath, dead_month, dead_date, dead_time)
 	date = logLines[3].to_i
 	time = logLines[4].split(":").first.to_i
 	
-	if month != dead_month then return false end
-	if date > dead_date then return false end
-	if date == dead_date && time >= dead_time then return false end
+	if month != dead_month then { return false }
+	if date > dead_date then { return false }
+	if date == dead_date && time >= dead_time then { return false }
 	
 	return true
 end	
@@ -173,9 +174,11 @@ array_count = 0
 
 #Homework 9 ~ FAIL OP
 	#Check via mapping
-mapping = Array.new()
-mapping_res = Array.new()
-mapping_keys = Array.new()
+
+
+mapping = Array.new()#and more
+mapping_res = Array.new()#and more
+mapping_keys = Array.new()#and more this is the 16-th
 
 CSV.foreach(ARGV[0]+"/class009_homework/project_to_names.csv") do |row|
 	if row.last != "Student Name" && row.last != nil
@@ -191,7 +194,7 @@ array_count = 0
 
 while array_count <= students_list.length
 	if mapping.include?(students_list[array_count]) == true
-		mapping_res[array_count] = 1
+		mapping_res[array_count] = 2
 	else
 		mapping_res[array_count] = 0
 	end
@@ -199,6 +202,8 @@ while array_count <= students_list.length
 end
 
 array_count = 0
+
+
 
 #puts mapping_res
 
@@ -231,7 +236,7 @@ end
 array_count = 0
 
 #CSV
-CSV.open("result_Gergan_Nikolov_B_11.csv", "w") do |csv|
+CSV.open("results_Valentin_Varbanov_B_4.csv", "w") do |csv|
 	csv << [" ", " ", "VH", "002", "003", "004", "009", "012"]
 	while array_count < students_list.length
 		csv << [students_list[array_count].split('_').first, students_list[array_count].split('_').last, vhodno_nivo_res[array_count], homework2_res[array_count], homework3_res[array_count], homework4_res[array_count], mapping_res[array_count], homework12_res[array_count]]
