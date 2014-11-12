@@ -61,4 +61,4 @@ end
 
 names = names.each { |key, value| value.map! { |var| var.nil? ? 0 : var }.map! { |var| var.class == Array ? var[0] : var } }.sort_by{ |key, value| key }
 writer = option_picked
-writer.write(names, "results_Dimitar_Matev_A_5")
+writer.write(names, "results_Kalin_Marinov_A_12")
