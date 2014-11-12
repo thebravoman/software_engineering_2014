@@ -14,7 +14,7 @@ def write_to_SVG(results)
 			i += 1
 		end
 	end
-	File.open("results_Stanislav_Iliev_B_26.svg","w") do |file|
+	File.open("results_Kaloyan_Nikov_B_19.svg","w") do |file|
 		file.puts "<svg id=\"graph\" xmlns=\"http://www.w3.org/2000/svg\">"
 		classes.each do |hw|
 			file.puts "\t<text x=\"#{text_x-k}\" font-size=\"10\" y=\"14\" fill=\"black\">#{hw} - #{class_array[k]}</text>"
