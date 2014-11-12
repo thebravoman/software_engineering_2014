@@ -2,6 +2,7 @@ require_relative "csv_writer.rb"
 require_relative "xml_writer.rb"
 require_relative "json_writer.rb"
 require_relative "html_writer.rb"
+require_relative "svg_writer.rb"
 
 repoPath = ARGV[0]
 results = Hash.new
@@ -149,6 +150,8 @@ if ARGV[1] == "-o"
 		writer = JSONWriter.new
 	when "html"
 		writer = HTMLWriter.new
+	when "svg"
+		writer = SVGWriter.new
 	else
 		abort("Invalid output type!")
 	end
