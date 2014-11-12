@@ -94,7 +94,7 @@ class Drawer
 		c9 = c9 * 3
 		c12 = c12 * 3
 
-		drawer = Drawer.new "results_Lubomir_Yankov_A_16.svg", 37,470
+		drawer = Drawer.new "results_Krassen_Angelov_A_14.svg", 37,470
 		drawer.start
 		drawer.cs
 		drawer.text "Statistics", 250, 400, 72
