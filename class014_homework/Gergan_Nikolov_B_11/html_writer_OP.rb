@@ -1,5 +1,5 @@
 class HTMLWriter
-	def write (hash)
+	def write (students_list, vhodno_nivo_res, homework2_res, homework3_res, homework4_res, mapping_res, homework12_res)
 		array_count = 0
 		
 		#Create the mighty HTML
@@ -23,27 +23,18 @@ class HTMLWriter
 			file.write ("</tr>\n")
 		}
 		
-		hash.each do |name,result|
-			if name != nil
-						first_name = name.split(' ').first
-						last_name = name.split(' ').last
-						result =  result.split(',')
-						result4 = result[4]
-						if result4 == nil then result4 = 0 end
-						result5 = result[5]
-						if result5 == nil then result5 = 0 end
-			end
+		while array_count < students_list.length
 			File.open('results_Gergan_Nikolov_B_11.html', 'a') {
 				|file|
 				file.write ("<tr>\n")
-				file << "<td>#{first_name}</td>\n"
-				file << "<td>#{last_name}</td>\n"
-				file << "<td>#{result[0]}</td>\n"
-				file << "<td>#{result[1]}</td>\n"
-				file << "<td>#{result[2]}</td>\n"
-				file << "<td>#{result[3]}</td>\n"
-				file << "<td>#{result4}</td>\n"
-				file << "<td>#{result5}</td>\n"
+				file << "<td>#{students_list[array_count].split('_')[0]}</td><>\n"
+				file << "<td>#{students_list[array_count].split('_')[1]}</td>\n"
+				file << "<td>#{vhodno_nivo_res[array_count]}</td>\n"
+				file << "<td>#{homework2_res[array_count]}</td>\n"
+				file << "<td>#{homework3_res[array_count]}</td>\n"
+				file << "<td>#{homework4_res[array_count]}</td>\n"
+				file << "<td>#{mapping_res[array_count]}</td>\n"
+				file << "<td>#{homework12_res[array_count]}</td>\n"
 				file.write ("</tr>\n")
 			}
 			
