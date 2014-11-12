@@ -14,8 +14,8 @@ def write_to_JSON(results)
 				"012" => val[5] 
 			}
 		}
-		File.open("results_Stanislav_Iliev_B_26.json","w") do |file|
-			file.write(hash.to_json)
-		end
+	end
+	File.open("results_Stanislav_Iliev_B_26.json","w") do |file|
+		file.write(hash.to_json)
 	end
 end
