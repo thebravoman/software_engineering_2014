@@ -4,7 +4,7 @@ class HTMLWriter
 
 	def write (hashstudents,hashstudents3,hashstudents4,hashstudents2,hashstudents6,hashstudents5)
 		Dir.chdir File.dirname(__FILE__)
-		fileHtml = File.new("results_ Konstantin_Vekilski_B_20.html", "w+")
+		fileHtml = File.new("results_Konstantin_Vekilski_B_20.html", "w+")
 		fileHtml.puts "<HTML><body><table>"
 		fileHtml.puts "<tr><td>student</td><td>VH</td><td>002</td><td>003</td><td>004</td><td>009</td><td>012</td></tr>"		
  		hashstudents.sort.each do |key, value|
