@@ -1,22 +1,14 @@
 require 'csv'
 
 class CSVWriter
-	def write (hash)
-		CSV.open("results_Gergan_Nikolov_B_11.csv","w") do |csv|
-			csv << [' ',' ',"vhodno_nivo","class002_homework","class003_homework","class004_homework", "class009_homework","class002_homework"]
-				hash.each do |name,result|
-					if name != nil
-						first_name = name.split(' ').first
-						last_name = name.split(' ').last
-						result =  result.split(',')
-						result4 = result[4]
-						if result4 == nil then result4 = 0 end
-						result5 = result[5]
-						if result5 == nil then result5 = 0 end
-
-						csv<<[first_name,last_name,result[0],result[1],result[2],result[3],result4,result5]
-					end
-				end
+	def write (students_list, vhodno_nivo_res, homework2_res, homework3_res, homework4_res, mapping_res, homework12_res)
+		array_count = 0
+		CSV.open("results_Gergan_Nikolov_B_11.csv", "w") do |csv|
+			csv << [" ", " ", "VH", "002", "003", "004", "009", "012"]
+			while array_count < students_list.length
+				csv << [students_list[array_count].split('_').first, students_list[array_count].split('_').last, vhodno_nivo_res[array_count], homework2_res[array_count], homework3_res[array_count], homework4_res[array_count], mapping_res[array_count], homework12_res[array_count]]
+				array_count += 1
+			end
 		end
 	end
 end
