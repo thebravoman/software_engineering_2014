@@ -17,6 +17,7 @@ class XMLWriter
 						if result4 == nil then result4 = 0 end
 						result5 = result[5]
 						if result5 == nil then result5 = 0 end
+			end
 			File.open('results_Mladen_Karadimov_B_24.xml', 'a') {
 				|file|
 				file << "<student>"
