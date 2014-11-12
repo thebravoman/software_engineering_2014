@@ -3,7 +3,7 @@ require 'csv'
 class CSVWriter
 
 	def write h
-		CSV.open("results_Ivo_Stratev_B_16.csv", "w") do |csv|
+		CSV.open("results_Borislav_Stratev_B_2.csv", "w") do |csv|
 			h.keys.each  do |k|
 				tmp1 = k.split(/\ /)[0]
 				tmp2 = k.split(/\ /)[1]
@@ -12,12 +12,12 @@ class CSVWriter
 		end
 		i = 0
 		file = Array.new
-		CSV.foreach("./results_Ivo_Stratev_B_16.csv") do |row|
+		CSV.foreach("./results_Borislav_Stratev_B_2.csv") do |row|
 			file[i] = row
 			i = i +1
 		end
 		file = file.sort
-		CSV.open("results_Ivo_Stratev_B_16.csv","w") do |csv|
+		CSV.open("results_Borislav_Stratev_B_2.csv","w") do |csv|
 			csv << [" ", " ", "Vh", "002", "003", "004", "009", "012", "\n"]
 			file.each do |element|
 				csv << element
