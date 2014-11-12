@@ -1,7 +1,9 @@
 class HTMLWriter
 	def write(whatever,classes)
 		File.open("results_Georgi_Velev_B_10.html","w") do |line|
-			line.puts "<link rel=\"stylesheet\" type=\"text/css\" href=\"results_Georgi_Velev_B_10.css\">" #ednata prostotiq varvi vinagi s drugata
+			line.puts "<html>\n<head>\n<title>Results</title>\n
+			<link rel=\"stylesheet\" type=\"text/css\" href=\"results_Georgi_Velev_B_10.css\">
+			\n</head>\n<body>" 							#ednata prostotiq varvi vinagi s drugata
 			line.puts "<table>"
 			line.puts "<caption>Results</caption>"
 			classes.each do |clas| #s class dava error, zashto li pak ne... ami ako iskam da imam promenliva koqto da se kazva class? Trqbva da se misli kato se sazdava ezik
@@ -23,7 +25,7 @@ class HTMLWriter
 					#line.puts  "</span>"
 				line.puts"</tr>"
 			end
-			line.puts "</table>"
+			line.puts "</table>\n</body>\n</html>"
 		end
 
 		File.open("results_Georgi_Velev_B_10.css","w") do |css|
@@ -31,6 +33,8 @@ class HTMLWriter
 			css.puts "caption {color:#ff9223; font-size:24; font-style:bold;}"
 			css.puts "th {color: #ff128d;}"
 			css.puts "table {
+			margin-left: auto;
+			margin-right: auto;
 			color: #ff128d; 
 			border-width: 2px; 
 			border-spacing: 3px;

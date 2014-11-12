@@ -2,6 +2,8 @@ body {text-align: center; background-color: #555555;}
 caption {color:#ff9223; font-size:24; font-style:bold;}
 th {color: #ff128d;}
 table {
+			margin-left: auto;
+			margin-right: auto;
 			color: #ff128d; 
 			border-width: 2px; 
 			border-spacing: 3px;
