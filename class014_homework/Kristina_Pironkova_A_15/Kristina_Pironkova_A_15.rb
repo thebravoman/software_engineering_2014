@@ -3,71 +3,211 @@ require_relative 'xml_writer.rb'
 require_relative 'csv_writer.rb'
 require_relative 'json_writer.rb'
 require_relative 'html_writer.rb'
-results = Hash.new{|hash, key| hash[key] = [0,0,0,0,0]}
-data=Hash.new{|name, tasks| name[tasks] = Array.new}
-folder = 0
+require_relative "svg_writer.rb"
+results = Hash.new
+teams = Hash.new
+mainRow = ["FirstName","LastName","VH","002","003","004","012"]
+repo = ARGV[0]
 
-mainRow = "FirstName LastName","VH","002","003","004","012"
-folder_name = ["vhodno_nivo","class002_homework", "class003_homework","class004","class012_homework"]
-Dir.glob(ARGV[0]+"/vhodno_nivo/**/*.*").each do |directory|
-
-	student_program=directory.split("/").last
-	student_data = directory.split("/").last.split('.').first.split('_')
-	student_name = "#{student_data[0].capitalize} #{student_data[1]}"
-	task = student_data[2]
-
-		if student_data.length == 3 
-			if (task.to_i >1) && (task.to_i < 19) then data[student_name] << student_program end
-			
+	def check(student_name, results)
+		if results[student_name]["012"] == nil
+			results[student_name]["012"] = 0	
 		end
 		
-		if data[student_name].count >= 3 
-		git_log = `git log --until=17.09.2014:20:00:00 #{directory}`
-		
-			if !git_log.empty?
-				results[student_name][folder] = 2
-			elsif git_log.empty?
-				results[student_name][folder] = 1
-			end
-	end
-
-end
-
-(0..4).each do |i|
-	Dir.glob(ARGV[0]+"#{folder_name[i]}/*.*").each do |directory|		
-		script_file = directory.split("/").last.reverse.split("_", 3).last.reverse.gsub("_"," ")
-		
-		if i == 0 then git_log = `git log --until=17.09.2014:20:00:00 #{directory}` end #vhodno_nivo
-		if i == 1 then git_log = `git log --until=22.09.2014:20:00:00 #{directory}` end #class002
-		if i == 2 then git_log = `git log --until=24.09.2014:20:00:00 #{directory}` end #class003
-		if i == 3 then git_log = `git log --until=29.09.2014:20:00:00 #{directory}` end #class004
-		#if i == 4 then git_log = `git log --until=27.10.2014:20:00:00 #{directory}` end #class009
-		if i == 4 then git_log = `git log --until=10.11.2014:20:00:00 #{directory}` end #class012
-			
-
-			if !git_log.empty?
-				results[script_file][folder] = 2
-			elsif git_log.empty?
-				results[script_file][folder] = 1
-			end
-	end
-		folder += 1
-end
-
-csv_writer=CSVWriter.new
-xml_writer=XMLWriter.new
-json_writer=JSONWriter.new
-html_writer=HTMLWriter.new
-
-csv_writer.write results
-xml_writer.write results
-json_writer.write results
-html_writer.write results
-
-
-CSV.open("results_Kristina_Pironkova_A_15.csv","w") do |csv|
-	csv << mainRow
-		results.keys.sort.each do |key|
-			csv << [key, results[key]].flatten
+		if results[student_name]["004"] == nil
+			results[student_name]["004"] = 0	
 		end
+
+		if results[student_name]["009"] == nil
+			results[student_name]["009"] = 0	
+		end
+		
+		if results[student_name]["VH"] == nil
+			results[student_name]["VH"] = 0	
+		end
+		
+		if results[student_name]["003"] == nil
+			results[student_name]["003"] = 0	
+		end
+		
+		if results[student_name]["002"] == nil
+			results[student_name]["002"] = 0	
+		end
+	end
+
+	def OnTime(path, deadline)
+	 	log = `git log --until=#{deadline} #{path}`
+	 if log.empty?
+	 	return 1
+	 else 
+	 	return 2
+	 end
+	end
+
+Dir.glob("#{repo}/vhodno_nivo/**/*_*_*.*").each do |file| 
+
+	student_program=file.split("/").last
+	student_data = file.split("/").last.split('.').first.split('_')
+	student_name = "#{student_data[0].capitalize} #{student_data[1].capitalize}"
+
+	if  not results.has_key? student_name
+		results[student_name] = Hash.new  
+		results[student_name]["VH"] = 0 
+		results[student_name]["002"] = 0 
+		results[student_name]["003"] = 0 
+		results[student_name]["004"] = 0 
+		results[student_name]["009"] = 0
+		results[student_name]["012"] = 0   
+	end
+	
+	if results[student_name]["VH"] != nil && OnTime(file, "17.09.2014:20:00:00") == 2
+		results[student_name]["VH"] += 1 
+	else
+		results[student_name]["VH"] += 101
+	end 
+
 end
+
+results.keys.each do |student_name|
+	if results[student_name]["VH"] % 100 >= 3
+		if results[student_name]["VH"] > 100
+			results[student_name]["VH"] = 1
+		else
+			results[student_name]["VH"] = 2
+		end
+	else
+		results[student_name]["VH"] = 0
+	end
+end
+
+
+content = File.read("#{repo}/class009_homework/project_to_names.csv")
+content.split("\n").each do |line|
+	teams[line.split(",").first] = Array.new if not teams.has_key? line.split(",").first
+	teams[line.split(",").first] << line.split(",").last
+end
+
+Dir.glob("#{repo}/class009_homework/**/*.pdf") do |file|  
+
+	team_name = file.split("/").last.split(".").first
+	if teams.has_key? team_name
+		teams[team_name].each do |student|	
+				if  not results.has_key? student
+					results[student] = Hash.new  
+					results[student]["009"] = 0  
+				end
+check(student, results)
+				results[student]["009"] = 0
+				results[student]["009"] = OnTime(file, "27.10.2014:20:00:00") if student != nil
+
+		end
+	end	
+end
+
+
+Dir.glob("#{repo}/class002_homework/*_*_*_*.rb") do |file|
+ student_program=file.split("/").last
+ student_data = file.split("/").last.split('.').first.split('_')
+ student_name = "#{student_data[0].capitalize} #{student_data[1].capitalize}"
+ 
+ if not results.has_key? student_name
+ 	results[student_name] = Hash.new  
+ 	results[student_name]["002"] = 0  
+ end
+	if results[student_name]["002"] == nil
+		
+		results[student_name]["002"] = 0	
+	end
+ if OnTime(file, "22.09.2014:20:00:00") == 2
+ 	results[student_name]["002"] = 2
+ else 
+ 	results[student_name]["002"]= 1
+ end
+end
+
+Dir.glob("#{repo}/class003_homework/*_*_*_*.rb") do |file|
+ student_program=file.split("/").last
+ student_data = file.split("/").last.split('.').first.split('_')
+ student_name = "#{student_data[0].capitalize} #{student_data[1].capitalize}"
+ 
+ if not results.has_key? student_name
+ 	results[student_name] = Hash.new  
+ 	results[student_name]["003"] = 0  
+ end
+	check(student_name, results)
+ if OnTime(file, "24.09.2014:20:00:00") == 2
+ 	results[student_name]["003"] = 2
+ else 
+ 	results[student_name]["003"]= 1
+ end
+end
+
+Dir.glob("#{repo}/class004/*_*_*_*.rb") do |file|
+ student_program=file.split("/").last
+ student_data = file.split("/").last.split('.').first.split('_')
+ student_name = "#{student_data[0].capitalize} #{student_data[1].capitalize}"
+ 
+ if not results.has_key? student_name
+ 	results[student_name] = Hash.new  
+ 	results[student_name]["004"] = 0  
+ end
+check(student_name, results)
+ if OnTime(file, "29.09.2014:20:00:00") == 2
+ 	results[student_name]["004"] = 2
+ else 
+ 	results[student_name]["004"]= 1
+ end
+end
+ 
+Dir.glob("#{repo}/class004_homework/*") do |file|
+ student_program=file.split("/").last
+ student_data = file.split("/").last.split('.').first.split('_')
+ student_name = "#{student_data[0].capitalize} #{student_data[1].capitalize}"
+ 
+ if not results.has_key? student_name
+ 	results[student_name] = Hash.new  
+ 	results[student_name]["004"] = 0  
+ end
+	check(student_name, results)
+ if OnTime(file, "29.09.2014:20:00:00") == 2
+ 	results[student_name]["004"] = 2
+ else 
+ 	results[student_name]["004"]= 1
+ end
+end
+ 
+
+Dir.glob("#{repo}/class012_homework/*_*_*_*.rb") do |file|
+ student_program=file.split("/").last
+ student_data = file.split("/").last.split('.').first.split('_')
+ student_name = "#{student_data[0].capitalize} #{student_data[1].capitalize}"
+ 
+ if not results.has_key? student_name
+ 	results[student_name] = Hash.new  
+ 	results[student_name]["012"] = 0  
+ end
+check(student_name, results)
+ if OnTime(file, "10.11.2014:20:00:00") == 2
+ 	results[student_name]["012"] = 2
+ else 
+ 	results[student_name]["012"]= 1
+ end
+end
+
+	if ARGV[1] == "-o"
+		case ARGV[2]
+		when "csv"
+			writer = CSVWriter.new
+		when "xml"
+			writer = XMLWriter.new
+		when "json"
+			writer = JSONWriter.new
+		when "html"
+			writer = HTMLWriter.new
+		when "svg"
+			writer = SVGWriter.new
+		else
+			abort ("Wrong format argument!") 
+		end
+			writer.write(results)
+	end
