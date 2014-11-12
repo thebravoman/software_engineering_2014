@@ -131,10 +131,10 @@ end
 
 
 
-data.sort
 system("git checkout master -q")
 Dir.chdir current_path
 
+writer = CSVWriter.new
 case ARGV[2]
 	when "xml"
 		writer = XMLWriter.new
@@ -147,4 +147,4 @@ case ARGV[2]
 	when "svg"
 		writer = SVGWriter.new
 end
-writer.write data
+writer.write data.sort
