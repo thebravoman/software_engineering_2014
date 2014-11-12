@@ -15,9 +15,9 @@ Dir.glob(ARGV[0]+"*1.rb").each do |script_file|
 				file_content = File.read(expected_file)
 				
 				if (output <=> file_content) == 0
-					results[short_script_file][short_fixture] = 1
+					results[short_script_file][fixture] = 1
 				else
-					results[short_script_file][short_fixture] = 0
+					results[short_script_file][fixture] = 0
 				end 
 			end
 	end
