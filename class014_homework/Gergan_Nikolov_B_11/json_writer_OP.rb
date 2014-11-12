@@ -1,43 +1,32 @@
 class JSONWriter
-	def write (hash)
+	def write (students_list, vhodno_nivo_res, homework2_res, homework3_res, homework4_res, mapping_res, homework12_res)
+		array_count = 0
 		
 		#Mighty JSON source :D
-		File.open('results_Mladen_Karadimov_B_24.json', 'w') {
+		File.open('results_Gergan_Nikolov_B_11.json', 'w') {
 			|file|
 			file.write("\"results\": {\n")
 		}	
 		
-		hash.each do |name,result|
-			if name != nil
-						first_name = name.split(' ').first
-						last_name = name.split(' ').last
-						result =  result.split(',')
-						result4 = result[4]
-						if result4 == nil then result4 = 0 end
-						result5 = result[5]
-						if result5 == nil then result5 = 0 end
-			end
-<<<<<<< HEAD
+		while array_count < students_list.length
 			File.open('results_Gergan_Nikolov_B_11.json', 'a') {
-=======
-			File.open('results_Mladen_Karadimov_B_24.json', 'a') {
->>>>>>> 94a28358d95ebfc8cdda2b70133a74d5c9b7eefc
 				|file|
 				file << "\"student\": {\n"
-				file << "\"first-name\": \"#{first_name}\"\n"
-				file << "\"last-name\": \"#{last_name}\"\n"
-				file << "\"vhodno-nivo\": \"#{result[0]}\"\n"
-				file << "\"homework002\": \"#{result[1]}\"\n"
-				file << "\"homework003\": \"#{result[2]}\"\n"
-				file << "\"homework004\": \"#{result[3]}\"\n"
-				file << "\"homework009\": \"#{result4}\"\n"
-				file << "\"homework012\": \"#{result5}\"\n"
+				file << "\"first-name\": \"#{students_list[array_count].split('_')[0]}\"\n"
+				file << "\"last-name\": \"#{students_list[array_count].split('_')[1]}\"\n"
+				file << "\"vhodno-nivo\": \"#{vhodno_nivo_res[array_count]}\"\n"
+				file << "\"homework002\": \"#{homework2_res[array_count]}\"\n"
+				file << "\"homework003\": \"#{homework3_res[array_count]}\"\n"
+				file << "\"homework004\": \"#{homework4_res[array_count]}\"\n"
+				file << "\"homework009\": \"#{mapping_res[array_count]}\"\n"
+				file << "\"homework012\": \"#{homework12_res[array_count]}\"\n"
 				file << "}\n"
 			}
-	
+		
+			array_count += 1
 		end
 		
-		File.open('results_Mladen_Karadimov_B_24.json', 'a') {
+		File.open('results_Gergan_Nikolov_B_11.json', 'a') {
 			|file|
 			file << "}\n"
 		}
