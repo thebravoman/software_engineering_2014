@@ -4,7 +4,7 @@ class CSVWriter
 
 	def write (hashstudents,hashstudents3,hashstudents4,hashstudents2,hashstudents6,hashstudents5)
 		Dir.chdir File.dirname(__FILE__)
-		CSV.open("results_David_Georgiev_B_12.csv","w") do |csv|
+		CSV.open("results_ Konstantin_Vekilski_B_20.csv","w") do |csv|
 			first_line = [' ',' ',"VH","002","003","004","009","012"]
 			csv << [first_line].flatten.compact
 
