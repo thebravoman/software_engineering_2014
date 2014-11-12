@@ -1,105 +1,99 @@
+# encoding: utf-8
 require 'csv'
 require './write_csv.rb'
 require './write_html.rb'
+require './write_svg.rb'
 
-folder_name = ["class002_homework", "class003_homework","class004","class009_homework","class012_homework"]
-result = Hash.new{|hash, key| hash[key] = [0,0,0,0,0,0]}
-folder = 0; prg_count = 0; i = 0; k = 0; nz = 0
-name_array = Array.new
-red_array = Array.new
-
-Dir.glob(ARGV[0]+"vhodno_nivo/**/*.*").each do |file|
-	short_file = file.split(/\//).last
-	if short_file.include? "_"
-		first_name = short_file.split(/_/).first.capitalize
-		last_name = short_file.split(/_/, 2).last.split("_").first.capitalize
-		name = first_name + ',' + last_name
-		log = `git log --until=17.09.2014:20:00:00 #{file}`
-		if !log.empty?
-			name_array[i] = name
-		elsif log.empty?
-			name_array[i] = name + '1'
-		end
-		i += 1
-	end
-end
-name_array.sort!
-for i in 0..name_array.size
-	if i != name_array.size
-		if name_array[i] == name_array[i+1]
-			prg_count += 1
-		end
-		if prg_count == 2
-			if name_array[i].include? ('1')
-				name_array[i] = name_array[i].delete("1")
-				result[name_array[i]][folder] = 1
-				prg_count = 0
-			elsif !name_array[i].include? ('1')
-				result[name_array[i]][folder] = 2
-				prg_count = 0
-			end
-		end
-	end
+softeng = ARGV.first	#taking directory of software_engineering_2014
+if softeng[-1] != "/"
+	softeng += "/"
 end
 
-folder = 1
+directories = [["vhodno_nivo/**/*.*", [17, 9, 20]],
+				["class002_homework/**/*.rb", [22, 9, 20]],
+				["class003_homework/**/*.rb", [24, 9, 20]],
+				["class004/**/*.rb", [29, 9, 20]],
+				["class009_homework/**/*.pdf", [27, 10, 20]],
+				["class012_homework/**/*.rb", [10, 11, 20]]]
 
-for i in 0..4
-	if i >= 0 && i < 3 || i == 4
-		Dir.glob(ARGV[0]+"#{folder_name[i]}/**/*.*").each do |file|
-			short_file = file.split(/\//).last
-			first_name = short_file.split(/_/).first.capitalize
-			last_name = short_file.split(/_/, 2).last.split("_").first.capitalize
-			name = first_name + ',' + last_name
-			if short_file.include? ("_")
-				if i == 0
-					log = `git log --until=22.09.2014:20:00:00 #{file}`
-				elsif i == 1
-					log = `git log --until=24.09.2014:20:00:00 #{file}`
-				elsif i == 2
-					log = `git log --until=29.09.2014:20:00:00 #{file}`
-				elsif i == 4
-					log = `git log --until=10.11.2014:20:00:00 #{file}`
+results = Hash.new{|hash,key| hash[key] = Array.new(directories.size) {0}}
+vhodno = Hash.new{|hash,key| hash[key] = [0,0]}
+class009 = Hash.new{|hash,key| hash[key] = []}
+
+File.open("#{softeng}class009_homework/project_to_names.csv", "r").each_line{ |line|
+	class009[line.chomp.split(",")[0]] << line.chomp.split(",")[1]
+}
+class009.delete("Progect Name")
+
+i = -1
+
+directories.each do |directory, deadline|
+	i += 1
+	Dir.glob("#{softeng}#{directory}").each do |script_file|
+		if script_file.split(/\//).last.include? "_" or i == 4
+			a = script_file.gsub(/(?=[ -'])/, '\\')
+			file = `git log --format="format:%ci" --reverse #{a}`
+			file = file.split(/\n/).first
+			if file =~ /\A\d+-\d+-\d+ \d+:\d+:\d+ .\d+\z/				#2014-09-29 16:56:39 +0300
+
+				date_day = file.split('-')[2].to_i													#29
+				date_month = file.split('-')[1].to_i												#9
+				date_time = file.split(' ')[1].split(':').first.to_i									#16
+				first_name = script_file.split(/\//).last.split("_").first.capitalize
+				last_name = script_file.split(/\//).last.split("_",2).last.split("_").first.capitalize
+				name = "#{first_name} #{last_name}"
+				if i == 4
+					name = script_file.split(/\//).last.split(/\./).first
 				end
-				if !log.empty?
-					result[name][folder] = 2
-				elsif log.empty?
-					result[name][folder] = 1
-				end
+
+				if (date_day<deadline[0] && date_month<=deadline[1]) || (date_day==deadline[0] && date_month==deadline[1] && date_time<deadline[2]) then
+					if i == 0
+						vhodno["#{name}"][0] += 1
+						if vhodno["#{name}"][0] != 3
+							next
+						end
+					end
+					if i == 4
+						class009["#{name}"].each do |student|
+							results["#{student}"][i] = 2
+						end
+						next
+					end
+
+					results["#{name}"][i] = 2
+				else
+					if i == 0
+						vhodno["#{name}"][1] += 1
+						if vhodno["#{name}"][1] + vhodno["#{name}"][0] != 3
+							next
+						end
+					end
+					if i == 4
+						class009["#{name}"].each do |student|
+							results["#{student}"][i] = 1
+						end
+						next
+					end
+
+					results["#{name}"][i] = 1
+				end				
 			end
-		end
-	elsif i == 3
-		name_list = File.open(ARGV[0]+"class009_homework/project_to_names.csv")
-		file_read = name_list.readlines
-		for i in 0..file_read.length
-			file_read.each do |red|
-				red_array[nz] = red
-				nz += 1
-			end
-			line = red_array[k]
-			teamname_name_array = line.split(",")
-			names = teamname_name_array[1].split(" ")
-			first_name = names[0]; last_name = names[1]
-			name = first_name + "," + last_name
-			team = teamname_name_array[0]
-			if File.exist? "#{ARGV[0]}class009_homework/#{team}.pdf"
-				log = `git log #{ARGV[0]}class009_homework/#{team}.pdf`
-				if !log.empty?
-					result[name][folder] = 2
-				elsif log.empty?
-					result[name][folder] = 1
-				end
-			end
-			k += 1
 		end
 	end
-	folder += 1
+end
+
+results.each do |arr|
+	arr[1].each do |score|
+		#puts score
+	end
 end
 
 if ARGV[1] == "-o"
 	if ARGV[2] == "csv"
-		write_to_CSV(result)
+		write_to_CSV(results.sort)
 	elsif ARGV[2] == "html"
-		write_to_HTML(result)
+		write_to_HTML(results.sort)
+	elsif ARGV[2] == "svg"
+		write_to_SVG(results.sort)
 	end
 end
