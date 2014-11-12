@@ -19,8 +19,8 @@ class HTMLWriter
 					}
 					data.each{|key, value|
 						html.tr{
-							html.td key.split(' ').first
-							html.td key.split(' ').last
+							html.td key.split('_').first
+							html.td key.split('_').last
 							html.td value[0]
 							html.td value[1]
 							html.td value[2]
