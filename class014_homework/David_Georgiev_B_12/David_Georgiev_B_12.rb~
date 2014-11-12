@@ -42,9 +42,8 @@ Dir.glob("#{ARGV[0]}/*").each do |subfolder|
 							if not files_vhodno_nivo_without_repeat.include?([myfile.split(/\//).last.split(/\./).first]) then
 								files_vhodno_nivo_without_repeat << (["#{myfile.split(/\//).last.split(/\./).first}"])
 							end
-							if (name[0] != "results") and (name[0] != "Results") then
-								hashstudents["#{name[0]}".capitalize + " " + "#{name[1]}".capitalize]=0
-							end
+							
+							hashstudents["#{name[0]}".capitalize + " " + "#{name[1]}".capitalize]=0
 							
 					end
 				end
@@ -58,9 +57,8 @@ Dir.glob("#{ARGV[0]}/*").each do |subfolder|
 				Dir.glob("#{subfolder}/*").each do |mysubfolder|
 					mysubfolder = mysubfolder.split(/\//).last.split(/_/)
 					if !mysubfolder[0].include? '.' and !mysubfolder[1].include? '.' then
-						if (mysubfolder[0] != "results") and (mysubfolder[0] != "Results") then
+
 						hashstudents["#{mysubfolder[0]}".capitalize + " " + "#{mysubfolder[1]}".capitalize]=0
-						end
 					end
 				end
 			#p students
@@ -74,9 +72,7 @@ Dir.glob("#{ARGV[0]}/*").each do |subfolder|
 						#p myfile.split(/\//).last
 					end
 					if !name[0].include? '.' and !name[1].include? '.' then
-						if (name[0] != "results") and (name[0] != "Results") then
-							hashstudents["#{name[0]}".capitalize + " " + "#{name[1]}".capitalize]=0
-						end
+						hashstudents["#{name[0]}".capitalize + " " + "#{name[1]}".capitalize]=0
 					end
 				end
 			end
