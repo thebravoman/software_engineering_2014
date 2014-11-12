@@ -33,7 +33,7 @@ class HTMLWriter
 			}
 		}
 		end
-		File.open("results_Dimitar_Terziev_A_6.html","w"){ |file| 
+		File.open("results_Stanimir_Bogdanov_A_24.html","w"){ |file| 
 			file.write(html_results.to_html)
 		}
 	end

@@ -31,7 +31,7 @@ class SVGWriter
 		      	      #doc.text(x:80, y:0){"text"}
 		  end
 		end
-		File.open("results_Dimitar_Terziev_A_6.svg", "w") do |file|
+		File.open("results_Stanimir_Bogdanov_A_24.svg", "w") do |file|
 			file.puts b.to_xml
 		end
 	end

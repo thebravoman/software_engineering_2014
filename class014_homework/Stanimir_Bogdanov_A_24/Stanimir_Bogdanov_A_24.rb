@@ -8,6 +8,11 @@ require_relative "SVGWriter"
 
 repo_folder = ARGV[0]
 
+output_format = 'csv'
+if ARGV[1] == '-o'
+	output_format = ARGV[2]
+end
+
 def check_entry_level(folder_path)
 	acceptable_extensions = [ '.c', '.cpp', '.cc', '.rb', '.py', '.java', '.html', '.js', '.pas' ]
 	hash = Hash.new { |hash, key| hash[key] = Array.new }
@@ -129,13 +134,11 @@ data.each do |key, value|
 	end
 end
 
-
-
+data = data.sort
 system("git checkout master -q")
 Dir.chdir current_path
 
-writer = CSVWriter.new
-case ARGV[2]
+case output_format
 	when "xml"
 		writer = XMLWriter.new
 	when "csv"
@@ -147,4 +150,4 @@ case ARGV[2]
 	when "svg"
 		writer = SVGWriter.new
 end
-writer.write data.sort
+writer.write data

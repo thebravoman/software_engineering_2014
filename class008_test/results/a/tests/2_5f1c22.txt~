@@ -1,4 +1,3 @@
-=begin
 Develop a program named FirstName_LastName_ClassNumber_5f1c22.rb
 
 1. you are given two arguments for a folders with files;
@@ -12,4 +11,4 @@ Develop a program named FirstName_LastName_ClassNumber_5f1c22.rb
 	LastName2,FirstName2
 	...
 	LastNameN,FirstNameN
-=end
+

@@ -1,8 +1,9 @@
 # encoding: utf-8
-require 'csv'
-require './write_csv.rb'
-require './write_html.rb'
-require './write_svg.rb'
+require_relative 'write_csv.rb'
+require_relative 'write_html.rb'
+require_relative 'write_svg.rb'
+require_relative 'write_xml.rb'
+require_relative 'write_json.rb'
 
 softeng = ARGV.first	#taking directory of software_engineering_2014
 if softeng[-1] != "/"
@@ -82,18 +83,17 @@ directories.each do |directory, deadline|
 	end
 end
 
-results.each do |arr|
-	arr[1].each do |score|
-		#puts score
-	end
-end
-
+results = results.sort
 if ARGV[1] == "-o"
 	if ARGV[2] == "csv"
-		write_to_CSV(results.sort)
+		write_to_CSV(results)
 	elsif ARGV[2] == "html"
-		write_to_HTML(results.sort)
+		write_to_HTML(results)
 	elsif ARGV[2] == "svg"
-		write_to_SVG(results.sort)
+		write_to_SVG(results)
+	elsif ARGV[2] == "xml"
+		write_to_XML(results)
+	elsif ARGV[2] == "json"
+		write_to_JSON(results)
 	end
 end
