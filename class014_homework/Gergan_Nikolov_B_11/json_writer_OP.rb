@@ -1,33 +1,41 @@
-class XMLWriter
-	def write (students_list, vhodno_nivo_res, homework2_res, homework3_res, homework4_res, mapping_res, homework12_res)
-		array_count = 0
+class JSONWriter
+	def write (hash)
 		
-		#Create the mighty XML
-		File.open('results_Gergan_Nikolov_B_11.xml', 'w') { 
-			|file| 
-			file.write ("<results>\n") 
-		}
+		#Mighty JSON source :D
+		File.open('results_Gergan_Nikolov_B_11.json', 'w') {
+			|file|
+			file.write("\"results\": {\n")
+		}	
 		
-		while array_count < students_list.length
-			File.open('results_Gergan_Nikolov_B_11.xml', 'a') {
+		hash.each do |name,result|
+			if name != nil
+						first_name = name.split(' ').first
+						last_name = name.split(' ').last
+						result =  result.split(',')
+						result4 = result[4]
+						if result4 == nil then result4 = 0 end
+						result5 = result[5]
+						if result5 == nil then result5 = 0 end
+			end
+			File.open('results_Gergan_Nikolov_B_11.json', 'a') {
 				|file|
-				file << "<student>"
-				file << "<first_name>#{students_list[array_count].split('_')[0]}</first_name>"
-				file << "<last_name>#{students_list[array_count].split('_')[1]}</last_name>"
-				file << "<vh>Vhodno Nivo - #{vhodno_nivo_res[array_count]}</vh>"
-				file << "<homework>Homework2 - #{homework2_res[array_count]}</homework>"
-				file << "<homework>Homework3 - #{homework3_res[array_count]}</homework>"
-				file << "<homework>Homework4 - #{homework4_res[array_count]}</homework>"
-				file << "<homework>Homework9 - #{mapping_res[array_count]}</homework>"
-				file << "<homework>Homework12 - #{homework12_res[array_count]}</homework>"
-				file << "</student>"
+				file << "\"student\": {\n"
+				file << "\"first-name\": \"#{first_name}\"\n"
+				file << "\"last-name\": \"#{last_name}\"\n"
+				file << "\"vhodno-nivo\": \"#{result[0]}\"\n"
+				file << "\"homework002\": \"#{result[1]}\"\n"
+				file << "\"homework003\": \"#{result[2]}\"\n"
+				file << "\"homework004\": \"#{result[3]}\"\n"
+				file << "\"homework009\": \"#{result4}\"\n"
+				file << "\"homework012\": \"#{result5}\"\n"
+				file << "}\n"
 			}
-			array_count += 1
+	
 		end
 		
-		File.open('results_Gergan_Nikolov_B_11.xml', 'a') {
+		File.open('results_Gergan_Nikolov_B_11.json', 'a') {
 			|file|
-			file << "</results>\n"
+			file << "}\n"
 		}
 	end
 end
