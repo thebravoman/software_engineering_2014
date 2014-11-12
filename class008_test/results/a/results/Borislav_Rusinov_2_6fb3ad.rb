@@ -20,7 +20,7 @@ require 'csv'
 array=[]
 Dir.glob("#{a}*.*")  do |my_text_file|
 	name = my_text_file.split("/").last.split(".").first.split("_")	
-	if name[1]!=nil && name[0].length==10
+	if name[1]!=nil && name[0].length == 10
 		array << name[0] + "," + name[1]
 	end
 end

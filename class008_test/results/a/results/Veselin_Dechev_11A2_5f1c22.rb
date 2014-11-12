@@ -7,6 +7,8 @@ Dir.glob(ARGV[0] + "*.rb").each do |first|
 	Dir.glob(ARGV[1]+"*.rb").each do |second|
 		name2 = second.split("/").last.capitalize
 		if (name1 == name2)
+			puts name1
+			puts name2
 			result.compare_by_identity
 			result[first_name] = last_name
 		end

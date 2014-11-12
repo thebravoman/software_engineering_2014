@@ -1,32 +1,25 @@
-hash = Hash.new("");
-b=ARGV[0]
-Dir.glob("#{b}*/*.*")  do |my_text_file|
-	first_name = my_text_file.split(/\//)
-	taking_first_name=first_name.last.split(/_/).first
-	last_name = my_text_file.split(/_/, 5)
-	taking_last_name=last_name.last.split(/_/).first
-	number = my_text_file.split(/_/)
-	taking_number=number.last.split(/\./).first
-	hash[taking_first_name.capitalize + " " + taking_last_name.capitalize] += taking_number + ","
-end
-hash.sort.each do |key, value|
-	sum = 0
-	can_be_printed = true
-	value.split(",").each do |x|
-		test_int = Integer(x) rescue nil
-		if !test_int
-			can_be_printed = false
+class HTMLwriter
+
+	def write results
+		html = File.open("results_Tihomir_Lidanski_A_27.html", "w")
+		html.puts("<!DOCTYPE html>")
+		html.puts("<html>")
+		html.puts("<table style=\"width:100%\">")
+		grades.keys.sort.each do |key|
+		
+			html.puts("<tr>")
+				html.puts("<td>#{key.split(' ').first}</td>")
+				html.puts("<td>#{key.split(' ').last}</td>")
+				html.puts("<td>#{grades[key][0]}</td>")
+				html.puts("<td>#{grades[key][1]}</td>")
+				html.puts("<td>#{grades[key][2]}</td>")
+				html.puts("<td>#{grades[key][3]}</td>")
+				html.puts("<td>#{grades[key][4]}</td>")
+				html.puts("<td>#{grades[key][5]}</td>")
+			html.puts("</tr>")
 		end
+		html.puts("</table>")
+		html.puts("</html>")
+		html.close
 	end
-	
-	if can_be_printed
-		print key 
-		value.split(",").sort{|a, b| a.to_i <=> b.to_i}.each do |x|
-			if x.to_i != 1 and x.to_i != 19
-				sum += x.to_i
-				print "," + x 
-			end
-		end
-		puts "," + sum.to_s
-	end
-end
+end	

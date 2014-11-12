@@ -11,11 +11,11 @@ def write_to_HTML(result)
 		end
 		file.puts "\t</tr>"
 		file.puts "\t<tr>"
-		result.keys.each do |key|
-			key_split = key.split(",")
+		result.each do |key|
+			key_split = key[0].split(",")
 			file.puts "\t\t<td>#{key_split[0]}<td>"
 			file.puts "\t\t<td>#{key_split[1]}<td>"
-			result[key].each do |r_key|
+			key[1].each do |r_key|
 				file.print "\t\t<td>"
 				file.print r_key
 				file.puts "</td>"
