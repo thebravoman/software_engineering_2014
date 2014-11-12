@@ -1,5 +1,5 @@
 class XMLWriter
-	def write (students_list, vhodno_nivo_res, homework2_res, homework3_res, homework4_res, mapping_res, homework12_res)
+	def write (hash)
 		array_count = 0
 		
 		#Create the mighty XML
@@ -8,22 +8,31 @@ class XMLWriter
 			file.write ("<results>\n") 
 		}
 		
-		while array_count < students_list.length
+		hash.each do |name,result|
+			if name != nil
+						first_name = name.split(' ').first
+						last_name = name.split(' ').last
+						result =  result.split(',')
+						result4 = result[4]
+						if result4 == nil then result4 = 0 end
+						result5 = result[5]
+						if result5 == nil then result5 = 0 end
+			end
 			File.open('results_Gergan_Nikolov_B_11.xml', 'a') {
 				|file|
 				file << "<student>"
-				file << "<first_name>#{students_list[array_count].split('_')[0]}</first_name>"
-				file << "<last_name>#{students_list[array_count].split('_')[1]}</last_name>"
-				file << "<vh>Vhodno Nivo - #{vhodno_nivo_res[array_count]}</vh>"
-				file << "<homework>Homework2 - #{homework2_res[array_count]}</homework>"
-				file << "<homework>Homework3 - #{homework3_res[array_count]}</homework>"
-				file << "<homework>Homework4 - #{homework4_res[array_count]}</homework>"
-				file << "<homework>Homework9 - #{mapping_res[array_count]}</homework>"
-				file << "<homework>Homework12 - #{homework12_res[array_count]}</homework>"
+				file << "<first_name>#{first_name}</first_name>"
+				file << "<last_name>#{last_name}</last_name>"
+				file << "<vh>Vhodno Nivo - #{result[0]}</vh>"
+				file << "<homework>Homework2 - #{result[1]}</homework>"
+				file << "<homework>Homework3 - #{result[2]}</homework>"
+				file << "<homework>Homework4 - #{result[3]}</homework>"
+				file << "<homework>Homework9 - #{result4}</homework>"
+				file << "<homework>Homework12 - #{result5}</homework>"
 				file << "</student>"
 			}
-			array_count += 1
-		end
+			end
+		
 		
 		File.open('results_Gergan_Nikolov_B_11.xml', 'a') {
 			|file|

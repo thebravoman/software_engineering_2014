@@ -1,6 +1,5 @@
 class JSONWriter
-	def write (students_list, vhodno_nivo_res, homework2_res, homework3_res, homework4_res, mapping_res, homework12_res)
-		array_count = 0
+	def write (hash)
 		
 		#Mighty JSON source :D
 		File.open('results_Gergan_Nikolov_B_11.json', 'w') {
@@ -8,22 +7,30 @@ class JSONWriter
 			file.write("\"results\": {\n")
 		}	
 		
-		while array_count < students_list.length
+		hash.each do |name,result|
+			if name != nil
+						first_name = name.split(' ').first
+						last_name = name.split(' ').last
+						result =  result.split(',')
+						result4 = result[4]
+						if result4 == nil then result4 = 0 end
+						result5 = result[5]
+						if result5 == nil then result5 = 0 end
+			end
 			File.open('results_Gergan_Nikolov_B_11.json', 'a') {
 				|file|
 				file << "\"student\": {\n"
-				file << "\"first-name\": \"#{students_list[array_count].split('_')[0]}\"\n"
-				file << "\"last-name\": \"#{students_list[array_count].split('_')[1]}\"\n"
-				file << "\"vhodno-nivo\": \"#{vhodno_nivo_res[array_count]}\"\n"
-				file << "\"homework002\": \"#{homework2_res[array_count]}\"\n"
-				file << "\"homework003\": \"#{homework3_res[array_count]}\"\n"
-				file << "\"homework004\": \"#{homework4_res[array_count]}\"\n"
-				file << "\"homework009\": \"#{mapping_res[array_count]}\"\n"
-				file << "\"homework012\": \"#{homework12_res[array_count]}\"\n"
+				file << "\"first-name\": \"#{first_name}\"\n"
+				file << "\"last-name\": \"#{last_name}\"\n"
+				file << "\"vhodno-nivo\": \"#{result[0]}\"\n"
+				file << "\"homework002\": \"#{result[1]}\"\n"
+				file << "\"homework003\": \"#{result[2]}\"\n"
+				file << "\"homework004\": \"#{result[3]}\"\n"
+				file << "\"homework009\": \"#{result4}\"\n"
+				file << "\"homework012\": \"#{result5}\"\n"
 				file << "}\n"
 			}
-		
-			array_count += 1
+	
 		end
 		
 		File.open('results_Gergan_Nikolov_B_11.json', 'a') {
