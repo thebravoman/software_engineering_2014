@@ -1,11 +1,11 @@
 require 'csv'
-student = Hash.new{|hash, key| hash[key] = Array.new}
+student = Hash.new{|hash, key| hash[key] = Array.new(4,0)}
 
 def check(dir, hash, date, i)
 Dir.glob( "#{dir}").each do |programName|
-#p "PATKA"
+
 studentName = programName.split("/").last.reverse.split("_",3).last.reverse.gsub("_", " ")
-#p studentName
+
 fileExists = `git log #{programName}`
 commitTime = `git log --until=#{date} #{programName}` 
 student[studentName][i] = 0
