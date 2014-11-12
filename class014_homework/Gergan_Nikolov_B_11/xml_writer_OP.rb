@@ -17,7 +17,12 @@ class XMLWriter
 						if result4 == nil then result4 = 0 end
 						result5 = result[5]
 						if result5 == nil then result5 = 0 end
+<<<<<<< HEAD
+			end
+			File.open('results_Gergan_Nikolov_B_11.xml', 'a') {
+=======
 			File.open('results_Mladen_Karadimov_B_24.xml', 'a') {
+>>>>>>> 94a28358d95ebfc8cdda2b70133a74d5c9b7eefc
 				|file|
 				file << "<student>"
 				file << "<first_name>#{first_name}</first_name>"
@@ -31,6 +36,10 @@ class XMLWriter
 				file << "</student>"
 			}
 			end
+<<<<<<< HEAD
+		
+=======
+>>>>>>> 94a28358d95ebfc8cdda2b70133a74d5c9b7eefc
 		
 		
 		File.open('results_Mladen_Karadimov_B_24.xml', 'a') {
