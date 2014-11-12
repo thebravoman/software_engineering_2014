@@ -1,5 +1,8 @@
 require_relative  "csv_writer.rb"
 require_relative "json_writer.rb"
+require_relative "xml_writer.rb"
+require_relative "html_writer.rb"
+require_relative "svg_writer.rb"
 require "csv"
 
 classes = " "," ","VH","002","003","004","009","012"
@@ -131,16 +134,14 @@ if ARGV[1] == "-o"
 	write = true
 	writer = CSVWriter.new
 	when "xml"
-	puts "Sorry :("
-	#write = true	
-	#writer = XMLWriter.new
+	write = true	
+	writer = XMLWriter.new
 	when "json"
 	write = true
 	writer = JSONWriter.new
 	when "html"
-	puts "Sorry :("
-	#write = true
-	#writer = HTMLWriter.new
+	write = true
+	writer = HTMLWriter.new
 	when "svg"
 	puts "Sorry :("
 	#write = true
