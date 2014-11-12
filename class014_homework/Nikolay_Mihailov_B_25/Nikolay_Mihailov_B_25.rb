@@ -140,9 +140,8 @@ if ARGV[1] == "-o"
 	write = true
 	writer = JSONWriter.new
 	when "html"
-	puts "Sorry :("
-	#write = true
-	#writer = HTMLWriter.new
+	write = true
+	writer = HTMLWriter.new
 	when "svg"
 	puts "Sorry :("
 	#write = true
