@@ -12,27 +12,12 @@ class SVGWriter
 		valid_tasks[5] = 0
 
 		data.each do |value, i|
-			valid_tasks[0] += 1 if data[value][0].to_i == 2
-		end
-
-		data.each do |value, i|
-			valid_tasks[1] += 1 if data[value][1].to_i == 2
-		end
-
-		data.each do |value, i|
-			valid_tasks[2] += 1 if data[value][2].to_i == 2
-		end
-
-		data.each do |value, i|
-			valid_tasks[3] += 1 if data[value][3].to_i == 2
-		end
-
-		data.each do |value, i|
-			valid_tasks[4] += 1 if data[value][4].to_i == 2
-		end
-
-		data.each do |value, i|
-			valid_tasks[5] += 1 if data[value][5].to_i == 2
+			valid_tasks[0] += 1 if i[0].to_i == 2
+			valid_tasks[1] += 1 if i[1].to_i == 2
+			valid_tasks[2] += 1 if i[2].to_i == 2
+			valid_tasks[3] += 1 if i[3].to_i == 2
+			valid_tasks[4] += 1 if i[4].to_i == 2
+			valid_tasks[5] += 1 if i[5].to_i == 2
 		end
 
 		b = Nokogiri::XML::Builder.new do |doc|
@@ -48,7 +33,6 @@ class SVGWriter
 		end
 		File.open("results_Dimitar_Terziev_A_6.svg", "w") do |file|
 			file.puts b.to_xml
-			#puts b.to_xml
 		end
 	end
 end
