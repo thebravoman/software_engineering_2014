@@ -1,6 +1,6 @@
 def write_to_HTML(result)
-	classes = " "," "," "," ","VH","002","003","004","009","012"
-	File.open("results_Stanislav_Iliev_B_26.html","w") do |file|
+	classes = " "," "," "," ","vhodno_nivo","class002","class003","class004","class009","class012"
+	File.open("results_Veselin_Dechev_A_2.html","w") do |file|
 		file.puts "<html>"
 		file.puts "<head></head>"
 		file.puts "<body>"
@@ -11,11 +11,11 @@ def write_to_HTML(result)
 		end
 		file.puts "\t</tr>"
 		file.puts "\t<tr>"
-		result.each do |key|
-			key_split = key[0].split(",")
+		result.keys.each do |key|
+			key_split = key.split(",")
 			file.puts "\t\t<td>#{key_split[0]}<td>"
 			file.puts "\t\t<td>#{key_split[1]}<td>"
-			key[1].each do |r_key|
+			result[key].each do |r_key|
 				file.print "\t\t<td>"
 				file.print r_key
 				file.puts "</td>"

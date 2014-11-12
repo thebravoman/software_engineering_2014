@@ -1,6 +1,7 @@
 require_relative "csv_whateverator.rb"
 require_relative "xml_whateverator.rb"
-
+require_relative "json_whateverator.rb"
+require_relative "html_ima-li-smisal-ot-tova.rb"
 classes = " "," ","VH","002","003","004","009","012"
 
 result = Hash.new{|hash, key| hash[key] = [0,0,0,0,0,0]}
@@ -128,9 +129,11 @@ end
 
 
 
-
-
-
-
 writer = XMLWriter.new
 writer.write result
+writer = CSVWriter.new
+writer.write(result, classes)
+writer = JSONWriter.new
+writer.write result
+writer = HTMLWriter.new
+writer.write(result, classes)
