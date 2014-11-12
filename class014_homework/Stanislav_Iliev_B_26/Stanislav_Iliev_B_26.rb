@@ -83,11 +83,6 @@ directories.each do |directory, deadline|
 	end
 end
 
-results.each do |arr|
-	arr[1].each do |score|
-		#puts score
-	end
-end
 results = results.sort
 if ARGV[1] == "-o"
 	if ARGV[2] == "csv"
