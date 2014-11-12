@@ -1,0 +1,22 @@
+body {text-align: center; background-color: #555555;}
+caption {color:#ff9223; font-size:24; font-style:bold;}
+th {color: #ff128d;}
+table {
+			color: #ff128d; 
+			border-width: 2px; 
+			border-spacing: 3px;
+			border-style: dashed; 
+			border-color: #13a3ed; 
+			border-collapse: separate; 
+			background-color: #474747;}
+td { text-align:center;
+			font-family:Helvetica; 
+			border-width: 1px; 
+			font-size:18px; 
+			color:#acee12;
+			font-style:bold; 
+			text-decoration:none; 
+			padding: 16px; 
+			border-color: #ff128d;
+			border-style: dashed;}
+.name {color: #76ade4;}
