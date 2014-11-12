@@ -1,5 +1,4 @@
 require "csv_writer.rb"
-require "json_writer.rb"
 a = Array.new
 vh = Array.new
 vh_h = Hash.new
