@@ -1,0 +1,38 @@
+require "csv"
+require "date"
+date = DateTime.new(2014,9,18,20,00,00,'+2')
+results = Hash.new{|hash, key| hash[key] = [0,0,0]}
+count = 0
+folder = 0
+
+homework = "FirstName LastName","002","003","004"
+folder_name = ["class002_homework", "class003_homework","class004"]
+
+(0..2).each do |j|
+i = 1
+	Dir.glob(ARGV[0]+"/#{folder_name[j]}/*.*").each do |repository|
+	
+		if (i == 1) 
+			i = 4
+		else 
+			i = 1
+		end
+		date_end = date + i
+		git_log = `git log --until= #{date_end} #{repository}`	
+		script_file1 = repository.split("/").last.reverse.split("_", 3).last.reverse.gsub("_"," ")
+			
+			if !git_log.empty?
+			 	results[script_file1][folder] = 2
+			elsif git_log.empty?
+			 	results[script_file1][folder] = 1	
+			end
+	end
+	folder += 1
+	date += i+1
+end
+CSV.open("results.csv","w") do |csv|
+	csv << homework
+	results.keys.sort.each do |key|
+ 		csv << [key, results[key]].flatten
+ 	end
+end

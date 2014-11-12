@@ -20,7 +20,7 @@ Dir.glob(ARGV[0] + "*").each do |file1|
 	short1 = file1.split("/").last
 	ext1 = short1.split(".").last
 	names1 = short1.split(".").first
-	digit1 = file1.split("_").last.split(".").first
+	digit1 = file1.split("_").last
 	if (ext1 != "rb") or (digit1.to_i.to_s != digit1) or (short1.scan("_").count != 2)
 		result[short1] = short1.length
 	end
@@ -29,7 +29,7 @@ Dir.glob(ARGV[1] + "*").each do |file2|
 	short2 = file2.split("/").last
 	ext2 = short2.split(".").last
 	names2 = short2.split(".").first
-	digit2 = file2.split("_").last.last.split(".").first
+	digit2 = file2.split("_").last
 	if (ext2 != "rb") or (digit2.to_i.to_s != digit) or (short2.scan("_").count != 2)
 		result[short2] = short2.length
 	end

@@ -1,0 +1,30 @@
+require "csv"
+results = Hash.new{|hash, key| hash[key] = [0,0,0,0]}
+folder = 0
+
+firstLine = "FirstName LastName","002","003","004","012"
+folder_name = ["class002_homework", "class003_homework","class004","class012_homework"]
+
+(0..3).each do |j|
+	Dir.glob(ARGV[0]+"/#{folder_name[j]}/*.*").each do |repository|
+		if j == 0 then git_log = `git log --until=22.09.2014:20:00:01 #{repository}` end
+		if j == 1 then git_log = `git log --until=24.09.2014:20:00:01 #{repository}` end
+		if j == 2 then git_log = `git log --until=29.09.2014:20:00:01 #{repository}` end
+		if j == 3 then git_log = `git log --until=10.10.2014:20:00:01 #{repository}` end	
+		script_file1 = repository.split("/").last.reverse.split("_", 3).last.reverse.gsub("_"," ")
+		
+#		if (j == 0) # then ??
+		if !git_log.empty?
+			 results[script_file1][folder] = 2
+		elsif git_log.empty?
+			 results[script_file1][folder] = 1	
+		end
+	end
+	folder += 1
+end
+CSV.open("results.csv","w") do |csv|
+	csv << firstLine
+	results.keys.sort.each do |key|
+ 		csv << [key, results[key]].flatten
+ 	end
+end

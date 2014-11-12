@@ -1,0 +1,16 @@
+require "csv"
+results = Hash.new
+
+Dir.glob(ARGV[0]+"class009_homework}/*.*").each do |repository|
+	team_name = repository.split("/").last.split(".").first
+	puts team_name
+
+end
+CSV.open("results.csv","w") do |csv|
+#	csv << firstLine
+	results.keys.sort.each do |key|
+ 		csv << [key, results[key]].flatten
+ 	end
+end
+
+
