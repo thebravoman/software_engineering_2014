@@ -1,5 +1,4 @@
-require 'csv'
-require 'xml_writer'
+require_relative "xml_writer"
 entry_point = Dir.getwd
 names_to_result =  Hash.new([0,0,0,0,0,0])
 names_to_team = Hash.new
@@ -121,7 +120,7 @@ end
 #7 Write to CSV
 Dir.chdir(entry_point)
 writer = XMLWriter.new
-writer.output_result(names_to_result)
+writer.write_out(names_to_result)
 =begin
 CSV.open("results_Velislav_Kostov_B_7.csv", "w") do |csv|
     csv << ["", "", "VH", "002", "003", "004", "009", "012"]
