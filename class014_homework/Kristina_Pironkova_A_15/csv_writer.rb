@@ -1,14 +1,15 @@
 require 'csv'
 
-class CSVWriter
+class CSVwritter
 	def write results
-		CSV.open("results_Kristina_Pironkova_A_15.csv","w") do |csv|
-			csv << ["","", "VH", "002", "003", "004","012"].flatten
-				results.keys.sort.each do |key|
-				csv << [key, results[key]].flatten
-				end
-			
-		end
-	end
+	mainRow = ["FirstName","LastName","VH","002","003","004","012"]
+			CSV.open("results_Kristina_Pironkova_A_15.csv", "w") do |csv|
+				csv << mainRow
+				results.keys.each do |key|
+				csv << [key.split(" ").first,key.split(" ").last, results[key]["VH"],
+					results[key]["002"], results[key]["003"], results[key]["004"], results[key]["009"], 
+					results[key]["012"]].flatten 
+								end
+			end
 end
-
+end

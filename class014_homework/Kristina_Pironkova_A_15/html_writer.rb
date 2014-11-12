@@ -5,11 +5,12 @@ class HTMLWriter
 			file << "<div class=\"student\">
 						<h3>#{key}</h3>
 						<ul>
-							<li>#{results[key][0]}</li>
-							<li>#{results[key][1]}</li>
-							<li>#{results[key][2]}</li>
-							<li>#{results[key][3]}</li>
-							<li>#{results[key][4]}</li>
+							<li>#{results[key]["VH"]}</li>
+							<li>#{results[key]["002"]}</li>
+							<li>#{results[key]["003"]}</li>
+							<li>#{results[key]["004"]}</li>
+							<li>#{results[key]["009"]}</li>
+							<li>#{results[key]["012"]}</li>
 						</ul>
 					</div>"
 		end
