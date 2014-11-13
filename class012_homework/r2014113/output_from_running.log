@@ -1,0 +1,572 @@
+kireto@kireto-laptop:~/tues/tp/software_engineering_2014/class012_homework$ ruby run_them_all.rb 
+"Running Konstantin_Kostov_B_21.rb"
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014/class009_homework//requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+"End running Konstantin_Kostov_B_21.rb"
+Already on 'master'
+"End checkout"
+"Running Petko_Bozhinov_A_21.rb"
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014/class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+"End running Petko_Bozhinov_A_21.rb"
+Already on 'master'
+"End checkout"
+"Running Lili_Kokalova_B_22.rb"
+"End running Lili_Kokalova_B_22.rb"
+Already on 'master'
+"End checkout"
+"Running Iosyf_Saleh_B_18.rb"
+"End running Iosyf_Saleh_B_18.rb"
+Already on 'master'
+"End checkout"
+"Running Borislav_Rusinov_A_1.rb"
+"End running Borislav_Rusinov_A_1.rb"
+Already on 'master'
+"End checkout"
+"Running Dimitar_Terziev_A_6.rb"
+error: Your local changes to the following files would be overwritten by checkout:
+	class012_homework/Stefan_Iliev_Class12_chktime.rb
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+error: Your local changes to the following files would be overwritten by checkout:
+	class012_homework/Stefan_Iliev_Class12_chktime.rb
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+error: Your local changes to the following files would be overwritten by checkout:
+	class012_homework/Stefan_Iliev_Class12_chktime.rb
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+error: Your local changes to the following files would be overwritten by checkout:
+	class012_homework/Stefan_Iliev_Class12_chktime.rb
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+error: Your local changes to the following files would be overwritten by checkout:
+	class012_homework/Stefan_Iliev_Class12_chktime.rb
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+"End running Dimitar_Terziev_A_6.rb"
+Already on 'master'
+"End checkout"
+"Running Dimitar_Matev_A_5.rb"
+"End running Dimitar_Matev_A_5.rb"
+Already on 'master'
+"End checkout"
+"Running Hristiyan_Velyakov_A_28.rb"
+Hristiyan_Velyakov_A_28.rb:27:in `+': can't convert Fixnum into String (TypeError)
+	from Hristiyan_Velyakov_A_28.rb:27:in `block (2 levels) in <main>'
+	from Hristiyan_Velyakov_A_28.rb:13:in `glob'
+	from Hristiyan_Velyakov_A_28.rb:13:in `block in <main>'
+	from Hristiyan_Velyakov_A_28.rb:11:in `glob'
+	from Hristiyan_Velyakov_A_28.rb:11:in `<main>'
+"End running Hristiyan_Velyakov_A_28.rb"
+Already on 'master'
+"End checkout"
+"Running Denis_Stoinev_B_13.rb"
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//class009_homework/The': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//class009_homework/The': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+"End running Denis_Stoinev_B_13.rb"
+Already on 'master'
+"End checkout"
+"Running Veselin_Dechev_Class12_2.rb"
+Veselin_Dechev_Class12_2.rb:25:in `block in <main>': undefined method `last' for nil:NilClass (NoMethodError)
+	from /home/kireto/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/csv.rb:1354:in `open'
+	from Veselin_Dechev_Class12_2.rb:24:in `<main>'
+"End running Veselin_Dechev_Class12_2.rb"
+Already on 'master'
+"End checkout"
+"Running Hristiyan_Velyakov_class12_2.rb"
+Hristiyan_Velyakov_class12_2.rb:25:in `block in <main>': undefined method `last' for nil:NilClass (NoMethodError)
+	from /home/kireto/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/csv.rb:1354:in `open'
+	from Hristiyan_Velyakov_class12_2.rb:24:in `<main>'
+"End running Hristiyan_Velyakov_class12_2.rb"
+Already on 'master'
+"End checkout"
+"Running Mladen_Karadimov_B_24.rb"
+"End running Mladen_Karadimov_B_24.rb"
+Already on 'master'
+"End checkout"
+"Running David_Georgiev_Class12_1.rb"
+David_Georgiev_Class12_1.rb:29:in `block in <main>': undefined method `[]' for nil:NilClass (NoMethodError)
+	from /home/kireto/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/csv.rb:1354:in `open'
+	from David_Georgiev_Class12_1.rb:28:in `<main>'
+"End running David_Georgiev_Class12_1.rb"
+Already on 'master'
+"End checkout"
+"Running Kaloyan_Nikov_B_19.rb"
+"End running Kaloyan_Nikov_B_19.rb"
+Already on 'master'
+"End checkout"
+"Running Valentin_Georgiev_B_3.rb"
+"End running Valentin_Georgiev_B_3.rb"
+Already on 'master'
+"End checkout"
+"Running Iliyan_Germanov_B_17.rb"
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//class009_homework/The': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//class009_homework/The': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+"End running Iliyan_Germanov_B_17.rb"
+Already on 'master'
+"End checkout"
+"Running Kamena_Dacheva_A_13.rb"
+"End running Kamena_Dacheva_A_13.rb"
+Already on 'master'
+"End checkout"
+"Running Stanislav_Valkanov_A_25.rb"
+/home/kireto/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/csv.rb:1342:in `initialize': No such file or directory - /home/kireto/tues/tp/software_engineering_2014//students_list2.csv (Errno::ENOENT)
+	from /home/kireto/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/csv.rb:1342:in `open'
+	from /home/kireto/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/csv.rb:1342:in `open'
+	from /home/kireto/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/csv.rb:1207:in `foreach'
+	from Stanislav_Valkanov_A_25.rb:5:in `<main>'
+"End running Stanislav_Valkanov_A_25.rb"
+Already on 'master'
+"End checkout"
+"Running Emiliqn_Sokolov_B_15.rb"
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014/class012_homework/results_Borislav_Rusinov_A_1.csv': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014/class012_homework/r/results_Borislav_Rusinov_A_1.csv': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+"End running Emiliqn_Sokolov_B_15.rb"
+Already on 'master'
+"End checkout"
+"Running Stanislav_Iliev_B_26.rb"
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014/class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014/class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014/class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014/class012_homework/results_Borislav_Rusinov_A_1.csv': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014/class012_homework/r/results_Borislav_Rusinov_A_1.csv': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+"End running Stanislav_Iliev_B_26.rb"
+Already on 'master'
+"End checkout"
+"Running Konstantin_Vekilski_B_20.rb"
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//class009_homework/The': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//class012_homework/results_Borislav_Rusinov_A_1.csv': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+"End running Konstantin_Vekilski_B_20.rb"
+Already on 'master'
+"End checkout"
+"Running Gergan_Nikolov_B_11.rb"
+"End running Gergan_Nikolov_B_11.rb"
+Already on 'master'
+"End checkout"
+"Running Hristiyan_Dodov_B_29.rb"
+fatal: ambiguous argument 'class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument 'class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument 'class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+"End running Hristiyan_Dodov_B_29.rb"
+Already on 'master'
+"End checkout"
+"Running Ivo_Stratev_B_16.rb"
+Note: checking out '9ec54ee4c574db60a514e5be3815a825a81d4441'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 9ec54ee... git commit suicide
+error: Your local changes to the following files would be overwritten by checkout:
+	class012_homework/Stefan_Iliev_Class12_chktime.rb
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+error: Your local changes to the following files would be overwritten by checkout:
+	class012_homework/Stefan_Iliev_Class12_chktime.rb
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+error: Your local changes to the following files would be overwritten by checkout:
+	class012_homework/Stefan_Iliev_Class12_chktime.rb
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+error: Your local changes to the following files would be overwritten by checkout:
+	class012_homework/Stefan_Iliev_Class12_chktime.rb
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+error: Your local changes to the following files would be overwritten by checkout:
+	class012_homework/Stefan_Iliev_Class12_chktime.rb
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+Previous HEAD position was 9ec54ee... git commit suicide
+HEAD is now at 81eb760... Create Ivo_Stratev_B_16.rb
+"End running Ivo_Stratev_B_16.rb"
+Previous HEAD position was 81eb760... Create Ivo_Stratev_B_16.rb
+Switched to branch 'master'
+"End checkout"
+"Running Lubomir_Yankov_A_16.rb"
+"End running Lubomir_Yankov_A_16.rb"
+Already on 'master'
+"End checkout"
+"Running Ivelin_Slavchev_A_10.rb"
+"End running Ivelin_Slavchev_A_10.rb"
+Already on 'master'
+"End checkout"
+"Running Martin_Grigorov_B_23.rb"
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014/class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014/class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014/class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014/class012_homework/results_Borislav_Rusinov_A_1.csv': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014/class012_homework/r/results_Borislav_Rusinov_A_1.csv': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+"End running Martin_Grigorov_B_23.rb"
+Already on 'master'
+"End checkout"
+"Running Stanimir_Bogdanov_A_24.rb"
+error: Your local changes to the following files would be overwritten by checkout:
+	class012_homework/Stefan_Iliev_Class12_chktime.rb
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+error: Your local changes to the following files would be overwritten by checkout:
+	class012_homework/Stefan_Iliev_Class12_chktime.rb
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+error: Your local changes to the following files would be overwritten by checkout:
+	class012_homework/Stefan_Iliev_Class12_chktime.rb
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+error: Your local changes to the following files would be overwritten by checkout:
+	class012_homework/Stefan_Iliev_Class12_chktime.rb
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+error: Your local changes to the following files would be overwritten by checkout:
+	class012_homework/Stefan_Iliev_Class12_chktime.rb
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+"End running Stanimir_Bogdanov_A_24.rb"
+Already on 'master'
+"End checkout"
+"Running Radoslav_Kostadinov_A_22.rb"
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014/class012_homework/results_Borislav_Rusinov_A_1.csv': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+"End running Radoslav_Kostadinov_A_22.rb"
+Already on 'master'
+"End checkout"
+"Running Stanislav_Gospodinov_class12_2.rb"
+Stanislav_Gospodinov_class12_2.rb:30:in `block in <main>': undefined method `last' for nil:NilClass (NoMethodError)
+	from /home/kireto/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/csv.rb:1354:in `open'
+	from Stanislav_Gospodinov_class12_2.rb:29:in `<main>'
+"End running Stanislav_Gospodinov_class12_2.rb"
+Already on 'master'
+"End checkout"
+"Running Atanaska_Ivancheva_B_1.rb"
+"End running Atanaska_Ivancheva_B_1.rb"
+Already on 'master'
+"End checkout"
+"Running Denis_Trenchev_Class12_2.rb"
+Denis_Trenchev_Class12_2.rb:29:in `block in <main>': undefined method `last' for nil:NilClass (NoMethodError)
+	from /home/kireto/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/csv.rb:1354:in `open'
+	from Denis_Trenchev_Class12_2.rb:28:in `<main>'
+"End running Denis_Trenchev_Class12_2.rb"
+Already on 'master'
+"End checkout"
+"Running Valentin_Varbanov_B_4.rb"
+Valentin_Varbanov_B_4.rb:38: void value expression
+	if month != dead_month then { return false }
+	                                          ^
+Valentin_Varbanov_B_4.rb:38: syntax error, unexpected keyword_false, expecting tASSOC
+	if month != dead_month then { return false }
+	                                          ^
+Valentin_Varbanov_B_4.rb:39: void value expression
+	if date > dead_date then { return false }
+	                                       ^
+Valentin_Varbanov_B_4.rb:39: syntax error, unexpected keyword_false, expecting tASSOC
+	if date > dead_date then { return false }
+	                                       ^
+Valentin_Varbanov_B_4.rb:40: void value expression
+	if date == dead_date && time >= dead_time then { return false }
+	                                                             ^
+Valentin_Varbanov_B_4.rb:40: syntax error, unexpected keyword_false, expecting tASSOC
+	if date == dead_date && time >= dead_time then { return false }
+	                                                             ^
+Valentin_Varbanov_B_4.rb:245: syntax error, unexpected $end, expecting keyword_end
+"End running Valentin_Varbanov_B_4.rb"
+Already on 'master'
+"End checkout"
+"Running Borislav_Stratev_B_2.rb"
+Note: checking out '9ec54ee4c574db60a514e5be3815a825a81d4441'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 9ec54ee... git commit suicide
+error: Your local changes to the following files would be overwritten by checkout:
+	class012_homework/Stefan_Iliev_Class12_chktime.rb
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+error: Your local changes to the following files would be overwritten by checkout:
+	class012_homework/Stefan_Iliev_Class12_chktime.rb
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+error: Your local changes to the following files would be overwritten by checkout:
+	class012_homework/Stefan_Iliev_Class12_chktime.rb
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+error: Your local changes to the following files would be overwritten by checkout:
+	class012_homework/Stefan_Iliev_Class12_chktime.rb
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+error: Your local changes to the following files would be overwritten by checkout:
+	class012_homework/Stefan_Iliev_Class12_chktime.rb
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+Previous HEAD position was 9ec54ee... git commit suicide
+HEAD is now at 81eb760... Create Ivo_Stratev_B_16.rb
+"End running Borislav_Stratev_B_2.rb"
+Previous HEAD position was 81eb760... Create Ivo_Stratev_B_16.rb
+Switched to branch 'master'
+"End checkout"
+"Running Tihomir_Lidanski_A_27.rb"
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014/class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+"End running Tihomir_Lidanski_A_27.rb"
+Already on 'master'
+"End checkout"
+"Running Velislav_Kostov_B_7.rb"
+/home/kireto/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/site_ruby/1.9.1/rubygems/custom_require.rb:36:in `require': cannot load such file -- xml_writer (LoadError)
+	from /home/kireto/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/site_ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+	from Velislav_Kostov_B_7.rb:2:in `<main>'
+"End running Velislav_Kostov_B_7.rb"
+Already on 'master'
+"End checkout"
+"Running Elena_Karakoleva_А_8.rb"
+"End running Elena_Karakoleva_А_8.rb"
+Already on 'master'
+"End checkout"
+"Running Veselin_Dechev_A_2.rb"
+Veselin_Dechev_A_2.rb:27:in `+': can't convert Fixnum into String (TypeError)
+	from Veselin_Dechev_A_2.rb:27:in `block (2 levels) in <main>'
+	from Veselin_Dechev_A_2.rb:13:in `glob'
+	from Veselin_Dechev_A_2.rb:13:in `block in <main>'
+	from Veselin_Dechev_A_2.rb:11:in `glob'
+	from Veselin_Dechev_A_2.rb:11:in `<main>'
+"End running Veselin_Dechev_A_2.rb"
+Already on 'master'
+"End checkout"
+"Running Krassen_Angelov_A_14.rb"
+"End running Krassen_Angelov_A_14.rb"
+Already on 'master'
+"End checkout"
+"Running Vladimir_Yordanov_B_9.rb"
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//vhodno_nivo/Nikola_Marinov_20/Nikola': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//vhodno_nivo/Nikola_Marinov_20/Nikola': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//vhodno_nivo/Nikola_Marinov_20/Nikola': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//class009_homework/The': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//class009_homework/Lazy': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+"End running Vladimir_Yordanov_B_9.rb"
+Already on 'master'
+"End checkout"
+"Running Nikolay_Mihailov_B_25.rb"
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014/class009_homework//requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+"End running Nikolay_Mihailov_B_25.rb"
+Already on 'master'
+"End checkout"
+"Running Stanislav_Valkanov_class12_2.rb"
+Stanislav_Valkanov_class12_2.rb:29:in `block in <main>': undefined method `last' for nil:NilClass (NoMethodError)
+	from /home/kireto/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/csv.rb:1354:in `open'
+	from Stanislav_Valkanov_class12_2.rb:28:in `<main>'
+"End running Stanislav_Valkanov_class12_2.rb"
+Already on 'master'
+"End checkout"
+"Running Kristina_Pironkova_A_15.rb"
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014/class012_homework/results_Borislav_Rusinov_A_1.csv': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+"End running Kristina_Pironkova_A_15.rb"
+Already on 'master'
+"End checkout"
+"Running Simeon_Shopkin_A_23.rb"
+/home/kireto/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/csv.rb:1342:in `initialize': No such file or directory - /home/kireto/tues/tp/software_engineering_2014//students_list2.csv (Errno::ENOENT)
+	from /home/kireto/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/csv.rb:1342:in `open'
+	from /home/kireto/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/csv.rb:1342:in `open'
+	from /home/kireto/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/csv.rb:1207:in `foreach'
+	from Simeon_Shopkin_A_23.rb:5:in `<main>'
+"End running Simeon_Shopkin_A_23.rb"
+Already on 'master'
+"End checkout"
+"Running Hristo_Dachev_Class12_2.rb"
+"End running Hristo_Dachev_Class12_2.rb"
+Already on 'master'
+"End checkout"
+"Running Vasil_Kolev_B_6.rb"
+"End running Vasil_Kolev_B_6.rb"
+Already on 'master'
+"End checkout"
+"Running Marian_Belchev_class12_2.rb"
+"End running Marian_Belchev_class12_2.rb"
+Already on 'master'
+"End checkout"
+"Running Stanislav_Iliev_Class12_1.rb"
+Stanislav_Iliev_Class12_1.rb:30:in `block in <main>': undefined method `[]' for nil:NilClass (NoMethodError)
+	from /home/kireto/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/csv.rb:1354:in `open'
+	from Stanislav_Iliev_Class12_1.rb:29:in `<main>'
+"End running Stanislav_Iliev_Class12_1.rb"
+Already on 'master'
+"End checkout"
+"Running Kalin_Marinov_A_14.rb"
+"End running Kalin_Marinov_A_14.rb"
+Already on 'master'
+"End checkout"
+"Running Stefan_Radev_B_27.rb"
+"End running Stefan_Radev_B_27.rb"
+Already on 'master'
+"End checkout"
+"Running David_Georgiev_B_12.rb"
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//class009_homework/The': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014//class012_homework/results_Borislav_Rusinov_A_1.csv': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+"End running David_Georgiev_B_12.rb"
+Already on 'master'
+"End checkout"
+"Running Emiliqn_Sokolov_Class12_1.rb"
+Emiliqn_Sokolov_Class12_1.rb:30:in `block in <main>': undefined method `[]' for nil:NilClass (NoMethodError)
+	from /home/kireto/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/csv.rb:1354:in `open'
+	from Emiliqn_Sokolov_Class12_1.rb:29:in `<main>'
+"End running Emiliqn_Sokolov_Class12_1.rb"
+Already on 'master'
+"End checkout"
+"Running Momchil_Angelov_A_18.rb"
+Momchil_Angelov_A_18.rb:135: syntax error, unexpected ',', expecting ']'
+csv << [,,"VH", "002", "003", "004", "012" ]
+         ^
+Momchil_Angelov_A_18.rb:135: syntax error, unexpected ',', expecting keyword_end
+csv << [,,"VH", "002", "003", "004", "012" ]
+               ^
+Momchil_Angelov_A_18.rb:135: syntax error, unexpected ',', expecting keyword_end
+csv << [,,"VH", "002", "003", "004", "012" ]
+                      ^
+Momchil_Angelov_A_18.rb:135: syntax error, unexpected ',', expecting keyword_end
+csv << [,,"VH", "002", "003", "004", "012" ]
+                             ^
+Momchil_Angelov_A_18.rb:135: syntax error, unexpected ',', expecting keyword_end
+csv << [,,"VH", "002", "003", "004", "012" ]
+                                    ^
+Momchil_Angelov_A_18.rb:135: syntax error, unexpected ']', expecting keyword_end
+"End running Momchil_Angelov_A_18.rb"
+Already on 'master'
+"End checkout"
+"Running Dimitar_Terziev_Class12_2.rb"
+fatal: Not a git repository (or any of the parent directories): .git
+Dimitar_Terziev_Class12_2.rb:38:in `block in <main>': undefined method `last' for nil:NilClass (NoMethodError)
+	from /home/kireto/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/csv.rb:1354:in `open'
+	from Dimitar_Terziev_Class12_2.rb:37:in `<main>'
+"End running Dimitar_Terziev_Class12_2.rb"
+Already on 'master'
+"End checkout"
+"Running Ivo_Valchev_A_11.rb"
+Ivo_Valchev_A_11.rb:1:in `<main>': undefined method `rrequire' for main:Object (NoMethodError)
+"End running Ivo_Valchev_A_11.rb"
+Already on 'master'
+"End checkout"
+"Running Veselina_Kolova_B_8.rb"
+"End running Veselina_Kolova_B_8.rb"
+Already on 'master'
+"End checkout"
+"Running Moretti_Georgiev_Class12_2.rb"
+"End running Moretti_Georgiev_Class12_2.rb"
+Already on 'master'
+"End checkout"
+"Running Dimitar_Andreev_B_14.rb"
+"End running Dimitar_Andreev_B_14.rb"
+Already on 'master'
+"End checkout"
+"Running Nikola_Marinov_A_20.rb"
+fatal: ambiguous argument '/home/kireto/tues/tp/software_engineering_2014/class009_homework/requireteamName.pdf': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+"End running Nikola_Marinov_A_20.rb"
+Already on 'master'
+"End checkout"
+"Running Vanya_Santeva_B_5.rb"
+"End running Vanya_Santeva_B_5.rb"
+Already on 'master'
+"End checkout"
