@@ -35,9 +35,9 @@ def onTime(targetPath, dead_month, dead_date, dead_time)
 	date = logLines[3].to_i
 	time = logLines[4].split(":").first.to_i
 	
-	if month != dead_month then { return false }
-	if date > dead_date then { return false }
-	if date == dead_date && time >= dead_time then { return false }
+	if month != dead_month then return false end
+	if date > dead_date then return false end
+	if date == dead_date && time >= dead_time then return false end
 	
 	return true
 end	
