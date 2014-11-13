@@ -1,7 +1,7 @@
 class SVGWriter
 	def bar(text, x, y, w, h)
-		text.puts("<rect x='#{x}' y='#{y}' width='#{w}' height='#{h}'\
-					style='fill:rgb(150,0,0);stroke-width:1;stroke:rgb(0,0,0)' />")
+		text.puts("\t<rect x='#{x}' y='#{y}' width='#{w}' height='#{h}' style='fill:rgb(150,0,0);stroke-width:1;stroke:rgb(0,0,0)'/>
+            <text x='#{x + w/2 - 4}' y='340' fill='white'>#{h}</text>")
 		return text
 	end
 
@@ -12,9 +12,8 @@ class SVGWriter
 		barStart = 50; barStep = 75
 		
 		file.puts "\
-<svg width='600' height='400'>
-	<rect x='0' y='0' width='100%' height='100%' style='fill:rgb(255,255,255)'/>
-	<line x1='50' y1='350' x2='550' y2='350' style='stroke:rgb(0,0,0);stroke-width:2' />
+<svg width='600' height='400' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+	<line x1='50' y1='350' x2='550' y2='350' style='stroke:rgb(0,0,0);stroke-width:2'/>
 	<line x1='50' y1='350' x2='50' y2='50' style='stroke:rgb(0,0,0);stroke-width:2' />
 	<text x='#{textStart}' y='365' fill='black'>VH</text>
 	<text x='#{textStart + textStep}' y='365' fill='black'>002</text>
@@ -35,7 +34,8 @@ class SVGWriter
 		end
 		
 		for i in 0..5
-			bar(file, barStart + barStep*i, 350, barStep, -values[i]*3)
+            puts values[i]
+			bar(file, barStart + barStep*i, 350 - values[i], barStep, values[i])
 		end
 		
 		file.puts "\
