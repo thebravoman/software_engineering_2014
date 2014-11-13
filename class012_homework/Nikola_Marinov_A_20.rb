@@ -122,7 +122,7 @@ Dir.glob("#{repo_loc}class012_homework/*.rb") do |task12|
 	end
 end
 
-CSV.open("results_Petko_Bozhinov_A_21.csv","w") do |csv|
+CSV.open("results_Nikola_Marinov_A_20.csv","w") do |csv|
 	csv << ["", "", "VH", "002", "003", "004", "009", "012"]
 	grades.keys.sort.each do |key|
 		if grades[key][0] == nil
