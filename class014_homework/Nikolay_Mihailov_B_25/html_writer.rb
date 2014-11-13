@@ -1,17 +1,3 @@
-def init_headers(html)
-	html.puts("	<tr>")
-	html.puts("	<th> FirstName </th>")
-	html.puts("	<th> LastName </th>")
-	html.puts("	<th> VH </th>")
-	html.puts("	<th> 002 </th>")
-	html.puts("	<th> 003 </th>")
-	html.puts("	<th> 004 </th>")
-	html.puts("	<th> 009 </th>")
-	html.puts("	<th> 012 </th>")
-	html.puts("	</tr>")
-	return html
-end
-
 class HTMLWriter
 	def write(result,classes)
 		html = File.open("results_Nikolay_Mihailov_B_25.html", "w")
