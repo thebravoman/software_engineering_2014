@@ -1,9 +1,9 @@
 class XMLWriter
-	def write (hash, filename)
+	def write (hash)
 		array_count = 0
 		
 		#Create the mighty XML
-		File.open(filename + ".xml", 'w') { 
+		File.open("results_Valentin_Varbanov_B_4.xml", 'w') { 
 			|file| 
 			file.write ("<results>\n") 
 		}
@@ -18,7 +18,7 @@ class XMLWriter
 						result5 = result[5]
 						if result5 == nil then result5 = 0 end
 			end
-			File.open(filename + ".xml", 'a') {
+			File.open("results_Valentin_Varbanov_B_4.xml", 'a') {
 				|file|
 				file << "<student>"
 				file << "<first_name>#{first_name}</first_name>"
@@ -34,7 +34,7 @@ class XMLWriter
 			end
 		
 		
-		File.open(filename + ".xml", 'a') {
+		File.open("results_Valentin_Varbanov_B_4.xml", 'a') {
 			|file|
 			file << "</results>\n"
 		}

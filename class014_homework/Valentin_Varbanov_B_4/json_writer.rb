@@ -1,8 +1,8 @@
 class JSONWriter
-	def write (hash, filename)
+	def write (hash)
 		
 		#Mighty JSON source :D
-		File.open(filename + ".json", 'w') {
+		File.open("results_Valentin_Varbanov_B_4.json", 'w') {
 			|file|
 			file.write("\"results\": {\n")
 		}	
@@ -17,7 +17,7 @@ class JSONWriter
 						result5 = result[5]
 						if result5 == nil then result5 = 0 end
 			end
-			File.open(filename + ".json", 'a') {
+			File.open("results_Valentin_Varbanov_B_4.json", 'a') {
 				|file|
 				file << "\"student\": {\n"
 				file << "\"first-name\": \"#{first_name}\"\n"
@@ -33,7 +33,7 @@ class JSONWriter
 	
 		end
 		
-		File.open(filename + ".json", 'a') {
+		File.open("results_Valentin_Varbanov_B_4.json", 'a') {
 			|file|
 			file << "}\n"
 		}
