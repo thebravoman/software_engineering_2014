@@ -7,10 +7,10 @@
 <text x="213" y="290" fill="black">004</text>
 <text x="264" y="290" fill="black">009</text>
 <text x="315" y="290" fill="black">012</text>
-<rect x="51" y="191" width="50" height="89" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
-<rect x="102" y="182" width="50" height="98" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
-<rect x="153" y="171" width="50" height="109" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
-<rect x="204" y="172" width="50" height="108" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
-<rect x="255" y="196" width="50" height="84" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
-<rect x="306" y="174" width="50" height="106" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<rect x="51" y="176" width="50" height="104" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<rect x="102" y="176" width="50" height="104" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<rect x="153" y="168" width="50" height="112" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<rect x="204" y="168" width="50" height="112" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<rect x="255" y="184" width="50" height="96" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<rect x="306" y="172" width="50" height="108" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
 </svg>

@@ -420,6 +420,16 @@
 			<tag012>2</tag012>
 	</student>
 	<student>
+		<first>Run</first>
+		<last>Them</last>
+			<tagVH>0</tagVH>
+			<tag002>0</tag002>
+			<tag003>0</tag003>
+			<tag004>0</tag004>
+			<tag009>0</tag009>
+			<tag012>2</tag012>
+	</student>
+	<student>
 		<first>Simeon</first>
 		<last>Shopkin</last>
 			<tagVH>2</tagVH>
@@ -573,7 +583,7 @@
 		<first>Vladimir</first>
 		<last>Yordanov</last>
 			<tagVH>2</tagVH>
-			<tag002>2</tag002>
+			<tag002>1</tag002>
 			<tag003>2</tag003>
 			<tag004>2</tag004>
 			<tag009>2</tag009>

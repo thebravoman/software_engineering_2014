@@ -3,17 +3,12 @@
 	{
 		"First Name":"Atanaska"
 		"Last Name":"Ivancheva"
-		"result":[1,1,2,2,2,2]
+		"result":[1,2,2,2,2,2]
 	},
 	{
 		"First Name":"Borislav"
 		"Last Name":"Rusinov"
 		"result":[1,2,2,2,2,2]
-	},
-	{
-		"First Name":"Borislav"
-		"Last Name":"Stratev"
-		"result":[2,2,2,2,2,2]
 	},
 	{
 		"First Name":"David"
@@ -38,7 +33,7 @@
 	{
 		"First Name":"Dimitar"
 		"Last Name":"Nestorov"
-		"result":[2,2,2,0,0,0]
+		"result":[1,1,1,0,0,0]
 	},
 	{
 		"First Name":"Dimitar"
@@ -83,7 +78,7 @@
 	{
 		"First Name":"Ivailo"
 		"Last Name":"Ivanov"
-		"result":[1,0,2,2,0,0]
+		"result":[1,0,1,2,0,0]
 	},
 	{
 		"First Name":"Ivelin"
@@ -103,7 +98,7 @@
 	{
 		"First Name":"Kalin"
 		"Last Name":"Marinov"
-		"result":[2,2,2,2,2,2]
+		"result":[1,2,2,2,2,2]
 	},
 	{
 		"First Name":"Kaloyan"
@@ -123,7 +118,7 @@
 	{
 		"First Name":"Konstantin"
 		"Last Name":"Vekilski"
-		"result":[2,2,2,1,2,2]
+		"result":[1,1,2,1,2,2]
 	},
 	{
 		"First Name":"Krassen"
@@ -148,7 +143,7 @@
 	{
 		"First Name":"Marian"
 		"Last Name":"Belchev"
-		"result":[1,2,2,2,0,2]
+		"result":[1,1,2,2,0,2]
 	},
 	{
 		"First Name":"Martin"
@@ -168,7 +163,7 @@
 	{
 		"First Name":"Nikolay"
 		"Last Name":"Mihailov"
-		"result":[1,1,2,2,2,2]
+		"result":[1,1,2,2,2,1]
 	},
 	{
 		"First Name":"Petko"
@@ -183,7 +178,7 @@
 	{
 		"First Name":"Simeon"
 		"Last Name":"Shopkin"
-		"result":[1,2,2,2,0,2]
+		"result":[1,2,2,2,0,1]
 	},
 	{
 		"First Name":"Stanimir"
@@ -238,12 +233,12 @@
 	{
 		"First Name":"Vasil"
 		"Last Name":"Kolev"
-		"result":[2,0,0,2,0,2]
+		"result":[1,0,0,1,0,2]
 	},
 	{
 		"First Name":"Velislav"
 		"Last Name":"Kostov"
-		"result":[2,2,2,2,2,0]
+		"result":[2,2,2,2,2,1]
 	},
 	{
 		"First Name":"Veselin"
@@ -261,9 +256,9 @@
 		"result":[2,1,2,2,2,2]
 	},
 	{
-		"First Name":"Denis"
-		"Last Name":"Trenchev"
-		"result":[0,2,2,2,0,2]
+		"First Name":"Momchil"
+		"Last Name":"Angelov"
+		"result":[0,2,2,1,0,2]
 	},
 	{
 		"First Name":"Nikola"
@@ -271,9 +266,19 @@
 		"result":[0,2,2,2,2,2]
 	},
 	{
-		"First Name":"Momchil"
-		"Last Name":"Angelov"
-		"result":[0,2,2,1,0,2]
+		"First Name":"Borislav"
+		"Last Name":"Stratev"
+		"result":[0,2,2,2,2,1]
+	},
+	{
+		"First Name":"Denis"
+		"Last Name":"Trenchev"
+		"result":[0,2,2,2,0,2]
+	},
+	{
+		"First Name":"Georgi"
+		"Last Name":"Velev"
+		"result":[0,0,2,2,2,0]
 	},
 	{
 		"First Name":"Hristiyan"
@@ -286,13 +291,188 @@
 		"result":[0,0,2,2,0,2]
 	},
 	{
-		"First Name":"Georgi"
-		"Last Name":"Velev"
-		"result":[0,0,2,2,2,0]
+		"First Name":"Run"
+		"Last Name":"Them"
+		"result":[0,0,0,0,0,1]
 	},
 	{
-		"First Name":"Run"
-		"Last Name":"Scripts"
-		"result":[0,0,0,1,0,0]
+		"First Name":"Results"
+		"Last Name":"Stefan"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Nikola"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Mladen"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Krassen"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Iliyan"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Vladimir"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Atanaska"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Valentin"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Borislav"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Output"
+		"Last Name":"From"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"David"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Lili"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Kalin"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Dimitar"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Stanimir"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Ivo"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Vasil"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Iosyf"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Kaloyan"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Veselina"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Lubomir"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Hristiyan"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Radoslav"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Martin"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Kamena"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Konstantin"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Emiliqn"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Denis"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Vanya"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Ivelin"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Nikolay"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Stanislav"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Elena"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Kristina"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Result"
+		"Last Name":"Gergan"
+		"result":[0,0,0,0,0,1]
+	},
+	{
+		"First Name":"Results"
+		"Last Name":"Petko"
+		"result":[0,0,0,0,0,1]
 	},
 ]}
