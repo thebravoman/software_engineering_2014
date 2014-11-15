@@ -6,7 +6,7 @@ require_relative "html_writer.rb"
 require_relative "svg_writer.rb"
 require_relative "csv_writer.rb"
 results = Hash.new
-time_starts = Time.now
+
 def CreateStudent() 
 	hash = Hash.new
 	hash["VH"] = 0
@@ -135,7 +135,6 @@ students = students.sort_by{|k,v| k }
 #	p v 
 #	p "------------------"
 #end 
-puts Time.now - time_starts
 writer.write(students)
 
 	
