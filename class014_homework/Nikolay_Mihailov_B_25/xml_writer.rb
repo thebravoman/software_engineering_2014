@@ -16,6 +16,7 @@ class XMLWriter
 			xml_file.puts("			<004> #{result[key][3]} </004>")
 			xml_file.puts("			<009> #{result[key][4]} </009>")
 			xml_file.puts("			<012> #{result[key][5]} </012>")
+			xml_file.puts("			<014> #{result[key][6]} </014>")
 			xml_file.puts("		</student>")
 		end
 		xml_file.puts("</results>")
