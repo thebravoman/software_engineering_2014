@@ -1,9 +1,9 @@
 class HTMLWriter
-	def write (hash, filename)
+	def write (hash)
 		array_count = 0
 		
 		#Create the mighty HTML
-		File.open(filename + ".html", 'w') { 
+		File.open("results_Valentin_Varbanov_B_4.html", 'w') { 
 			|file| 
 			file.write ("<html>\n") 
 			file.write ("<head>\n")
@@ -33,7 +33,7 @@ class HTMLWriter
 						result5 = result[5]
 						if result5 == nil then result5 = 0 end
 			end
-			File.open(filename + ".html", 'a') {
+			File.open("results_Valentin_Varbanov_B_4.html", 'a') {
 				|file|
 				file.write ("<tr>\n")
 				file << "<td>#{first_name}</td>\n"
@@ -50,7 +50,7 @@ class HTMLWriter
 			array_count += 1
 		end
 		
-		File.open(filename + ".html", 'a') {
+		File.open("results_Valentin_Varbanov_B_4.html", 'a') {
 			|file|
 			file << "</table>\n"
 			file << "</body>\n"

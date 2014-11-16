@@ -1,8 +1,8 @@
 require 'csv'
 
 class CSVWriter
-	def write (hash, filename)
-		CSV.open(filename + ".csv",'w') do |csv|
+	def write (hash)
+		CSV.open("results_Valentin_Varbanov_B_4.csv",'w') do |csv|
 			csv << [' ',' ',"vhodno_nivo","class002_homework","class003_homework","class004_homework", "class009_homework","class002_homework"]
 				hash.each do |name,result|
 					if name != nil

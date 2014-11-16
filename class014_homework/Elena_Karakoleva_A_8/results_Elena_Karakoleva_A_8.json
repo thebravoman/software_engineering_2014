@@ -1,0 +1,681 @@
+{
+  "Student Name": "Atanaska Ivancheva",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Borislav Rusinov",
+  "result": {
+    "VH": 1,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Borislav Stratev",
+  "result": {
+    "VH": 0,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      1
+    ],
+    "012": 1
+  }
+}{
+  "Student Name": "David Georgiev",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      1
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Denis Stoinev",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Denis Trenchev",
+  "result": {
+    "VH": 0,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": 0,
+    "012": 2
+  }
+}{
+  "Student Name": "Dimitar Andreev",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      1
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Dimitar Matev",
+  "result": {
+    "VH": 1,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Dimitar Nestorov",
+  "result": {
+    "VH": 1,
+    "002": 1,
+    "003": 1,
+    "004": 0,
+    "009": 0,
+    "012": 0
+  }
+}{
+  "Student Name": "Dimitar Terziev",
+  "result": {
+    "VH": 1,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Elena Karakoleva",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Emiliqn Sokolov",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Georgi Ivanov",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      1
+    ],
+    "012": 0
+  }
+}{
+  "Student Name": "Georgi Velev",
+  "result": {
+    "VH": 0,
+    "002": 0,
+    "003": 2,
+    "004": 2,
+    "009": [
+      1
+    ],
+    "012": 0
+  }
+}{
+  "Student Name": "Gergan Nikolov",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Hristiyan Dodov",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Hristiyan Velyakov",
+  "result": {
+    "VH": 0,
+    "002": 0,
+    "003": 2,
+    "004": 0,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Hristo Dachev",
+  "result": {
+    "VH": 0,
+    "002": 0,
+    "003": 2,
+    "004": 2,
+    "009": 0,
+    "012": 2
+  }
+}{
+  "Student Name": "Iliyan Germanov",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Iosyf Saleh",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 0,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Ivailo Ivanov",
+  "result": {
+    "VH": 1,
+    "002": 0,
+    "003": 1,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 0
+  }
+}{
+  "Student Name": "Ivelin Slavchev",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      1
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Ivo Stratev",
+  "result": {
+    "VH": 0,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      1
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Ivo Valchev",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Kalin Marinov",
+  "result": {
+    "VH": 1,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Kaloyan Nikov",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Kamena Dacheva",
+  "result": {
+    "VH": 1,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Konstantin Kostov",
+  "result": {
+    "VH": 1,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      1
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Konstantin Vekilski",
+  "result": {
+    "VH": 2,
+    "002": 1,
+    "003": 2,
+    "004": 1,
+    "009": [
+      1
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Krassen Angelov",
+  "result": {
+    "VH": 1,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      1
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Kristina Pironkova",
+  "result": {
+    "VH": 0,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Lili Kokalova",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Lubomir Yankov",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      1
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Marian Belchev",
+  "result": {
+    "VH": 1,
+    "002": 1,
+    "003": 2,
+    "004": 2,
+    "009": 0,
+    "012": 2
+  }
+}{
+  "Student Name": "Martin Grigorov",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Mladen Karadimov",
+  "result": {
+    "VH": 1,
+    "002": 2,
+    "003": 1,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Momchil Angelov",
+  "result": {
+    "VH": 0,
+    "002": 2,
+    "003": 2,
+    "004": 1,
+    "009": 0,
+    "012": 2
+  }
+}{
+  "Student Name": "Moretti Georgiev",
+  "result": {
+    "VH": 1,
+    "002": 0,
+    "003": 0,
+    "004": 1,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Nikola Marinov",
+  "result": {
+    "VH": 0,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Nikolay Mihailov",
+  "result": {
+    "VH": 1,
+    "002": 1,
+    "003": 2,
+    "004": 2,
+    "009": [
+      1
+    ],
+    "012": 1
+  }
+}{
+  "Student Name": "Petko Bozhinov",
+  "result": {
+    "VH": 1,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Radoslav Kostadinov",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Simeon Shopkin",
+  "result": {
+    "VH": 1,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": 0,
+    "012": 1
+  }
+}{
+  "Student Name": "Stanimir Bogdanov",
+  "result": {
+    "VH": 1,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Stanislav Gospodinov",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": 0,
+    "012": 2
+  }
+}{
+  "Student Name": "Stanislav Iliev",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Stanislav Valkanov",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": 0,
+    "012": 2
+  }
+}{
+  "Student Name": "Stefan Iliev",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Stefan Radev",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Tihomir Lidanski",
+  "result": {
+    "VH": 0,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Valentin Georgiev",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Valentin Varbanov",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Vanya Santeva",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Vasil Kolev",
+  "result": {
+    "VH": 1,
+    "002": 0,
+    "003": 0,
+    "004": 1,
+    "009": [
+      1
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Velislav Kostov",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 1
+  }
+}{
+  "Student Name": "Veselin Dechev",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Veselina Kolova",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}{
+  "Student Name": "Vladimir Yordanov",
+  "result": {
+    "VH": 2,
+    "002": 2,
+    "003": 2,
+    "004": 2,
+    "009": [
+      2
+    ],
+    "012": 2
+  }
+}

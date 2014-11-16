@@ -1,4 +1,4 @@
-require 'Date'
+require 'date'
 #Stefan Iliev waz hiar. #
 #ruby chktime file_path time_limit point_penalty.#
 #additional arguments: -help brings the help menu, -x accumulates the points lost for every late commit.

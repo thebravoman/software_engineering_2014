@@ -1,17 +1,3 @@
-def init_headers(html)
-	html.puts("	<tr>")
-	html.puts("	<th> FirstName </th>")
-	html.puts("	<th> LastName </th>")
-	html.puts("	<th> VH </th>")
-	html.puts("	<th> 002 </th>")
-	html.puts("	<th> 003 </th>")
-	html.puts("	<th> 004 </th>")
-	html.puts("	<th> 009 </th>")
-	html.puts("	<th> 012 </th>")
-	html.puts("	</tr>")
-	return html
-end
-
 class HTMLWriter
 	def write(result,classes)
 		html = File.open("results_Nikolay_Mihailov_B_25.html", "w")
@@ -29,6 +15,7 @@ class HTMLWriter
 		html.puts("	<th> 004 </th>")
 		html.puts("	<th> 009 </th>")
 		html.puts("	<th> 012 </th>")
+		html.puts("	<th> 014 </th>")
 		html.puts("	</tr>")
 		
 		result.keys.sort.each do |key|
@@ -46,6 +33,7 @@ class HTMLWriter
 			html.puts("	<td> #{result[key][3]} </td>")
 			html.puts("	<td> #{result[key][4]} </td>")
 			html.puts("	<td> #{result[key][5]} </td>")
+			html.puts("	<td> #{result[key][6]} </td>")
 			html.puts("	</tr>")
 		end
 		html.puts("	</table>")

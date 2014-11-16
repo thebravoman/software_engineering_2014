@@ -203,6 +203,6 @@ if ARGV[1] == "-o"
 	elsif ARGV[2] == "svg"
 	
 	end	
-	writer.write (hash, "results_Valentin_Varbanov_B_4")
+	writer.write (hash)
 	
 end

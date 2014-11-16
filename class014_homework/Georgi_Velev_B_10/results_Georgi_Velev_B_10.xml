@@ -36,7 +36,7 @@
     <H002>2</H002>
     <H003>2</H003>
     <H004>2</H004>
-    <H009>2</H009>
+    <H009>1</H009>
     <H012>2</H012>
   </student>
   <student>
@@ -232,7 +232,7 @@
   <student>
     <FirstName>Ivo</FirstName>
     <LastName>Valchev</LastName>
-    <VH>1</VH>
+    <VH>2</VH>
     <H002>2</H002>
     <H003>2</H003>
     <H004>2</H004>
@@ -303,7 +303,7 @@
     <FirstName>Kristina</FirstName>
     <LastName>Pironkova</LastName>
     <VH>2</VH>
-    <H002>1</H002>
+    <H002>2</H002>
     <H003>2</H003>
     <H004>2</H004>
     <H009>2</H009>
@@ -420,6 +420,16 @@
     <H012>2</H012>
   </student>
   <student>
+    <FirstName>Run</FirstName>
+    <LastName>Them</LastName>
+    <VH>0</VH>
+    <H002>0</H002>
+    <H003>0</H003>
+    <H004>0</H004>
+    <H009>0</H009>
+    <H012>1</H012>
+  </student>
+  <student>
     <FirstName>Simeon</FirstName>
     <LastName>Shopkin</LastName>
     <VH>1</VH>
@@ -455,7 +465,7 @@
     <VH>2</VH>
     <H002>2</H002>
     <H003>2</H003>
-    <H004>1</H004>
+    <H004>2</H004>
     <H009>2</H009>
     <H012>2</H012>
   </student>

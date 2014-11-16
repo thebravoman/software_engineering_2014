@@ -118,7 +118,7 @@ Dir.glob(ARGV[0]+"class012_homework/*.*").each do |file|
 		first_name = short_file.split(/_/).first.capitalize
 		last_name = short_file.split(/_/, 2).last.split("_").first.capitalize
 		name = first_name + ',' + last_name
-		log = `git log --until=Nov--13--2014--06:00:00 #{file}`
+		log = `git log --until=Nov--10--2014--20:00:00 #{file}`
 		if !log.empty?
 			result[name][folder] = 2
 		elsif log.empty?
@@ -129,11 +129,18 @@ end
 
 
 
-writer = XMLWriter.new
-writer.write result
-writer = CSVWriter.new
-writer.write(result, classes)
-writer = JSONWriter.new
-writer.write result
-writer = HTMLWriter.new
-writer.write(result, classes)
+
+case ARGV[2]
+when "xml"
+	writer = XMLWriter.new
+	writer.write result
+when "csv"
+	writer = CSVWriter.new
+	writer.write(result, classes)
+when "json"
+	writer = JSONWriter.new
+	writer.write result
+when "html"
+	writer = HTMLWriter.new
+	writer.write(result, classes)
+end

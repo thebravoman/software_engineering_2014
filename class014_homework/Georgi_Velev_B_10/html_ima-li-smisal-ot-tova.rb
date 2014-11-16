@@ -25,34 +25,52 @@ class HTMLWriter
 					#line.puts  "</span>"
 				line.puts"</tr>"
 			end
-			line.puts "</table>\n</body>\n</html>"
+			line.puts "</table>\n<h1>Inspired by Google Material Design</h1></body>\n</html>"
 		end
 
 		File.open("results_Georgi_Velev_B_10.css","w") do |css|
-			css.puts "body {text-align: center; background-color: #555555;}"
-			css.puts "caption {color:#ff9223; font-size:24; font-style:bold;}"
-			css.puts "th {color: #ff128d;}"
+			css.puts "body {
+					text-align: center;
+					background-color: #bdbdbd;
+					font-family:\"RobotoDraft\",\"Roboto\",sans-serif;}"
+			css.puts "caption {
+					color:#ffffff;
+					font-size:24;
+					font-style:bold;
+					background-color: #43a047;
+					padding:10px;}"
+			css.puts "th {
+					background-color:4caf50;
+					color:#ffffff;
+					border-width: 0px;
+					margin:0px;
+					padding: 1px 8px;}"
 			css.puts "table {
-			margin-left: auto;
-			margin-right: auto;
-			color: #ff128d; 
-			border-width: 2px; 
-			border-spacing: 3px;
-			border-style: dashed; 
-			border-color: #13a3ed; 
-			border-collapse: separate; 
-			background-color: #474747;}"
-			css.puts "td { text-align:center;
-			font-family:Helvetica; 
-			border-width: 1px; 
-			font-size:18px; 
-			color:#acee12;
-			font-style:bold; 
-			text-decoration:none; 
-			padding: 16px; 
-			border-color: #ff128d;
-			border-style: dashed;}"
-			css.puts ".name {color: #76ade4;}"
+					margin-left: auto;
+					margin-right: auto;
+					color: #dedede; 
+					border-width: 0px; 
+					border-spacing: 0px;
+					background-color: #ffffff;}"
+			css.puts "td {
+					text-align:center;
+					font-family:Helvetica; 
+					font-size:18px; 
+					color:#212121;
+					font-style:bold; 
+					text-decoration:none; 
+					padding: 16px;}"
+			css.puts ".name {
+					color: #212121;
+					background-color: e0e0e0;}"
+			css.puts "h1 {
+					color:#ffffff;
+					font-size:11;
+					font-style:bold;
+					margin:0px -8px;
+					margin-bottom: -8px;
+					padding: 2px;
+					background-color: #43a047;}"
 		end
 
 	end

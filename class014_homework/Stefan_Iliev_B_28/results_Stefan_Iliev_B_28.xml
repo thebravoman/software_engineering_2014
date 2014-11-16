@@ -3,7 +3,7 @@
 		<FirstName> Atanaska </FirstName>
 		<LastName> Ivancheva </LastName>
 		<entry_homework>  2  </entry_homework>
-		<homework_1> 1 </homework_1>
+		<homework_1> 2 </homework_1>
 		<homework_2> 2 </homework_2>
 		<homework_3> 2 </homework_3>
 		<homework_4> 2 </homework_4>
@@ -206,7 +206,7 @@
 		<homework_1> 0 </homework_1>
 		<homework_2> 1 </homework_2>
 		<homework_3> 2 </homework_3>
-		<homework_4> 0 </homework_4>
+		<homework_4> 2 </homework_4>
 		<homework_5> 0 </homework_5>
 	</student>
 	<student>
@@ -285,7 +285,7 @@
 		<entry_homework>  1  </entry_homework>
 		<homework_1> 1 </homework_1>
 		<homework_2> 2 </homework_2>
-		<homework_3> 1 </homework_3>
+		<homework_3> 2 </homework_3>
 		<homework_4> 1 </homework_4>
 		<homework_5> 2 </homework_5>
 	</student>
@@ -303,7 +303,7 @@
 		<FirstName> Kristina </FirstName>
 		<LastName> Pironkova </LastName>
 		<entry_homework>  2  </entry_homework>
-		<homework_1> 1 </homework_1>
+		<homework_1> 2 </homework_1>
 		<homework_2> 2 </homework_2>
 		<homework_3> 2 </homework_3>
 		<homework_4> 2 </homework_4>
@@ -376,7 +376,7 @@
 		<homework_1> 0 </homework_1>
 		<homework_2> 0 </homework_2>
 		<homework_3> 1 </homework_3>
-		<homework_4> 0 </homework_4>
+		<homework_4> 2 </homework_4>
 		<homework_5> 2 </homework_5>
 	</student>
 	<student>
@@ -397,7 +397,7 @@
 		<homework_2> 2 </homework_2>
 		<homework_3> 2 </homework_3>
 		<homework_4> 1 </homework_4>
-		<homework_5> 1 </homework_5>
+		<homework_5> 2 </homework_5>
 	</student>
 	<student>
 		<FirstName> Petko </FirstName>
@@ -426,7 +426,7 @@
 		<homework_1> 2 </homework_1>
 		<homework_2> 2 </homework_2>
 		<homework_3> 2 </homework_3>
-		<homework_4> 0 </homework_4>
+		<homework_4> 2 </homework_4>
 		<homework_5> 2 </homework_5>
 	</student>
 	<student>
@@ -455,7 +455,7 @@
 		<entry_homework>  2  </entry_homework>
 		<homework_1> 2 </homework_1>
 		<homework_2> 2 </homework_2>
-		<homework_3> 1 </homework_3>
+		<homework_3> 2 </homework_3>
 		<homework_4> 2 </homework_4>
 		<homework_5> 2 </homework_5>
 	</student>
@@ -466,7 +466,7 @@
 		<homework_1> 2 </homework_1>
 		<homework_2> 2 </homework_2>
 		<homework_3> 2 </homework_3>
-		<homework_4> 0 </homework_4>
+		<homework_4> 2 </homework_4>
 		<homework_5> 2 </homework_5>
 	</student>
 	<student>
@@ -547,7 +547,7 @@
 		<homework_2> 2 </homework_2>
 		<homework_3> 2 </homework_3>
 		<homework_4> 2 </homework_4>
-		<homework_5> 1 </homework_5>
+		<homework_5> 2 </homework_5>
 	</student>
 	<student>
 		<FirstName> Veselin </FirstName>

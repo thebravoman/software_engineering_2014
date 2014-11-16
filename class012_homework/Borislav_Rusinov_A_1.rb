@@ -49,7 +49,7 @@ end
 		folder += 1
 end
 
-CSV.open("results_Borislav_Rusinov_A_1.csv	","w") do |csv|
+CSV.open("results_Borislav_Rusinov_A_1.csv","w") do |csv|
 csv << mainRow
 results.keys.sort.each do |key|
 csv << [key, results[key]].flatten

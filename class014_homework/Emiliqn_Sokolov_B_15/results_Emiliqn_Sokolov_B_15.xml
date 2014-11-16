@@ -1,15 +1,11 @@
 <results>
 	<students>
 		<student_name>["Atanaska", "Ivancheva"]</student_name>
-		<result>[1, 1, 2, 2, 2, 2]</result>
+		<result>[1, 2, 2, 2, 2, 2]</result>
 	</students>
 	<students>
 		<student_name>["Borislav", "Rusinov"]</student_name>
 		<result>[1, 2, 2, 2, 2, 2]</result>
-	</students>
-	<students>
-		<student_name>["Borislav", "Stratev"]</student_name>
-		<result>[2, 2, 2, 2, 2, 2]</result>
 	</students>
 	<students>
 		<student_name>["David", "Georgiev"]</student_name>
@@ -29,7 +25,7 @@
 	</students>
 	<students>
 		<student_name>["Dimitar", "Nestorov"]</student_name>
-		<result>[2, 2, 2, 0, 0, 0]</result>
+		<result>[1, 1, 1, 0, 0, 0]</result>
 	</students>
 	<students>
 		<student_name>["Dimitar", "Terziev"]</student_name>
@@ -65,7 +61,7 @@
 	</students>
 	<students>
 		<student_name>["Ivailo", "Ivanov"]</student_name>
-		<result>[1, 0, 2, 2, 0, 0]</result>
+		<result>[1, 0, 1, 2, 0, 0]</result>
 	</students>
 	<students>
 		<student_name>["Ivelin", "Slavchev"]</student_name>
@@ -81,7 +77,7 @@
 	</students>
 	<students>
 		<student_name>["Kalin", "Marinov"]</student_name>
-		<result>[2, 2, 2, 2, 2, 2]</result>
+		<result>[1, 2, 2, 2, 2, 2]</result>
 	</students>
 	<students>
 		<student_name>["Kaloyan", "Nikov"]</student_name>
@@ -97,7 +93,7 @@
 	</students>
 	<students>
 		<student_name>["Konstantin", "Vekilski"]</student_name>
-		<result>[2, 2, 2, 1, 2, 2]</result>
+		<result>[1, 1, 2, 1, 2, 2]</result>
 	</students>
 	<students>
 		<student_name>["Krassen", "Angelov"]</student_name>
@@ -117,7 +113,7 @@
 	</students>
 	<students>
 		<student_name>["Marian", "Belchev"]</student_name>
-		<result>[1, 2, 2, 2, 0, 2]</result>
+		<result>[1, 1, 2, 2, 0, 2]</result>
 	</students>
 	<students>
 		<student_name>["Martin", "Grigorov"]</student_name>
@@ -133,7 +129,7 @@
 	</students>
 	<students>
 		<student_name>["Nikolay", "Mihailov"]</student_name>
-		<result>[1, 1, 2, 2, 2, 2]</result>
+		<result>[1, 1, 2, 2, 2, 1]</result>
 	</students>
 	<students>
 		<student_name>["Petko", "Bozhinov"]</student_name>
@@ -145,7 +141,7 @@
 	</students>
 	<students>
 		<student_name>["Simeon", "Shopkin"]</student_name>
-		<result>[1, 2, 2, 2, 0, 2]</result>
+		<result>[1, 2, 2, 2, 0, 1]</result>
 	</students>
 	<students>
 		<student_name>["Stanimir", "Bogdanov"]</student_name>
@@ -189,11 +185,11 @@
 	</students>
 	<students>
 		<student_name>["Vasil", "Kolev"]</student_name>
-		<result>[2, 0, 0, 2, 0, 2]</result>
+		<result>[1, 0, 0, 1, 0, 2]</result>
 	</students>
 	<students>
 		<student_name>["Velislav", "Kostov"]</student_name>
-		<result>[2, 2, 2, 2, 2, 0]</result>
+		<result>[2, 2, 2, 2, 2, 1]</result>
 	</students>
 	<students>
 		<student_name>["Veselin", "Dechev"]</student_name>
@@ -208,16 +204,24 @@
 		<result>[2, 1, 2, 2, 2, 2]</result>
 	</students>
 	<students>
-		<student_name>["Denis", "Trenchev"]</student_name>
-		<result>[0, 2, 2, 2, 0, 2]</result>
+		<student_name>["Momchil", "Angelov"]</student_name>
+		<result>[0, 2, 2, 1, 0, 2]</result>
 	</students>
 	<students>
 		<student_name>["Nikola", "Marinov"]</student_name>
 		<result>[0, 2, 2, 2, 2, 2]</result>
 	</students>
 	<students>
-		<student_name>["Momchil", "Angelov"]</student_name>
-		<result>[0, 2, 2, 1, 0, 2]</result>
+		<student_name>["Borislav", "Stratev"]</student_name>
+		<result>[0, 2, 2, 2, 2, 1]</result>
+	</students>
+	<students>
+		<student_name>["Denis", "Trenchev"]</student_name>
+		<result>[0, 2, 2, 2, 0, 2]</result>
+	</students>
+	<students>
+		<student_name>["Georgi", "Velev"]</student_name>
+		<result>[0, 0, 2, 2, 2, 0]</result>
 	</students>
 	<students>
 		<student_name>["Hristiyan", "Velyakov"]</student_name>
@@ -228,10 +232,150 @@
 		<result>[0, 0, 2, 2, 0, 2]</result>
 	</students>
 	<students>
-		<student_name>["Georgi", "Velev"]</student_name>
-		<result>[0, 0, 2, 2, 2, 0]</result>
+		<student_name>["Run", "Them"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
 	</students>
 	<students>
-		<student_name>["Run", "Scripts"]</student_name>
-		<result>[0, 0, 0, 1, 0, 0]</result>
+		<student_name>["Results", "Stefan"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Nikola"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Mladen"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Krassen"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Iliyan"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Vladimir"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Atanaska"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Valentin"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Borislav"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Output", "From"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "David"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Lili"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Kalin"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Dimitar"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Stanimir"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Ivo"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Vasil"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Iosyf"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Kaloyan"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Veselina"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Lubomir"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Hristiyan"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Radoslav"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Martin"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Kamena"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Konstantin"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Emiliqn"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Denis"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Vanya"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Ivelin"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Nikolay"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Stanislav"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Elena"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Kristina"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Result", "Gergan"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
+	</students>
+	<students>
+		<student_name>["Results", "Petko"]</student_name>
+		<result>[0, 0, 0, 0, 0, 1]</result>
 	</students>	</results>

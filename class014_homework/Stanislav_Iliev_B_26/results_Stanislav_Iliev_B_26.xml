@@ -206,7 +206,7 @@
 		<002>0</002>
 		<003>1</003>
 		<004>2</004>
-		<009>0</009>
+		<009>2</009>
 		<012>0</012>
 	</student>
 	<student>
@@ -282,7 +282,7 @@
 	<student>
 		<FirstName>Konstantin</FirstName>
 		<LastName>Vekilski</LastName>
-		<VH>1</VH>
+		<VH>0</VH>
 		<002>1</002>
 		<003>2</003>
 		<004>2</004>
@@ -376,7 +376,7 @@
 		<002>0</002>
 		<003>0</003>
 		<004>1</004>
-		<009>0</009>
+		<009>2</009>
 		<012>2</012>
 	</student>
 	<student>
@@ -418,6 +418,16 @@
 		<004>2</004>
 		<009>2</009>
 		<012>2</012>
+	</student>
+	<student>
+		<FirstName>Run</FirstName>
+		<LastName>Them</LastName>
+		<VH>0</VH>
+		<002>0</002>
+		<003>0</003>
+		<004>0</004>
+		<009>0</009>
+		<012>1</012>
 	</student>
 	<student>
 		<FirstName>Simeon</FirstName>
@@ -547,7 +557,7 @@
 		<003>2</003>
 		<004>2</004>
 		<009>2</009>
-		<012>0</012>
+		<012>1</012>
 	</student>
 	<student>
 		<FirstName>Veselin</FirstName>

@@ -206,7 +206,7 @@
 		<tag002>0</tag002>
 		<tag003>1</tag003>
 		<tag004>2</tag004>
-		<tag009>0</tag009>
+		<tag009>2</tag009>
 		<tag012>0</tag012>
 	</student>
 	<student>
@@ -376,7 +376,7 @@
 		<tag002>0</tag002>
 		<tag003>0</tag003>
 		<tag004>1</tag004>
-		<tag009>0</tag009>
+		<tag009>2</tag009>
 		<tag012>2</tag012>
 	</student>
 	<student>
@@ -417,6 +417,16 @@
 		<tag003>2</tag003>
 		<tag004>2</tag004>
 		<tag009>2</tag009>
+		<tag012>2</tag012>
+	</student>
+	<student>
+		<first>Run</first>
+		<last>Them</last>
+		<tagVH>0</tagVH>
+		<tag002>0</tag002>
+		<tag003>0</tag003>
+		<tag004>0</tag004>
+		<tag009>0</tag009>
 		<tag012>2</tag012>
 	</student>
 	<student>
@@ -547,7 +557,7 @@
 		<tag003>2</tag003>
 		<tag004>2</tag004>
 		<tag009>2</tag009>
-		<tag012>0</tag012>
+		<tag012>2</tag012>
 	</student>
 	<student>
 		<first>Veselin</first>

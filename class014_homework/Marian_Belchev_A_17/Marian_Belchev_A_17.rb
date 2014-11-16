@@ -11,7 +11,7 @@ require_relative 'svg_writer.rb'
 												"004" 	=> 0, 
 												"009" 	=> 0, 
 												"012" 	=> 0}}
-folders 	= ["#{ARGV[0]}*_homework", "#{ARGV[0]}vhodno_nivo", "#{ARGV[0]}class004"]
+folders 	= ["#{ARGV[0]}/*_homework", "#{ARGV[0]}/vhodno_nivo", "#{ARGV[0]}/class004"]
 
 def checkTime(path, deadline)
 	commitTime = `git log --until=#{deadline} #{path}`
@@ -71,18 +71,19 @@ def checkFolder(folder, hwNum, deadline)
 end
 
 Dir.glob(folders) do |path|
-	case path
-		when "../../vhodno_nivo"
+	shortPath = path.split("/").last
+	case shortPath
+		when "vhodno_nivo"
 			checkFolder(path, "VH", "17.09.2014:20:00:00") 
-		when "../../class002_homework"
+		when "class002_homework"
 			checkFolder(path, "002", "22.09.2014:20:00:00")
-		when "../../class003_homework"
+		when "class003_homework"
 			checkFolder(path, "003", "24.09.2014:20:00:00")
-		when "../../class004"
+		when "class004"
 			checkFolder(path, "004", "29.09.2014:20:00:00")
-		when "../../class009_homework"
+		when "class009_homework"
 			checkFolder(path, "009", "27.10.2014:20:00:00")
-		when "../../class012_homework"
+		when "class012_homework"
 			checkFolder(path, "012", "10.11.2014:20:00:00")
 	end
 end
