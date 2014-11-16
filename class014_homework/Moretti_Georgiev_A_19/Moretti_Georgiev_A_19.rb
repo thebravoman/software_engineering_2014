@@ -2,7 +2,12 @@ require 'csv'
 
 folders = ["vhodno_nivo","class002_homework", "class003_homework","class004","class009_homework","class012_homework"]
 countFolders = folders.length
-student = Hash.new{|hash, key| hash[key] = Array.new(countFolders,0)}
+student =Hash.new{|hash, key| hash[key] = {	"0" 	=> 0, 
+									1 	=> 0, 
+									2 	=> 0, 
+									3 	=> 0, 
+									4	=> 0, 
+									5 	=> 0}}
 
 def isNotNil(variable)
 	if variable != nil
@@ -44,14 +49,15 @@ end
 		if currentFolder == 4
 			CSV.foreach(ARGV[0] + 'class009_homework/project_to_names.csv') do |row|
   				studentName = row[1]
-  				p studentName
+
   					student[studentName][4] = 2
   				
 			end
 		end
-		CSV.open("results.csv","w") do |csv|
-			student.sort.each do |key, value|
-				csv <<  ["#{key}", "#{value}"]
+		CSV.open("results.csv", "w") do |csv|
+			csv << ["FirstName LastName","VH","002","003","004","009","012"]
+			student.keys.sort.each do |key|
+				csv << [key, student[key].values].flatten
 			end
 		end
 	end	
