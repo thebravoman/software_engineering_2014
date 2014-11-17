@@ -67,7 +67,7 @@ def numCase(hwNum, file, yOrG, result)
 end
 
 def flog(file, hwNum)
-	flogResult = `flog #{file}`.split(":").first
+	flogResult = `flog #{file} -c -q -s`.split(":").first
 	numCase(hwNum, file, "g", flogResult)
 end
 
