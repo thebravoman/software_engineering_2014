@@ -1,6 +1,3 @@
-#179.5 flog
-#178.5 flog, when using nil(line 36)
-
 # Require writers
 require_relative 'csv_writer.rb'
 require_relative 'xml_writer.rb'
@@ -70,18 +67,12 @@ def numCase(hwNum, file, yOrG, result)
 end
 
 def flog(file, hwNum)
-	command = `flog #{file}`
-	flogResult = command.split(":").first
-
+	flogResult = `flog #{file}`.split(":").first
 	numCase(hwNum, file, "g", flogResult)
 end
 
 def flay(file, hwNum)
-	#flayResult = `flay #{file} | grep Lili | wc -l`
-
-	command = `flay #{file}`
-	flayResult = command.split("\n").first.scan(/\d+/).first
-
+	flayResult = `flay #{file}`.split("\n").first.scan(/\d+/).first
 	numCase(hwNum, file, "y", flayResult)
 end
 
@@ -106,7 +97,7 @@ def checkFolder(folder, hwNum, deadline)
 		splitTeamNames(teams)
 
 		Dir.glob("#{folder}/*.pdf") do |file|
-			fileTeamName = file.split("/").last.split(".").first.gsub!("'", "")
+			fileTeamName = file.split("/").last.split(".").first.gsub("'", "")
 			if teams.has_key? fileTeamName
 				teams[fileTeamName].each do |student|
 					if checkTime(file, deadline)
@@ -127,8 +118,7 @@ def checkFolder(folder, hwNum, deadline)
 end
 
 Dir.glob(folders) do |path|
-	shortPath = path.split("/").last
-	case shortPath
+	case path.split("/").last
 		when "vhodno_nivo"
 			checkFolder(path, "VH", "17.09.2014:20:00:00") 
 		when "class002_homework"
@@ -161,9 +151,6 @@ if ARGV[1] == "-o"
 		else 
 			abort "ERROR: Wrong type of result file!"
 	end
-
-	finish = Time.now
-	time = finish - start
-
-	writer.write @results,time
+	
+	writer.write @results, Time.now - start
 end
