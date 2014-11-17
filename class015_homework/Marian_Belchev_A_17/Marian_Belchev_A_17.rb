@@ -33,7 +33,7 @@ folders 	= ["#{ARGV[0]}/*_homework", "#{ARGV[0]}/vhodno_nivo", "#{ARGV[0]}/class
 def checkTime(path, deadline)
 	commitTime = `git log --until=#{deadline} #{path}`
 
-	if commitTime.nil? ; return true ; end
+	if !commitTime.empty? ; return true ; end
 end
 
 def split(file)
