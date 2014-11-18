@@ -91,8 +91,8 @@ def checkFolder folder, hwNum, deadline
 	else
 		Dir.glob("#{folder}/**/*_*_*_*.rb") do |file|
 			setMark(file, hwNum, deadline)
-			#flog(file, hwNum)
-			#flay(file, hwNum)
+			flog(file, hwNum)
+			flay(file, hwNum)
 		end
 	end
 end
