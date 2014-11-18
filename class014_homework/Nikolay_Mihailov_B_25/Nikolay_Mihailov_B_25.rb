@@ -49,24 +49,20 @@ def homework_chek_009 (directory_name,log_info,result,folder)
 	end
 	return result
 end
-for folder in 0..6 do
-	case folder
-		when 0
-		result = homework_chek("/vhodno_nivo/**/*_*_*.*", "Sep--17--2014--20:00:00",result,folder)				
-		when 1
-		result = homework_chek("/class002_homework/*_*_*_*.rb", "Sep--22--2014--20:00:00",result,folder)
-		when 2
-		result = homework_chek("/class003_homework/*_*_*_*.rb", "Sep--24--2014--20:00:00",result,folder)
-		when 3
-		result = homework_chek("/class004/*_*_*_*.rb", "Sep--29--2014--20:00:00",result,folder)
-		when 4
-		result = homework_chek_009("/class009_homework/**/*.pdf", "Oct--27--2014--20:00:00",result,folder)	
-		when 5
-		result = homework_chek("/class012_homework/*_*_*_*.rb", "Nov--10--2014--20:00:00",result,folder)
-		when 6
-		result = homework_chek("/class014_homework/**/*_*_*_*.rb", "Nov--13--2014--06:00:00",result,folder)
-		end
-end 
+folder = 0
+result = homework_chek("/vhodno_nivo/**/*_*_*.*", "Sep--17--2014--20:00:00",result,folder)				
+folder = 1
+result = homework_chek("/class002_homework/*_*_*_*.rb", "Sep--22--2014--20:00:00",result,folder)
+folder = 2
+result = homework_chek("/class003_homework/*_*_*_*.rb", "Sep--24--2014--20:00:00",result,folder)
+folder = 3
+result = homework_chek("/class004/*_*_*_*.rb", "Sep--29--2014--20:00:00",result,folder)
+folder = 4
+result = homework_chek_009("/class009_homework/**/*.pdf", "Oct--27--2014--20:00:00",result,folder)	
+folder = 5
+result = homework_chek("/class012_homework/*_*_*_*.rb", "Nov--10--2014--20:00:00",result,folder)
+folder = 6
+result = homework_chek("/class014_homework/**/*_*_*_*.rb", "Nov--13--2014--06:00:00",result,folder)
 		
 puts Time.now - time_start
 write = true

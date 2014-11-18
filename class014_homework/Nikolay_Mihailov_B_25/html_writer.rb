@@ -19,10 +19,7 @@ class HTMLWriter
 		html.puts("	</tr>")
 		
 		result.keys.sort.each do |key|
-
-			if key.include? ','
-					key_split = key.split(",")
-			end
+			key_split = key.split(",")
 
 			html.puts("	<tr>")
 			html.puts("	<td> #{key_split[0]} </td>")

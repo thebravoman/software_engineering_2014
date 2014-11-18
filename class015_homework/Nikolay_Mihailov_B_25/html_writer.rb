@@ -15,14 +15,15 @@ class HTMLWriter
 		html.puts("	<th> 004 </th>")
 		html.puts("	<th> 009 </th>")
 		html.puts("	<th> 012 </th>")
+		html.puts("	<th> Flog12 </th>")
+		html.puts("	<th> Flay12 </th>")
+		html.puts("	<th> 014 </th>")
+		html.puts("	<th> Flog14 </th>")
+		html.puts("	<th> Flay14 </th>")
 		html.puts("	</tr>")
 		
 		result.keys.sort.each do |key|
-
-			if key.include? ','
-					key_split = key.split(",")
-			end
-
+			key_split = key.split(",")
 			html.puts("	<tr>")
 			html.puts("	<td> #{key_split[0]} </td>")
 			html.puts("	<td> #{key_split[1]} </td>")
@@ -32,6 +33,11 @@ class HTMLWriter
 			html.puts("	<td> #{result[key][3]} </td>")
 			html.puts("	<td> #{result[key][4]} </td>")
 			html.puts("	<td> #{result[key][5]} </td>")
+			html.puts("	<td> #{result[key][6]} </td>")
+			html.puts("	<td> #{result[key][7]} </td>")
+			html.puts("	<td> #{result[key][8]} </td>")
+			html.puts("	<td> #{result[key][9]} </td>")
+			html.puts("	<td> #{result[key][10]} </td>")
 			html.puts("	</tr>")
 		end
 		html.puts("	</table>")

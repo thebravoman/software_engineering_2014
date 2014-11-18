@@ -1,60 +1,59 @@
- , ,VH,002,003,004,009,012,014
-Atanaska,Ivancheva,2,2,2,2,2,2,0
-Borislav,Rusinov,1,2,2,2,2,2,0
-Borislav,Stratev,2,2,2,2,1,1,0
-David,Georgiev,2,2,2,2,2,2,0
-Denis,Stoinev,2,2,2,2,2,2,0
-Denis,Trenchev,0,2,2,2,0,2,0
-Dimitar,Andreev,2,2,2,2,0,2,0
-Dimitar,Matev,1,2,2,2,0,2,0
-Dimitar,Nestorov,2,1,1,0,0,0,0
-Dimitar,Terziev,1,2,2,2,2,2,0
-Elena,Karakoleva,2,2,2,2,2,2,0
-Emiliqn,Sokolov,2,2,2,2,2,2,0
-Georgi,Ivanov,2,2,2,2,1,0,0
-Georgi,Velev,0,0,2,2,1,0,0
-Gergan,Nikolov,2,2,2,2,2,2,0
-Hristiyan,Dodov,2,2,2,2,2,2,0
-Hristiyan,Velyakov,0,0,2,2,2,2,0
-Hristo,Dachev,0,0,2,2,0,2,0
-Iliyan,Germanov,2,2,2,2,2,2,0
-Iosyf,Saleh,2,2,0,2,2,2,0
-Ivailo,Ivanov,1,0,2,2,0,0,0
-Ivelin,Slavchev,2,2,2,2,1,2,0
-Ivo,Stratev,2,2,2,2,1,2,0
-Ivo,Valchev,1,2,2,2,2,2,0
-Kalin,Marinov,1,2,2,2,2,2,0
-Kaloyan,Nikov,2,2,2,2,2,2,0
-Kamena,Dacheva,1,2,2,2,2,2,0
-Konstantin,Kostov,1,2,2,2,1,2,0
-Konstantin,Vekilski,2,2,2,2,1,2,0
-Krassen,Angelov,1,2,2,2,1,2,0
-Kristina,Pironkova,2,2,2,2,2,2,0
-Lili,Kokalova,2,2,2,2,2,2,0
-Lubomir,Yankov,2,2,2,2,1,2,0
-Marian,Belchev,1,1,2,2,0,2,0
-Martin,Grigorov,2,2,2,2,2,2,0
-Mladen,Karadimov,1,2,1,2,2,2,0
-Momchil,Angelov,0,2,2,1,0,2,0
-Moretti,Georgiev,1,0,0,1,0,2,0
-Nikola,Marinov,0,2,2,2,2,2,0
-Nikolay,Mihailov,1,1,2,2,1,1,0
-Petko,Bozhinov,1,2,2,2,2,2,0
-Radoslav,Kostadinov,2,2,2,2,2,2,0
-Run,Them,0,0,0,0,0,1,0
-Simeon,Shopkin,1,2,2,2,0,1,0
-Stanimir,Bogdanov,1,2,2,2,2,2,0
-Stanislav,Gospodinov,2,2,2,2,0,2,0
-Stanislav,Iliev,2,2,2,2,2,2,0
-Stanislav,Valkanov,2,2,2,2,0,2,0
-Stefan,Iliev,2,2,2,2,2,2,0
-Stefan,Radev,2,2,2,2,2,2,0
-Tihomir,Lidanski,2,2,2,2,2,2,0
-Valentin,Georgiev,2,2,2,2,2,2,0
-Valentin,Varbanov,2,2,2,2,2,2,0
-Vanya,Santeva,2,2,2,2,2,2,0
-Vasil,Kolev,1,0,0,1,0,2,0
-Velislav,Kostov,2,2,2,2,2,1,0
-Veselin,Dechev,2,2,2,2,2,2,0
-Veselina,Kolova,2,2,2,2,2,2,0
-Vladimir,Yordanov,2,2,2,2,2,2,0
+ , ,VH,002,003,004,009,012,Flog12,Flay12,014,Flog14,Flay14
+Atanaska,Ivancheva,2,2,2,2,2,2,   345.2,70,2,   342.6,70
+Borislav,Rusinov,1,2,2,2,2,2,   115.6,36,2,   355.8,300
+Borislav,Stratev,2,2,2,2,1,1,   499.6,664,2,   457.9,664
+David,Georgiev,2,2,2,2,2,2,    62.1,0,2,   908.8,667
+Denis,Stoinev,2,2,2,2,2,2,   199.1,0,2,   178.6,0
+Denis,Trenchev,0,2,2,2,0,2,   113.8,0,0,-,-
+Dimitar,Andreev,2,2,2,2,0,2,   196.1,185,0,-,-
+Dimitar,Matev,2,2,2,2,0,2,   170.5,0,2,   180.6,0
+Dimitar,Nestorov,0,1,1,0,0,0,-,-,0,-,-
+Dimitar,Terziev,1,2,2,2,2,2,   257.4,302,2,   260.7,98
+Elena,Karakoleva,2,2,2,2,2,2,   258.7,   280.7,42,-,-
+Emiliqn,Sokolov,2,2,2,2,2,2,    64.9,0,2,   267.2,0
+Georgi,Ivanov,2,2,2,2,1,0,-,-,0,-,-
+Georgi,Velev,0,0,2,2,1,0,-,-,2,   309.6,336
+Gergan,Nikolov,2,2,2,2,2,2,   383.8,359,2,   364.2,178
+Hristiyan,Dodov,2,2,2,2,2,2,   177.7,0,2,   166.3,0
+Hristiyan,Velyakov,0,0,2,0,2,2,   296.5,298,2,   296.5,298
+Hristo,Dachev,0,0,2,2,2,2,    92.0,0,2,   135.0,0
+Iliyan,Germanov,2,2,2,2,2,2,   196.9,0,2,   181.9,0
+Iosyf,Saleh,0,2,0,2,2,2,   223.8,44,2,   267.2,0
+Ivailo,Ivanov,1,0,2,2,2,0,-,-,0,-,-
+Ivelin,Slavchev,2,2,2,2,1,2,   458.6,272,2,   296.3,314
+Ivo,Stratev,2,2,2,2,1,2,   499.6,664,2,   457.9,664
+Ivo,Valchev,2,2,2,2,2,2,   257.5,98,2,   259.2,98
+Kalin,Marinov,1,2,2,2,2,2,   170.5,0,2,   180.6,0
+Kaloyan,Nikov,2,2,2,2,2,2,   223.8,44,2,   239.8,44
+Kamena,Dacheva,1,2,2,2,2,2,   232.3,36,2,   254.5,68
+Konstantin,Kostov,0,2,2,2,1,2,   264.6,270,2,   315.9,336
+Konstantin,Vekilski,2,2,2,2,1,2,   855.3,579,2,   879.9,579
+Krassen,Angelov,2,2,2,2,1,2,   458.6,272,2,   292.7,314
+Kristina,Pironkova,2,2,2,2,2,2,   115.6,36,2,   355.8,300
+Lili,Kokalova,2,2,2,2,2,2,   314.9,396,2,   321.7,396
+Lubomir,Yankov,2,2,2,2,1,2,   521.3,805,2,   292.7,314
+Marian,Belchev,0,1,2,2,2,2,    92.0,0,2,   138.5,0
+Martin,Grigorov,2,2,2,2,2,2,   214.3,76,1,   267.2,0
+Mladen,Karadimov,1,2,1,2,2,2,   381.9,359,2,   364.2,178
+Momchil,Angelov,0,2,2,1,0,2,,0,0,-,-
+Moretti,Georgiev,1,0,0,1,2,2,    92.0,0,2,    63.6,0
+Nikola,Marinov,0,2,2,2,2,2,   289.2,195,2,   297.8,195
+Nikolay,Mihailov,1,1,2,2,1,1,   264.6,270,2,   165.1,0
+Petko,Bozhinov,1,2,2,2,2,2,   289.2,195,2,   297.8,195
+Radoslav,Kostadinov,2,2,2,2,2,2,   115.6,36,2,   355.8,300
+Simeon,Shopkin,2,2,2,2,1,1,   291.5,184,1,   295.7,184
+Stanimir,Bogdanov,0,2,2,2,2,2,   257.5,98,2,   263.0,98
+Stanislav,Gospodinov,2,2,2,2,0,2,   113.8,0,0,-,-
+Stanislav,Iliev,2,2,2,2,2,2,   212.7,76,2,   239.8,44
+Stanislav,Valkanov,2,2,2,2,1,2,    83.8,0,2,   295.7,184
+Stefan,Iliev,2,2,2,2,2,2,   127.0,0,2,   127.0,0
+Stefan,Radev,2,2,2,2,2,2,   314.9,396,2,   321.7,396
+Tihomir,Lidanski,2,2,2,2,2,2,   289.2,195,2,   290.5,195
+Valentin,Georgiev,2,2,2,2,2,2,   345.2,70,2,   340.8,70
+Valentin,Varbanov,2,2,2,2,2,2,   383.8,359,2,   363.1,178
+Vanya,Santeva,2,2,2,2,2,2,   223.8,44,2,   239.8,44
+Vasil,Kolev,1,0,0,1,0,2,   237.8,185,0,-,-
+Velislav,Kostov,2,2,2,2,2,1,   265.3,300,2,   264.3,300
+Veselin,Dechev,2,2,2,2,2,2,    69.3,0,2,    69.3,0
+Veselina,Kolova,2,2,2,2,2,2,   345.2,70,2,   340.8,70
+Vladimir,Yordanov,2,2,2,2,2,2,   404.4,375,0,-,-

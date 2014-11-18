@@ -3,10 +3,8 @@ class XMLWriter
 		xml_file = File.open("results_Nikolay_Mihailov_B_25.xml", "w")
 		xml_file.puts("<results>")
 		result.keys.sort.each do |key|
-			if key.include? ','
-				key_split = key.split(",")
-				key_split_ = key_split[0] + " " + key_split[1]
-			end
+			key_split = key.split(",")
+			key_split_ = key_split[0] + " " + key_split[1]
 			
 			xml_file.puts("		<student>")
 			xml_file.puts("			<Name> #{key_split_} </Name>")

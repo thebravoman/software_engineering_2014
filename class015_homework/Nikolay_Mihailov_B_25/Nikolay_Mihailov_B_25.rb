@@ -5,32 +5,47 @@ require_relative "html_writer.rb"
 require_relative "svg_writer.rb"
 require "csv"
 time_start=Time.now
-classes = " "," ","VH","002","003","004","009","012","014"
-result = Hash.new{|hash, key| hash[key] = [0,0,0,0,0,0,0]}
-folder = 0
+classes = " "," ","VH","002","003","004","009","012","Flog12","Flay12","014","Flog14","Flay14"
+result = Hash.new{|hash, key| hash[key] = [0,0,0,0,0,0,'-','-',0,'-','-']}
 team_names = Array.new
 def homework_chek (directory_name,log_info,result,folder)
+	program_num = 1 #for VH
+	name_before = "" #for VH
+	folder_modified = folder
+	folder = 8 if folder == 6
 	Dir.glob(ARGV[0]+"#{directory_name}").each do |file|
-		short_file = file.split(/\//).last
-		if short_file.include? ("_")
-			first_name = short_file.split(/_/).first.capitalize
-			last_name = short_file.split(/_/, 2).last.split("_").first.capitalize
-			name = first_name + ',' + last_name
-			log = `git log --until=#{log_info} #{file}`
-			result[name][folder] = 2 if !log.empty? 
-			result[name][folder] = 1 if log.empty? 
-		end
+		short_file_name = file.split(/\//).last		
+		first_name = short_file_name.split(/_/).first.capitalize
+		last_name = short_file_name.split(/_/, 2).last.split("_").first.capitalize
+		name = first_name + ',' + last_name 
+		program_num +=1 if folder == 0 && name == name_before #for VH
+		log = `git log --until=#{log_info} #{file}`
+		result[name][folder] = 2 if (!log.empty? && folder !=0) || (!log.empty? && program_num == 3 && folder == 0)	 
+		result[name][folder] = 1 if (log.empty? && folder !=0) || (log.empty? && program_num == 3 && folder == 0)
+		if folder == 5 || folder == 8 	
+			file_folder = file.chomp("#{file.split(/\//).last}") 
+			file_folder = file if folder == 5
+			flog = `flog #{file_folder}`
+			flay = `flay #{file_folder}`
+			folder_modified +=1
+			result[name][folder_modified] = flog.split(/:/).first 
+			folder_modified +=1
+			result[name][folder_modified] = flay.split(/=/)[1][1, 4].delete!("\n")
+			folder_modified = folder
+		end		
+		name_before = name #for VH
+		program_num = 1 if program_num == 3 #for VH
 	end
 	return result
 end
 def homework_chek_009 (directory_name,log_info,result,folder)
-	team_names = CSV.read("../../class009_homework/project_to_names.csv")[1, 55]
+	team_names = CSV.read("../../class009_homework/project_to_names.csv")[1, 58]
 	Dir.glob(ARGV[0]+"#{directory_name}").each do |file|	
 		name = file.split(/\//).last.split(".").first
 		team_members = 0
 		line = 0
 		first_line = false
-		for counter in 0..51
+		for counter in 0..55
 		 	if team_names[counter][0] == name 			
 				line = counter if first_line != true
 				first_line = true
@@ -47,26 +62,21 @@ def homework_chek_009 (directory_name,log_info,result,folder)
 	end
 	return result
 end
-for folder in 0..5 do
-	case folder
-		when 0
-		result = homework_chek("/vhodno_nivo/**/*.*", "Sep--17--2014--20:00:00",result,folder)				
-		when 1
-		result = homework_chek("/class002_homework/*.rb", "Sep--22--2014--20:00:00",result,folder)
-		when 2
-		result = homework_chek("/class003_homework/*.rb", "Sep--24--2014--20:00:00",result,folder)
-		when 3
-		result = homework_chek("/class004/*.rb", "Sep--29--2014--20:00:00",result,folder)
-		when 4
-		result = homework_chek_009("/class009_homework//*.pdf", "Oct--27--2014--20:00:00",result,folder)	
-		when 5
-		result = homework_chek("/class012_homework/*.rb", "Nov--10--2014--20:00:00",result,folder)
-		#when 6
-		#result = homework_chek("/class014_homework/**/*_*_*_*.rb", "Nov--13--2014--06:00:00",result,folder)
-		else
-		puts "You are drunk"
-	end
-end 
+
+folder = 0
+result = homework_chek("/vhodno_nivo/**/*_*_*.*", "Sep--17--2014--20:00:00",result,folder)				
+folder = 1
+result = homework_chek("/class002_homework/*_*_*_*.rb", "Sep--22--2014--20:00:00",result,folder)
+folder = 2
+result = homework_chek("/class003_homework/*_*_*_*.rb", "Sep--24--2014--20:00:00",result,folder)
+folder = 3
+result = homework_chek("/class004/*_*_*_*.rb", "Sep--29--2014--20:00:00",result,folder)
+folder = 4
+result = homework_chek_009("/class009_homework/**/*.pdf", "Oct--27--2014--20:00:00",result,folder)	
+folder = 5
+result = homework_chek("/class012_homework/*_*_*_*.rb", "Nov--10--2014--20:00:00",result,folder)
+folder = 6
+result = homework_chek("/class014_homework/**/*_*_*_*.rb", "Nov--13--2014--06:00:00",result,folder) 
 		
 puts Time.now - time_start
 write = true
@@ -81,7 +91,6 @@ if ARGV[1] == "-o"
 		when "html"
 		writer = HTMLWriter.new
 		when "svg"
-		puts "Sorry :("
 		write = false
 		#writer = SVGWriter.new
 		else
