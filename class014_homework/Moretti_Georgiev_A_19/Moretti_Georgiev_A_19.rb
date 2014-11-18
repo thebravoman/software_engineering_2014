@@ -1,65 +1,100 @@
 require 'csv'
-
+require_relative 'csv_writer.rb'
+require_relative 'json_writer.rb'
+require_relative 'xml_writer.rb'
+require_relative 'html_writer.rb'
+#homework folders
 folders = ["vhodno_nivo","class002_homework", "class003_homework","class004","class009_homework","class012_homework"]
-countFolders = folders.length
-student =Hash.new{|hash, key| hash[key] = {	"0" 	=> 0, 
-									1 	=> 0, 
-									2 	=> 0, 
-									3 	=> 0, 
-									4	=> 0, 
-									5 	=> 0}}
-
-def isNotNil(variable)
-	if variable != nil
-		return true;
-	end
-end
-
-def nameChecker(name)
+#hash for every student and his/hers results
+@student =Hash.new{|hash, key| hash[key] = {"VN" 	=> 0, 
+											"002" 	=> 0, 
+											"003" 	=> 0, 
+											"004" 	=> 0, 
+											"009"	=> 0, 
+											"012" 	=> 0}
+}
+def nameCheck(name)
 	if name.to_s.count(" ") == 1
 		return true
 	end
 
 end
+def getFullName(file)
+	#get the first name of the student
+	firstName 	= file.split("/").last.split("_").first
+	#get the last name of the student
+	lastName 	= file.split("/").last.split("_", 2).last.split("_").first
+	#full name
+	fullName 	= firstName + " " + lastName
 
-(0...countFolders).each do |currentFolder| #go through all the folders
-	Dir.glob(ARGV[0]+"/#{folders[currentFolder]}/*_*_*.*").each do |directory|#find files
-		studentName = directory.split("/").last.reverse.split("_",3).last.reverse.gsub("_", " ")#get the student name
-		case currentFolder
-			when 0 then gitLog = `git log --until=17.09.2014:20:00:00 #{directory}`#homeworks comitted to that date
-				studentName = directory.split("/").last.reverse.split("_",2).last.reverse.gsub("_", " ")#get the student name
-			
-			when 1 then gitLog = `git log --until=22.09.2014:20:00:00 #{directory}`#homeworks comitted to that date
-			when 2 then gitLog = `git log --until=24.09.2014:20:00:00 #{directory}`#homeworks comitted to that date
-			when 3 then gitLog = `git log --until=29.09.2014:20:00:00 #{directory}`#homeworks comitted to that date
-			when 4 then gitLog = `git log --until=27.10.2014:20:00:00 #{directory}`#homeworks comitted to that date 
-			when 5 then gitLog = `git log --until=10.11.2014:20:00:00 #{directory}`#homeworks comitted to that date
-		end
-		fileExists = `git log #{directory}` 
-		if !fileExists.to_s.empty?#check if file exists
-			if nameChecker(studentName)
-				student[studentName][currentFolder] = 1 
+	return fullName
+end
+def checkHomework009(hwNum)
+		#read csv line by line
+		CSV.foreach(ARGV[0] + 'class009_homework/project_to_names.csv') do |team|
+			#get the student name
+			studentName = team[1]
+			if nameCheck(studentName)
+				#set mark to the student
+				@student[studentName][hwNum] = 2
 			end
-		end
-		if !gitLog.to_s.empty? #check if the homework is commited on time
-			if nameChecker(studentName)
-				student[studentName][currentFolder] = 2
-			end
-		end
-		if currentFolder == 4
-			CSV.foreach(ARGV[0] + 'class009_homework/project_to_names.csv') do |row|
-  				studentName = row[1]
+		end	
+end
+def countUnderscores(directory)
+	underscoresNum = directory.split("/").last.count("_")
+	return underscoresNum
+end
 
-  					student[studentName][4] = 2
-  				
+def setResultsOfStudent(directory, hwNum, deadline)
+	 	#get the name of the student
+		studentName = getFullName(directory)
+		#result from git log
+		gitLog = `git log --until=#{deadline} #{directory}`
+		#check if file exists
+		fileExists = `git log #{directory}`		
+		#check if the name is correct
+		if nameCheck(studentName)
+			#check if it is a real student program
+			if countUnderscores(directory) > 2 || hwNum == "VN"
+				#check if file exists and it is commited even not in time
+				if !fileExists.to_s.empty?
+						@student[studentName][hwNum] = 1 
+				end
+				 #check if the homework is commited in time
+				if !gitLog.to_s.empty?
+						@student[studentName][hwNum] = 2
+				end
+				#check if homework is 009
+				
 			end
+			if hwNum == "009"	
+						checkHomework009(hwNum)
+				end	
 		end
-		CSV.open("results.csv", "w") do |csv|
-			csv << ["FirstName LastName","VH","002","003","004","009","012"]
-			student.keys.sort.each do |key|
-				csv << [key, student[key].values].flatten
+end
+#go through all the homework folders
+folders.each do |currentFolder|
+	#go through all the homeworks
+		Dir.glob(ARGV[0]+"#{currentFolder}/*_*_*.*").each do |fullDirectory|
+			case currentFolder
+				when "vhodno_nivo" then setResultsOfStudent(fullDirectory, "VN", "17.09.2014:20:00:00")
+ 				when "class002_homework" then setResultsOfStudent(fullDirectory, "002", "22.09.2014:20:00:00")
+				when "class003_homework" then setResultsOfStudent(fullDirectory, "003", "24.09.2014:20:00:00")
+				when "class004" then setResultsOfStudent(fullDirectory, "004", "29.09.2014:20:00:00")
+				when "class009_homework" then setResultsOfStudent(fullDirectory, "009", "27.10.2014:20:00:00")
+				when "class012_homework" then setResultsOfStudent(fullDirectory, "012", "10.11.2014:20:00:00") 
 			end
+		end	
+	
+end
+
+if ARGV[1] == "-o"
+	resultType = ARGV[2]
+		case resultType
+			when "csv" then writer = CsvWriter.new()
+			when "json" then writer = JSONWriter.new()
+			when "xml" then writer = XMLWriter.new()
+			when "html" then writer = HTMLWriter.new()
 		end
-	end	
-	p "*****************END**************** #{folders[currentFolder]}"
+		writer.write(@student)
 end
