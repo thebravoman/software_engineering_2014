@@ -51,8 +51,10 @@ def check009 folder, hwNum, deadline
 
 	Dir.glob("#{folder}/*.pdf") do |file|
 		fileTeamName = file.split('/').last.split('.').first.tr("'", '')
-		teams[fileTeamName].each do |student|
-			@results[student][hwNum] = checkTime(file, deadline)
+		if teams.key? fileTeamName
+			teams[fileTeamName].each do |student|
+				@results[student][hwNum] = checkTime(file, deadline)
+			end
 		end
 	end
 end
@@ -61,7 +63,7 @@ def checkHW folder, hwNum, deadline
 	hwNum != "VH" ? path = "#{folder}/**/*_*_*_*.rb" : path = "#{folder}/**/*_*_*.*"
 
 	Dir.glob(path) do |file|
-		@results[split(folder)][hwNum] = checkTime(file, deadline)
+		@results[split(file)][hwNum] = checkTime(file, deadline)
 		if hwNum != "VH"
 			flog(file, hwNum)
 			flay(file, hwNum)
