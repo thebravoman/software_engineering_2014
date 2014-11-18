@@ -73,8 +73,8 @@ result = homework_chek("/class012_homework/*_*_*_*.rb", "Nov--10--2014--20:00:00
 folder = 8 # not 6 because after class012 --> flog and flay  
 result = homework_chek("/class014_homework/**/*_*_*_*.rb", "Nov--13--2014--06:00:00",result,folder) 
 		
-write = true
 puts Time.now - time_start
+write = true
 if ARGV[1] == "-o"
 	case ARGV[2]
 		when "csv"
