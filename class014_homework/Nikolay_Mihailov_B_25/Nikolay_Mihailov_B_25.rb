@@ -12,9 +12,9 @@ def homework_chek (directory_name,log_info,result,folder)
 	program_num = 1
 	name_before = ""
 	Dir.glob(ARGV[0]+"#{directory_name}").each do |file|
-		short_file = file.split(/\//).last
-		first_name = short_file.split(/_/).first.capitalize
-		last_name = short_file.split(/_/, 2).last.split("_").first.capitalize
+		short_file_name = file.split(/\//).last		
+		first_name = short_file_name.split(/_/)[0].capitalize
+		last_name = short_file_name.split(/_/)[1].capitalize
 		name = first_name + ',' + last_name 
 		program_num +=1 if folder == 0 && name == name_before #for VH
 		log = `git log --until=#{log_info} #{file}`
