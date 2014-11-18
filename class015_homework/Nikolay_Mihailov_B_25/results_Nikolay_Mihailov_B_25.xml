@@ -7,6 +7,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    345.2 </Flog12>
+			<Flay12> 70 </Flay12>
+			<014> 2 </014>
+			<Flog14>    619.6 </Flog14>
+			<Flay14> 70 </Flay14>
 		</student>
 		<student>
 			<Name> Borislav Rusinov </Name>
@@ -16,6 +21,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    115.6 </Flog12>
+			<Flay12> 36 </Flay12>
+			<014> 2 </014>
+			<Flog14>    518.8 </Flog14>
+			<Flay14> 300 </Flay14>
 		</student>
 		<student>
 			<Name> Borislav Stratev </Name>
@@ -25,6 +35,11 @@
 			<004> 2 </004>
 			<009> 1 </009>
 			<012> 1 </012>
+			<Flog12>    499.6 </Flog12>
+			<Flay12> 664 </Flay12>
+			<014> 2 </014>
+			<Flog14>    504.4 </Flog14>
+			<Flay14> 664 </Flay14>
 		</student>
 		<student>
 			<Name> David Georgiev </Name>
@@ -32,8 +47,13 @@
 			<002> 2 </002>
 			<003> 2 </003>
 			<004> 2 </004>
-			<009> 1 </009>
+			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>     62.1 </Flog12>
+			<Flay12> 0 </Flay12>
+			<014> 2 </014>
+			<Flog14>    988.0 </Flog14>
+			<Flay14> 785 </Flay14>
 		</student>
 		<student>
 			<Name> Denis Stoinev </Name>
@@ -43,6 +63,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    199.1 </Flog12>
+			<Flay12> 0 </Flay12>
+			<014> 2 </014>
+			<Flog14>    378.1 </Flog14>
+			<Flay14> 184 </Flay14>
 		</student>
 		<student>
 			<Name> Denis Trenchev </Name>
@@ -52,6 +77,11 @@
 			<004> 2 </004>
 			<009> 0 </009>
 			<012> 2 </012>
+			<Flog12>    113.8 </Flog12>
+			<Flay12> 0 </Flay12>
+			<014> 0 </014>
+			<Flog14> - </Flog14>
+			<Flay14> - </Flay14>
 		</student>
 		<student>
 			<Name> Dimitar Andreev </Name>
@@ -61,24 +91,39 @@
 			<004> 2 </004>
 			<009> 0 </009>
 			<012> 2 </012>
+			<Flog12>    196.1 </Flog12>
+			<Flay12> 185 </Flay12>
+			<014> 0 </014>
+			<Flog14> - </Flog14>
+			<Flay14> - </Flay14>
 		</student>
 		<student>
 			<Name> Dimitar Matev </Name>
-			<VH> 1 </VH>
+			<VH> 2 </VH>
 			<002> 2 </002>
 			<003> 2 </003>
 			<004> 2 </004>
 			<009> 0 </009>
 			<012> 2 </012>
+			<Flog12>    170.5 </Flog12>
+			<Flay12> 0 </Flay12>
+			<014> 2 </014>
+			<Flog14>    352.3 </Flog14>
+			<Flay14> 42 </Flay14>
 		</student>
 		<student>
 			<Name> Dimitar Nestorov </Name>
-			<VH> 2 </VH>
+			<VH> 0 </VH>
 			<002> 1 </002>
 			<003> 1 </003>
 			<004> 0 </004>
 			<009> 0 </009>
 			<012> 0 </012>
+			<Flog12> - </Flog12>
+			<Flay12> - </Flay12>
+			<014> 0 </014>
+			<Flog14> - </Flog14>
+			<Flay14> - </Flay14>
 		</student>
 		<student>
 			<Name> Dimitar Terziev </Name>
@@ -88,6 +133,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    257.4 </Flog12>
+			<Flay12> 302 </Flay12>
+			<014> 2 </014>
+			<Flog14>    513.3 </Flog14>
+			<Flay14> 194 </Flay14>
 		</student>
 		<student>
 			<Name> Elena Karakoleva </Name>
@@ -97,6 +147,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    258.7 </Flog12>
+			<Flay12>    410.2 </Flay12>
+			<014> 42 </014>
+			<Flog14> - </Flog14>
+			<Flay14> - </Flay14>
 		</student>
 		<student>
 			<Name> Emiliqn Sokolov </Name>
@@ -106,6 +161,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>     64.9 </Flog12>
+			<Flay12> 0 </Flay12>
+			<014> 2 </014>
+			<Flog14>    419.7 </Flog14>
+			<Flay14> 0 </Flay14>
 		</student>
 		<student>
 			<Name> Georgi Ivanov </Name>
@@ -115,6 +175,11 @@
 			<004> 2 </004>
 			<009> 1 </009>
 			<012> 0 </012>
+			<Flog12> - </Flog12>
+			<Flay12> - </Flay12>
+			<014> 0 </014>
+			<Flog14> - </Flog14>
+			<Flay14> - </Flay14>
 		</student>
 		<student>
 			<Name> Georgi Velev </Name>
@@ -124,6 +189,11 @@
 			<004> 2 </004>
 			<009> 1 </009>
 			<012> 0 </012>
+			<Flog12> - </Flog12>
+			<Flay12> - </Flay12>
+			<014> 2 </014>
+			<Flog14>    456.4 </Flog14>
+			<Flay14> 336 </Flay14>
 		</student>
 		<student>
 			<Name> Gergan Nikolov </Name>
@@ -133,6 +203,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    383.8 </Flog12>
+			<Flay12> 359 </Flay12>
+			<014> 2 </014>
+			<Flog14>    556.3 </Flog14>
+			<Flay14> 404 </Flay14>
 		</student>
 		<student>
 			<Name> Hristiyan Dodov </Name>
@@ -142,15 +217,25 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    177.7 </Flog12>
+			<Flay12> 0 </Flay12>
+			<014> 2 </014>
+			<Flog14>    305.0 </Flog14>
+			<Flay14> 94 </Flay14>
 		</student>
 		<student>
 			<Name> Hristiyan Velyakov </Name>
 			<VH> 0 </VH>
 			<002> 0 </002>
 			<003> 2 </003>
-			<004> 2 </004>
+			<004> 0 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    296.5 </Flog12>
+			<Flay12> 298 </Flay12>
+			<014> 2 </014>
+			<Flog14>    547.1 </Flog14>
+			<Flay14> 298 </Flay14>
 		</student>
 		<student>
 			<Name> Hristo Dachev </Name>
@@ -158,8 +243,13 @@
 			<002> 0 </002>
 			<003> 2 </003>
 			<004> 2 </004>
-			<009> 0 </009>
+			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>     92.0 </Flog12>
+			<Flay12> 0 </Flay12>
+			<014> 2 </014>
+			<Flog14>    226.5 </Flog14>
+			<Flay14> 0 </Flay14>
 		</student>
 		<student>
 			<Name> Iliyan Germanov </Name>
@@ -169,15 +259,25 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    196.9 </Flog12>
+			<Flay12> 0 </Flay12>
+			<014> 2 </014>
+			<Flog14>    381.4 </Flog14>
+			<Flay14> 184 </Flay14>
 		</student>
 		<student>
 			<Name> Iosyf Saleh </Name>
-			<VH> 2 </VH>
+			<VH> 0 </VH>
 			<002> 2 </002>
 			<003> 0 </003>
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    223.8 </Flog12>
+			<Flay12> 44 </Flay12>
+			<014> 2 </014>
+			<Flog14>    419.7 </Flog14>
+			<Flay14> 0 </Flay14>
 		</student>
 		<student>
 			<Name> Ivailo Ivanov </Name>
@@ -185,8 +285,13 @@
 			<002> 0 </002>
 			<003> 2 </003>
 			<004> 2 </004>
-			<009> 0 </009>
+			<009> 2 </009>
 			<012> 0 </012>
+			<Flog12> - </Flog12>
+			<Flay12> - </Flay12>
+			<014> 0 </014>
+			<Flog14> - </Flog14>
+			<Flay14> - </Flay14>
 		</student>
 		<student>
 			<Name> Ivelin Slavchev </Name>
@@ -196,6 +301,11 @@
 			<004> 2 </004>
 			<009> 1 </009>
 			<012> 2 </012>
+			<Flog12>    458.6 </Flog12>
+			<Flay12> 272 </Flay12>
+			<014> 2 </014>
+			<Flog14>    662.7 </Flog14>
+			<Flay14> 314 </Flay14>
 		</student>
 		<student>
 			<Name> Ivo Stratev </Name>
@@ -205,6 +315,11 @@
 			<004> 2 </004>
 			<009> 1 </009>
 			<012> 2 </012>
+			<Flog12>    499.6 </Flog12>
+			<Flay12> 664 </Flay12>
+			<014> 2 </014>
+			<Flog14>    504.4 </Flog14>
+			<Flay14> 664 </Flay14>
 		</student>
 		<student>
 			<Name> Ivo Valchev </Name>
@@ -214,6 +329,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    257.5 </Flog12>
+			<Flay12> 98 </Flay12>
+			<014> 2 </014>
+			<Flog14>    526.3 </Flog14>
+			<Flay14> 302 </Flay14>
 		</student>
 		<student>
 			<Name> Kalin Marinov </Name>
@@ -223,6 +343,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    170.5 </Flog12>
+			<Flay12> 0 </Flay12>
+			<014> 2 </014>
+			<Flog14>    352.3 </Flog14>
+			<Flay14> 42 </Flay14>
 		</student>
 		<student>
 			<Name> Kaloyan Nikov </Name>
@@ -232,6 +357,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    223.8 </Flog12>
+			<Flay12> 44 </Flay12>
+			<014> 2 </014>
+			<Flog14>    420.3 </Flog14>
+			<Flay14> 44 </Flay14>
 		</student>
 		<student>
 			<Name> Kamena Dacheva </Name>
@@ -241,33 +371,53 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    232.3 </Flog12>
+			<Flay12> 36 </Flay12>
+			<014> 2 </014>
+			<Flog14>    384.0 </Flog14>
+			<Flay14> 68 </Flay14>
 		</student>
 		<student>
 			<Name> Konstantin Kostov </Name>
-			<VH> 1 </VH>
+			<VH> 0 </VH>
 			<002> 2 </002>
 			<003> 2 </003>
 			<004> 2 </004>
 			<009> 1 </009>
 			<012> 2 </012>
+			<Flog12>    264.6 </Flog12>
+			<Flay12> 270 </Flay12>
+			<014> 2 </014>
+			<Flog14>    483.4 </Flog14>
+			<Flay14> 374 </Flay14>
 		</student>
 		<student>
 			<Name> Konstantin Vekilski </Name>
 			<VH> 2 </VH>
 			<002> 2 </002>
 			<003> 2 </003>
-			<004> 1 </004>
+			<004> 2 </004>
 			<009> 1 </009>
 			<012> 2 </012>
+			<Flog12>    855.3 </Flog12>
+			<Flay12> 579 </Flay12>
+			<014> 2 </014>
+			<Flog14>    959.0 </Flog14>
+			<Flay14> 697 </Flay14>
 		</student>
 		<student>
 			<Name> Krassen Angelov </Name>
-			<VH> 1 </VH>
+			<VH> 2 </VH>
 			<002> 2 </002>
 			<003> 2 </003>
 			<004> 2 </004>
 			<009> 1 </009>
 			<012> 2 </012>
+			<Flog12>    458.6 </Flog12>
+			<Flay12> 272 </Flay12>
+			<014> 2 </014>
+			<Flog14>    659.1 </Flog14>
+			<Flay14> 314 </Flay14>
 		</student>
 		<student>
 			<Name> Kristina Pironkova </Name>
@@ -277,6 +427,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    115.6 </Flog12>
+			<Flay12> 36 </Flay12>
+			<014> 2 </014>
+			<Flog14>    472.5 </Flog14>
+			<Flay14> 300 </Flay14>
 		</student>
 		<student>
 			<Name> Lili Kokalova </Name>
@@ -286,6 +441,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    314.9 </Flog12>
+			<Flay12> 396 </Flay12>
+			<014> 2 </014>
+			<Flog14>    416.2 </Flog14>
+			<Flay14> 396 </Flay14>
 		</student>
 		<student>
 			<Name> Lubomir Yankov </Name>
@@ -295,15 +455,25 @@
 			<004> 2 </004>
 			<009> 1 </009>
 			<012> 2 </012>
+			<Flog12>    521.3 </Flog12>
+			<Flay12> 805 </Flay12>
+			<014> 2 </014>
+			<Flog14>    659.1 </Flog14>
+			<Flay14> 314 </Flay14>
 		</student>
 		<student>
 			<Name> Marian Belchev </Name>
-			<VH> 1 </VH>
+			<VH> 0 </VH>
 			<002> 1 </002>
 			<003> 2 </003>
 			<004> 2 </004>
-			<009> 0 </009>
+			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>     92.0 </Flog12>
+			<Flay12> 0 </Flay12>
+			<014> 2 </014>
+			<Flog14>    230.0 </Flog14>
+			<Flay14> 0 </Flay14>
 		</student>
 		<student>
 			<Name> Martin Grigorov </Name>
@@ -313,6 +483,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    214.3 </Flog12>
+			<Flay12> 76 </Flay12>
+			<014> 1 </014>
+			<Flog14>    419.7 </Flog14>
+			<Flay14> 0 </Flay14>
 		</student>
 		<student>
 			<Name> Mladen Karadimov </Name>
@@ -322,6 +497,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    381.9 </Flog12>
+			<Flay12> 359 </Flay12>
+			<014> 2 </014>
+			<Flog14>    556.3 </Flog14>
+			<Flay14> 404 </Flay14>
 		</student>
 		<student>
 			<Name> Momchil Angelov </Name>
@@ -331,6 +511,11 @@
 			<004> 1 </004>
 			<009> 0 </009>
 			<012> 2 </012>
+			<Flog12>  </Flog12>
+			<Flay12> 0 </Flay12>
+			<014> 0 </014>
+			<Flog14> - </Flog14>
+			<Flay14> - </Flay14>
 		</student>
 		<student>
 			<Name> Moretti Georgiev </Name>
@@ -338,8 +523,13 @@
 			<002> 0 </002>
 			<003> 0 </003>
 			<004> 1 </004>
-			<009> 0 </009>
+			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>     92.0 </Flog12>
+			<Flay12> 0 </Flay12>
+			<014> 2 </014>
+			<Flog14>    111.3 </Flog14>
+			<Flay14> 0 </Flay14>
 		</student>
 		<student>
 			<Name> Nikola Marinov </Name>
@@ -349,6 +539,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    289.2 </Flog12>
+			<Flay12> 195 </Flay12>
+			<014> 2 </014>
+			<Flog14>    457.9 </Flog14>
+			<Flay14> 195 </Flay14>
 		</student>
 		<student>
 			<Name> Nikolay Mihailov </Name>
@@ -358,6 +553,11 @@
 			<004> 2 </004>
 			<009> 1 </009>
 			<012> 1 </012>
+			<Flog12>    264.6 </Flog12>
+			<Flay12> 270 </Flay12>
+			<014> 2 </014>
+			<Flog14>    326.5 </Flog14>
+			<Flay14> 38 </Flay14>
 		</student>
 		<student>
 			<Name> Petko Bozhinov </Name>
@@ -367,6 +567,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    289.2 </Flog12>
+			<Flay12> 195 </Flay12>
+			<014> 2 </014>
+			<Flog14>    457.9 </Flog14>
+			<Flay14> 195 </Flay14>
 		</student>
 		<student>
 			<Name> Radoslav Kostadinov </Name>
@@ -376,33 +581,39 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
-		</student>
-		<student>
-			<Name> Run Them </Name>
-			<VH> 0 </VH>
-			<002> 0 </002>
-			<003> 0 </003>
-			<004> 0 </004>
-			<009> 0 </009>
-			<012> 1 </012>
+			<Flog12>    115.6 </Flog12>
+			<Flay12> 36 </Flay12>
+			<014> 2 </014>
+			<Flog14>    518.8 </Flog14>
+			<Flay14> 300 </Flay14>
 		</student>
 		<student>
 			<Name> Simeon Shopkin </Name>
-			<VH> 1 </VH>
+			<VH> 2 </VH>
 			<002> 2 </002>
 			<003> 2 </003>
 			<004> 2 </004>
-			<009> 0 </009>
+			<009> 1 </009>
 			<012> 1 </012>
+			<Flog12>    291.5 </Flog12>
+			<Flay12> 184 </Flay12>
+			<014> 1 </014>
+			<Flog14>    457.2 </Flog14>
+			<Flay14> 342 </Flay14>
 		</student>
 		<student>
 			<Name> Stanimir Bogdanov </Name>
-			<VH> 1 </VH>
+			<VH> 0 </VH>
 			<002> 2 </002>
 			<003> 2 </003>
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    257.5 </Flog12>
+			<Flay12> 98 </Flay12>
+			<014> 2 </014>
+			<Flog14>    515.5 </Flog14>
+			<Flay14> 194 </Flay14>
 		</student>
 		<student>
 			<Name> Stanislav Gospodinov </Name>
@@ -412,6 +623,11 @@
 			<004> 2 </004>
 			<009> 0 </009>
 			<012> 2 </012>
+			<Flog12>    113.8 </Flog12>
+			<Flay12> 0 </Flay12>
+			<014> 0 </014>
+			<Flog14> - </Flog14>
+			<Flay14> - </Flay14>
 		</student>
 		<student>
 			<Name> Stanislav Iliev </Name>
@@ -421,6 +637,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    212.7 </Flog12>
+			<Flay12> 76 </Flay12>
+			<014> 2 </014>
+			<Flog14>    420.3 </Flog14>
+			<Flay14> 44 </Flay14>
 		</student>
 		<student>
 			<Name> Stanislav Valkanov </Name>
@@ -428,8 +649,13 @@
 			<002> 2 </002>
 			<003> 2 </003>
 			<004> 2 </004>
-			<009> 0 </009>
+			<009> 1 </009>
 			<012> 2 </012>
+			<Flog12>     83.8 </Flog12>
+			<Flay12> 0 </Flay12>
+			<014> 2 </014>
+			<Flog14>    457.2 </Flog14>
+			<Flay14> 342 </Flay14>
 		</student>
 		<student>
 			<Name> Stefan Iliev </Name>
@@ -439,6 +665,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    127.0 </Flog12>
+			<Flay12> 0 </Flay12>
+			<014> 2 </014>
+			<Flog14>    526.3 </Flog14>
+			<Flay14> 264 </Flay14>
 		</student>
 		<student>
 			<Name> Stefan Radev </Name>
@@ -448,6 +679,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    314.9 </Flog12>
+			<Flay12> 396 </Flay12>
+			<014> 2 </014>
+			<Flog14>    416.2 </Flog14>
+			<Flay14> 396 </Flay14>
 		</student>
 		<student>
 			<Name> Tihomir Lidanski </Name>
@@ -457,6 +693,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    289.2 </Flog12>
+			<Flay12> 195 </Flay12>
+			<014> 2 </014>
+			<Flog14>  </Flog14>
+			<Flay14> 377 </Flay14>
 		</student>
 		<student>
 			<Name> Valentin Georgiev </Name>
@@ -466,6 +707,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    345.2 </Flog12>
+			<Flay12> 70 </Flay12>
+			<014> 2 </014>
+			<Flog14>    617.7 </Flog14>
+			<Flay14> 70 </Flay14>
 		</student>
 		<student>
 			<Name> Valentin Varbanov </Name>
@@ -475,6 +721,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    383.8 </Flog12>
+			<Flay12> 359 </Flay12>
+			<014> 2 </014>
+			<Flog14>    555.3 </Flog14>
+			<Flay14> 404 </Flay14>
 		</student>
 		<student>
 			<Name> Vanya Santeva </Name>
@@ -484,6 +735,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    223.8 </Flog12>
+			<Flay12> 44 </Flay12>
+			<014> 2 </014>
+			<Flog14>    420.3 </Flog14>
+			<Flay14> 44 </Flay14>
 		</student>
 		<student>
 			<Name> Vasil Kolev </Name>
@@ -493,6 +749,11 @@
 			<004> 1 </004>
 			<009> 0 </009>
 			<012> 2 </012>
+			<Flog12>    237.8 </Flog12>
+			<Flay12> 185 </Flay12>
+			<014> 0 </014>
+			<Flog14> - </Flog14>
+			<Flay14> - </Flay14>
 		</student>
 		<student>
 			<Name> Velislav Kostov </Name>
@@ -502,6 +763,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 1 </012>
+			<Flog12>    265.3 </Flog12>
+			<Flay12> 300 </Flay12>
+			<014> 2 </014>
+			<Flog14>    288.7 </Flog14>
+			<Flay14> 300 </Flay14>
 		</student>
 		<student>
 			<Name> Veselin Dechev </Name>
@@ -511,6 +777,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>     69.3 </Flog12>
+			<Flay12> 0 </Flay12>
+			<014> 2 </014>
+			<Flog14>    547.1 </Flog14>
+			<Flay14> 298 </Flay14>
 		</student>
 		<student>
 			<Name> Veselina Kolova </Name>
@@ -520,6 +791,11 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    345.2 </Flog12>
+			<Flay12> 70 </Flay12>
+			<014> 2 </014>
+			<Flog14>    617.7 </Flog14>
+			<Flay14> 70 </Flay14>
 		</student>
 		<student>
 			<Name> Vladimir Yordanov </Name>
@@ -529,5 +805,10 @@
 			<004> 2 </004>
 			<009> 2 </009>
 			<012> 2 </012>
+			<Flog12>    404.4 </Flog12>
+			<Flay12> 375 </Flay12>
+			<014> 0 </014>
+			<Flog14> - </Flog14>
+			<Flay14> - </Flay14>
 		</student>
 </results>
