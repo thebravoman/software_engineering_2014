@@ -6,43 +6,18 @@ require_relative 'html_writer.rb'
 require_relative 'svg_writer.rb'
 
 start 		= Time.now
-@results	= Hash.new {|hash, key| hash[key] = {'VH' 	=> 0, 
-												'002' 	=> 0, 
-												'003' 	=> 0, 
-												'004' 	=> 0, 
-												'009' 	=> 0, 
-												'012' 	=> 0,
-												'014' 	=> 0,
-												'g2'	=> 0,
-												'g3' 	=> 0,
-												'g4' 	=> 0,
-												'g9' 	=> '-',
-												'g12' 	=> 0,
-												'g14' 	=> 0,
-												'y2' 	=> '',
-												'y3' 	=> '',
-												'y4' 	=> '',
-												'y9' 	=> '-',
-												'y12' 	=> '',
-												'y14' 	=> ''}}
+@results	= Hash.new {|hash, key| hash[key] = {'VH' => 0, '002' => 0, '003' => 0, '004' => 0, '009' => 0, '012' => 0, '014' => 0, 'g2' => 0, 'g3' => 0, 'g4' => 0, 'g9' => '-', 'g12' => 0, 'g14' => 0, 'y2' => '', 'y3' => '', 'y4' => '', 'y9' => '-', 'y12' => '', 'y14' => ''}}
 folders 	= ["#{ARGV[0]}/*_homework", "#{ARGV[0]}/vhodno_nivo", "#{ARGV[0]}/class004"]
 
 def checkTime path, deadline
-	commitTime = `git log --until=#{deadline} #{path}`
-
-	if !commitTime.empty? ; return true ; end
+	return `git log --until=#{deadline} #{path}`.empty? ? 1 : 2
 end
 
 def split file
-	firstName 	= file.split('/').last.split('_').first.capitalize
-	lastName 	= file.split('/').last.split('_', 2).last.split('_').first.capitalize
-	fullName 	= "#{firstName} #{lastName}"
-
-	return fullName	
-end
-
-def setMark file, hwNum, deadline
-	checkTime(file, deadline) ? @results[split(file)][hwNum] = 2 : @results[split(file)][hwNum] = 1
+	path 		= file.split('/').last
+	firstName 	= path.split('_').first
+	lastName 	= path.split('_', 2).last.split('_').first
+	return fullName	= "#{firstName.capitalize} #{lastName.capitalize}"
 end
 
 def numCase hwNum, file, yOrG, result
@@ -63,34 +38,31 @@ def splitTeamNames teams
 	teamNames = File.read("#{ARGV[0]}/class009_homework/project_to_names.csv")
 	teamNames.split("\n").each do |line|
 		split = line.split(',')
-		teams[split.first] = [] unless teams.key? split.first
-		teams[split.first] << split.last
+		splitFirst = split.first
+		teams[splitFirst] = [] unless teams.key? splitFirst
+		teams[splitFirst] << split.last
 	end
-
 	return teams
 end
 
-def checkFolder folder, hwNum, deadline
-	if hwNum == 'VH'
-		Dir.glob("#{folder}/**/*_*_*.*") do |file|
-			setMark(file, hwNum, deadline)
-		end
-	elsif hwNum == '009'
-		# Read team names from file
-		teams = Hash.new
-		splitTeamNames(teams)
+def check009 folder, hwNum, deadline
+	teams = Hash.new
+	splitTeamNames(teams)
 
-		Dir.glob("#{folder}/*.pdf") do |file|
-			fileTeamName = file.split('/').last.split('.').first.tr("'", '')
-			if teams.key? fileTeamName
-				teams[fileTeamName].each do |student|
-					checkTime(file, deadline) ? @results[student][hwNum] = 2 : @results[student][hwNum] = 1
-				end
-			end
+	Dir.glob("#{folder}/*.pdf") do |file|
+		fileTeamName = file.split('/').last.split('.').first.tr("'", '')
+		teams[fileTeamName].each do |student|
+			@results[student][hwNum] = checkTime(file, deadline)
 		end
-	else
-		Dir.glob("#{folder}/**/*_*_*_*.rb") do |file|
-			setMark(file, hwNum, deadline)
+	end
+end
+
+def checkHW folder, hwNum, deadline
+	hwNum != "VH" ? path = "#{folder}/**/*_*_*_*.rb" : path = "#{folder}/**/*_*_*.*"
+
+	Dir.glob(path) do |file|
+		@results[split(folder)][hwNum] = checkTime(file, deadline)
+		if hwNum != "VH"
 			flog(file, hwNum)
 			flay(file, hwNum)
 		end
@@ -100,19 +72,19 @@ end
 Dir.glob(folders) do |path|
 	case path.split('/').last
 		when 'vhodno_nivo'
-			checkFolder(path, 'VH', '17.09.2014:20:00:00') 
+			checkHW(path, 'VH', '17.09.2014:20:00:00') 
 		when 'class002_homework'
-			checkFolder(path, '002', '22.09.2014:20:00:00')
+			checkHW(path, '002', '22.09.2014:20:00:00')
 		when 'class003_homework'
-			checkFolder(path, '003', '24.09.2014:20:00:00')
+			checkHW(path, '003', '24.09.2014:20:00:00')
 		when 'class004'
-			checkFolder(path, '004', '29.09.2014:20:00:00')
+			checkHW(path, '004', '29.09.2014:20:00:00')
 		when 'class009_homework'
-			checkFolder(path, '009', '27.10.2014:20:00:00')
+			check009(path, '009', '27.10.2014:20:00:00')
 		when 'class012_homework'
-			checkFolder(path, '012', '10.11.2014:20:00:00')
+			checkHW(path, '012', '10.11.2014:20:00:00')
 		when 'class014_homework'
-			checkFolder(path, '014', '13.11.2014:06:00:00')
+			checkHW(path, '014', '13.11.2014:06:00:00')
 	end
 end
 
