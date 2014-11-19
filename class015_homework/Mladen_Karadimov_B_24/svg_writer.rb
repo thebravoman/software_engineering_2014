@@ -53,7 +53,7 @@ class SVGWriter
 			end
 		end
 	
-		File.open("results_Valentin_Varbanov_B_4.svg", 'w') {
+		File.open("results_Gergan_Nikolov_B_11.svg", 'w') {
 			|file|
 			file << "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">\n"
 			for i in 0..barChartData.length - 1 do

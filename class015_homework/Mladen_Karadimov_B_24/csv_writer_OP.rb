@@ -2,7 +2,7 @@ require 'csv'
 
 class CSVWriter
 	def write (hash)
-		CSV.open("results_Mladen_Karadimov_B_24.csv","w") do |csv|
+		CSV.open("results_Gergan_Nikolov_B_11.csv","w") do |csv|
 			csv << [' ',' ',"vhodno_nivo","class002_homework","class003_homework","class004_homework", "class009_homework","class012_homework","class014_homework","Flog 2","Flog 3","Flog 12","Flog 14","Flay 2","Flay 3","Flay 12","Flay 14"]
 				hash.each do |name,result|
 					if name != nil
