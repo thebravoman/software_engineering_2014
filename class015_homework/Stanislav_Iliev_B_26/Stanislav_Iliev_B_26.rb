@@ -3,7 +3,6 @@ require_relative 'write_csv.rb'
 require_relative 'write_html.rb'
 require_relative 'write_svg.rb'
 require_relative 'write_xml.rb'
-require 'benchmark'
 
 start = Time.now
 
@@ -32,7 +31,8 @@ i = -1;
 directories.each do |directory, deadline|
 	i += 1
 	Dir.glob("#{softeng}#{directory}").each do |script_file|
-		if ((i!=6 and script_file.split(/\//).last.include?("_")) or i == 4 or (i==6 and (script_file.split(/\//).last =~ /_[A-B]_/ or script_file.split(/\//).last =~ /_Class[1-2]_/))) and !script_file.include?("result") and !script_file.include?("~")
+		short_file = script_file.split(/\//).last
+		if ((i!=6 and short_file.include?("_")) or i == 4 or (i==6 and (short_file =~ /_[A-B]_/ or short_file =~ /_Class[1-2]_/))) and !script_file.include?("result") and !script_file.include?("~")
 			a = script_file.gsub(/(?=[ -'])/, '\\')
 			file = `git log --format="format:%ci" --reverse #{a}`
 			file = file.split(/\n/).first
