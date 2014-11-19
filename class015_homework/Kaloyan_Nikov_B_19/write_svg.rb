@@ -1,6 +1,6 @@
 def write_to_SVG(results,time)
 	text_x = 0; k = 0; rect_x = 0;
-	class_array = Array.new(6,0)
+	class_array = Array.new(7,0)
 	classes = "VH","002","003","004","009","012","014"
 	results.each do |key|
 		i = 0
