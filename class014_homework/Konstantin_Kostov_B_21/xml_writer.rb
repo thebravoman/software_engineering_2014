@@ -1,6 +1,6 @@
 class XMLWriter
 	def write(result,classes)
-		xml_file = File.open("results_Nikolay_Mihailov_B_25.xml", "w")
+		xml_file = File.open("results_Konstantin_Kostov_B_21.xml", "w")
 		xml_file.puts("<results>")
 		result.keys.sort.each do |key|
 			if key.include? ','
