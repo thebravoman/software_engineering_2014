@@ -76,7 +76,7 @@ class CheckFolders
 			the_name_of_the_file = current_work.split(/\//).last
 			the_name_of_the_student = current_work.split(/\//).last.split(/_/)
 			if extension != nil
-				if the_name_of_the_student[0]!=nil and the_name_of_the_student[1]!=nil and the_name_of_the_student[0]!="results" and the_name_of_the_student[0]!="result" and the_name_of_the_student[0]!="Results" and the_name_of_the_file.split(/_/).last.split(/\./).first.is_number? and !the_name_of_the_student[0].include? '.' and !the_name_of_the_student[1].include? '.' and extension.length < 5 and !extension.include? '~' then
+				if the_name_of_the_student[0]!=nil and the_name_of_the_student[1]!=nil and the_name_of_the_student[0]!="results" and the_name_of_the_student[0]!="Results" and the_name_of_the_file.split(/_/).last.split(/\./).first.is_number? and !the_name_of_the_student[0].include? '.' and !the_name_of_the_student[1].include? '.' and extension.length < 5 and !extension.include? '~' then
 					CheckFolders.new.add_a_student_in_all_students(the_name_of_the_student[0],the_name_of_the_student[1],all_students)
 					git_log = `#{git_log_time} #{current_work}`
 					if extension == "rb" then
