@@ -1,6 +1,6 @@
 def write_to_HTML(result,time)
 	classes = "#{time}"," "," "," ","VH","002","003","004","009", "012", "014", "g2", "g3", "g4", "g12", "g14", "y2", "y3", "y4", "y12", "y14"
-	File.open("results_Kaloyan_Nikov_B_26.html","w") do |file|
+	File.open("results_Kaloyan_Nikov_B_19.html","w") do |file|
 		file.puts "<html>"
 		file.puts "<head></head>"
 		file.puts "<body>"
