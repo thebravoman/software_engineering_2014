@@ -2,7 +2,7 @@ require "csv"
 
 class CSVWriter
 	def write(result,classes)
-		CSV.open("results_Nikolay_Mihailov_B_25.csv","w") do |csv|
+		CSV.open("results_Konstantin_Kostov_B_21.csv","w") do |csv|
 			csv << classes
 			result.keys.sort.each do |key|
 				if key.include? ','
