@@ -44,7 +44,7 @@ Dir.glob("#{ARGV[0]}"'*/*').each do |we|
 			end
 		end
 		if folder == "class009_homework"
-			#insert shit here if you forget to do so!
+			#insert stuff here if you forget to do so!
 			if (file.split(".")[1] != nil)
 				file = file.split(".")[0]
 			end
