@@ -5,8 +5,8 @@ require_relative "html_writer.rb"
 require_relative "svg_writer.rb"
 require "csv"
 time_start=Time.now
-classes = " "," ","VH","002","003","004","009","012","Flog12","Flay12","014","Flog14","Flay14"
-result = Hash.new{|hash, key| hash[key] = [0,0,0,0,0,0,'-','-',0,'-','-']}
+classes = " "," ","VH","002","Flog02","Flay02","003","Flog03","Flay03","004","Flog04","Flay04","009","012","Flog12","Flay12","014","Flog14","Flay14","015","Flog15","Flay15"
+result = Hash.new{|hash, key| hash[key] = [0,0,'-','-',0,'-','-',0,'-','-',0,0,'-','-',0,'-','-',0,'-','-']}
 team_names = Array.new
 def homework_chek (directory_name,log_info,result,folder)
 	program_num = 1 #for VH
@@ -20,16 +20,16 @@ def homework_chek (directory_name,log_info,result,folder)
 		log = `git log --until=#{log_info} #{file}`
 		result[name][folder] = 2 if (!log.empty? && folder !=0) || (!log.empty? && program_num == 3 && folder == 0)	 
 		result[name][folder] = 1 if (log.empty? && folder !=0) || (log.empty? && program_num == 3 && folder == 0)
-		if folder == 5 || folder == 8 	
-			file_folder = file.chomp("#{file.split(/\//).last}") 
-			file_folder = file if folder == 5
-			flog = `flog #{file_folder}`
-			flay = `flay #{file_folder}`
-			result[name][folder + 1] = flog.split(/:/).first 
-			result[name][folder + 2] = flay.split(/=/)[1][1, 4].delete!("\n")
-		end		
 		name_before = name #for VH
 		program_num = 1 if program_num == 3 #for VH
+		
+		next if folder == 0 || folder == 10 	#next if folder != 11 && folder != 14 	
+		file_folder = file
+		file_folder = file.chomp("#{file.split(/\//).last}") if folder == 14 || folder == 17
+		flog = `flog #{file_folder}`
+		flay = `flay #{file_folder}`
+		result[name][folder + 1] = flog.split(/:/).first 
+		result[name][folder + 2] = flay.split(/=/)[1][1, 4].delete!("\n")
 	end
 	return result
 end
@@ -62,16 +62,18 @@ folder = 0
 result = homework_chek("/vhodno_nivo/**/*_*_*.*", "Sep--17--2014--20:00:00",result,folder)				
 folder = 1
 result = homework_chek("/class002_homework/*_*_*_*.rb", "Sep--22--2014--20:00:00",result,folder)
-folder = 2
+folder = 4 #[0,0,'-','-',0,'-','-',0,'-','-',0,0,'-','-',0,'-','-',0,'-','-']
 result = homework_chek("/class003_homework/*_*_*_*.rb", "Sep--24--2014--20:00:00",result,folder)
-folder = 3
+folder = 7
 result = homework_chek("/class004/*_*_*_*.rb", "Sep--29--2014--20:00:00",result,folder)
-folder = 4
+folder = 10
 result = homework_chek_009("/class009_homework/**/*.pdf", "Oct--27--2014--20:00:00",result,folder)	
-folder = 5
+folder = 11
 result = homework_chek("/class012_homework/*_*_*_*.rb", "Nov--10--2014--20:00:00",result,folder)
-folder = 8 # not 6 because after class012 --> flog and flay  
+folder = 14  
 result = homework_chek("/class014_homework/**/*_*_*_*.rb", "Nov--13--2014--06:00:00",result,folder) 
+folder = 17  
+result = homework_chek("/class015_homework/**/*_*_*_*.rb", "Nov--20--2014--06:00:00",result,folder) 
 		
 write = true
 puts Time.now - time_start
