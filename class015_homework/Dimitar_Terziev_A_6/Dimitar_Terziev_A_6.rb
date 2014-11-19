@@ -71,7 +71,6 @@ format = 'CSV'
 if ARGV.include?('-o')
 	format_index = ARGV.index('-o')+1
 	format = ARGV[format_index]
-	require_relative "#{format.upcase}Writer"
 end
 writer = eval("#{format.upcase}Writer.new") if format =~ /\Axml\Z|\Ahtml\Z|\Ajson\Z|\Asvg\Z|\Acsv\Z/
 writer.write data.sort, time_taken
