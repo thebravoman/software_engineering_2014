@@ -1,8 +1,11 @@
 # encoding: utf-8
-require_relative 'write_csv.rb'
-require_relative 'write_html.rb'
-require_relative 'write_svg.rb'
-require_relative 'write_xml.rb'
+require './write_csv.rb'
+require './write_html.rb'
+require './write_svg.rb'
+require './write_xml.rb'
+require 'benchmark'
+
+start = Time.now
 
 softeng = ARGV.first	#taking directory of software_engineering_2014
 if softeng[-1] != "/"
@@ -31,7 +34,7 @@ i = -1;
 directories.each do |directory, deadline|
 	i += 1
 	Dir.glob("#{softeng}#{directory}").each do |script_file|
-		if script_file.split(/\//).last.include? "_" or i == 4
+		if ((i!=6 and script_file.split(/\//).last.include?("_")) or i == 4 or (i==6 and (script_file.split(/\//).last =~ /_[A-B]_/ or script_file.split(/\//).last =~ /_Class[1-2]_/))) and !script_file.include?("result") and !script_file.include?("~")
 			a = script_file.gsub(/(?=[ -'])/, '\\')
 			file = `git log --format="format:%ci" --reverse #{a}`
 			file = file.split(/\n/).first
@@ -42,8 +45,8 @@ directories.each do |directory, deadline|
 				first_name = script_file.split(/\//).last.split("_").first.capitalize
 				last_name = script_file.split(/\//).last.split("_",2).last.split("_").first.capitalize
 				name = "#{first_name} #{last_name}"
-				if script_file.include? ".rb" then
-					if i > 0 && i <= 3 || i > 4
+				if script_file.include? ".rb"
+					if i > 0 && i != 4
 						flog = `flog #{script_file} --continue`
 						flay = `flay #{a} | grep #{first_name} | wc -l`
 						if flog != "" then
@@ -55,7 +58,7 @@ directories.each do |directory, deadline|
 					name = script_file.split(/\//).last.split(/\./).first
 				end
 
-				if (date_day<deadline[0] && date_month<=deadline[1]) || (date_day==deadline[0] && date_month==deadline[1] && date_time<deadline[2]) then
+				if (date_day<deadline[0] && date_month<=deadline[1]) || (date_day==deadline[0] && date_month==deadline[1] && date_time<deadline[2])
 					if i == 0
 						vhodno["#{name}"][0] += 1
 						if vhodno["#{name}"][0] != 3
@@ -86,28 +89,32 @@ directories.each do |directory, deadline|
 
 					results["#{name}"][i] = 1
 				end
-				if i > 0 && i <= 3 || i > 4
-					results["#{name}"][i+5] = flog if i < 4
-					results["#{name}"][i+4] = flog if i > 4
-					results["#{name}"][i+9] = flay.to_i if i < 4
-					results["#{name}"][i+8] = flay.to_i if i > 4
+				if i > 0
+					results["#{name}"][i+6] = flog if i < 4
+					results["#{name}"][i+5] = flog if i > 4
+					results["#{name}"][i+11] = flay.to_i if i < 4
+					results["#{name}"][i+10] = flay.to_i if i > 4
 				end
 			end
 		end
 	end
 end
 
+finish = Time.now
+time = finish - start
+time = time.to_f
+
 results = results.sort
 if ARGV[1] == "-o"
 	if ARGV[2] == "csv"
-		write_to_CSV(results)
+		write_to_CSV(results,time)
 	elsif ARGV[2] == "html"
-		write_to_HTML(results)
+		write_to_HTML(results,time)
 	elsif ARGV[2] == "svg"
-		write_to_SVG(results)
+		write_to_SVG(results,time)
 	elsif ARGV[2] == "xml"
-		write_to_XML(results)
+		write_to_XML(results,time)
 	elsif ARGV[2] == "json"
-		write_to_JSON(results)
+		write_to_JSON(results,time)
 	end
 end
