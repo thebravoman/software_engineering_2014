@@ -1,0 +1,24 @@
+class JSONWriter
+	def write(results)
+		file = File.open("results_Hristiyan_Dodov_B_29.json","w")
+		file.puts "{"
+		
+		$students.sort.to_a.each do |(k,v), index| 		
+			file.print "\
+\"#{k.split('_')[0]} #{k.split('_')[1]}\"\:\
+{\"VH\":#{$students[k]['01']},\
+\"002\":#{$students[k]['02']},\
+\"003\":#{$students[k]['03']},\
+\"004\":#{$students[k]['04']},\
+\"009\":#{$students[k]['09']},\
+\"012\":#{$students[k]['12']}}"
+			if index < results.length - 1; file.print ","; end
+			
+			file.puts
+		end
+		
+		file.print "}"
+	end
+end
+
+$end
