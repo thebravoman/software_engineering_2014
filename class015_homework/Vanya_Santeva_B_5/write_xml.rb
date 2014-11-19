@@ -1,5 +1,5 @@
 def write_to_XML(results,time)
-	File.open("results_Stanislav_Iliev_B_26.xml", "w") do |file|
+	File.open("results_Vanya_Santeva_B_5.xml", "w") do |file|
 		file.puts("<results>")
 		file.puts("\t<time>#{time}</time>")
 		results.sort.each do |name, val|
