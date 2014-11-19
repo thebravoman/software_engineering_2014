@@ -1,8 +1,8 @@
 # encoding: utf-8
-require './write_csv.rb'
-require './write_html.rb'
-require './write_svg.rb'
-require './write_xml.rb'
+require_relative 'write_csv.rb'
+require_relative 'write_html.rb'
+require_relative 'write_svg.rb'
+require_relative 'write_xml.rb'
 require 'benchmark'
 
 start = Time.now
