@@ -42,7 +42,7 @@ class GitTimeChecker
 			if commitTime > timeLimit then 
 				isRewardCut = true
 				pointsLost += pointCut
-				if isPenaltyAccumulated then break end 
+				if !isPenaltyAccumulated then break end 
 			end
 		end
 		
