@@ -7,10 +7,8 @@ require 'benchmark'
 
 start = Time.now
 
-softeng = ARGV.first	#taking directory of software_engineering_2014
-if softeng[-1] != "/"
-	softeng += "/"
-end
+softeng = ARGV[0]
+softeng += "/" if softeng[-1] != 47
 
 directories = [["vhodno_nivo/**/*.*", [17, 9, 20]],
 				["class002_homework/**/*.rb", [22, 9, 20]],
