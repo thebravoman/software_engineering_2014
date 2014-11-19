@@ -14,7 +14,7 @@ end
 
 class HTMLWriter
 	def write(result,classes)
-		html = File.open("results_Nikolay_Mihailov_B_25.html", "w")
+		html = File.open("results_Konstantin_Kostov_B_21.html", "w")
 		
 		html.puts("<!DOCTYPE html>")
 		html.puts("<html>")
