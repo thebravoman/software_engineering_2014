@@ -1,7 +1,6 @@
 class HTMLWriter
 	def write(result,classes)
 		html = File.open("results_Nikolay_Mihailov_B_25.html", "w")
-		
 		html.puts("<!DOCTYPE html>")
 		html.puts("<html>")
 		html.puts("	<table border=\"1\" style=\"width:80%\">")
@@ -9,17 +8,9 @@ class HTMLWriter
 		html.puts("	<tr>")
 		html.puts("	<th> FirstName </th>")
 		html.puts("	<th> LastName </th>")
-		html.puts("	<th> VH </th>")
-		html.puts("	<th> 002 </th>")
-		html.puts("	<th> 003 </th>")
-		html.puts("	<th> 004 </th>")
-		html.puts("	<th> 009 </th>")
-		html.puts("	<th> 012 </th>")
-		html.puts("	<th> Flog12 </th>")
-		html.puts("	<th> Flay12 </th>")
-		html.puts("	<th> 014 </th>")
-		html.puts("	<th> Flog14 </th>")
-		html.puts("	<th> Flay14 </th>")
+		for class_index in 2..21
+			html.puts("	<th> #{classes[class_index]} </th>")
+		end
 		html.puts("	</tr>")
 		
 		result.keys.sort.each do |key|
@@ -27,17 +18,9 @@ class HTMLWriter
 			html.puts("	<tr>")
 			html.puts("	<td> #{key_split[0]} </td>")
 			html.puts("	<td> #{key_split[1]} </td>")
-			html.puts("	<td> #{result[key][0]} </td>")
-			html.puts("	<td> #{result[key][1]} </td>")
-			html.puts("	<td> #{result[key][2]} </td>")
-			html.puts("	<td> #{result[key][3]} </td>")
-			html.puts("	<td> #{result[key][4]} </td>")
-			html.puts("	<td> #{result[key][5]} </td>")
-			html.puts("	<td> #{result[key][6]} </td>")
-			html.puts("	<td> #{result[key][7]} </td>")
-			html.puts("	<td> #{result[key][8]} </td>")
-			html.puts("	<td> #{result[key][9]} </td>")
-			html.puts("	<td> #{result[key][10]} </td>")
+			for counter in 0..19
+				html.puts("	<td> #{result[key][counter]} </td>")
+			end
 			html.puts("	</tr>")
 		end
 		html.puts("	</table>")
