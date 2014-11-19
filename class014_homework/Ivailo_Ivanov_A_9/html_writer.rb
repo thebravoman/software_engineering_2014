@@ -9,7 +9,7 @@ class HTMLWriter
 		<!DOCTYPE html>
 			<html>
 			<head>
-				<title>results_Moretti_Georgiev_A_19</title>
+				<title>results_Ivailo_Ivanov_9</title>
 				<meta charset = \"utf - 8\">
 				<style>
 					table{width: 70%; border: 1px solid #e5e5e5; font-family: Verdana, Sans-serif; color: #444; margin: 0px auto; text-align:center;}
