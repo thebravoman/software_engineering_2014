@@ -150,8 +150,6 @@ if ARGV[1] == "-o"
 		writer = JSONWriter.new
 	when "html"
 		writer = HTMLWriter.new
-	when "svg"
-		writer = SVGWriter.new
 	else
 		abort("Invalid output type!")
 	end
