@@ -34,7 +34,7 @@ class SVGWriter
 			e+=11
 			rect(el_svg,q,e,p[i]+2)
 		end
-		svg = File.open("results_Iosyf_Saleh_B_18.svg", "w")
+		svg = File.open("results_Martin_Grigorov_B_23.svg", "w")
 		doc=(doc.to_s).split("</svg>").first
 		svg.write(doc.to_s)
 		svg=initTable(svg)
