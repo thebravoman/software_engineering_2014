@@ -34,7 +34,7 @@ class OptionO
 	def check_arguments
 		if ARGV[1] == "-o" then
 			for i in 2..6
-				if ((ARGV[i] == "csv") or (ARGV[i] == "html") or (ARGV[i] == "json") or (ARGV[i] == "xml") or (ARGV[i] == "svg")) and (ARGV[i] != nil) then
+				if ((ARGV[i] == "csv") or (ARGV[i] == "html") or (ARGV[i] == "json") or (ARGV[i] == "xml") or (ARGV[i] == "svg") or (ARGV[i] == nil)) then
 				else
 					print "error: wrong argument for -o: \"#{ARGV[2]}\"\n"
 					abort
