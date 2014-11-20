@@ -1,8 +1,8 @@
-require_relative 'csv_writer.rb'
-require_relative 'xml_writer.rb'
-require_relative 'svg_writer.rb'
-require_relative 'html_writer.rb'
-require_relative 'json_writer.rb'
+require "csv_writer.rb"
+require "xml_writer.rb"
+require "svg_writer.rb"
+require "html_writer.rb"
+require "json_writer.rb"
 
 startTime = Time.new
 $students = Hash.new(Array.new)
