@@ -109,7 +109,7 @@ end
 folders.each do |currentFolder|
 	#go through all the homeworks
 		Dir.glob(ARGV[0]+"#{currentFolder}/*_*_*").each do |fullDirectory|
-			p fullDirectory
+			#p fullDirectory
 			case currentFolder
 				when "vhodno_nivo" then setResultsOfStudent(fullDirectory, "VN", "17.09.2014:20:00:00")
  				when "class002_homework" then setResultsOfStudent(fullDirectory, "002", "22.09.2014:20:00:00")
@@ -117,7 +117,7 @@ folders.each do |currentFolder|
 				when "class004" then setResultsOfStudent(fullDirectory, "004", "29.09.2014:20:00:00")
 				when "class009_homework" then setResultsOfStudent(fullDirectory, "009", "27.10.2014:20:00:00")
 				when "class012_homework" then setResultsOfStudent(fullDirectory, "012", "10.11.2014:20:00:00") 
-				when "class014_homework" then setResultsOfStudent(fullDirectory, "014", "13.11.2014:20:00:00")
+				when "class014_homework" then setResultsOfStudent(fullDirectory, "014", "13.11.2014:06:00:00")
 			end
 		end	
 end
