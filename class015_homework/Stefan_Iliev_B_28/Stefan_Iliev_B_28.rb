@@ -13,12 +13,28 @@ gitTimeChecker = GitTimeChecker.new
 
 def CreateStudent() 
 	hash = Hash.new
-	hash["VH"] = 0
+	hash["entry_homework"] = 0
 	hash["homework_1"] = 0 
 	hash["homework_2"] = 0
 	hash["homework_3"] = 0
 	hash["homework_4"] = 0
 	hash["homework_5"] = 0 
+	hash["homework_6"] = 0 
+	hash["homework_7"] = 0 
+	
+	hash["flog_1"] = "-"
+	hash["flog_2"] = "-"
+	hash["flog_3"] = "-"
+	hash["flog_5"] = "-"
+	hash["flog_6"] = "-"
+	hash["flog_7"] = "-"
+
+	hash["flay_1"] = "-"
+	hash["flay_2"] = "-"
+	hash["flay_3"] = "-"
+	hash["flay_5"] = "-"
+	hash["flay_6"] = "-"
+	hash["flay_7"] = "-"
 	return hash
 end
 
@@ -27,6 +43,14 @@ def getStudentName( element )
 	student_name = student_name.split("_")[0].capitalize + "_" + student_name.split("_")[1].capitalize
 	return student_name
 end 
+
+def getFlog( path )
+	return `flog #{path}`.to_s.split("\n").first.to_i
+end
+
+def getFlay( path, student_name )
+	return `flay #{path} | grep #{student_name} | wc -l`.to_i 
+end
 
 repository_path = ARGV.shift || "err"
 homeworks = Hash.new
@@ -38,6 +62,9 @@ homeworks["homework_2"] = Dir.glob(repository_path + "/class003_homework/**/*_*_
 homeworks["homework_3"] = Dir.glob(repository_path + "/class004/**/*_*_*_*.rb")
 homeworks["homework_4"] = Dir.glob(repository_path + "/class009_homework/**/*.pdf")
 homeworks["homework_5"] = Dir.glob(repository_path + "/class012_homework/**/*_*_*_*.rb")
+homeworks["homework_6"] = Dir.glob(repository_path + "/class014_homework/**/*_*_*_*.rb")
+homeworks["homework_7"] = Dir.glob(repository_path + "/class015_homework/**/*_*_*_*.rb")
+
 
 p "load files:"
 puts Time.now - time_starts
@@ -72,8 +99,11 @@ results_count = Hash.new
 homeworks["entry_homework"].each do |element|
 	extension = element.split(".").last
 	if extension == "class" || extension.include?("~") then next end
+	
 	student_name = getStudentName(element)
+	
 	if students[student_name] == nil then students[student_name] = CreateStudent() end 
+	
 	res_count = results_count[student_name] || results_count[student_name] = 0
 	if res_count == 3 then next end 
 	
@@ -89,8 +119,8 @@ end
 p "check first homework:"
 puts Time.now - time_starts
 
-times = ["0","2014:09:22:20:00", "2014:09:24:20:00","2014:09:29:20:00","2014:10:27:20:00"]
-for i in 1..5
+times = ["0","2014:09:22:20:00", "2014:09:24:20:00","2014:09:29:20:00","2014:10:27:20:00","2014:11:10:20:00","2014:11:13:06:00","2014:11:20:06:00"]
+for i in 1..7
 	next if (i == 4)
 	homeworks["homework_#{i.to_s}"].each do |element|
 	
@@ -99,11 +129,13 @@ for i in 1..5
 		result = gitTimeChecker.checkLog(element,times[i],1,false).to_i 	
 		if result != -1 then students[student_name]["homework_#{i.to_s}"] = 2
 		else students[student_name]["homework_#{i.to_s}"] = 1 end
-
+		
+		#students[student_name]["flog_#{i.to_s}"] = getFlog(element)
+		#students[student_name]["flay_#{i.to_s}"] = getFlay(element, student_name)
 	end
 end
 
-p "check 1..5 homeworks except 4:"
+p "check 1..7 homeworks except 4:"
 puts Time.now - time_starts
 
 

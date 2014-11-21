@@ -54,34 +54,26 @@ def checkHomework009(hwNum)
 			end
 		end	
 end
+def removeZerosInTheBegining(hwNum)
+		return	hwNum.to_i.to_s
+end
 def countUnderscores(directory)
-	underscoresNum = directory.split("/").last.count("_")
-	return underscoresNum
+	return directory.split("/").last.count("_")
 end
 def setFlog(directory, hwNum, studentName)
 	if hwNum != "VN"
-		flogResult = `flog #{directory}`.split(":").first
-		case hwNum
-			when "002" then @student[studentName]["g2"] = flogResult
-			when "003" then @student[studentName]["g3"] = flogResult
-			when "004" then @student[studentName]["g4"] = flogResult
-			when "009" then @student[studentName]["g9"] = flogResult
-			when "012" then @student[studentName]["g12"] = flogResult
-			when "014" then @student[studentName]["g14"] = flogResult
-		end
+		#get the flog result and remove white spaces
+		flogResult = `flog #{directory}`.split(":").first.to_s.gsub!(/\s+/, "")
+		hwNum = removeZerosInTheBegining(hwNum)
+		@student[studentName]["g#{hwNum}"] = flogResult
 	end
 end
 def setFlay(directory, hwNum, studentName)
 	if hwNum != "VN"
-		flayResult = `flay #{directory} | grep #{directory} | wc -l`
-		case hwNum
-			when "002" then @student[studentName]["y2"] = flayResult
-			when "003" then @student[studentName]["y3"] = flayResult
-			when "004" then @student[studentName]["y4"] = flayResult
-			when "009" then @student[studentName]["y9"] = flayResult
-			when "012" then @student[studentName]["y12"] = flayResult
-			when "014" then @student[studentName]["y14"] = flayResult
-		end
+		#get the flay result and remove the unnecessery info and remove the new line
+		flayResult = `flay #{directory} | grep #{directory} | wc -l`.split("\n").first
+		hwNum = removeZerosInTheBegining(hwNum)
+		@student[studentName]["y#{hwNum}"] = flayResult
 	end
 end
 def setResultsOfStudent(directory, hwNum, deadline)
@@ -128,7 +120,6 @@ folders.each do |currentFolder|
 				when "class014_homework" then setResultsOfStudent(fullDirectory, "014", "13.11.2014:20:00:00")
 			end
 		end	
-	
 end
 
 if ARGV[1] == "-o"

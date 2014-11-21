@@ -19,20 +19,20 @@ class XMLWriter
 						xml.HW014 results[key]["014"]
 					}
 					xml.flog {
-						xml.g2 results[key]["g002"]
-						xml.g3 results[key]["g003"]
-						xml.g4 results[key]["g004"]
-						xml.g9 results[key]["g009"]
-						xml.g12 results[key]["g012"]
-						xml.g14 results[key]["g014"]
+						xml.g2 results[key]["g2"]
+						xml.g3 results[key]["g3"]
+						xml.g4 results[key]["g4"]
+						xml.g9 results[key]["g9"]
+						xml.g12 results[key]["g12"]
+						xml.g14 results[key]["g14"]
 					}
 					xml.flay {
-						xml.y2 results[key]["y002"]
-						xml.y3 results[key]["y003"]
-						xml.y4 results[key]["y004"]
-						xml.y9 results[key]["y009"]
-						xml.y12 results[key]["y012"]
-						xml.y14 results[key]["y014"]
+						xml.y2 results[key]["y2"]
+						xml.y3 results[key]["y3"]
+						xml.y4 results[key]["y4"]
+						xml.y9 results[key]["y9"]
+						xml.y12 results[key]["y12"]
+						xml.y14 results[key]["y14"]
 					}
 				}	
 			end

@@ -1,47 +1,55 @@
-def bar(parent, x, y, w, h)
-  	parent.puts("<rect x=\"#{x}\" y=\"#{y}\" width=\"#{w}\" height=\"#{h}\" style=\"fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)\" />")
-	return parent
+def bar(svg, x, y, w, h)
+	svg.puts("<rect x=\"#{x}\" y=\"#{y}\" width=\"#{w}\" height=\"#{h}\" style=\"fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)\" />")	
+	return svg
 end
 
-def initTable(parent)
-	parent.puts("<line x1=\"50\" y1=\"280\" x2=\"600\" y2=\"280\" style=\"stroke:rgb(0,0,0);stroke-width:2\" />")
-	parent.puts("<line x1=\"50\" y1=\"280\" x2=\"50\" y2=\"30\" style=\"stroke:rgb(0,0,0);stroke-width:2\" />")
-	parent.puts("<text x=\"60\" y=\"290\" fill=\"black\">VH</text>")
-	parent.puts("<text x=\"111\" y=\"290\" fill=\"black\">002</text>")
-	parent.puts("<text x=\"162\" y=\"290\" fill=\"black\">003</text>")
-	parent.puts("<text x=\"213\" y=\"290\" fill=\"black\">004</text>")
-	parent.puts("<text x=\"264\" y=\"290\" fill=\"black\">009</text>")
-	parent.puts("<text x=\"315\" y=\"290\" fill=\"black\">012</text>")
-	return parent
+def init_graph(svg)
+	svg.puts("<text x=\"73\" y=\"295\" fill=\"black\">VH</text>")
+	svg.puts("<text x=\"145\" y=\"295\" fill=\"black\">002</text>")
+	svg.puts("<text x=\"217\" y=\"295\" fill=\"black\">003</text>")
+	svg.puts("<text x=\"289\" y=\"295\" fill=\"black\">004</text>")
+	svg.puts("<text x=\"361\" y=\"295\" fill=\"black\">009</text>")
+	svg.puts("<text x=\"433\" y=\"295\" fill=\"black\">012</text>")
+	svg.puts("<text x=\"505\" y=\"295\" fill=\"black\">014</text>")
+	svg.puts("<text x=\"577\" y=\"295\" fill=\"black\">015</text>")
+	svg.puts("<line x1=\"50\" y1=\"280\" x2=\"640\" y2=\"280\" style=\"stroke:rgb(0,0,0);stroke-width:2\" />")
+	svg.puts("<line x1=\"50\" y1=\"280\" x2=\"50\" y2=\"30\" style=\"stroke:rgb(0,0,0);stroke-width:2\" />")
+	return svg
 end
 
-def convertResults(results)
-	statistic = Array.new(6, 0)	
+def convert_results(results)
+	counter = Array.new(8,0)
 	results.keys.each do |key|
-		statistic[0] += results[key]["VH"]
-		statistic[1] += results[key]["002"]
-		statistic[2] += results[key]["003"]
-		statistic[3] += results[key]["004"]
-		statistic[4] += results[key]["009"]
-		statistic[5] += results[key]["012"]
+		counter[0] += results[key]["VH"]%2 #getting only the 1s with mod 2 (2 % 2 = 0, 1 % 2 = 1, 0 % 2 = 0)
+		counter[1] += results[key]["002"]%2
+		counter[2] += results[key]["003"]%2
+		counter[3] += results[key]["004"]%2
+		counter[4] += results[key]["009"]%2
+		counter[5] += results[key]["012"]%2
+		counter[6] += results[key]["014"]%2
+		counter[7] += results[key]["015"]%2
 	end
-	return statistic
+	return counter
 end
 
-class SVGWriter 
-	def write(results)
-		statistic = convertResults(results)
+class SVGWriter
+	def write(results, flog, flay)
 		svg = File.open("results_Iliyan_Germanov_B_17.svg", "w")
-		svg.puts("<svg width=\"680\" height=\"440\">")
-		svg = initTable(svg)
+ 		svg.puts("<svg width='680px' height='440px' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>")
+		svg.puts("<text x=\"310\" y=\"430\" fill=\"black\">Bar chart with the number of 1s.</text>")
+		counter = convert_results(results)
+		svg = init_graph(svg)
 		x = 51
-		statistic.each do |count|
-			svg = bar(svg, x, 280 - count, 50, count)
-			x += 51
+		counter.each do |height|
+			svg = bar(svg, x, 279 - height * 3, 70, height * 3)
+			xText = x + 27
+			y = 275 - height * 3
+			svg.puts("<text x=\"#{xText}\" y=\"#{y}\" fill=\"black\">#{height}</text>")
+			x += 72
 		end
-		svg.puts("</svg>") 
+		svg.puts("</svg>")
+		svg.close
 	end
 end
-
 
 
