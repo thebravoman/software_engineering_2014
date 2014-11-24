@@ -1,6 +1,3 @@
-#program accepts file path as file
-#program accepts index for key value
-
 require 'csv'
 
 def read (file, key_index)
