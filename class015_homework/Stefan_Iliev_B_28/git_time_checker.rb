@@ -10,7 +10,7 @@ class GitTimeChecker
 		#Equalize timeLimit to match requirement in case it's not passed as required. (YY:MM:DD:HH:MM) (Two symbols per ':' after the first ':')#
 
 		dir = File.expand_path(File.dirname(__FILE__))
-		output = `git log #{dir}/#{filePath}`
+		output = `git log "#{dir}/#{filePath}"`
 		commitTimes = Array.new() 
 		output.split("\n").each do |new_line|
 			if new_line.include?("Date:")
