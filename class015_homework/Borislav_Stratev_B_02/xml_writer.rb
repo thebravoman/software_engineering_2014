@@ -1,14 +1,21 @@
-require 'xml'
-
 class XMLWriter
-
-	def write h
-		CSV.open("results_Borislav_Stratev_B_02.csv","w") do |csv|
-				a = [" ", " ", "Vh", "002", "003", "004", "009", "012","014","g2","g3","g4","g12","g14","f2","f3","f4","f12","f14","\n"]
-			csv << a.to_xml
-			h.keys.sort.each do |k, v|
-				csv << [k.split(/\ /)[0], k.split(/\ /)[1],h[k][0],h[k][1],h[k][2],h[k][3],h[k][4],h[k][5],h[k][6],h[k][7],h[k][8],h[k][9],h[k][10],h[k][11],h[k][12],h[k][13],h[k]14],h[k][15],h[k][16]].flatten.to_xml
+	def write (results,time)
+		File.open("results_Borislav_Stratev_B_02.xml", "w") do |r|
+			a = ["Vh", "002", "003", "004", "009", "012","014","g002", "g003", "g004", "g012","g014","y002", "y003", "y004",  "y012","y014","\n"]
+			r <<"<results>\n"
+			results.sort.each do |k,v|
+				r << "\t<student>\n"
+				r << "\t\t<first>#{k.split(" ")[0]}</first>\n"
+				r << "\t\t<last>#{k.split(" ")[1]}</last>\n"
+				i = 0
+				a.each do |classes|
+					r << "\t\t<tag#{classes}>#{v[i]}</tag#{classes}>\n"
+					i = i + 1
+				end
+				r << "\t</student>\n"
 			end
+			r << "</results>"
 		end
 	end
+	
 end
