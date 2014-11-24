@@ -149,7 +149,7 @@ end
 
 homeworks["homework_4"].each do |element| 
 	team_name = element.split(/\//).last.split(/\./).first
-	result = result = gitTimeChecker.checkLog(element,"2014:10:27:20:00",1,false).to_i || 0 
+	result = result = gitTimeChecker.checkLog(element,"2014:10:27:20:00",1,false).to_i 
 	team_members.each do |k ,v|
 		if k == team_name 
 			student_name = v.split(" ")[0] + "_" + v.split(" ")[1] 
