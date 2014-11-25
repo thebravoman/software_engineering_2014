@@ -1,4 +1,4 @@
-you are given a folder full of folders with txt files
+you are given a folder full of txt files
 you are given the folder and a txt file with words separated by commas as argv
-chexk how many times every word is found in the whole folder
+check how many times each word is found in each of the txt files
 write the result in one of the formats(XML, JSON, CSV, HTML)
