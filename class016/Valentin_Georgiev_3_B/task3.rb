@@ -44,7 +44,7 @@ class Task3 < Task
 			:in_what_order => "DESC",
 			:file_format=>"csv",
 			:to_expect=>
-"				File1.rb,24
+				"File1.rb,24
 				File2.rb,28
 				...
 				FileN.rb,32",
