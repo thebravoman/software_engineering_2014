@@ -1,9 +1,0 @@
-Two arguments are required. First is a folder with *.rb files. Second is a number. 
-Find all the files from the folder which have more lines than the second argument.
-Produce a result in CSV format named result.csv. Sort the result by lenght DESC
-
-FileName,Lines
-File1,213
-File2,167
-..
-FileN,51
