@@ -1,4 +1,6 @@
-Given an argument for a folder with .txt files. The second argument is word(s) separated by commas. Count how many times each word occurs in all files. Results should be case sensitive. Produce a result in CSV formt named result.csv
+Given an argument for a folder with .txt files. The second argument is word(s) separated by commas. 
+Count how many times each word occurs in all files. Results should be case sensitive. 
+Produce a result in CSV formt named result.csv
 
 word1 - x
 Word2 - y
