@@ -1,0 +1,10 @@
+Develop a program named FirstName_LastName_ClassNumber_<%= @task_number %>.rb
+
+1. You are given an argument for a folder with files;
+1.1 If there are other arguments they should be discarded;
+2. File names in this folders are in the form First_Last_digits.rb; 
+3. Find all person's initials (Robinzon Kruzo ->> RK);
+4. Sort the result by <%= @which_to_sort %> <%= @in_what_order %>;
+5. Produce a result in <%= @file_type %> format from <%= @file_type %>_writer_ClassNumber.rb named result.<%= @file_type %>:
+
+<%= @to_expect %>
