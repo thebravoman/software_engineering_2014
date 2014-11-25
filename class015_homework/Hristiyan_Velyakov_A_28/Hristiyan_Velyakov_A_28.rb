@@ -1,40 +1,173 @@
-require_relative "csv_writer.rb" require_relative "xml_writer.rb" require_relative "json_writer.rb" require_relative "html_writer.rb" require_relative "svg_writer.rb"
-time_start = Time.now repoPath = ARGV[0]
-results = Hash.new{|h, k| h[k] = {"VH" => 0, "002" => 0, "003" => 0, "004" => 0, "009" => 0, "012" => 0, "014" => 0, "015" => 0}}
-def initHash
-return Hash.new{|h, k| h[k] = {"002" => -1, "003" => -1, "004" => -1, "012" => -1, "014" => -1, "015" => -1}}
+require_relative "csv_writer.rb"
+require_relative "xml_writer.rb"
+require_relative "json_writer.rb"
+require_relative "html_writer.rb"
+require_relative "svg_writer.rb"
+
+vhodno_nivo=Array.new
+class002=Array.new
+class003=Array.new
+class004=Array.new
+class012=Array.new
+repo=ARGV[0]
+current_file=0	
+time_start=Time.now	
+results = Hash.new{|key, value| key[value] = []}
+Dir.glob("#{repo}/*.*") do |folder|		
+i=0
+		Dir.glob("#{repo}vhodno_nivo/*.*") do |script_file|
+		i+=1
+	Dir.glob("script_file/*.*") do |file|
+end 
+	if i>=3 
+	firstname=script_file.split("/").last.split(".").first.split("_")[0]
+	lastname=script_file.split("/").last.split(".").first.split("_")[1]
+	name="#{firstname} #{lastname}"	
+end 
+        commit = `git log #{script_file}`
+		if (commit!=(`git log --until=17.Sep.2014--20:00:00 #{script_file}`))
+			score=2
+			prints = "#{name}"+" "+"#{score}"
+			vhodno_nivo.push(prints) 
+		elsif
+			 (commit==(`git log --until=17.Sep.2014--20:00:00 #{script_file}`))
+	 		score=1
+			prints = "#{name}"+" "+"#{score}"
+			vhodno_nivo.push(prints)
+		else	
+ 			score=0	
+			prints = "#{name}"+" "+"#{score}"
+			vhodno_nivo.push(prints)			
+	   	end 
+			flog = `flog #{script_file}`
+			results["#{name}"][0] = score
+			results["#{name}"][0] = flog
 end
-flog = initHash
-flay = initHash
-homeworks = { "002" => ["class002_homework/**/*_*_*_*.rb", "--until=22.09.2014:20:00"], "003" => ["class003_homework/**/*_*_*_*.rb", "--until=24.09.2014:20:00"], "004" => ["class004/**/*_*_*_*.rb", "--until=29.09.2014:20:00"], "012" => ["class012_homework/**/*_*_*_*.rb", "--until=10.11.2014:20:00"], "014" => ["class014_homework/**/*_*_*_*.rb", "--until=13.11.2014:06:00"], "015" => ["class015_homework/**/*_*_*_*.rb", "--until=20.11.2014:06:00"] }
-def getName(path) filename = path.split("/").last.split("_") first_name = filename.first last_name = filename[1] return first_name.capitalize + '_' + last_name.capitalize
+	
+	Dir.glob("#{repo}class002_homework/*.*") do |script_file1|
+		firstname=script_file1.split("/").last.split(".").first.split("_")[0]
+		lastname=script_file1.split("/").last.split(".").first.split("_")[1]
+		name="#{firstname}"+" "+"#{lastname}"
+	 	commit = `git log #{script_file1}`
+		
+			if (commit==(`git log --until=Sep--22--2014--20:00:00 #{script_file1}`))
+			
+	 		score=2
+				prints = "#{name}"+" "+"#{score}"
+				class002.push(prints)
+			elsif
+
+			 (commit!=(`git log --until=Sep--22--2014--20:00:00 #{script_file1}`))
+	
+			 		score=1
+				prints = "#{name}"+" "+"#{score}"
+				class002.push(prints)
+			else
+			 		score=0	
+				prints = "#{name}"+" "+"#{score}"
+				class002.push(prints)			
+			end 
+				flog = `flog #{script_file1}`
+			results["#{name}"][1] = score
+			results["#{name}"][1] = flog
+		end
+	Dir.glob("#{repo}class003_homework/*.*") do |script_file2|
+		firstname=script_file2.split("/").last.split(".").first.split("_")[0]
+		lastname=script_file2.split("/").last.split(".").first.split("_")[1]
+		name="#{firstname}"+" "+"#{lastname}"
+		 commit = `git log #{script_file2}`
+			if (commit==(`git log --until=Sep--24--2014--20:00:00 #{script_file2}`))
+			
+			 		score=2
+				prints = "#{name}"+" "+"#{score}"
+				class003.push(prints)
+			elsif
+			 (commit!=(`git log --until=Sep--24--2014--20:00:00 #{script_file2}`))
+				    
+			 		score=1
+				prints = "#{name}"+" "+"#{score}"
+				class003.push(prints)
+			else
+
+			 		score=0	
+				prints = "#{name}"+" "+"#{score}"
+				class003.push(prints)			
+			
+					
+			end		
+			flog = `flog #{script_file1}`
+			results["#{name}"][2] = score
+			results["#{name}"][2] = flog
+	end 
+
+	Dir.glob("#{repo}class004_homework/*.*") do |script_file4|
+	 	firstname=script_file4.split("/").last.split(".").first.split("_")[0]
+		lastname=script_file4.split("/").last.split(".").first.split("_")[1]
+		name="#{firstname}"+" "+"#{lastname}"
+		commit = `git log #{script_file4}`
+		if (commit==(`git log --until=Sep--29--2014--20:00:00 #{script_file4}`))
+		
+		 		score=2
+			prints = "#{name}"+" "+"#{score}"
+			class004.push(prints)
+		elsif
+
+		 (commit!=(`git log --until=Sep--29--2014--20:00:00 #{script_file4}`))
+
+		 		score=1
+			prints = "#{name}"+" "+"#{score}"
+			class004.push(prints)
+		else
+		 
+		 		score=0	
+			prints = "#{name}"+" "+"#{score}"
+			class004.push(prints)			
+		end 
+		flog = `flog #{script_file4}`
+			results["#{name}"][3] = score
+			results["#{name}"][3] = flog
+
+	end 
+
+	Dir.glob("#{repo}class012_homework/*.*") do |script_file5|
+	firstname=script_file5.split("/").last.split(".").first.split("_")[0]
+		lastname=script_file5.split("/").last.split(".").first.split("_")[1]
+		name="#{firstname}"+" "+"#{lastname}"
+	 commit = `git log #{script_file5}`
+		if (commit==(`git log --until=Sep--22--2014--20:00:00 #{script_file5}`))
+				score=2
+			prints = "#{name}"+" "+"#{score}"
+			class012.push(prints)
+		elsif
+				(commit!=(`git log --until=Sep--22--2014--20:00:00 #{script_file5}`))
+				score=1
+			prints = "#{name}"+" "+"#{score}"
+			class012.push(prints)
+		else
+		 		score=0	
+			prints = "#{name}"+" #{score}"
+			class012.push(prints)			
+		end 
+	flog = `flog #{script_file5}`
+			results["#{name}"][4] = score
+			results["#{name}"][4] = flog		
+	end
 end
-def onTime(path, deadline) return `git log #{deadline} #{path}`.empty? ? 1 : 2
-end
-homeworks.keys.each do |hw| Dir.glob("#{repoPath}/#{homeworks[hw].first}") do |path| student_name = getName(path)
-results[student_name][hw] = onTime(path, homeworks[hw][1])
-flog[student_name][hw] = `flog #{path}`.to_i flay[student_name][hw] = `flay #{path} | grep #{student_name} | wc -l`.to_i
-end	
-end
-Dir.glob("#{repoPath}/vhodno_nivo/**/*_*_*.*") do |path| student_name = getName(path)
-if onTime(path, "--until=17.09.2014:20:00") == 2
-results[student_name]["VH"] += 1 else results[student_name]["VH"] += 101
-end
-end
-results.keys.each do |student| if results[student]["VH"] % 100 >= 3 if results[student]["VH"] < 100 results[student]["VH"] = 2 else results[student]["VH"] = 1
-end
+puts Time.now-time_start
+if ARGV[1] == "-o"
+case ARGV[2]
+when "csv"
+writer = CSVWriter.new
+when "xml"
+writer = XMLWriter.new
+when "json"
+writer = JSONWriter.new
+when "html"
+writer = HTMLWriter.new
+when "svg"
+writer = SVGWriter.new
 else
-results[student]["VH"] = 0
+abort("Shitty error!")
 end
-end
-teams = Hash.new{|h, k| h[k] = Array.new} content = File.read("#{repoPath}/class009_homework/project_to_names.csv").split("\n") content.each do |line| team_name = line.split(",").first student = line.split(",")[1]
-student = student.split(" ").first + "_" + student.split(" ")[1] if student != nil teams[team_name] << student
-end
-Dir.glob("#{repoPath}/class009_homework/**/*.pdf") do |path| team = path.split("/").last.split(".").first teams[team].each do |student|
-results[student]["009"] = onTime(path, "--until=27.10.2014:20:00")
-end
-end	
-puts "Time: #{Time.now - time_start}" if ARGV[1] == "-o" case ARGV[2] when "csv" writer = CSVWriter.new when "xml" writer = XMLWriter.new when "json" writer = JSONWriter.new when "html" writer = HTMLWriter.new when "svg" writer = SVGWriter.new else abort("Invalid output type!")
-end
-writer.write(results, flog, flay)
+writer.write(results, flog)
 end

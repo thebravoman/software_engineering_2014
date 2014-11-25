@@ -1,41 +1,17 @@
 class JSONWriter
-	def write (hash)
-		
-		#Mighty JSON source :D
-		File.open("results_Valentin_Varbanov_B_4.json", 'w') {
-			|file|
-			file.write("\"results\": {\n")
-		}	
-		
-		hash.each do |name,result|
-			if name != nil
-						first_name = name.split(' ').first
-						last_name = name.split(' ').last
-						result =  result.split(',')
-						result4 = result[4]
-						if result4 == nil then result4 = 0 end
-						result5 = result[5]
-						if result5 == nil then result5 = 0 end
-			end
-			File.open("results_Valentin_Varbanov_B_4.json", 'a') {
-				|file|
-				file << "\"student\": {\n"
-				file << "\"first-name\": \"#{first_name}\"\n"
-				file << "\"last-name\": \"#{last_name}\"\n"
-				file << "\"vhodno-nivo\": \"#{result[0]}\"\n"
-				file << "\"homework002\": \"#{result[1]}\"\n"
-				file << "\"homework003\": \"#{result[2]}\"\n"
-				file << "\"homework004\": \"#{result[3]}\"\n"
-				file << "\"homework009\": \"#{result4}\"\n"
-				file << "\"homework012\": \"#{result5}\"\n"
+	def write (hash, filename, time)
+		order = ["VH", "002", "003", "004", "009", "012", "014", "g2", "g3", "g4", "g12", "g14", "y2", "y3", "y4", "y12", "y14"]
+		File.open(filename + ".json" ,'w') do |file|
+			hash.each do |name, result|
+				file << "\"student\": {\n\"name\": \"#{name}\"\n"
+				
+				order.each do |key|
+					file << "\"#{key}\": \"#{result[key]}\"\n"
+				end
+				
 				file << "}\n"
-			}
-	
+			end
 		end
-		
-		File.open("results_Valentin_Varbanov_B_4.json", 'a') {
-			|file|
-			file << "}\n"
-		}
 	end
+	
 end

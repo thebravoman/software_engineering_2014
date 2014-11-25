@@ -130,8 +130,8 @@ for i in 1..7
 		if result != -1 then students[student_name]["homework_#{i.to_s}"] = 2
 		else students[student_name]["homework_#{i.to_s}"] = 1 end
 		
-		#students[student_name]["flog_#{i.to_s}"] = getFlog(element)
-		#students[student_name]["flay_#{i.to_s}"] = getFlay(element, student_name)
+		students[student_name]["flog_#{i.to_s}"] = getFlog(element)
+		students[student_name]["flay_#{i.to_s}"] = getFlay(element, student_name)
 	end
 end
 
@@ -149,7 +149,7 @@ end
 
 homeworks["homework_4"].each do |element| 
 	team_name = element.split(/\//).last.split(/\./).first
-	result = result = gitTimeChecker.checkLog(element,"2014:10:27:20:00",1,false).to_i || 0 
+	result = result = gitTimeChecker.checkLog(element,"2014:10:27:20:00",1,false).to_i 
 	team_members.each do |k ,v|
 		if k == team_name 
 			student_name = v.split(" ")[0] + "_" + v.split(" ")[1] 

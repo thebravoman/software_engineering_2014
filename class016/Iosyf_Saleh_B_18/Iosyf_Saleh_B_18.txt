@@ -1,0 +1,15 @@
+ begin=
+ 1.You have an argument for a folder with files.
+ 2.In the folder you have file in different formats. You have to take the ones in the formats ".c" and ".rb". The first format is ".c". Second is ".rb"
+ 3.sort all the files in an xml file "result.xml"
+	<results>	
+		<format1>
+			<file_name1>name</file_name1>
+			<file_name2>name</file_name2>
+		</format1>
+		<format2>
+			<file_name1>name</file_name1>
+			<file_name2>name</file_name2>
+			...
+ 4. The name includes extentions
+=end

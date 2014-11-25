@@ -1,0 +1,10 @@
+1.You have a folder with files
+2.The files are in the format fname_lname_number.rb
+3.All other arguments should be discarded
+4.Take all the people whose number when devided by 2 gives a whole number.
+5.Sort them by numbers ASC
+6.Save them in "result.csv" in the format
+	file_name1, number/2 1
+	file_name2, number/2 2
+	...
+	

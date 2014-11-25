@@ -1,16 +1,21 @@
-require_relative 'csv_read.rb'
-require 'csv'
+require_relative 'csv_reader.rb'
+require_relative 'csv_writer.rb'
+require_relative 'html_writer.rb'
 
-$times = read "times.csv", 0
+$times = csv_read "times.csv", 0
+$head = Array.new
+$head[0] = "First Name"
+$head[1] = "Last Name"
 
 i = 0
 $times.values.each do |val|
+	$head[i+2] = val[1]
 	val[3] = i
 	$times[val[0]] = val
 	i+=1
 end
 
-$project_to_names = read "#{ARGV[0]}/class009_homework/project_to_names.csv", 1
+$project_to_names = csv_read "#{ARGV[0]}/class009_homework/project_to_names.csv", 1
 $res = Hash.new{|h, k| h[k] = Array.new($times.keys.count,0)}
 
 def check_file (dir)
@@ -27,11 +32,7 @@ def grade_file (dir, times_row)
 		if dir.split('/')[-2] == "class009_homework"
 			$project_to_names.values.each do |team|
 				if team[0] == (dir.split('/').last).split('.')[0]
-					exception = dir.split('2014/')[1]
-					if (dir.split('class009_homework/')[1]).split(' ')[1] != nil
-						exception = dir.split('/')[-2] + '/' + (dir.split('/').last).split(' ')[0] + '\ ' + (dir.split('/').last).split(' ')[1] + "/"
-					end
-					if `git log --until #{times_row[2]}, #{exception}` == ''
+					if `git log --until #{times_row[2]}, #{dir.split('2014/')[1].dump}` == ''
 						$res[team[1]][times_row[3]] = 1
 					else 
 						$res[team[1]][times_row[3]] = 2
@@ -43,7 +44,7 @@ def grade_file (dir, times_row)
 			first_name = file.split('_')[0]
 			last_name = file.split('_')[1]
 			person = first_name.capitalize + " " + last_name.capitalize
-			if `git log --until #{times_row[2]}, #{dir.split('2014/')[1]}` == ''
+			if `git log --until #{times_row[2]}, #{times_row[0].dump}` == ''
 				$res[person][times_row[3]] = 1
 			else 
 				$res[person][times_row[3]] = 2
@@ -55,9 +56,16 @@ end
 Dir.glob("#{ARGV[0]}"'*/*') do |dir|
 	check_file dir
 end
-#Move to another file PLS!
-CSV.open("results_Vasil_Kolev_B_6.csv", "w") do |csv|
-	$res.keys.each do |key|
-		csv << Array.new(1,key) + $res[key]
+
+results = $res.sort
+
+if ARGV[1] == "-o"
+	case ARGV[2].downcase
+	when "csv"
+		csv_write results, $head
+	when "html"
+		html_write $res
+	when "json"
+		
 	end
 end
