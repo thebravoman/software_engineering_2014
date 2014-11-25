@@ -1,0 +1,13 @@
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
+1. you are given an argument for a folder with files from repository with name <%=@folder%>;
+1.1 if there are other arguments they should be discarded
+2. take all files in the format First_Last_Class_Number.rb
+3. run flog on all programs and print only those which score is under <%=@flog_number%>
+4. sort results by <%=@sort%>
+5. Produce a result in CSV format named result.csv:
+
+		FirstName1,LastName1,Flog1
+		FirstName2,LastName2,Flog2
+		...
+		FirstNameN,LastNameN,FlogN
