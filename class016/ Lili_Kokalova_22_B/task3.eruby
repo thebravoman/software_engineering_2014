@@ -1,0 +1,11 @@
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
+1. You are given a CSV file with 
+		
+		First Name, Last Name, Age;
+
+2. Find <%= @what_to_find %>;
+3. Sort the result by <%= @which_to_sort %> <%= @in_what_order %>;
+4. Produce a result in HTML format named results.html
+
+	FirstName LastName Age BirthYear
