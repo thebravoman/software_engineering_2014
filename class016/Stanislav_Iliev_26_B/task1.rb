@@ -26,7 +26,7 @@ sixtyfivelines.rb,65
 "
 		}
 
-		context1_1 = {
+		context1_3 = {
 			:task_number=>"1"
 			:more_or_less=>"less",
 			:in_what_order=>"ASC",
@@ -35,6 +35,18 @@ sixtyfivelines.rb,65
 lucky_Num.rb,7
 never.rb,9
 forget.rb,11
+"
+		}
+
+		context1_4 = {
+			:task_number=>"1"
+			:more_or_less=>"less",
+			:in_what_order=>"DESC",
+			:expected=>
+"forget.rb,11
+never.rb,9
+lucky_Num.rb,7
+oneliner.rb,1
 "
 		}
 
