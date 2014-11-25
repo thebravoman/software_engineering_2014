@@ -1,0 +1,15 @@
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
+1. you are given an argument for a folder with files;
+1.1 if there are other arguments they should be discarded
+2. some file names in this folder are in the form First_Last_digits.rb. But there are also other files; 
+3. find all the students that have <%= @letters %> symbols in their <%= @which_name %> name;
+4. Sort the result by <%= @which_to_sort %> <%= @in_what_order %>.
+5. Produce a result in CSV format named result.csv:
+
+		FirstName1,LastName1
+		FirstName2,LastName2
+		...
+		FirstNameN,LastNameN
+
+
