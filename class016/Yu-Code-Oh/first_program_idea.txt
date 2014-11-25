@@ -1,4 +1,6 @@
-you are given a folder full of txt files
-you are given the folder and a txt file with words separated by commas as argv
-check how many times each word is found in each of the txt files
-write the result in one of the formats(XML, JSON, CSV, HTML)
+Given an argument for a folder with .txt files. The second argument is word(s) separated by commas. Count how many times each word occurs in all files. Results should be case sensitive. Produce a result in CSV formt named result.csv
+
+word1 - x
+Word2 - y
+...
+wordN - z
