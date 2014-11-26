@@ -5,7 +5,7 @@ class Task1 < Task
 	def init_contexts
 	
 		context1_1 = {
-			:task_number=>"1"
+			:task_number=>"1",
 			:more_or_less=>"more",
 			:in_what_order=>"ASC",
 			:expected=>
@@ -16,7 +16,7 @@ onehundred_lines.rb,100
 		}
 
 		context1_2 = {
-			:task_number=>"1"
+			:task_number=>"1",
 			:more_or_less=>"more",
 			:in_what_order=>"DESC",
 			:expected=>
@@ -27,7 +27,7 @@ sixtyfivelines.rb,65
 		}
 
 		context1_3 = {
-			:task_number=>"1"
+			:task_number=>"1",
 			:more_or_less=>"less",
 			:in_what_order=>"ASC",
 			:expected=>
@@ -39,7 +39,7 @@ forget.rb,11
 		}
 
 		context1_4 = {
-			:task_number=>"1"
+			:task_number=>"1",
 			:more_or_less=>"less",
 			:in_what_order=>"DESC",
 			:expected=>
