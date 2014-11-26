@@ -1,0 +1,28 @@
+require 'csv'
+student_names = Array.new
+student_names2 = Array.new
+
+CSV.foreach(ARGV[0]) do |csv|
+	if !student_names.include? [csv[0],' ',csv[1]] then
+		student_names << [csv[0],' ',csv[1]]
+	end
+end
+
+
+Dir.glob("#{ARGV[1]}/*.*").each do |my_file|
+	name = my_file.split(/\//).last.split(/_/)
+	extention = my_file.split(/\//).last.split(/\./).last
+	if !student_names.include? [name[0],' ',name[1]] then
+		student_names2 << [my_file.split(/\//).last.split(/\./).first,extention]
+	end
+end
+
+
+Dir.chdir File.dirname(__FILE__)
+csv = File.new("results-2-1.csv", "w+")		
+student_names2.sort.each do |name, extention|
+	csv.puts "#{extention},#{name}"
+end
+
+csv.close
+

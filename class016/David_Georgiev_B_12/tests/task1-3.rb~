@@ -1,0 +1,34 @@
+require 'csv'
+student_names = Array.new
+student_names2 = Array.new
+
+Dir.glob("#{ARGV[1]}/*.*").each do |my_file|
+	name = my_file.split(/\//).last.split(/_/)
+	extention = my_file.split(/\//).last.split(/\./).last
+	if !student_names.include? [extention,my_file.split(/\//).last.split(/\./).first] then
+		student_names << [extention,my_file.split(/\//).last.split(/\./).first]
+	end
+end
+
+CSV.foreach(ARGV[0]) do |csv|
+	
+	if !student_names2.include? [csv[0],' ',csv[1]] then
+		student_names2 << [csv[0],' ',csv[1]]
+	end
+end
+
+student_names.each do |file_name|
+	if 
+end
+
+Dir.chdir File.dirname(__FILE__)
+xml = File.new("results-1-3.xml", "w+")	
+xml.puts "<results>"	
+student_names2.sort.reverse.each do |extention, name|
+	xml.puts "<file>"
+	xml.puts "<name>#{name}</name><extention>#{extention}</extention>"
+	xml.puts "</file>"
+end
+xml.puts "</results>"
+xml.close
+

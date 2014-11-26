@@ -1,0 +1,17 @@
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
+1. you are given an CSV file with student names and a folder with files;
+1.1 The CSV is in the format: 
+	First_name1, Last_name1
+	First_name2, Last_name2
+	...
+	FirstNameN,LastNameN
+1.2 if there are other arguments they should be discarded
+2. The file names in the folder are in the form First_Last_digits.*; 
+3. find  the students that are only in the <%= @folder_or_csv %> and not in the <%= @csv_or_folder %>.
+4. Sort the result by file names <%= @in_what_order1 %>;
+5. Produce a result in <%= @format %> and formats named results."the extention":
+
+<%= @format_example %>
+
+
