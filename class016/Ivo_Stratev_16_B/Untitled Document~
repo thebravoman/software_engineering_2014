@@ -1,8 +1,0 @@
-You are given a folder with folders that contain files in all kind of formats
-The Folder is passed as first argument.
-Work wit files in format: ,that format is passed as second argument ,ALL OTHER FORMATS ARE IGNORED!
-Output a file that contains a  hash with filenames for keys and file containment for values.
-The output file foramt is , and is passed as third argument.
-Sort that hash in order by key.
-The result file is named result.
-Program is named 
