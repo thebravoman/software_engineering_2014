@@ -1,5 +1,10 @@
 1. Read from CSV file and write in <%=@write_in%> file only those 
 that have less or equal than <%=@letters%> letters in their <%=@name%>;
+
+      FirstName1,LastName2
+      FirstName5,LastName7
+      FirstName3,LastName3
+      
 2. there are FirstName and SecondName separated by commas in the CSV file;
 3. sort the results by <%=@sort_by%> <%=@sort_order%> order;
 4. The <%=@write_in%> file must be named results_FirstName_LastName_ClassNumber.html:
