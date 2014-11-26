@@ -1,0 +1,17 @@
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
+1. You are given an argument for a folder with files.
+1.1. If there are other arguments they should be discarded..
+2. In this folder there is a CSV file, containing file names, along with other file formats.
+3. Parse the CSV file.
+4. Find all files that have <%=@letters%> "<%=@symbols%>" in them including extensions.
+5. Calculate their file name length including extensions.
+6. Sort the result by <%=@which_to_sort%> <%=@in_what_order%>.
+7. Produce a result in JSON format named <%=@task_number%>.<%=@extension%>:
+
+	{
+		"File1":"Length1"
+		"File2":"Length2"
+		...
+		"FileN":"LengthN"
+	}
