@@ -1,9 +1,21 @@
 Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
 1. You are given a ARGV for folder with files
-2  Take the names of the files like Gosho_Gopesh_21.rb-Gosho,Gopesh!
+2 Take the names of the files like Spas_Iliev_21.rb --> Spas,Iliev
 3. Find <%= @what_to_find %>;
 3. Sort the result by <%= @which_to_sort %> <%= @in_what_order %>;
-4. Produce a result in JSON format named results.json
-FirstName,LastName,Number,Firstname.length
-FirstName,LastName,Number,Firstname.length
-Firstname.length e chislo
+4. Produce a result in XML format named results.xml
+	Example:
+	
+<result>
+	<student>
+		<first>Alexander</first>
+		<last>Marinov</last>
+		<></>
+	</student>
+	<student>
+		<first>Alexander</first>
+		<last>Ynwa</last>
+		<></>
+	</student>
+</result>
