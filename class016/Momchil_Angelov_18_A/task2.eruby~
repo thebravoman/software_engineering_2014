@@ -1,0 +1,10 @@
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
+1. you are given an argument for a folder with files from repository with name <%=@folder%>;
+1.1 if there are other arguments they should be discarded
+2. Find all words with length of <%=@length> in the CSV files
+4. sort results by <%=@sort%>
+5. Produce a result in XML format named result.XML:
+
+ Unexpected results pls no bully if something goes wrong: 
+ <%=@unexpected%>
