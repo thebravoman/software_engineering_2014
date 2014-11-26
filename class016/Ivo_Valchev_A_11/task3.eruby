@@ -1,0 +1,31 @@
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
+1. You are given a command-line argument with a CSV file
+2. If there are other arguments they should be discarded
+3. Find all students with at least one zero
+4. Create a JSON file with the following structure:
+
+{
+	"student_with_zero": {
+		"student": [
+			"FirstName1_LastName1", 
+			"FirstName2_LastName2",
+			...
+			"FirstNameN_LastNameN"
+		]
+	}
+}
+
+5. The CSV file provided has the following structure:
+First Name,Last Name,VH,002,003,004,009,012
+First1,Last1,res,res,res,res,res,res
+First2,Last2,res,res,res,res,res,res
+First3,Last3,res,res,res,res,res,res
+First4,Last4,res,res,res,res,res,res
+First5,Last5,res,res,res,res,res,res
+...
+FirstN,LastN,res,res,res,res,res,res
+
+Where res is 0 or 1 
+
+6. Sort the result by <%= @which_to_sort %> <%= @in_what_order %>
