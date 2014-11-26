@@ -49,8 +49,8 @@ sixtyfivelines.rb,96"
             :format_example=>
 "\"file1.rb\":9,\"file2.rb\":11,......",
 			:expected=>
-"\"never.rb\":6,\"forget.rb\":9,"\"32lines.rb\":27,\"sixtyfivelines\":54"
-}
+"\"never.rb\":6,\"forget.rb\":9,\"32lines.rb\":27,\"sixtyfivelines\":54"
+		}
 
 		[context1_1,context1_2,context1_3]
 	end
