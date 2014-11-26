@@ -1,4 +1,5 @@
 require 'erubis'
+require 'csv'
 require 'securerandom'
 require_relative 'task1.rb'
 require_relative 'task2.rb'
