@@ -2,7 +2,7 @@ require 'json'
 class JSONWriter
 	def write results, time
 		time1 = {"Program time" => time}
-		File.open("results_Elena_Karakoleva_A_8.json","w") do |f|
+		File.open("results_Kamena_Dacheva_A_13.json","w") do |f|
 		f.write JSON.generate(time1)
 			results.keys.sort!.each do |key,val|
 		tempHash = {
