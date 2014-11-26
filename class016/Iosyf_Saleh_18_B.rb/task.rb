@@ -15,7 +15,7 @@ class Task
 		context[:task_number] = random_string = SecureRandom.hex(3)
 		numbers.shuffle!
 		sample = numbers.pop
-		File.open("#{sample}_#{context[:task_number]}.txt","w") do |file|
+		File.open("tasks/#{sample}_#{context[:task_number]}.txt","w") do |file|
 			file.write(eruby.evaluate(context))
 		end
 		if @taskNumber == 1
