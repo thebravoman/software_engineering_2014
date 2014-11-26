@@ -6,57 +6,41 @@ class Task1 < Task
 	
 		context1_1 = {
 			:task_number=>"1",
-			:letters=>"5",
-			:which_name=>"second",
-			:which_to_sort=>"Last Name",
-			:in_what_order=>"ASC",
+			:number_comparison=>"less",
+			:sorting=>"ASC",
 			:expected=>
-"F5le8,L5le1
-F5le2,L5le2
-F5le3,L5le3
+"Tn_Cn_2.rb
+Fn_Ln_5.rb
 "
 		}
 		
 		context1_2 = {
 			:task_number=>"1",
-			:letters=>"10",
-			:which_name=>"second",
-			:which_to_sort=>"Last Name",
-			:in_what_order=>"ASC",
+			:number_comparison=>"greater",
+			:sorting=>"DESC",
 			:expected=>
-"F10letter0,L10letter1
-F10letter2,L10letter2
-F10letter3,L10letter4
-F10letters,L10letters
+"Sn_Nn_13.rb
+Fn_Ln_12.rb
 "
 		}
 		
 		context1_3 = {
 			:task_number=>"1",
-			:letters=>"5",
-			:which_name=>"second",
-			:which_to_sort=>"First name",
-			:in_what_order=>"DESC",
+			:number_comparison=>"less",
+			:sorting=>"DESC",
 			:expected=>
-"F5le8,L5le1
-F5le3,L5le3
-F5le2,L5le2
+"Fn_Ln_5.rb
+Tn_Cn_2.rb
 "
 		}
 		
 		context1_4 = {
 			:task_number=>"1",
-			:letters=>"10",
-			:which_name=>"first",
-			:which_to_sort=>"Last Name",
-			:in_what_order=>"DESC",
+			:number_comparison=>"greater",
+			:sorting=>"ASC",
 			:expected=>
-"FirstName2,LastName2
-FirstName1,LastName1
-F10letters,L10letters
-F10letter3,L10letter4
-F10letter2,L10letter2
-F10letter0,L10letter1
+"Fn_Ln_12.rb
+Sn_Nn_13.rb
 "
 		}
 		
