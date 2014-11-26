@@ -1,4 +1,4 @@
-require './statement.rb'
+#require './statement.rb'
 
 class Task
 	
@@ -11,7 +11,7 @@ class Task
 	
 	def generate numbers
 		#number_distribution template
-		generate2 @template
+		#generate2 @template
 		input = File.read(@template)
 		eruby = Erubis::Eruby.new(input)
 		context = @contexts.shuffle[0]
