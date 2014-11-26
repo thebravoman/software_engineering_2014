@@ -8,21 +8,29 @@ class Task1 < Task
 			:task_number=>"1",
 			:more_or_less=>"more",
 			:in_what_order=>"ASC",
+			:format_example=>
+"file1,3
+file2,10
+..
+fileN,N",
 			:expected=>
 "32lines.rb,32
 sixtyfivelines.rb,65
-onehundred_lines.rb,100
 "
 		}
 
 		context1_2 = {
 			:task_number=>"1",
-			:more_or_less=>"more",
+			:more_or_less=>"less",
 			:in_what_order=>"DESC",
+			:format_example=>
+"file1,3
+file2,10
+..
+fileN,N",
 			:expected=>
-"onehundred_lines.rb,100
-sixtyfivelines.rb,65
-32lines.rb,32
+"forget.rb,11
+never.rb,9
 "
 		}
 
@@ -30,27 +38,18 @@ sixtyfivelines.rb,65
 			:task_number=>"1",
 			:more_or_less=>"less",
 			:in_what_order=>"ASC",
+			:format_example=>
+"file1,3
+file2,10
+..
+fileN,N",
 			:expected=>
-"oneliner.rb,1
-lucky_Num.rb,7
-never.rb,9
+"never.rb,9
 forget.rb,11
 "
 		}
 
-		context1_4 = {
-			:task_number=>"1",
-			:more_or_less=>"less",
-			:in_what_order=>"DESC",
-			:expected=>
-"forget.rb,11
-never.rb,9
-lucky_Num.rb,7
-oneliner.rb,1
-"
-		}
-
-		[context1_1,context1_2,context1_3,context1_4]
+		[context1_1,context1_2,context1_3]
 	end
 	
 	def initialize
