@@ -10,9 +10,7 @@ class Task1 < Task
 			:one_two => "2",
 			:format => "csv",
 			:expected=>
-"
-	Iosyf_Saleh_12.c,
-"
+"Iosyf_Saleh_12.c"
 		}
 		
 		context1_2 = {
@@ -21,9 +19,7 @@ class Task1 < Task
 			:one_two => "1",
 			:format => "csv",
 			:expected=>
-"
-	Fun_imation.c
-"
+"Fun_imation.c"
 		}
 		
 		context1_3 = {
@@ -32,9 +28,7 @@ class Task1 < Task
 			:one_two => "1",
 			:format => "csv",
 			:expected=>
-"
-	Sha_ft.rb
-"
+"Sha_ft.rb"
 		}
 		
 		
