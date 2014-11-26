@@ -27,7 +27,7 @@ class Task
 		else 
 			"Wrong file format"
 		end
-		File.open("#{context[:task_number]}.#{format}","w") do |file|
+		File.open("expects/#{context[:task_number]}.#{format}","w") do |file|
 			file.write(context[:expected])
 		end	
 	end
