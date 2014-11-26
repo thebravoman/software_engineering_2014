@@ -8,9 +8,10 @@ context1_1 = {
 :in_what_order => "ASC",
 :expected=>
 "
-Firstname2,Lastname,5,10
-Firstname4,Lastname,6,10
-Firstname6,Lastname,21,10"
+["Firstname2","Lastname","5","10"]
+["Firstname4","Lastname","6","10"]
+["Firstname6","Lastname","21","10"]
+"
 }
 context1_2 = {
 :task_number=>"3",
@@ -20,9 +21,10 @@ context1_2 = {
 :in_what_order => "DESC",
 :expected=>
 "
-Firstname6,Lastname,5,10
-Firstname4,Lastname,21,10
-Firstname2,Lastname,6,10
+["Firstname6","Lastname","5","10"]
+["Firstname4","Lastname","21","10"]
+["Firstname2","Lastname","6","10"]
+
 
 "
 }
@@ -34,9 +36,10 @@ context1_3 = {
 :in_what_order => "DESC",
 :expected=>
 "
-Firstname6,Lastname,21,10
-Firstname4,Lastname,6,10
-Firstname2,Lastname,5,10
+["Firstname6","Lastname","21","10"]
+["Firstname4","Lastname","6","10"]
+["Firstname2","Lastname","5","10"]
+
 "
 }
 context1_4 = {
@@ -46,9 +49,9 @@ context1_4 = {
 :in_what_order => "ASC",
 :expected=>
 "
-Firstname6,Lastname,5,10
-Firstname4,Lastname,6,10
-Firstname2,Lastname,21,10
+["Firstname6","Lastname","5","10"]
+["Firstname4","Lastname","6","10"]
+["Firstname2","Lastname","21","10"]
 
 "
 }
