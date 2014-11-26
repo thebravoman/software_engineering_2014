@@ -11,12 +11,16 @@ class Task1 < Task
 			:which_to_sort=>"Last Name",
 			:in_what_order=>"ASC",
 			:expected=>
-"F5le8,LastName1
-First1,L10letter2
-F5le2,LastName3
-First3,L10letter4
-First2,L10letter5
-F5le3,LastName6"
+"<table>
+	<tr>
+		<td>F5le8,LastName1</td>
+		<td>First1,L10letter2</td>
+		<td>F5le2,LastName3</td>
+		<td>First3,L10letter4</td>
+		<td>First2,L10letter5</td>
+		<td>F5le3,LastName6</td>
+	</tr>
+</table>"
 		}
 		
 		context1_2 = {
@@ -26,12 +30,16 @@ F5le3,LastName6"
 			:which_to_sort=>"Last Name",
 			:in_what_order=>"DESC",
 			:expected=>
-"F5le3,LastName6
-First2,L10letter5
-First3,L10letter4
-F5le2,LastName3
-First1,L10letter2
-F5le8,LastName1"
+"<table>
+	</tr>
+		<td>F5le3,LastName6<td>
+		<td>First2,L10letter5</td>
+		<td>First3,L10letter4</td>
+		<td>F5le2,LastName3</td>
+		<td>First1,L10letter2</td>
+		<td>F5le8,LastName1</td>
+	</tr>
+</table>"
 		}
 		
 		context1_3 = {
@@ -41,12 +49,16 @@ F5le8,LastName1"
 			:which_to_sort=>"First Name",
 			:in_what_order=>"ASC",
 			:expected=>
-"First1,L5le6
-First3,L5le3
-F10letter4,LastName2
-F10letter5,LastName5
-F10letter7,LastName4
-First8,L5le1"
+"<table>
+	<tr>
+		<td>First1,L5le6</td>
+		<td>First3,L5le3</td>
+		<td>F10letter4,LastName2</td>
+		<td>F10letter5,LastName5</td>
+		<td>F10letter7,LastName4</td>
+		<td>First8,L5le1</td>
+	</tr>
+</table>"
 		}
 		
 		context1_4 = {
@@ -56,12 +68,16 @@ First8,L5le1"
 			:which_to_sort=>"First Name",
 			:in_what_order=>"DESC",
 			:expected=>
-"First8,L5le1
-F10letter7,LastName4
-F10letter5,LastName5
-F10letter4,LastName2
-First3,L5le3
-First1,L5le6"
+"<table>
+	<tr>
+		<td>First8,L5le1</td>
+		<td>F10letter7,LastName4</td>
+		<td>F10letter5,LastName5</td>
+		<td>F10letter4,LastName2</td>
+		<td>First3,L5le3</td>
+		<td>First1,L5le6</td>
+	</tr>
+</table>"
 		}
 		
 		[context1_1,context1_2,context1_3,context1_4]
