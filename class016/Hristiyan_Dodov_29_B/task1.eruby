@@ -4,7 +4,6 @@ Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
 	= the file must be in format Firstname_Lastname_Number.rb
 	= the file must have a Number <%= @number_comparison %> than 10 -------^
 - sort the results <%= @sorting %> by Number ---------------------^
-- save the results with the given JSON writer with .write(ARRAY)
-	= ARRAY holds the results (each element is a filename)
-
+- save the results in XML file, named results.xml
+	= example : "<file>Fn_Ln_3.rb</file><file>Fn_Ln_5.rb</file>"
 
