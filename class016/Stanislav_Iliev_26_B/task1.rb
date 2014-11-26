@@ -10,8 +10,8 @@ class Task1 < Task
 			:in_what_order=>"ASC",
 			:format=>"csv",
 			:format_example=>
-"file1,3
-file2,10
+"file1,30
+file2,40
 ..
 fileN,N",
 			:expected=>
