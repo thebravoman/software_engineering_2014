@@ -1,0 +1,28 @@
+Develop a program named FirstName_LastName_ClassNumber_015e6b.rb
+
+1. You are given a CSV file, named csvnames.csv, which includes 2 rows. First is a name, second is a number, either 1 or 0;
+1.1 Name,1
+	Prestoslav,0
+	Mestoslav,0
+3. find all the people that have 0.;
+4. Sort the result by names in ASC.
+5. Produce a result in HTML format named result.html:
+
+	<html>
+	<head></head>
+	<body>
+		<p> Fname </p>
+		<p> Peshko </p>
+	</body>
+	</html>
+
+<html>
+<body>
+	<p>Aletko</p>
+	<p>Anastas</p>
+	<p>Bastion</p>
+	<p>Ceco</p>
+	<p>Prestoslav</p>
+</body>
+</html>
+
