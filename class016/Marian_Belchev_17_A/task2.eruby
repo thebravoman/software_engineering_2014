@@ -1,0 +1,12 @@
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
+1. you are given an arguments for a CSV file;
+1.1 if there are other arguments they should be discarded;
+2. take all <%=@odd_or_even%> numbers from the file;
+3. Produce a result in XML format named result.xml and sort the numbers <%=@sort%>:
+
+	<numbers>
+		<number>Number1</number>
+		<number>Number2</number>
+		<number>NumberN</number>
+	</numbers>
