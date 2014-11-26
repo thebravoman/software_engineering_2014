@@ -10,9 +10,18 @@ class Task1 < Task
 			:which_to_sort=>"First Name",
 			:in_what_order=>"ASC",
 			:expected=>
-"FirstLetterFN1, LastName1
-FirstLetterFN4, LastName6
-FirstLetterFN8, LastName3"
+"<student>
+	<firstName>FirstLetterFN1</firstName> 
+	<lastName>LastName1</lastName>
+</student>
+<student>
+	<firstName>FirstLetterFN4</firstName> 
+	<lastName>LastName6</lastName>
+</student>
+<student>
+	<firstName>FirstLetterFN8</firstName> 
+	<lastName>LastName3</lastName>
+</student>"
 		}
 		
 		context1_2 = {
@@ -21,9 +30,18 @@ FirstLetterFN8, LastName3"
 			:which_to_sort=>"Last Name",
 			:in_what_order=>"DESC",
 			:expected=>
-"FirstLetterFN4, LastName6
-FirstLetterFN8, LastName3
-FirstLetterFN1, LastName1"
+"<student>	
+	<firstName>FirstLetterFN4</firstName>
+	<lastName>LastName6<lastName>
+</student>
+<student>
+	<firstName>FirstLetterFN8</firstName>
+	<lastName>LastName3<lastName>
+</student>
+<student>
+	<firstName>FirstLetterFN1</firstName>
+	<lastName>LastName1<lastName>
+</student>"
 		}
 		
 		context1_3 = {
@@ -32,9 +50,18 @@ FirstLetterFN1, LastName1"
 			:which_to_sort=>"First Name",
 			:in_what_order=>"ASC",
 			:expected=>
-"FirstName1, FirstLetterLN1
-FirstName4, FirstLetterLN6
-FirstName8, FirstLetterLN3"
+"<student>
+	<firstName>FirstName1<firstName> 
+	<lastName>FirstLetterLN1<lastName>
+</student>
+<student>
+	<firstName>FirstName4<firstName>
+	<lastName>FirstLetterLN6<lastName>
+</student>
+<student>
+	<firstName>FirstName8<firstName>
+	<lastName>FirstLetterLN3<lastName>
+</student>"
 		}
 		
 		context1_4 = {
@@ -43,9 +70,18 @@ FirstName8, FirstLetterLN3"
 			:which_to_sort=>"Last Name",
 			:in_what_order=>"DESC",
 			:expected=>
-"FirstName8, FirstLetterLN3
-FirstName4, FirstLetterLN6
-FirstName1, FirstLetterLN1"
+"<student>
+	<firstName>FirstName8<firstName>
+	<lastName> FirstLetterLN3<lastName>
+</student>
+<student>
+	<firstName>FirstName4<firstName>
+	<lastName> FirstLetterLN6<lastName>
+</student>
+<student>
+	<firstName>FirstName1<firstName>
+	<lastName> FirstLetterLN1<lastName>
+</student>"
 		}
 		
 		[context1_1,context1_2,context1_3,context1_4]
