@@ -1,0 +1,12 @@
+
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
+1. you are given an argument for a folder from the repository from class <%= @class %>;
+1.1 if there are other arguments they should be discarded
+2. Calculate the flog of files in folder
+3. Sort by filename
+4. Produce a result in <%= @which_format %> format named result.<%= @which_format %>:
+
+
+		filename,flog
+		filename,flog 

@@ -6,26 +6,26 @@ class Task3 < Task
 	
 		context1_1 = {
 			:task_number=>"1",
-            :length=>"5",
-            :in_what_order => "ASC",
-            :format=>"csv",
-            :format_example=>
+			:length=>"5",
+			:in_what_order => "ASC",
+			:format=>"csv",
+			:format_example=>
 "file1.rb,9
 file2.rb,11
 .....",
 			:expected=>
-"32lines.rb,32
+"never.rb,11
 forget.rb,16
-never.rb,11
+32lines.rb,32
 sixtyfivelines.rb,96"
 		}
 
 		context1_2 = {
 			:task_number=>"2",
-            :length=>"10",
-            :in_what_order => "ASC",
-            :format=>"xml",
-            :format_example=>
+			:length=>"10",
+			:in_what_order => "ASC",
+			:format=>"xml",
+			:format_example=>
 "<results>
 <file1.rb>N</file1.rb>
 <file2.rb>11</file2.rb>
@@ -43,13 +43,13 @@ sixtyfivelines.rb,96"
 
 		context1_3 = {
 			:task_number=>"3",
-            :length=>"6",
-            :in_what_order => "ASC",
-            :format=>"json",
-            :format_example=>
+			:length=>"6",
+			:in_what_order => "ASC",
+			:format=>"json",
+			:format_example=>
 "\"file1.rb\":9,\"file2.rb\":11,......",
 			:expected=>
-"\"32lines.rb\":27,\"forget.rb\":9,\"never.rb\":6,\"sixtyfivelines\":54"
+"\"never.rb\":6,\"forget.rb\":9,\"32lines.rb\":27,\"sixtyfivelines\":54"
 }
 
 		[context1_1,context1_2,context1_3]
