@@ -4,9 +4,9 @@ Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
 1.2 If there are other arguments they should be discarded;
 1.2 take the names in this file that are in the format First_Last_digits.rb;
 2. <%= @find %>;
-4. Sort the result by <%= @sort %> <%= @order %>;
-5.Produce a result in XML format named result.xml:
+3. Sort the result by <%= @sort %> <%= @order %>;
+4.Produce a result in XML format named result.xml:
 Example:
 <result>
-	<student_name>["Firstname", "Lastname"]</student_name>
+	<student_name>["Firstname","Lastname"]</student_name>
 </result>
