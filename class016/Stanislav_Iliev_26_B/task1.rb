@@ -8,6 +8,7 @@ class Task1 < Task
 			:task_number=>"1",
 			:more_or_less=>"more",
 			:in_what_order=>"ASC",
+			:format=>"csv",
 			:format_example=>
 "file1,3
 file2,10
@@ -23,6 +24,7 @@ sixtyfivelines.rb,65
 			:task_number=>"1",
 			:more_or_less=>"less",
 			:in_what_order=>"DESC",
+			:format=>"csv",
 			:format_example=>
 "file1,3
 file2,10
@@ -38,6 +40,7 @@ never.rb,9
 			:task_number=>"1",
 			:more_or_less=>"less",
 			:in_what_order=>"ASC",
+			:format=>"csv",
 			:format_example=>
 "file1,3
 file2,10
