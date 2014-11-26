@@ -17,8 +17,18 @@ class Task
 		File.open("tests/#{sample}_#{context[:task_number]}.txt","w") do |file|
 			file.write(eruby.evaluate(context))
 		end	
-		File.open("expects/#{context[:task_number]}.csv","w") do |file|
-			file.write(context[:expected])
-		end	
+		if (context[:format] == "csv")
+			File.open("expects/#{context[:task_number]}.csv","w") do |file|
+				file.write(context[:expected])
+			end	
+		elsif (context[:format] == "xml")
+			File.open("expects/#{context[:task_number]}.xml","w") do |file|
+				file.write(context[:expected])
+			end
+		elsif (context[:format] == "json")
+			File.open("expects/#{context[:task_number]}.json","w") do |file|
+				file.write(context[:expected])
+			end
+		end
 	end
 end
