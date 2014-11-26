@@ -1,0 +1,32 @@
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
+1. You are given a command-line argument with a path to a folder
+2. If there are other arguments they should be discarded
+3. Find all students with <%= @how_many_letters %> letters in their <%= @what_name %> name
+4. Sort the result by <%= @which_to_sort %> <%= @in_what_order %>
+4. All files are in the format FirstName_LastName_ClassLetter_ClassNumber.rb
+5. Produce a JSON file with the following structure:
+	{
+		"students_with_<%= @how_many_letters %>_letters": {
+			"student": [
+				{
+					"first_name": ..., 
+					"last_name": ..., 
+					"class": ..., 
+					"number": ...
+				},
+				{
+					"first_name": ..., 
+					"last_name": ..., 
+					"class": ..., 
+					"number": ...
+				},
+				{
+					"first_name": ..., 
+					"last_name": ..., 
+					"class": ..., 
+					"number": ...
+				}
+			]
+		}
+	}

@@ -1,0 +1,10 @@
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
+1. You are given an argument for a folder with files;
+	1.1 If there are other arguments they should be discarded
+2. Some file names in this folder are in the form First_Last_digits.rb. But there are also other files; 
+3. Find all counts of lenghts of the <%= @which_name %> names in the folder.
+4. Sort the result by length <%= @in_what_order %>.
+5. Produce a result in XML format named result_<%=@task_number%>.xml:
+
+		<%= @example %>
