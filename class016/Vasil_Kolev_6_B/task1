@@ -1,0 +1,9 @@
+1. Students are given .csv files with a command that their script needs to execute in terminal
+	1.1 File must be read.
+	1.2 Hardcoding is not allowed, if the .csv file is changed, your program still needs to work.
+	1.3 The command is on the first line and it's the first element, ignore other stuff.
+
+2. Write results from command in a .csv file like so:
+	command,result
+
+3. Task must be completed in a 30min period.
