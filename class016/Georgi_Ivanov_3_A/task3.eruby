@@ -1,0 +1,3 @@
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
+1. Produce a result in JSON format named <%=@task_number%>.<%=@extension%>
