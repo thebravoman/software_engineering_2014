@@ -1,0 +1,22 @@
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
+1. You are given an argument for a folder with files.
+1.1. If there are other arguments they should be discarded.
+2. Some file names in this folder are in the form First_Last_digits.rb, but there are also other files. 
+3. Find the students with <%=@letters%> symbols in their <%=@which_name%> Name.
+4. Calculate the length of the file name excluding extensions.
+4. Sort the result by <%=@which_to_sort%> <%=@in_what_order%>.
+5. Produce a result in HTML format named <%=@task_number%>.<%=@extension%>:
+
+	<!DOCTYPE html>
+		<html>
+			<body>
+				<h4>FirstName1,LastName1,Length1</h4>
+			
+				<h4>FirstName2,LastName2,Length2</h4>
+			
+				...
+			
+				<h4>FirstNameN,LastNameN,LengthN</h4>
+			</body>
+		</html>		
