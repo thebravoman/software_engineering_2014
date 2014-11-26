@@ -1,0 +1,12 @@
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+1. you are given an argument for a folder with files;
+1.1 if there are other arguments they should be discarded;
+2. there is only one .xml file. But there are also other files;
+2.1 in the .xml file there are many tags
+<tag1>Name</tag1>
+<tag2>Name</tag2>
+....
+<tag3>Name</tag3>
+3. read the file and find the name in <%= @tag %> tag (<<%= @tag %>>);
+4. Produce a result in CSV format named result.csv:
+Name
