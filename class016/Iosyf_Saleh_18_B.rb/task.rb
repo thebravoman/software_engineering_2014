@@ -9,6 +9,10 @@ class Task
 	end
 	
 	def generate numbers
+	
+		`mkdir tasks` if not Dir.exists?("tasks")
+		`mkdir expects` if not Dir.exists?("expects")
+		
 		input = File.read(@template)
 		eruby = Erubis::Eruby.new(input)
 		context = @contexts.shuffle[0]
