@@ -1,0 +1,16 @@
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
+1. you are given one <%=@main_task%>;
+1.1 if there are other arguments they should be discarded;
+2. <%=@task%>;
+input file example:
+
+<%=@input_example%>
+			
+3. Calculate the length of their names;
+4. Sort students by first name by <%=@sort_by%>
+5. <%=@save_in%>
+output file example:
+
+<%=@output_example%>
+
