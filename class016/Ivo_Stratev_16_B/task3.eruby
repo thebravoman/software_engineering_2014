@@ -1,0 +1,9 @@
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
+1 You are given a folder with files.The Folder is passed as first argument;
+2 Find all csv files wich multiplication of (lines) and (values in each line)  is <%= @number %>. {multiplication = a*b,where a is lines and b is values in each line}
+3 Output the results in <%=@format%> file that contains as result filename and line numbers.The order in wich results are written is by lines in each file in <%=@order%> order.The <%=@format%> file is named result.<%=@format%>.
+
+<%= @to_expect %>
+
+
