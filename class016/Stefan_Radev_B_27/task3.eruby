@@ -6,6 +6,6 @@ Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
 
 2. Find <%= @what_to_find %>;
 3. Sort the result by <%= @which_to_sort %> <%= @in_what_order %>;
-4. Produce a result in JSON format named results.json
+4. Produce a result in HTML format named results.html
 
-	FirstName LastName Age BirthYear
+<%= @expected %>
