@@ -5,3 +5,5 @@ Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
 3. Sort the result by <%= @which_to_sort %> <%= @in_what_order %>;
 4. Produce a result in JSON format named results.json
 FirstName,LastName,Number,Firstname.length
+FirstName,LastName,Number,Firstname.length
+Firstname.length e chislo
