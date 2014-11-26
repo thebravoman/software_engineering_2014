@@ -5,7 +5,7 @@ class Task1 < Task
 	def init_contexts
 	
 		context1_1 = {
-			:task_number=>"1",
+			:task_number=>"",
 			:name=>"Alexander",
 			:letters=>"4",
 			:file_format=>"xml",
@@ -40,7 +40,7 @@ class Task1 < Task
 		}
 		
 		context1_2 = {
-			:task_number=>"1",
+			:task_number=>"",
 			:name=>"Iosif",
 			:letters=>"6",
 			:file_format=>"html",
@@ -84,7 +84,7 @@ class Task1 < Task
 		}
 		
 		context1_3 = {
-			:task_number=>"1",
+			:task_number=>"",
 			:name=>"Andrea",
 			:letters=>"4",
 			:file_format=>"html",
