@@ -10,5 +10,7 @@ while files.size>0
 	dir= File.dirname(file)
 	file = file.split('/')[file.split('/').size-1]
 	p "cd #{dir} && ruby #{file} #{params}"
+	`git rm -rf #{dir}/expects`
+	`git rm -rf #{dir}/tests`
 	`cd #{dir} && ruby #{file} #{params}`
 end
