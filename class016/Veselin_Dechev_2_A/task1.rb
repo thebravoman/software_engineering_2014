@@ -8,6 +8,7 @@ context1_1 = {
 :which_name=>"first",
 :which_to_sort=>"First name",
 :in_what_order=>"ASC",
+:format => "csv",
 :expected=>
 "
 Denis,Stoinev
@@ -24,6 +25,7 @@ context1_2 = {
 :which_name=>"second",
 :which_to_sort=>"First name",
 :in_what_order=>"ASC",
+:format => "csv",
 :expected=>
 "
 Denis,Stoinev
@@ -39,6 +41,7 @@ context1_3 = {
 :which_name=>"second",
 :which_to_sort=>"First name",
 :in_what_order=>"ASC",
+:format => "csv",
 :expected=>
 "
 Dimitar,Matev
