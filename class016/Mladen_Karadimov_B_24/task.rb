@@ -1,5 +1,4 @@
-class Task
-	
+class Task	
 	@template = ""
 	
 	def initialize template
@@ -11,14 +10,11 @@ class Task
 		input = File.read(@template)
 		eruby = Erubis::Eruby.new(input)
 		context = @contexts.shuffle[0]
-		context[:task_number] = random_string = SecureRandom.hex(3)
+		context[:task_number] = random_string = SecureRandom.hex(3).to_s
 		numbers.shuffle!
 		sample = numbers.pop
-		File.open("tests/#{sample}_#{context[:task_number]}.txt","w") do |file|
+		File.open("#{sample}_#{context[:task_number]}.txt","w") do |file|
 			file.write(eruby.evaluate(context))
-		end	
-		File.open("expects/#{context[:task_number]}.csv","w") do |file|
-			file.write(context[:expected])
 		end	
 	end
 end
