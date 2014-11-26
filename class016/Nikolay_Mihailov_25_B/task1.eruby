@@ -4,6 +4,5 @@ Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
 1.1 if there are other arguments they should be discarded
 2. some file names in this folder are in the form First_Last_digits.rb. But there are also other files; 
 3. find all the students with first name: <%= @name %> which have <%= @letters %> letters in their last name;
-4. Sort the result by last name in <%= @in_what_order %> order.
-5. Produce a result in <%= @file_format %> format named result.<%= @file_format %>:
+4. Produce a result in <%= @file_format %> format named result.<%= @file_format %>:
 			<%= @file_format_example %>

@@ -1,4 +1,4 @@
-require_relative 'task.rb'
+require_relative "task.rb"
 
 class Task1 < Task
 
@@ -7,84 +7,128 @@ class Task1 < Task
 		context1_1 = {
 			:task_number=>"1",
 			:name=>"Alexander",
-			:letters=>"7",
-			:in_what_order=>"ASC",
-			:file_format=>"json",
+			:letters=>"4",
+			:file_format=>"xml",
 			:file_format_example=>
-"F10letter0,L10letter1
-F10letter2,L10letter2
-F10letter3,L10letter4
-F10letters,L10letters
+"
+<result>
+	<student>
+		<first>Alexander</first>
+		<last>Muci</last>
+		<number>13</number>
+	</student>
+	<student>
+		<first>Alexander</first>
+		<last>Ynwa</last>
+		<number>19</number>
+	</student>
+</result>
 ",			
 			:expected=>
-"F5le8,L5le1
-F5le2,L5le2
-F5le3,L5le3
-"
+"<result>
+	<student>
+		<first>Alexander</first>
+		<last>Muci</last>
+		<number>13</number>
+	</student>
+	<student>
+		<first>Alexander</first>
+		<last>Ynwa</last>
+		<number>19</number>
+	</student>
+</result>"
 		}
 		
 		context1_2 = {
 			:task_number=>"1",
 			:name=>"Iosif",
-			:letters=>"5",
-			:in_what_order=>"ASC",
+			:letters=>"6",
 			:file_format=>"html",
 			:file_format_example=>
-"F10letter0,L10letter1
-F10letter2,L10letter2
-F10letter3,L10letter4
-F10letters,L10letters
-",			
-			:expected=>
-"F10letter0,L10letter1
-F10letter2,L10letter2
-F10letter3,L10letter4
-F10letters,L10letters
 "
+<!DOCTYPE html>
+<html>
+	<body>
+		 <dl>
+			<dd>Iosif</dd>
+			<dd>Ivanov</dd>
+			<dd>12</dd>
+			  
+		</dl> 
+		 <dl>
+			<dd>Iosif</dd>
+			<dd>Ilievv</dd>
+			<dd>17</dd>
+		</dl> 
+	</body>
+	
+ </html>",			
+			:expected=>
+"<!DOCTYPE html>
+<html>
+	<body>
+		 <dl>
+			<dd>Iosif</dd>
+			<dd>Ivanov</dd>
+			<dd>12</dd>
+			  
+		</dl> 
+		 <dl>
+			<dd>Iosif</dd>
+			<dd>Ilievv</dd>
+			<dd>17</dd>
+		</dl> 
+	</body>
+	
+ </html>"		
 		}
 		
 		context1_3 = {
 			:task_number=>"1",
 			:name=>"Andrea",
-			:letters=>"7",
-			:in_what_order=>"DESC",
+			:letters=>"4",
 			:file_format=>"html",
 			:file_format_example=>
-"F10letter0,L10letter1
-F10letter2,L10letter2
-F10letter3,L10letter4
-F10letters,L10letters
-",			
-			:expected=>
-"F5le8,L5le1
-F5le3,L5le3
-F5le2,L5le2
 "
+<!DOCTYPE html>
+<html>
+	<body>
+		 <dl>
+			<dd>Andrea</dd>
+			<dd>Spas</dd>
+			<dd>12</dd>
+			  
+		</dl> 
+		 <dl>
+			<dd>Andrea</dd>
+			<dd>Boko</dd>
+			<dd>17</dd>
+		</dl> 
+	</body>
+	
+ </html>",			
+			:expected=>
+"<!DOCTYPE html>
+<html>
+	<body>
+		 <dl>
+			<dd>Andrea</dd>
+			<dd>Spas</dd>
+			<dd>12</dd>
+			  
+		</dl> 
+		 <dl>
+			<dd>Andrea</dd>
+			<dd>Boko</dd>
+			<dd>17</dd>
+		</dl> 
+	</body>
+	
+ </html>",			
 		}
 		
-		context1_4 = {
-			:task_number=>"1",
-			:name=>"Vasil",
-			:letters=>"5",
-			:in_what_order=>"DESC",
-			:file_format=>"json",
-			:file_format_example=>
-"F10letter0,L10letter1
-F10letter2,L10letter2
-F10letter3,L10letter4
-F10letters,L10letters
-",			
-			:expected=>
-"FirstName2,LastName2
-FirstName1,LastName1
-F10letters,L10letters
-F10letter3,L10letter4
-F10letter2,L10letter2
-F10letter0,L10letter1
-"
-		}
 		
-		[context1_1,context1_2,context1_3,context1_4]
+		[context1_1,context1_2,context1_3]
 	end
 	
 	def initialize

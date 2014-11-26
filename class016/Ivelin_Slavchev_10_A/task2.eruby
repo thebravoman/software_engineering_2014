@@ -1,0 +1,14 @@
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
+1. You are given an argument for a folder with files.
+1.1. If there are other arguments they should be discarded.
+2. In this folder there is a JSON file, containing student names, along with other file formats.
+3. Parse the JSON file.
+3. Find all students with <%=@letters%> or <%=@word%> symbols in their <%=@which_name%> Name.
+4. Sort the result by <%=@which_to_sort%> Name <%=@in_what_order%>.
+5. Produce a result in CSV format named <%=@task_number%>.<%=@extension%>:
+
+	LastName1,FirstName1
+	LastName2,FirstName2
+	...
+	LastNameN,FirstNameN
