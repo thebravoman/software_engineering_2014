@@ -5,9 +5,10 @@ context1_1 = {
 :task_number=>"3",
 :more_or_less=>"more",
 :in_what_order=>"ASC",
+:format=>"csv",
 :format_example=>
-"file1,3
-file2,10
+"file1,30
+file2,40
 ..
 fileN,N",
 :expected=>
@@ -19,8 +20,9 @@ context1_2 = {
 :task_number=>"3",
 :more_or_less=>"less",
 :in_what_order=>"DESC",
+:format=>"csv",
 :format_example=>
-"file1,3
+"file1,20
 file2,10
 ..
 fileN,N",
@@ -33,9 +35,10 @@ context1_3 = {
 :task_number=>"3",
 :more_or_less=>"less",
 :in_what_order=>"ASC",
+:format=>"csv",
 :format_example=>
-"file1,3
-file2,10
+"file1,10
+file2,20
 ..
 fileN,N",
 :expected=>
