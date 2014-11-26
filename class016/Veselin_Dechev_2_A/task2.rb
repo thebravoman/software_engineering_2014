@@ -16,7 +16,7 @@ context1_2 = {
 :file_format => "xml",
 :expected=>
 "
-<numbers><number>746395bg018312.rb<number><numbers>
+<numbers><number>234sd678887012<number><numbers>
 "
 }
 context1_3 = {

@@ -25,8 +25,6 @@ class Task
 				format = "csv"
 			when 2
 				format = "xml"
-			when 3
-				format = "json"
 			else
 				format = ""
 		end

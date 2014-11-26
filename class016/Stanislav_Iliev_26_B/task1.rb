@@ -8,10 +8,9 @@ class Task1 < Task
 			:task_number=>"1",
 			:more_or_less=>"more",
 			:in_what_order=>"ASC",
-			:format=>"csv",
 			:format_example=>
-"file1,30
-file2,40
+"file1,3
+file2,10
 ..
 fileN,N",
 			:expected=>
@@ -24,9 +23,8 @@ sixtyfivelines.rb,65
 			:task_number=>"1",
 			:more_or_less=>"less",
 			:in_what_order=>"DESC",
-			:format=>"csv",
 			:format_example=>
-"file1,20
+"file1,3
 file2,10
 ..
 fileN,N",
@@ -40,10 +38,9 @@ never.rb,9
 			:task_number=>"1",
 			:more_or_less=>"less",
 			:in_what_order=>"ASC",
-			:format=>"csv",
 			:format_example=>
-"file1,10
-file2,20
+"file1,3
+file2,10
 ..
 fileN,N",
 			:expected=>

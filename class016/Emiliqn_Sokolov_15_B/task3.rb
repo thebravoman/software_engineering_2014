@@ -12,7 +12,7 @@ class Task3 < Task
 			:expected=>
 "
 <result>
-	<student_name>[\"Kamen\", \"Iosyf\"]</student_name>
+	<student_name>["Kamen","Iosyf"]</student_name>
 </result>
 "
 		}
@@ -25,7 +25,7 @@ class Task3 < Task
 			:expected=>
 "
 <result>
-	<student_name>[\"Kamen\", \"Iosyf\"]</student_name>
+	<student_name>["Kamen","Iosyf"]</student_name>
 </result>
 "
 		}

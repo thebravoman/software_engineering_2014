@@ -7,17 +7,16 @@ class Task2 < Task
 		context1_1 = {
 			:task_number=>"1",
 			:word=>"software",
-			:in_what_order=>"DESC",
 			:format=>"csv",
 			:format_example=>
-"file1.rb,30
-file2.txt,10
+"file1,3
+file2,10
 ..
-fileN.extension,N",
+fileN,N",
 			:expected=>
 "never.rb,6
-sixtyfivelines.rb,4
 32lines.rb,2
+sixtyfivelines.rb,4
 forget.rb,0
 "
 		}
@@ -25,7 +24,6 @@ forget.rb,0
 		context1_2 = {
 			:task_number=>"1",
 			:word=>"hardware",
-			:in_what_order=>"ASC",
 			:format=>"xml",
 			:format_example=>
 "<results>
@@ -47,7 +45,6 @@ forget.rb,0
 		context1_3 = {
 			:task_number=>"1",
 			:word=>"tues",
-			:in_what_order=>"ASC",
 			:format=>"json",
 			:format_example=>
 "\"file1.rb\":N,\"file2.rb\":N ..",

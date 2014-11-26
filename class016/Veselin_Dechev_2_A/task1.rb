@@ -11,10 +11,10 @@ context1_1 = {
 :format => "csv",
 :expected=>
 "
-F2le2_L9le4_1
-F2le2_L9le4_2
-F2le2_L9le442_3
-F2le4_Last142_4
+Denis,Stoinev
+Dimitar,Matev
+Emiliqn,Sokolov
+Gergan,Nikolov
 
 "
 }
@@ -28,10 +28,10 @@ context1_2 = {
 :format => "csv",
 :expected=>
 "
-F2le2_L9le4_1
-F2le2_L9le4_2
-F2le2_L9le442_3
-F2le4_Last142_4
+Denis,Stoinev
+Dimitar,Matev
+Emiliqn,Sokolov
+Gergan,Nikolov
 "
 }
 context1_3 = {
@@ -44,8 +44,8 @@ context1_3 = {
 :format => "csv",
 :expected=>
 "
-F2le2_L9le442_3
-F2le4_Last142_4
+Dimitar,Matev
+Emiliqn,Sokolov
 "
 }
 [context1_1,context1_2,context1_3]
