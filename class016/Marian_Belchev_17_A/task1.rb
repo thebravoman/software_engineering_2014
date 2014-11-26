@@ -10,9 +10,7 @@ class Task1 < Task
 			:flog_number=>"200",
 			:sort=>"firstname",
 			:expected=>
-"FirstName1,LastName1,Flog1
-FirstName2,LastName2,Flog2
-FirstNameN,LastNameN,FlogN
+"...
 "
 		}
 
@@ -22,9 +20,7 @@ FirstNameN,LastNameN,FlogN
 			:flog_number=>"300",
 			:sort=>"flog result",
 			:expected=>
-"FirstName1,LastName1,Flog1
-FirstName2,LastName2,Flog2
-FirstNameN,LastNameN,FlogN
+"..
 "
 		}
 
@@ -34,9 +30,7 @@ FirstNameN,LastNameN,FlogN
 			:flog_number=>"200",
 			:sort=>"firstname",
 			:expected=>
-"FirstName1,LastName1,Flog1
-FirstName2,LastName2,Flog2
-FirstNameN,LastNameN,FlogN
+"...
 "
 		}
 
@@ -46,16 +40,15 @@ FirstNameN,LastNameN,FlogN
 			:flog_number=>"300",
 			:sort=>"flog result",
 			:expected=>
-"FirstName1,LastName1,Flog1
-FirstName2,LastName2,Flog2
-FirstNameN,LastNameN,FlogN
+"...
 "
 		}
-		
+
 		[context1_1,context1_2,context1_3,context1_4]
 	end
 	
 	def initialize
-		super 'task1.eruby'
+		taskNumber = 1
+		super 'task1.eruby', taskNumber
 	end
 end

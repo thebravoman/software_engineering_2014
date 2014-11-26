@@ -4,8 +4,8 @@ class Task2 < Task
 
 	def init_contexts
 
-		context1_1 = {
-			:task_number=>"1",
+		context2_1 = {
+			:task_number=>"2",
 			:odd_or_even=>"odd",
 			:sort=>"ASC",
 			:expected=>
@@ -13,8 +13,8 @@ class Task2 < Task
 "
 		}
 
-		context1_2 = {
-			:task_number=>"1",
+		context2_2 = {
+			:task_number=>"2",
 			:odd_or_even=>"even",
 			:sort=>"DESC",
 			:expected=>
@@ -22,11 +22,12 @@ class Task2 < Task
 "
 		}
 
-		[context1_1,context1_2]
+		[context2_1,context2_2]
 	end
 	
 	def initialize
-		super 'task2.eruby'
+		taskNumber = 2
+		super 'task2.eruby', taskNumber
 	end
 	
 end
