@@ -17,7 +17,7 @@ class Task
 		File.open("tests/#{sample}_#{context[:task_number]}.txt","w") do |file|
 			file.write(eruby.evaluate(context))
 		end	
-		File.open("expects/#{context[:task_number]}.csv","w") do |file|
+		File.open("expects/#{context[:task_number]}.txt","w") do |file|
 			file.write(context[:expected])
 		end	
 	end

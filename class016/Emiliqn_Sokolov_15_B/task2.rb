@@ -10,7 +10,7 @@ class Task2 < Task
 			:file_format => "xml",
 			:expected=>
 "
-	<numbers><number>920496asd1010.rb<number><numbers>
+	<numbers><number>920496asd1010.rb</number></numbers>
 "
 		}
 	
@@ -20,7 +20,7 @@ class Task2 < Task
 			:file_format => "xml",
 			:expected=>
 "
-	<numbers><number>234sd678887012<number><numbers>
+	<numbers><number>234sd678887012</number></numbers>
 "
 		}
 		
@@ -30,7 +30,7 @@ class Task2 < Task
 			:file_format => "xml",
 			:expected=>
 "
-	<numbers><number>123456780s11.rb<number><numbers>
+	<numbers><number>123456780s11.rb</number></numbers>
 "
 
 		}
