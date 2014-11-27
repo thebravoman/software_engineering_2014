@@ -1,0 +1,11 @@
+Develop a program named FirstName_LastName_ClassNumber_1a7b3031.rb
+
+You are given an argument for a folder with .rb files.
+Find all the files from the folder which have less than 30 lines.
+Sort the result by number of lines ASC
+Produce a result in CSV format named result.csv. 
+
+file1,3
+file2,10
+..
+fileN,N

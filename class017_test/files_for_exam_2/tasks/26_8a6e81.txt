@@ -1,0 +1,15 @@
+Develop a program named FirstNAme_LastName_ClassNumber_8a6e81.rb
+
+1.You are given 2 arguments.The first one is a folder with files named FirstName_LastName_digit.extension with differant extensions.
+The second one is an c.
+2.Find all the files with that c and check if they include an odd or an even number in their names.
+3.If the number is  write the results in XML file sorted by ASC.
+4.The XML file must be named result_FirstName_LastName_ClassNumber.xml
+  XML file
+					 <odd_result>
+						<file>FirstName1_LastName2_digit.c</file>
+						<file>FirstName2_LastName1_digit.c</file>
+						<file>FirstNameN_LastNameN_digit.c</file>
+					</odd_result>
+   
+

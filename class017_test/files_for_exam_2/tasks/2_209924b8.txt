@@ -1,0 +1,9 @@
+Develop a program named FirstName_LastName_ClassNumber_209924b8.rb
+You are given an argument for a folder with files.
+Count how many times the word "software" occurs in each of the files.
+Produce a result in csv format named result.csv.
+
+file1,3
+file2,10
+..
+fileN,N
