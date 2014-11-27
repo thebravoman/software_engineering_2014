@@ -7,5 +7,5 @@ results[0] = csv[0][0]
 results[1] = result
 
 CSV.open('results.csv', 'w') do |write|
-	puts results
+	write << results
 end
