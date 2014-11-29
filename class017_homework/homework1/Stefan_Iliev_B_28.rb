@@ -1,5 +1,6 @@
 require_relative "fixture_searcher.rb"
 require_relative "expected_searcher.rb"
+require_relative "results_writer.rb"
 require 'timeout'
 
 #GNU POWERED.
@@ -24,6 +25,10 @@ Dir.glob(repository_path + "/class017_test/files_for_exam_*/results/**/*_*_*_*.r
 	expected = ExpectedSearcher.read_with_hash(program_hash,repository_path).to_s
 	result_extension = ExpectedSearcher.get_last_extension
 	
+	if file.include?("files_for_exam_1")
+		path_to_fixture = "#{repository_path}/class008_test/visible/fixture1 #{repository_path}/class008_test/visible/fixture2"
+	end 
+	
 	if path_to_fixture == "FNF" 
 		test_results[file_name] = "FNF"
 		next
@@ -47,9 +52,7 @@ Dir.glob(repository_path + "/class017_test/files_for_exam_*/results/**/*_*_*_*.r
 		test_results[file_name] = 1
 	else 
 		test_results[file_name] = 0
-	end 
+	end
 end
 
-test_results.each do |k,v|
-	puts k.to_s + " ===||=== " + v.to_s
-end 
+ResultsWriter.write(test_results)
