@@ -7,6 +7,7 @@ require 'timeout'
 repository_path = ARGV.shift || "."
 
 test_results = Hash.new 
+test_results.compare_by_identity
 
 Dir.glob(repository_path + "/class017_test/files_for_exam_*/results/**/*_*_*_*.rb").each do |file|
 
@@ -25,7 +26,7 @@ Dir.glob(repository_path + "/class017_test/files_for_exam_*/results/**/*_*_*_*.r
 	
 	if path_to_fixture == "FNF" 
 		test_results[file_name] = "FNF"
-	#	next
+		next
 	end 
 	if expected == "ENF"
 		test_results[file_name] = "ENF"
@@ -48,3 +49,7 @@ Dir.glob(repository_path + "/class017_test/files_for_exam_*/results/**/*_*_*_*.r
 		test_results[file_name] = 0
 	end 
 end
+
+test_results.each do |k,v|
+	puts k.to_s + " ===||=== " + v.to_s
+end 
