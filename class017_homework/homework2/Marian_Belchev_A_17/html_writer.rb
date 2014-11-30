@@ -63,24 +63,24 @@ class HTMLWriter
 				<th>#{results[key]["009"]}</th>
 				<th>#{results[key]["012"]}</th>
 				<th>#{results[key]["014"]}</th>
-				<th>#{results[key]["017.1"]}</th>
-				<th>#{results[key]["017.2"]}</th>
+				<th>#{results[key]["0171"]}</th>
+				<th>#{results[key]["0172"]}</th>
 				<th>#{results[key]["g2"]}</th>
 				<th>#{results[key]["g3"]}</th>
 				<th>#{results[key]["g4"]}</th>
 				<th>#{results[key]["g9"]}</th>
 				<th>#{results[key]["g12"]}</th>
 				<th>#{results[key]["g14"]}</th>
-				<th>#{results[key]["g17.1"]}</th>
-				<th>#{results[key]["g17.2"]}</th>
+				<th>#{results[key]["g171"]}</th>
+				<th>#{results[key]["g172"]}</th>
 				<th>#{results[key]["y2"]}</th>
 				<th>#{results[key]["y3"]}</th>
 				<th>#{results[key]["y4"]}</th>
 				<th>#{results[key]["y9"]}</th>
 				<th>#{results[key]["y12"]}</th>
 				<th>#{results[key]["y14"]}</th>
-				<th>#{results[key]["y17.1"]}</th>
-				<th>#{results[key]["y17.2"]}</th>
+				<th>#{results[key]["y171"]}</th>
+				<th>#{results[key]["y172"]}</th>
 			</tr>"
 		end	
 		file << "			</tbody>

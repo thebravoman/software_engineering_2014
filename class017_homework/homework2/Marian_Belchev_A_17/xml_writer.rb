@@ -17,8 +17,8 @@ class XMLWriter
 						xml.HW009 results[key]["009"]
 						xml.HW012 results[key]["012"]
 						xml.HW014 results[key]["014"]
-						xml.HW014 results[key]["017.1"]
-						xml.HW014 results[key]["017.2"]
+						xml.HW017_1 results[key]["0171"]
+						xml.HW017_2 results[key]["0172"]
 					}
 					xml.flog {
 						xml.g2 results[key]["g2"]
@@ -27,8 +27,8 @@ class XMLWriter
 						xml.g9 results[key]["g9"]
 						xml.g12 results[key]["g12"]
 						xml.g14 results[key]["g14"]
-						xml.g14 results[key]["g17.1"]
-						xml.g14 results[key]["g17.2"]
+						xml.g17_1 results[key]["g171"]
+						xml.g17_2 results[key]["g172"]
 					}
 					xml.flay {
 						xml.y2 results[key]["y2"]
@@ -37,8 +37,8 @@ class XMLWriter
 						xml.y9 results[key]["y9"]
 						xml.y12 results[key]["y12"]
 						xml.y14 results[key]["y14"]
-						xml.y14 results[key]["y17.1"]
-						xml.y14 results[key]["y17.2"]
+						xml.y17_1 results[key]["y171"]
+						xml.y17_2 results[key]["y172"]
 					}
 				}	
 			end
