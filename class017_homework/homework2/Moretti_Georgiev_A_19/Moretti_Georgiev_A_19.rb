@@ -5,7 +5,7 @@ require_relative 'xml_writer.rb'
 require_relative 'html_writer.rb'
 measureTime = Time.now
 #homework folders
-folders = ["vhodno_nivo","class002_homework", "class003_homework","class004","class009_homework","class012_homework", "class014_homework", "class015_homework", "class017_homework/homework1"]
+folders = ["vhodno_nivo","class002_homework", "class003_homework","class004","class009_homework","class012_homework", "class014_homework", "class015_homework", "class017_homework/homework1","class017_homework/homework2"]
 #hash for every student and his/hers results
 @student =Hash.new{|hash, key| hash[key] = {"VN" 	=> 0, 
 											"002" 	=> 0, 
@@ -14,24 +14,24 @@ folders = ["vhodno_nivo","class002_homework", "class003_homework","class004","cl
 											"009"	=> 0, 
 											"012" 	=> 0,
 											"014"	=> 0,
-											"015"	=> 0,
-											"017"	=> 0,
+											"017(1)"	=> 0,
+											"017(2)"	=> 0,
 											"g2" 	=> "-",
 											"g3" 	=> "-",
 											"g4" 	=> "-",
 											"g9" 	=> "-",
 											"g12" 	=> "-",
 											"g14"	=> "-",
-											"g15"	=> "-",
-											"g17"	=> "-",
+											"g17(1)"	=> "-",
+											"g17(2)"	=> "-",
 											"y2" 	=> "-",
 											"y3" 	=> "-",
 											"y4" 	=> "-",
 											"y9" 	=> "-",
 											"y12" 	=> "-",
 											"y14"	=> "-",
-											"y15"	=> "-",
-											"y17"	=> "-",}
+											"y17(1)"	=> "-",
+											"y17(2)"	=> "-"}
 }
 def nameCheck(name)
 	if name.to_s.count(" ") == 1
@@ -61,7 +61,7 @@ def checkHomework009(hwNum)
 		end	
 end
 def removeZerosInTheBegining(hwNum)
-		return	hwNum.to_i.to_s
+		return	hwNum.gsub("0", "")
 end
 def countUnderscores(directory)
 	return directory.split("/").last.count("_")
@@ -124,9 +124,8 @@ folders.each do |currentFolder|
 				when "class009_homework" then setResultsOfStudent(fullDirectory, "009", "27.10.2014:20:00:00")
 				when "class012_homework" then setResultsOfStudent(fullDirectory, "012", "10.11.2014:20:00:00") 
 				when "class014_homework" then setResultsOfStudent(fullDirectory, "014", "13.11.2014:06:00:00")
-				when "class015_homework" then setResultsOfStudent(fullDirectory, "015", "20.11.2014:06:00:00")
-				when "class017_homework/homework1" then setResultsOfStudent(fullDirectory, "017", "02.12.2014:06:00:00")
-
+				when "class017_homework/homework1" then setResultsOfStudent(fullDirectory, "017(1)", "02.12.2014:06:00:00")
+				when "class017_homework/homework2" then setResultsOfStudent(fullDirectory, "017(2)", "02.12.2014:06:00:00")	
 			end
 		end	
 end

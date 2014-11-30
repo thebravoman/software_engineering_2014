@@ -38,15 +38,16 @@ class HTMLWriter
 							<th>g12</th>
 							<th>g14</th>
 							<th>g15</th>
-							<th>g17</th>
+							<th>g17(1)</th>
+							<th>g17(2)</th>
 							<th>y2</th>
 							<th>y3</th>
 							<th>y4</th>
 							<th>y9</th>
 							<th>y12</th>
 							<th>y14</th>
-							<th>y15</th>
-							<th>y17</th>
+							<th>y17(1)</th>
+							<th>y17(2)</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -60,22 +61,24 @@ class HTMLWriter
 						<td>#{student[key]["012"]}</td>
 						<td>#{student[key]["014"]}</td>
 						<td>#{student[key]["015"]}</td>
+						<td>#{student[key]["017(1)"]}</td>
+						<td>#{student[key]["017(2)"]}</td>
 						<td>#{student[key]["g2"]}</td>
 						<td>#{student[key]["g3"]}</td>
 						<td>#{student[key]["g4"]}</td>
 						<td>#{student[key]["g9"]}</td>
 						<td>#{student[key]["g12"]}</td>
 						<td>#{student[key]["g14"]}</td>
-						<td>#{student[key]["g15"]}</td>
-						<td>#{student[key]["g17"]}</td>
+						<td>#{student[key]["g17(1)"]}</td>
+						<td>#{student[key]["g17(2)"]}</td>
 						<td>#{student[key]["y2"]}</td>
 						<td>#{student[key]["y3"]}</td>
 						<td>#{student[key]["y4"]}</td>
 						<td>#{student[key]["y9"]}</td>
 						<td>#{student[key]["y12"]}</td>
 						<td>#{student[key]["y14"]}</td>
-						<td>#{student[key]["y15"]}</td>
-						<td>#{student[key]["y17"]}</td>
+						<td>#{student[key]["y17(1)"]}</td>
+						<td>#{student[key]["y17(2)"]}</td>
 					</tr>
 					</tbody>
 				</table>
