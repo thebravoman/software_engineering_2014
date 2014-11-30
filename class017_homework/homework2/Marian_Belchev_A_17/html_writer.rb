@@ -32,24 +32,24 @@ class HTMLWriter
 				<th>009</th>
 				<th>012</th>
 				<th>014</th>
-				<th>015</th>
-				<th>017</th>
+				<th>017.1</th>
+				<th>017.2</th>
 				<th>g2</th>
 				<th>g3</th>
 				<th>g4</th>
 				<th>g9</th>
 				<th>g12</th>
 				<th>g14</th>
-				<th>g15</th>
-				<th>g17</th>
+				<th>g17.1</th>
+				<th>g17.2</th>
 				<th>y2</th>
 				<th>y3</th>
 				<th>y4</th>
 				<th>y9</th>
 				<th>y12</th>
 				<th>y14</th>
-				<th>y15</th>
-				<th>y17</th>
+				<th>y17.1</th>
+				<th>y17.2</th>
 			</tr>
 		</thead>
 		<tbody>"
@@ -63,24 +63,24 @@ class HTMLWriter
 				<th>#{results[key]["009"]}</th>
 				<th>#{results[key]["012"]}</th>
 				<th>#{results[key]["014"]}</th>
-				<th>#{results[key]["015"]}</th>
-				<th>#{results[key]["017"]}</th>
+				<th>#{results[key]["0171"]}</th>
+				<th>#{results[key]["0172"]}</th>
 				<th>#{results[key]["g2"]}</th>
 				<th>#{results[key]["g3"]}</th>
 				<th>#{results[key]["g4"]}</th>
 				<th>#{results[key]["g9"]}</th>
 				<th>#{results[key]["g12"]}</th>
 				<th>#{results[key]["g14"]}</th>
-				<th>#{results[key]["g15"]}</th>
-				<th>#{results[key]["g17"]}</th>
+				<th>#{results[key]["g171"]}</th>
+				<th>#{results[key]["g172"]}</th>
 				<th>#{results[key]["y2"]}</th>
 				<th>#{results[key]["y3"]}</th>
 				<th>#{results[key]["y4"]}</th>
 				<th>#{results[key]["y9"]}</th>
 				<th>#{results[key]["y12"]}</th>
 				<th>#{results[key]["y14"]}</th>
-				<th>#{results[key]["y15"]}</th>
-				<th>#{results[key]["y17"]}</th>
+				<th>#{results[key]["y171"]}</th>
+				<th>#{results[key]["y172"]}</th>
 			</tr>"
 		end	
 		file << "			</tbody>
