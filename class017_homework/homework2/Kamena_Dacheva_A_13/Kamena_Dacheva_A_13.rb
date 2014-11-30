@@ -10,6 +10,7 @@ teams_hash	= Hash.new { |hash, key| hash[key] = [] }
 time_hash	= Hash.new { |hash, key| hash[key] = [] }
 student_all	= Hash.new { |name, programs| name[programs] = [] }
 student_time	= Hash.new { |name, programs| name[programs] = [] }
+folder_name 	= ["vhodno_nivo","class002_homework", "class003_homework","class004","class009_homework","class012_homework","class014_homework/**","class017_homework/homework1","class017_homework/homework2"]
 folder = 0
 
 class String
