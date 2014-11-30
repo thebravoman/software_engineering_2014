@@ -6,7 +6,7 @@ require_relative 'html_writer.rb'
 require_relative 'svg_writer.rb'
 
 start 		= Time.now
-@results	= Hash.new {|hash, key| hash[key] = {'VH' => 0, '002' => 0, '003' => 0, '004' => 0, '009' => 0, '012' => 0, '014' => 0, '015' => 0, '017' => 0, 'g2' => 0, 'g3' => 0, 'g4' => 0, 'g9' => '-', 'g12' => 0, 'g14' => 0, 'y2' => '', 'y3' => '', 'y4' => '', 'y9' => '-', 'y12' => '', 'y14' => ''}}
+@results	= Hash.new {|hash, key| hash[key] = {'VH' => 0, '002' => 0, '003' => 0, '004' => 0, '009' => 0, '012' => 0, '014' => 0, '0171' => 0, '0172' => 0, 'g2' => 0, 'g3' => 0, 'g4' => 0, 'g9' => '-', 'g12' => 0, 'g14' => 0, 'g171' => 0, 'g172' => 0, 'y2' => '', 'y3' => '', 'y4' => '', 'y9' => '-', 'y12' => '', 'y14' => '', 'y171' => '', 'y172' => ''}}
 folders 	= ["#{ARGV[0]}/*_homework", "#{ARGV[0]}/vhodno_nivo", "#{ARGV[0]}/class004"]
 
 def checkTime path, deadline
@@ -87,10 +87,9 @@ Dir.glob(folders) do |path|
 			checkHW(path, '012', '10.11.2014:20:00:00')
 		when 'class014_homework'
 			checkHW(path, '014', '13.11.2014:06:00:00')
-		when 'class015_homework'
-			checkHW(path, '015', '20.11.2014:06:00:00')
 		when 'class017_homework'
-			checkHW("#{path}/homework1", '017', '02.12.2014:06:00:00')
+			checkHW("#{path}/homework1", '0171', '02.12.2014:06:00:00')
+			checkHW("#{path}/homework2", '0172', '02.12.2014:06:00:00')
 	end
 end
 
