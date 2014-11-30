@@ -7,7 +7,7 @@ class SVGWriter
 			info_for_bars[i] = 0.0
 		end
 		Dir.chdir File.dirname(__FILE__)
-		svg = File.new("results_David_Georgiev_B_12.svg", "w+")
+		svg = File.new("results_Konstantin_Vekilski_B_20.svg", "w+")
 		hashstudents_vhodno.each	do |key, value| if value == 1 then count[1] = count[1]+1 end end
 		hashstudents_002.each		do |key, value| if value == 1 then count[2]	= count[2]+1 end end
 		hashstudents_003.each		do |key, value| if value == 1 then count[3]	= count[3]+1 end end
