@@ -5,8 +5,8 @@ require_relative "html_writer.rb"
 require_relative "svg_writer.rb"
 require "csv"
 time_start=Time.now
-classes = " "," ","VH","002","Flog02","Flay02","003","Flog03","Flay03","004","Flog04","Flay04","009","012","Flog12","Flay12","014","Flog14","Flay14","015","Flog15","Flay15"
-result = Hash.new{|hash, key| hash[key] = [0,0,'-','-',0,'-','-',0,'-','-',0,0,'-','-',0,'-','-',0,'-','-']}
+classes = " "," ","VH","002","Flog02","Flay02","003","Flog03","Flay03","004","Flog04","Flay04","009","012","Flog12","Flay12","014","Flog14","Flay14","015","Flog15","Flay15","017","Flog17","Flay17"
+result = Hash.new{|hash, key| hash[key] = [0,0,'-','-',0,'-','-',0,'-','-',0,0,'-','-',0,'-','-',0,'-','-',0,'-','-']}
 team_names = Array.new
 def homework_chek (directory_name,log_info,result,folder)
 	program_num = 1 #for VH
@@ -22,7 +22,7 @@ def homework_chek (directory_name,log_info,result,folder)
 		result[name][folder] = 1 if (log.empty? && folder !=0) || (log.empty? && program_num == 3 && folder == 0)
 		name_before = name #for VH
 		program_num = 1 if program_num == 3 #for VH
-		
+		puts file
 		next if folder == 0 || folder == 10 	#next if folder != 11 && folder != 14 	
 		file_folder = file
 		file_folder = file.chomp("#{file.split(/\//).last}") if folder == 14 || folder == 17
@@ -74,6 +74,8 @@ folder = 14
 result = homework_chek("/class014_homework/**/*_*_*_*.rb", "Nov--13--2014--06:00:00",result,folder) 
 folder = 17  
 result = homework_chek("/class015_homework/**/*_*_*_*.rb", "Nov--20--2014--06:00:00",result,folder) 
+folder = 20  
+result = homework_chek("/class017_homework/homework1/*_*_*_*.rb","Dec--2--2014--06:00:00",result,folder) 
 		
 write = true
 puts Time.now - time_start

@@ -8,7 +8,7 @@ class HTMLWriter
 		html.puts("	<tr>")
 		html.puts("	<th> FirstName </th>")
 		html.puts("	<th> LastName </th>")
-		for class_index in 2..21
+		for class_index in 2..24
 			html.puts("	<th> #{classes[class_index]} </th>")
 		end
 		html.puts("	</tr>")
@@ -18,7 +18,7 @@ class HTMLWriter
 			html.puts("	<tr>")
 			html.puts("	<td> #{key_split[0]} </td>")
 			html.puts("	<td> #{key_split[1]} </td>")
-			for counter in 0..19
+			for counter in 0..22
 				html.puts("	<td> #{result[key][counter]} </td>")
 			end
 			html.puts("	</tr>")
