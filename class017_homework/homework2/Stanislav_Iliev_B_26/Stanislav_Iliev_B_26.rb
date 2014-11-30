@@ -89,10 +89,10 @@ directories.each do |directory, deadline|
 					results["#{name}"][i] = 1
 				end
 				if i > 0
-					results["#{name}"][i+7] = flog if i < 4
-					results["#{name}"][i+6] = flog if i > 4
-					results["#{name}"][i+13] = flay.to_i if i < 4
-					results["#{name}"][i+12] = flay.to_i if i > 4
+					results["#{name}"][i+7] = flog if i < 4 #+1 pri novo domashno
+					results["#{name}"][i+6] = flog if i > 4 #+1 pri novo domashno
+					results["#{name}"][i+13] = flay.to_i if i < 4 #+2 pri novo domashno
+					results["#{name}"][i+12] = flay.to_i if i > 4 #+2 pri novo domashno
 				end
 			end
 		end
