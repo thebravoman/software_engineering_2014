@@ -28,8 +28,8 @@ class SVGWriter
 		hashstudents_012.each		do |key, value| if value == 1 or value == 2 then count[6] = count[6]+value end end
 		hashstudents_014.each		do |key, value| if value == 1 or value == 2 then count[7] = count[7]+value end end
 		hashstudents_015.each		do |key, value| if value == 1 or value == 2 then count[8] = count[8]+value end end
-		hashstudents_017_1.each		do |key, value| if value == 1 or value == 2 then count[9] = count[10]+value end end
-		hashstudents_017_2.each		do |key, value| if value == 1 or value == 2 then count[10] = count[9]+value end end
+		hashstudents_017_1.each		do |key, value| if value == 1 or value == 2 then count[9] = count[9]+value end end
+		hashstudents_017_2.each		do |key, value| if value == 1 or value == 2 then count[10] = count[10]+value end end
 =end
 		max_value_index = count.index(count.max)
 		per_cent = count[max_value_index]/100

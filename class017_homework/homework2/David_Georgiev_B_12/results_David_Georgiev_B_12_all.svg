@@ -94,9 +94,9 @@ fill:#e29676;
 background: red;"/>
 </svg>
 <text x="837" y="385" style="fill: #999999; stroke: #000000;  font-size: 16px;">017_1</text>
-<text x="945" y="369" style="fill: #594e52; font-size: 16px;">4</text>
-<svg x="0" y="369">
-<rect x="910" y="10" height="11" width="90"
+<text x="945" y="331" style="fill: #594e52; font-size: 16px;">18</text>
+<svg x="0" y="331">
+<rect x="910" y="10" height="49" width="90"
 rx="20" ry="10"
 style="stroke:#594e52;
 stroke-width: 3;
