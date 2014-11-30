@@ -29,7 +29,6 @@ class HTMLWriter
 							<th>009</th>
 							<th>012</th>
 							<th>014</th>
-							<th>015</th>
 							<th>017</th>
 							<th>g2</th>
 							<th>g3</th>
@@ -37,7 +36,6 @@ class HTMLWriter
 							<th>g9</th>
 							<th>g12</th>
 							<th>g14</th>
-							<th>g15</th>
 							<th>g17(1)</th>
 							<th>g17(2)</th>
 							<th>y2</th>
@@ -60,7 +58,6 @@ class HTMLWriter
 						<td>#{student[key]["009"]}</td>
 						<td>#{student[key]["012"]}</td>
 						<td>#{student[key]["014"]}</td>
-						<td>#{student[key]["015"]}</td>
 						<td>#{student[key]["017(1)"]}</td>
 						<td>#{student[key]["017(2)"]}</td>
 						<td>#{student[key]["g2"]}</td>
