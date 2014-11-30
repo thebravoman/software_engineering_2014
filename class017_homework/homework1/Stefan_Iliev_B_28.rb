@@ -1,6 +1,6 @@
-require_relative "fixture_searcher.rb"
-require_relative "expected_searcher.rb"
-require_relative "results_writer.rb"
+require_relative "Stefan_Iliev/fixture_searcher.rb"
+require_relative "Stefan_Iliev/expected_searcher.rb"
+require_relative "Stefan_Iliev/results_writer.rb"
 require 'timeout'
 
 #GNU POWERED.
@@ -37,6 +37,7 @@ Dir.glob(repository_path + "/class017_test/files_for_exam_*/results/**/*_*_*_*.r
 		test_results[file_name] = "ENF"
 		next 
 	end
+	
 	begin 
 	status = Timeout::timeout(3) {
 		unless system("ruby #{file} #{path_to_fixture}")
