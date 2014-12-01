@@ -30,7 +30,7 @@ file_read.each do |line|
 	line = line.gsub "\n",""
 	name = line.split(",").first
 	number = line.split(",").last
-	if number.to_i >= 5
+	if number.to_i == 5
 		names[i] = name
 		i += 1
 	end
