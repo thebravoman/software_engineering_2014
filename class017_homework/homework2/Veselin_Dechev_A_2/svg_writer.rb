@@ -6,33 +6,35 @@ end
 def initTable(parent)
 	parent.puts("<line x1=\"50\" y1=\"280\" x2=\"600\" y2=\"280\" style=\"stroke:rgb(0,0,0);stroke-width:2\" />")
 	parent.puts("<line x1=\"50\" y1=\"280\" x2=\"50\" y2=\"30\" style=\"stroke:rgb(0,0,0);stroke-width:2\" />")
-	parent.puts("<text x=\"60\" y=\"290\" fill=\"black\">vhodno_nivo</text>")
-	parent.puts("<text x=\"111\" y=\"290\" fill=\"black\">class002</text>")
-	parent.puts("<text x=\"162\" y=\"290\" fill=\"black\">class003</text>")
-	parent.puts("<text x=\"213\" y=\"290\" fill=\"black\">class004</text>")
-	parent.puts("<text x=\"264\" y=\"290\" fill=\"black\">class009</text>")
-	parent.puts("<text x=\"315\" y=\"290\" fill=\"black\">class012</text>")
+	parent.puts("<text x=\"60\" y=\"300\" fill=\"black\">VH</text>")
+	parent.puts("<text x=\"111\" y=\"300\" fill=\"black\">002</text>")
+	parent.puts("<text x=\"162\" y=\"300\" fill=\"black\">003</text>")
+	parent.puts("<text x=\"213\" y=\"300\" fill=\"black\">004</text>")
+	parent.puts("<text x=\"264\" y=\"300\" fill=\"black\">009</text>")
+	parent.puts("<text x=\"315\" y=\"300\" fill=\"black\">012</text>")
+	parent.puts("<text x=\"366\" y=\"300\" fill=\"black\">014</text>")	
 	return parent
 end
 
 def convertResults(results)
-	statistic = Array.new(6, 0)	
-	results.each do |key,hw_hash|
-		statistic[0] += hw_hash.values_at("vhodno_nivo").first.to_i
-		statistic[1] += hw_hash.values_at("class002").first.to_i
-		statistic[2] += hw_hash.values_at("class003").first.to_i
-		statistic[3] += hw_hash.values_at("class004").first.to_i
-		statistic[4] += hw_hash.values_at("class009").first.to_i
-		statistic[5] += hw_hash.values_at("class012").first.to_i
+	statistic = Array.new(7, 0)	
+	results.keys.each do |key|
+		statistic[0] += results[key]["VH"]
+		statistic[1] += results[key]["002"]
+		statistic[2] += results[key]["003"]
+		statistic[3] += results[key]["004"]
+		statistic[4] += results[key]["009"]
+		statistic[5] += results[key]["012"]
+		statistic[6] += results[key]["014"]
 	end
 	return statistic
 end
 
 class SVGWriter 
-	def write(results)
+	def write(results,start)
 		statistic = convertResults(results)
-		svg = File.open("results_Veselin_Dechev_A_2.svg", "w")
-		svg.puts("<svg width=\"680\" height=\"440\">")
+		svg = File.open("results_Radoslav_Kostadinov_A_22.svg", "w")
+		svg.puts("<svg width='680' height='440' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>")
 		svg = initTable(svg)
 		x = 51
 		statistic.each do |count|
@@ -42,3 +44,6 @@ class SVGWriter
 		svg.puts("</svg>") 
 	end
 end
+
+
+

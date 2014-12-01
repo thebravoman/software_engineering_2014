@@ -1,29 +1,34 @@
-def write_to_HTML(result)
-	classes = " "," "," "," ","vhodno_nivo","class002","class003","class004","class009","class012"
-	File.open("results_Veselin_Dechev_A_2.html","w") do |file|
-		file.puts "<html>"
-		file.puts "<head></head>"
-		file.puts "<body>"
-		file.puts "<table border=\"1\">"
-		file.puts "\t<tr>"
-		classes.each do |hw|
-			file.puts "\t\t<th>#{hw}</th>"
+class HTMLWriter 
+	def write results,time
+		file = File.new("results_Radoslav_Kostadinov_A_22.html", "w")
+		file << "<div><h4>#{time}</h4></div>"		
+			results.keys.sort.each do |key|
+			file << "<div class=\"student\">
+						<h3>#{key}</h3>
+						<ul>
+							<li>#{results[key]["VH"]}</li>
+							<li>#{results[key]["002"]}</li>
+							<li>#{results[key]["003"]}</li>
+							<li>#{results[key]["004"]}</li>
+							<li>#{results[key]["009"]}</li>
+							<li>#{results[key]["012"]}</li>
+							<li>#{results[key]["014"]}</li>
+							<li>#{results[key]["0171"]}</li>
+							<li>#{results[key]["0172"]}</li>
+							<li>#{results[key]["g2"]}</li>
+							<li>#{results[key]["g3"]}</li>
+							<li>#{results[key]["g4"]}</li>
+							<li>#{results[key]["g12"]}</li>
+							<li>#{results[key]["g14"]}</li>
+							<li>#{results[key]["g171"]}</li>
+							<li>#{results[key]["y2"]}</li>
+							<li>#{results[key]["y3"]}</li>
+							<li>#{results[key]["y4"]}</li>
+							<li>#{results[key]["y12"]}</li>
+							<li>#{results[key]["y14"]}</li>
+							<li>#{results[key]["g171"]}</li>
+						</ul>
+					</div>"
 		end
-		file.puts "\t</tr>"
-		file.puts "\t<tr>"
-		result.keys.each do |key|
-			key_split = key.split(",")
-			file.puts "\t\t<td>#{key_split[0]}<td>"
-			file.puts "\t\t<td>#{key_split[1]}<td>"
-			result[key].each do |r_key|
-				file.print "\t\t<td>"
-				file.print r_key
-				file.puts "</td>"
-			end
-			file.puts "\t</tr>"
-		end
-		file.puts "</table>"
-		file.puts "</body>"
-		file.puts "</html>"
 	end
 end
