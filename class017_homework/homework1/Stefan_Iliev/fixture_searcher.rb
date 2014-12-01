@@ -7,6 +7,6 @@ class FixtureSearcher
 			output += repository_path.to_s + fixture_arg.split(",").first + " "
 		end 
 		return "FNF" if output == ""
-		return repository_path + output
+		return  output
 	end
 end

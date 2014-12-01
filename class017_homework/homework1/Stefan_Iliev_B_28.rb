@@ -48,12 +48,19 @@ Dir.glob(repository_path + "/class017_test/files_for_exam_*/results/**/*_*_*_*.r
 		puts "Program timed out.\n\n"
 	end 
 	
-	path_to_results =  "./result."+result_extension
+	grep_result = `grep #{hash} #{repository_path}/class017_homework/result_output_name.csv`
+	if grep_result != ""
+			path_to_results = "./" + (grep_result.to_s.split("\n").first.split(",").last || "result.#{result_extension}")
+	else 
+		path_to_results = "./result.#{result_extension}"
+	end 
+
 	if File.exists?(path_to_results) && File.read(path_to_results) == expected
 		test_results[file_name] = 1
 	else 
 		test_results[file_name] = 0
 	end
+	`rm -f #{path_to_results}`
 end
 
 ResultsWriter.write(test_results)
