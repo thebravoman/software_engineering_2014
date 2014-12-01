@@ -73,9 +73,9 @@
 			<015> 2 </015>
 			<Flog15>    967.2 </Flog15>
 			<Flay15> 406 </Flay15>
-			<017> 0 </017>
-			<Flog17> - </Flog17>
-			<Flay17> - </Flay17>
+			<017> 2 </017>
+			<Flog17>  </Flog17>
+			<Flay17> 0 </Flay17>
 		</student>
 		<student>
 			<Name> David Georgiev </Name>
@@ -91,8 +91,8 @@
 			<Flay04> 0 </Flay04>
 			<009> 2 </009>
 			<012> 2 </012>
-			<Flog12>    855.3 </Flog12>
-			<Flay12> 579 </Flay12>
+			<Flog12>     62.1 </Flog12>
+			<Flay12> 0 </Flay12>
 			<014> 2 </014>
 			<Flog14>    988.0 </Flog14>
 			<Flay14> 785 </Flay14>
@@ -235,7 +235,7 @@
 		</student>
 		<student>
 			<Name> Dimitar Terziev </Name>
-			<VH> 0 </VH>
+			<VH> 1 </VH>
 			<002> 2 </002>
 			<Flog02>    100.9 </Flog02>
 			<Flay02> 0 </Flay02>
@@ -247,8 +247,8 @@
 			<Flay04> 0 </Flay04>
 			<009> 2 </009>
 			<012> 2 </012>
-			<Flog12>     81.7 </Flog12>
-			<Flay12> 0 </Flay12>
+			<Flog12>    257.4 </Flog12>
+			<Flay12> 302 </Flay12>
 			<014> 2 </014>
 			<Flog14>    513.3 </Flog14>
 			<Flay14> 194 </Flay14>
@@ -281,9 +281,9 @@
 			<015> 1 </015>
 			<Flog15>    487.0 </Flog15>
 			<Flay15> 0 </Flay15>
-			<017> 0 </017>
-			<Flog17> - </Flog17>
-			<Flay17> - </Flay17>
+			<017> 2 </017>
+			<Flog17>     29.6 </Flog17>
+			<Flay17> 0 </Flay17>
 		</student>
 		<student>
 			<Name> Emiliqn Sokolov </Name>
@@ -307,9 +307,9 @@
 			<015> 2 </015>
 			<Flog15>    476.3 </Flog15>
 			<Flay15> 80 </Flay15>
-			<017> 0 </017>
-			<Flog17> - </Flog17>
-			<Flay17> - </Flay17>
+			<017> 2 </017>
+			<Flog17>    309.1 </Flog17>
+			<Flay17> 58 </Flay17>
 		</student>
 		<student>
 			<Name> George Vevel </Name>
@@ -541,9 +541,9 @@
 			<015> 2 </015>
 			<Flog15>    475.6 </Flog15>
 			<Flay15> 80 </Flay15>
-			<017> 0 </017>
-			<Flog17> - </Flog17>
-			<Flay17> - </Flay17>
+			<017> 2 </017>
+			<Flog17>    309.1 </Flog17>
+			<Flay17> 58 </Flay17>
 		</student>
 		<student>
 			<Name> Ivailo Ivanov </Name>
@@ -619,9 +619,9 @@
 			<015> 2 </015>
 			<Flog15>    967.2 </Flog15>
 			<Flay15> 406 </Flay15>
-			<017> 0 </017>
-			<Flog17> - </Flog17>
-			<Flay17> - </Flay17>
+			<017> 2 </017>
+			<Flog17>  </Flog17>
+			<Flay17> 0 </Flay17>
 		</student>
 		<student>
 			<Name> Ivo Valchev </Name>
@@ -697,9 +697,9 @@
 			<015> 2 </015>
 			<Flog15>    573.6 </Flog15>
 			<Flay15> 44 </Flay15>
-			<017> 0 </017>
-			<Flog17> - </Flog17>
-			<Flay17> - </Flay17>
+			<017> 2 </017>
+			<Flog17>     72.2 </Flog17>
+			<Flay17> 0 </Flay17>
 		</student>
 		<student>
 			<Name> Kamena Dacheva </Name>
@@ -723,9 +723,9 @@
 			<015> 1 </015>
 			<Flog15>    454.2 </Flog15>
 			<Flay15> 0 </Flay15>
-			<017> 0 </017>
-			<Flog17> - </Flog17>
-			<Flay17> - </Flay17>
+			<017> 2 </017>
+			<Flog17>    118.4 </Flog17>
+			<Flay17> 0 </Flay17>
 		</student>
 		<student>
 			<Name> Konstantin Kostov </Name>
@@ -905,9 +905,9 @@
 			<015> 2 </015>
 			<Flog15>    419.7 </Flog15>
 			<Flay15> 141 </Flay15>
-			<017> 0 </017>
-			<Flog17> - </Flog17>
-			<Flay17> - </Flay17>
+			<017> 2 </017>
+			<Flog17>      6.7 </Flog17>
+			<Flay17> 0 </Flay17>
 		</student>
 		<student>
 			<Name> Martin Grigorov </Name>
@@ -931,9 +931,9 @@
 			<015> 2 </015>
 			<Flog15>    479.0 </Flog15>
 			<Flay15> 80 </Flay15>
-			<017> 0 </017>
-			<Flog17> - </Flog17>
-			<Flay17> - </Flay17>
+			<017> 2 </017>
+			<Flog17>    309.1 </Flog17>
+			<Flay17> 58 </Flay17>
 		</student>
 		<student>
 			<Name> Mladen Karadimov </Name>
@@ -1217,9 +1217,9 @@
 			<015> 2 </015>
 			<Flog15>    575.8 </Flog15>
 			<Flay15> 44 </Flay15>
-			<017> 0 </017>
-			<Flog17> - </Flog17>
-			<Flay17> - </Flay17>
+			<017> 2 </017>
+			<Flog17>     72.2 </Flog17>
+			<Flay17> 0 </Flay17>
 		</student>
 		<student>
 			<Name> Stanislav Valkanov </Name>
@@ -1270,7 +1270,7 @@
 			<Flog15>    798.9 </Flog15>
 			<Flay15> 452 </Flay15>
 			<017> 2 </017>
-			<Flog17>     62.2 </Flog17>
+			<Flog17>     75.9 </Flog17>
 			<Flay17> 0 </Flay17>
 		</student>
 		<student>
@@ -1431,7 +1431,7 @@
 		</student>
 		<student>
 			<Name> Velislav Kostov </Name>
-			<VH> 0 </VH>
+			<VH> 2 </VH>
 			<002> 2 </002>
 			<Flog02>     38.8 </Flog02>
 			<Flay02> 0 </Flay02>
@@ -1469,8 +1469,8 @@
 			<Flay04> 0 </Flay04>
 			<009> 2 </009>
 			<012> 2 </012>
-			<Flog12>    296.5 </Flog12>
-			<Flay12> 298 </Flay12>
+			<Flog12>     69.3 </Flog12>
+			<Flay12> 0 </Flay12>
 			<014> 2 </014>
 			<Flog14>    547.1 </Flog14>
 			<Flay14> 298 </Flay14>
