@@ -4,7 +4,7 @@ class HTMLWriter
 		html.puts("<!DOCTYPE html>")
 		html.puts("<html>")
 		html.puts("<head>")
-		html.puts("<pre><title> Students homeworks </title></pre>")
+		html.puts("<pre><title>Test2 - results</title></pre>")
 		html.puts("</head>")
 		html.puts("<table border=1 style=width:50% align=center>")
 			html.puts("<tr>")		
