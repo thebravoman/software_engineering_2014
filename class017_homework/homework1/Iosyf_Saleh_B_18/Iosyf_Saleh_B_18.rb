@@ -23,7 +23,7 @@ Dir.glob("#{ARGV[0]}/class017_test/files_for_exam_2/*").each do |file|
 		Dir.glob("#{ARGV[0]}/class017_test/files_for_exam_2/expects/*").each do |file_results|
 			file_hex=file_results.split("/").last.split(".").first
 			data.each do |a|
-				if a[1] == file_hex
+				if a[1] == file_hex 
 					complete=""
 					file = File.open(file_results, "r").each do |text|
 						complete+=text
