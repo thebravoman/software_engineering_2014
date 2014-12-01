@@ -2,15 +2,21 @@ dir = ARGV[0]
 dir = dir[0..-2] if dir[-1] == "/"
 
 def write_to_HTML(result)
+	headers = "First Name","Last Name","Result"
 	File.open("results_Stanislav_Iliev_B_26.html","w") do |file|
 		file.puts "<html>"
 		file.puts "<head></head>"
 		file.puts "<body>"
 		file.puts "<table border=\"1\">"
+		file.puts "\t<tr>"
+		headers.each do |hw|
+			file.puts "\t\t<th>#{hw}</th>"
+		end
+		file.puts "\t<tr>"
 		result.each do |key, value|
 			key_split = key.split(" ")
-			file.puts "\t\t<td>#{key_split[0]}<td>"
-			file.puts "\t\t<td>#{key_split[1]}<td>"
+			file.puts "\t\t<td>#{key_split[0]}</td>"
+			file.puts "\t\t<td>#{key_split[1]}</td>"
 			file.print "\t\t<td>"
 			file.print value
 			file.puts "</td>"
