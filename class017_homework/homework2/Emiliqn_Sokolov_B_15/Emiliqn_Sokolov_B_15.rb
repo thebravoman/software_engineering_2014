@@ -7,7 +7,7 @@ require_relative "svg_writer.rb"
 start_time = Time.now
 
 folder_name = ["class002_homework", "class003_homework","class004","class009_homework","class012_homework","class014_homework","class017_homework/homework1","class017_homework/homework2"]
-result = Hash.new{|hash, key| hash[key] = [0,0,0,0,0,0,0,"-","-","-","-","-","-","-","-","-","-","-","-","-","-"]}
+result = Hash.new{|hash, key| hash[key] = [0,0,0,0,0,0,0,0,0,"-","-","-","-","-","-","-","-","-","-","-","-","-","-"]}
 folder = 0
 prg_count = 0
 n = 0
@@ -67,32 +67,32 @@ for i in 0..7
 				case i
 					when 0
 						log = `git log --until=22.09.2014:20:00:00 #{file}`
-						flay_def file,result,first_name,name,folder+13
-						flog_def file,result,name,folder+6
+						flay_def file,result,first_name,name,folder+15
+						flog_def file,result,name,folder+8
 					when 1					
 						log = `git log --until=24.09.2014:20:00:00 #{file}`
-						flog_def file,result,name,folder+6
-						flay_def file,result,first_name,name,folder+13
+						flog_def file,result,name,folder+8
+						flay_def file,result,first_name,name,folder+15
 					when 2
 						log = `git log --until=29.09.2014:20:00:00 #{file}`
-						flog_def file,result,name,folder+6
-						flay_def file,result,first_name,name,folder+13
+						flog_def file,result,name,folder+8
+						flay_def file,result,first_name,name,folder+15
 					when 4
 						log = `git log --until=10.11.2014:20:00:00 #{file}`
-						flog_def file,result,name,folder+5
-						flay_def file,result,first_name,name,folder+12
+						flog_def file,result,name,folder+7
+						flay_def file,result,first_name,name,folder+15
 					when 5
 						log = `git log --until=13.11.2014:06:00:00 #{file}`
-						flog_def file,result,name,folder+5
-						flay_def file,result,first_name,name,folder+12
+						flog_def file,result,name,folder+7
+						flay_def file,result,first_name,name,folder+14
 					when 6
 						log = `git log --until=02.12.2014:06:00:00 #{file}`
-						flog_def file,result,name,folder+5
-						flay_def file,result,first_name,name,folder+12
+						flog_def file,result,name,folder+7
+						flay_def file,result,first_name,name,folder+14
 					when 7
 						log = `git log --until=02.12.2014:06:00:00 #{file}`
-						flog_def file,result,name,folder+5
-						flay_def file,result,first_name,name,folder+12
+						flog_def file,result,name,folder+7
+						flay_def file,result,first_name,name,folder+14
 				end
 
 				if !log.empty?
@@ -128,7 +128,7 @@ end
 result.keys.sort.each { |k| result[k] = result.delete k }
 
 end_time=Time.now-start_time
-cff = end_time," ","VH","002","003","004","009","012","014","g2","g3","g4","g12","g14","g17/1","g17/2","y2","y3","y4","y12","y14","y17/1","y17/2" 
+cff = end_time," ","VH","002","003","004","009","012","014","017/1","017/2","g2","g3","g4","g12","g14","g17/1","g17/2","y2","y3","y4","y12","y14","y17/1","y17/2" 
 if ARGV[1] == "-o"
 		case ARGV[2]
 			when "csv"
