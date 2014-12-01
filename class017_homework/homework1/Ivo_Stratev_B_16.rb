@@ -33,8 +33,8 @@ def find_expected_and_task script_file, fixture_to_result
 end
 
 hash_to_fix = Hash.new
-hash_to_fix[] = []
-
+hash_to_fix[] = stefan 	= ["c79cebde", "da3e5702", "e2d2e61b", "db2c5549", "6933f104", "a059b1d0", "2c40c53d", "14d2c190", "007ac6de", "82e7bff5", "4ba9968b", "27ed8788", "f74e194f", "2899304a", "d614ce69", "8fc44197", "769ce879", "990d42f4", "7097778f", "fce4d375", "600ed2d4", "e68e2949"]
+hash_to_fix[] =
 results = Hash.new
 count =0
 results_path =ARGV[0]+"results/*.rb"
