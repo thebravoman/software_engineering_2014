@@ -13,7 +13,7 @@ Rado_1 		= ["b128c3", "fd50e0", "bd4324", "02e338"]
 # result file: result.*
 Rado_2 		= ["6f8073", "755d84", "8a6e81"]
 
-Stanislav 	= ["r279960a1","44e94fc4", "582de2e5", "6c3d2ca8", "7d2544d7", "bad8d1c2", "f33e8621", "46025b3d", "03c6ca26", "07c5163f", "f76433c1", "1a7b3031", "193e7097", "2bef4341", "ccaf7125", "209924b8"]
+Stanislav 	= ["267a81", "r279960a1", "44e94fc4", "582de2e5", "6c3d2ca8", "7d2544d7", "bad8d1c2", "f33e8621", "46025b3d", "03c6ca26", "07c5163f", "f76433c1", "1a7b3031", "193e7097", "2bef4341", "ccaf7125", "209924b8"]
 Moreti 		= ["be4045", "5fcdeb", "ad735a", "5b868a", "fcb67d"]
 
 @results = Hash.new
