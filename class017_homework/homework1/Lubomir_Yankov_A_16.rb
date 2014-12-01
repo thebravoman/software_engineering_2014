@@ -100,10 +100,14 @@ Dir.glob(ARGV[0]+"class017_test/files_for_exam_2/results/*_*_*_*.rb").each do |s
 					
 					compare("results.#{extension}", fixture) # comparing output results to expected results
 					
-				elsif File.exist?("results.#{extension}")
+				elsif File.exist?("results_*_*_*_*.#{extension}")
 					
-					compare("results*_*_*_*.#{extension}", fixture) # comparing output results to expected results
+					compare("results_*_*_*_*.#{extension}", fixture) # comparing output results to expected results
 					
+				elsif File.exist?("result_*_*_*.#{extension}")
+
+					compare("result_*_*_*.#{extension}", fixture)
+
 				end
 				
 			else 
@@ -121,8 +125,8 @@ end
 #-------------------------------------------------- CLEARING THE PRODUCED FILES ---------------------------------------------------#
 system("rm -f result.*")
 system("rm -f results.*")
-system("rm -f results*_*_*_*.xml")
-system("rm -f result*_*_*_*.xml")
+system("rm -f results_*_*_*_*.xml")
+system("rm -f result_*_*_*.xml")
 
 #-------------------------------------------------- PRODUCING HTML FILE WITH RESULTS --------------------------------------------------#
 html = File.open("results_Lubomir_Yankov_A_16.html", "w")
