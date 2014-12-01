@@ -1,6 +1,6 @@
 class HTMLWriter 
 	def write results,time
-		file = File.new("results_Radoslav_Kostadinov_A_22.html", "w")
+		file = File.new("results_Borislav_Rusinov_A_1.html", "w")
 		file << "<div><h4>#{time}</h4></div>"		
 			results.keys.sort.each do |key|
 			file << "<div class=\"student\">

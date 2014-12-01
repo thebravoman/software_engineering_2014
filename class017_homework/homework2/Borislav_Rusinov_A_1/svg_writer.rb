@@ -33,7 +33,7 @@ end
 class SVGWriter 
 	def write(results,start)
 		statistic = convertResults(results)
-		svg = File.open("results_Radoslav_Kostadinov_A_22.svg", "w")
+		svg = File.open("results_Borislav_Rusinov_A_1.svg", "w")
 		svg.puts("<svg width='680' height='440' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>")
 		svg = initTable(svg)
 		x = 51

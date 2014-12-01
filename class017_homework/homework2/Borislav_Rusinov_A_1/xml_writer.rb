@@ -2,7 +2,7 @@ require 'builder'
 
 class XMLWriter
 	def write results, start
-		file = File.new("results_Radoslav_Kostadinov_A_22.xml", "w")
+		file = File.new("results_Borislav_Rusinov_A_1.xml","w")
 		xml = Builder::XmlMarkup.new(:indent => 2)
 		file <<	xml.results {
 				xml.time start
