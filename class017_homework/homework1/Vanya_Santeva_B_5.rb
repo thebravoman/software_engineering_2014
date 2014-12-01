@@ -3,7 +3,7 @@ dir = dir[0..-2] if dir[-1] == "/"
 
 def write_to_HTML(result)
 	headers = "First Name","Last Name","Result"
-	File.open("results_Stanislav_Iliev_B_26.html","w") do |file|
+	File.open("results_Vanya_Santeva_B_5.html","w") do |file|
 		file.puts "<html>"
 		file.puts "<head></head>"
 		file.puts "<body>"
