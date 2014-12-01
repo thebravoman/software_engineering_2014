@@ -62,10 +62,21 @@ Dir.glob(results_path).each do |script_file|
 	end 
 end
 
-CSV.open("official_results.csv", "w") do |csv|
-	
-	results.each_key do |key|
-		ftr = results[key]
-		csv << [key,ftr[:result],ftr[:program_error],ftr[:task],ftr[:expected],ftr[:output]]
+File.open("result_Ivo_Stratev_B_16.html","w") do |file|
+		file.puts "<html>"
+		file.puts "<head></head>"
+		file.puts "<body>"
+		file.puts "<table border=\"1\">"
+		result.each do |key, value|
+			key_split = key.split(" ")
+			file.puts "\t\t<td>#{key.split(/\//).last.split(/_/)[0]}<td>"
+			file.puts "\t\t<td>#{key.split(/\//).last.split(/_/)[1]}<td>"
+			file.print "\t\t<td>"
+			file.print value
+			file.puts "</td>"
+			file.puts "\t</tr>"
+		end
+		file.puts "</table>"
+		file.puts "</body>"
+		file.puts "</html>"
 	end
-end
