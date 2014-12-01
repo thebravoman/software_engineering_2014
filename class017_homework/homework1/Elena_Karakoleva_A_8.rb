@@ -1,4 +1,4 @@
-# Run: ruby Elena_Karakoleva_A_8.rb /home/kamena/Desktop/software_engineering_2014/class017_test/files_for_exam_2/results/ /home/kamena/Desktop/software_engineering_2014/class017_test/files_for_exam_2/expects/
+# Run: ruby Elena_Karakoleva_A_8.rb /home/elena/Desktop/software_engineering_2014/class017_test/files_for_exam_2/results/ /home/kamena/Desktop/software_engineering_2014/class017_test/files_for_exam_2/expects/
 
 
 require 'csv'
