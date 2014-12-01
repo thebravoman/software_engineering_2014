@@ -79,4 +79,5 @@ File.open("result_Ivo_Stratev_B_16.html","w") do |file|
 		file.puts "</table>"
 		file.puts "</body>"
 		file.puts "</html>"
-	end
+		file.close
+end
