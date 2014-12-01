@@ -1,4 +1,5 @@
 require 'similar_text'
+require 'csv'
 data=Hash.new	#NAMES
 data1=Hash.new	#PATHS
 data2=Hash.new	#EXPECTED RESULTS
@@ -8,7 +9,7 @@ result_ex2=Hash.new	#SELFEXPLANITORY
 
 #We use "a" and "b" as the variable while making a .each loop for the data hashes 
 
-Dir.glob("/home/iluvanime/software_engineering_2014/class017_test/files_for_exam_2/*").each do |file|
+Dir.glob("#{ARGV[0]}/class017_test/files_for_exam_2/*").each do |file|
 	if file.split("/").last == "results" #results
 		Dir.glob("#{file}/*").each do |file_results|
 			file_result=file_results.split("/").last
@@ -19,7 +20,7 @@ Dir.glob("/home/iluvanime/software_engineering_2014/class017_test/files_for_exam
 			end
 		end
 	elsif file.split("/").last == "tasks" #expects + tasks
-		Dir.glob("/home/iluvanime/software_engineering_2014/class017_test/files_for_exam_2/expects/*").each do |file_results|
+		Dir.glob("#{ARGV[0]}/class017_test/files_for_exam_2/expects/*").each do |file_results|
 			file_hex=file_results.split("/").last.split(".").first
 			data.each do |a|
 				if a[1] == file_hex
@@ -31,7 +32,7 @@ Dir.glob("/home/iluvanime/software_engineering_2014/class017_test/files_for_exam
 				end
 			end
 		end
-		Dir.glob("/home/iluvanime/software_engineering_2014/class017_test/files_for_exam_2/tasks/*").each do |file_results|
+		Dir.glob("#{ARGV[0]}/class017_test/files_for_exam_2/tasks/*").each do |file_results|
 			file_hex=file_results.split("/").last.split(".").first.split("_").last
 			data.each do |a|
 				if a[1] == file_hex
@@ -45,7 +46,7 @@ Dir.glob("/home/iluvanime/software_engineering_2014/class017_test/files_for_exam
 		end
 	end
 end
-Dir.glob("/home/iluvanime/software_engineering_2014/class016/*").each do |file|
+Dir.glob("#{ARGV[0]}/class016/*").each do |file|
 	Dir.glob("#{file}/*").each do |sub_file|
 		sub_file=sub_file.split("/").last
 		if sub_file=="fixture" || sub_file=="fixtures"
@@ -72,16 +73,16 @@ Dir.glob("/home/iluvanime/software_engineering_2014/class016/*").each do |file|
 											end
 											data2.each do |c|
 												if c[0]==b[0]
-													puts "D"				
+																
 													data.each do |d|
 														if d[1]==c[0]
-															puts d[0]
+															
 															result_ex2[d[0]] = 1 #GIVE THIS PERSON A KIUFTE HE GOT A 1
 														else
 															result_ex2[d[0]] = 0
 														end
 													end
-													puts "E"
+													
 												end
 											end
 											puts `rm "#{file}/#{checking_for_results}"`
@@ -97,10 +98,26 @@ Dir.glob("/home/iluvanime/software_engineering_2014/class016/*").each do |file|
 	end
 end
 
+result_ex2=result_ex2.sort
 
-
-puts "\n\n\nEND"
-puts `clear`
-result_ex2.each do |a|
-	puts a
+File.open("results_Iosyf_Saleh_B_18.html","w") do |file|
+	file.puts "<html>"
+	file.puts "<head></head>"
+	file.puts "<body style=\"background:gray\">"
+	file.puts "<table color=\"black\" style=\" border: 5px solid purple; border-collapse: collapse; \" align =\"center\">"
+	file.puts "\t<tr style=\"background:black\">"
+	file.puts "\t\t<th style=\"color:white; border:1px solid black\">First</th>"
+	file.puts "\t\t<th style=\"color:white\">Last</th>"
+	file.puts "\t\t<th style=\"background:red ;color:white\">Result</th>"
+	file.puts "\t</tr>"
+	result_ex2.each do |key|
+		file.puts "\t<tr style=\"background:#33FF66\">"
+		file.puts "\t\t<td color=\"white\">#{key.to_s.split("\"")[1].split(",").first}</td>"
+		file.puts "\t\t<td color=\"white\">#{key.to_s.split("\"")[1].split(",").last}</td>"
+		file.puts "\t\t<td color=\"white\">#{key.to_s.split("\"")[2].split("\s").last.chomp"]"}</td>"
+		file.puts "\t</tr>"
+	end
+	file.puts "</table>"
+	file.puts "</body>"
+	file.puts "</html>"
 end
