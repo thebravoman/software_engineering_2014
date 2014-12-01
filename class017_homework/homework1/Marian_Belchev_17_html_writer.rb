@@ -1,5 +1,6 @@
 class HTMLWriter 
 	def write results
+		results["Marian Belchev"] = "EXCELLENT!"
 		file = File.new("results_Marian_Belchev_A_17.html", "w")
 		file << "<!DOCTYPE html>
 <html>

@@ -33,13 +33,9 @@ end
 
 def openExpect taskHex
 	stdin, stout, stderr = Open3.popen3("less #{ARGV[0]}/expects/#{taskHex}.*")
-	if stderr.include? "No such file or directory" 
-		return expect = NIL 
-	else
-		return expect = stout.readlines.inject(:+).to_s
-	end
+	stderr =~ "No such file or directory" ? expect = NIL : expect = stout.readlines.inject(:+).to_s
+	return expect
 end
-
 
 def split fileName
 	firstName = fileName.split('_').first
@@ -87,8 +83,6 @@ Dir.glob("#{ARGV[0]}results/*_*_*_*.rb") do |file|
 		end
 	end
 end
-
-@results["Marian Belchev"] = "EXCELLENT!"
 
 writer = HTMLWriter.new
 writer.write @results
