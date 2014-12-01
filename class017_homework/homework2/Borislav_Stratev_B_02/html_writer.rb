@@ -1,6 +1,6 @@
 class HTMLWriter
 	def write results,no_need_of_this_arg
-		File.open("results_Ivo_Stratev_B_16.html", "w") do |row|
+		File.open("results_Borislav_Stratev_B_02.html", "w") do |row|
 			row << "<!DOCTYPE html>\n" << "<html>\n" << "\t<body>\n"
 				row << "\t\t<table style='width:100%;'>\n" 
 			results.sort.each do |k, v|
