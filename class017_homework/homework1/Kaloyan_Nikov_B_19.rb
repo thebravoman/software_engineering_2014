@@ -1,7 +1,7 @@
 dir = ARGV[0]
 
 def write_to_HTML(result)
-	File.open("results_Stanislav_Iliev_B_26.html","w") do |file|
+	File.open("results_Kaloyan_Nikov_B_19.html","w") do |file|
 		file.puts "<html>"
 		file.puts "<head></head>"
 		file.puts "<body>"
