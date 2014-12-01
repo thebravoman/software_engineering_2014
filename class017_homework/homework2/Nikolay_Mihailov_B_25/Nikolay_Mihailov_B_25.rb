@@ -22,7 +22,7 @@ def homework_chek (directory_name,log_info,result,folder)
 		result[name][folder] = 1 if (log.empty? && folder !=0) || (log.empty? && program_num == 3 && folder == 0)
 		name_before = name #for VH
 		program_num = 1 if program_num == 3 #for VH
-		puts file
+		#puts file
 		next if folder == 0 || folder == 10 	#next if folder != 11 && folder != 14 	
 		file_folder = file
 		file_folder = file.chomp("#{file.split(/\//).last}") if folder == 14 || folder == 17
@@ -34,7 +34,7 @@ def homework_chek (directory_name,log_info,result,folder)
 	return result
 end
 def homework_chek_009 (directory_name,log_info,result,folder)
-	team_names = CSV.read("../../class009_homework/project_to_names.csv")[1, 58]
+	team_names = CSV.read(ARGV[0] + "/class009_homework/project_to_names.csv")[1, 58]
 	Dir.glob(ARGV[0]+"#{directory_name}").each do |file|	
 		name = file.split(/\//).last.split(".").first
 		team_members = 0
@@ -62,7 +62,7 @@ folder = 0
 result = homework_chek("/vhodno_nivo/**/*_*_*.*", "Sep--17--2014--20:00:00",result,folder)				
 folder = 1
 result = homework_chek("/class002_homework/*_*_*_*.rb", "Sep--22--2014--20:00:00",result,folder)
-folder = 4 #[0,0,'-','-',0,'-','-',0,'-','-',0,0,'-','-',0,'-','-',0,'-','-']
+folder = 4 #[0,0,'-','-',0,'-','-',0,'-','-',0,0,'-','-',0,'-','-',0,'-','-',0,'-','-']
 result = homework_chek("/class003_homework/*_*_*_*.rb", "Sep--24--2014--20:00:00",result,folder)
 folder = 7
 result = homework_chek("/class004/*_*_*_*.rb", "Sep--29--2014--20:00:00",result,folder)
@@ -95,5 +95,5 @@ if ARGV[1] == "-o"
 		write = false
 		puts "You are drunk"
 	end
-	writer.write(result,classes) if write == true
+	writer.write(result,classes,folder) if write == true
 end
