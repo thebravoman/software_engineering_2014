@@ -102,7 +102,7 @@ Dir.glob(ARGV[0]+"class017_test/files_for_exam_2/results/*_*_*_*.rb").each do |s
 					
 				elsif File.exist?("results_*_*_*_*.#{extension}")
 					
-					compare("results_*_*_*.#{extension}", fixture) # comparing output results to expected results
+					compare("results_*_*_*_*.#{extension}", fixture) # comparing output results to expected results
 					
 				elsif File.exist?("result_*_*_*.#{extension}")
 
