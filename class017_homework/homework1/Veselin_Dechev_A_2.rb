@@ -29,8 +29,8 @@ Dir.glob("#{dir}/class017_test/files_for_exam_2/**/*.*").each do |script_file|
 		first_name = script_file.split(/\//).last.split("_").first.capitalize
 		last_name = script_file.split(/\//).last.split("_",2).last.split("_").first.capitalize
 		name = "#{first_name} #{last_name}"
-		results[name] = (rand() * 2).to_i #da nqma surditi
-	end
+		results[name] = (rand() * 2).to_i 
+		end
 end
 
 write_to_HTML(results.sort)
