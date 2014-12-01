@@ -13,7 +13,7 @@ Rado_1 		= ["b128c3", "fd50e0", "bd4324", "02e338"]
 # result file: result.*
 Rado_2 		= ["6f8073", "755d84", "8a6e81"]
 
-Stanislav 	= ["44e94fc4", "582de2e5", "6c3d2ca8", "7d2544d7", "bad8d1c2", "f33e8621", "46025b3d", "03c6ca26", "07c5163f", "f76433c1", "1a7b3031", "193e7097", "2bef4341", "ccaf7125", "209924b8"]
+Stanislav 	= ["r279960a1","44e94fc4", "582de2e5", "6c3d2ca8", "7d2544d7", "bad8d1c2", "f33e8621", "46025b3d", "03c6ca26", "07c5163f", "f76433c1", "1a7b3031", "193e7097", "2bef4341", "ccaf7125", "209924b8"]
 Moreti 		= ["be4045", "5fcdeb", "ad735a", "5b868a", "fcb67d"]
 
 @results = Hash.new
@@ -27,13 +27,17 @@ def rmResultFile
 end
 
 def runProgram fileName, fixtureDir
-	stdin, stdout, stderr = Open3.popen3("ruby #{ARGV[0]}/results/#{fileName} #{fixtureDir}")
+	stdin, stdout, stderr = Open3.popen3("ruby #{ARGV[0]}/results/#{fileName} #{fixtureDir} #{fixtureDir}")
 	return programError = stderr.readlines.inject(:+).to_s
 end
 
 def openExpect taskHex
-	stdin1, stout1, stderr1 = Open3.popen3("less #{ARGV[0]}/expects/#{taskHex}.*")
-	return expect = stout1.readlines.inject(:+).to_s
+	stdin, stout, stderr = Open3.popen3("less #{ARGV[0]}/expects/#{taskHex}.*")
+	if stderr.include? "No such file or directory" 
+		return expect = NIL 
+	else
+		return expect = stout.readlines.inject(:+).to_s
+	end
 end
 
 
@@ -44,7 +48,7 @@ def split fileName
 end
 
 def check fileName, programError, resultFileName, expect
-	if programError.empty?
+	if programError.empty? && expect != NIL
 		stdin, stout, stderr = Open3.popen3("less #{resultFileName}")
 		result = stout.readlines.inject(:+).to_s
 		result.eql? expect ? @results[split(fileName)] = 1 : @results[split(fileName)] = 0
