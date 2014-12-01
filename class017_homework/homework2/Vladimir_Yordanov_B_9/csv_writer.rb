@@ -1,7 +1,7 @@
 require 'csv'
 class CSVWriter
 	def write(resutls)
-		CSV.open("/home/vlady/Desktop/results_Vladimir_Yordanov_B_9.csv", "wb") do |csv|
+		CSV.open("results_Vladimir_Yordanov_B_9.csv", "wb") do |csv|
 			csv << ["", "","VH", "002", "003", "004", "009", "012", "014",  "017 2", "017 1", "g2" , "g3" , "g4", "g12", "g14", "g17 2", "g17 1 ", "y2" , "y3" , "y4", "y12", "y14", "y17 2", "y17 1" ]
 			$students.sort.to_a.each do |k,v|
 				if k !=nil
