@@ -51,7 +51,7 @@ Dir.glob(ARGV[0]+"#{folder}/results/*.*").each do |file_name|
 end
 
 
-File.open("results.html", "w") do |row|
+File.open("results_Veselina_Kolova_B_8.html", "w") do |row|
 	row << "<table border=10 style=width:50% >"
 	official.sort.each do |k, v|
 		row << "<tr>"
