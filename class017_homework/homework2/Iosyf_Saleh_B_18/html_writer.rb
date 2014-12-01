@@ -17,6 +17,8 @@ class HTMLWriter
 			file.puts "\t\t<th>009</th>"
 			file.puts "\t\t<th>012</th>"
 			file.puts "\t\t<th>014</th>"
+			file.puts "\t\t<th>017/1</th>"
+			file.puts "\t\t<th>017/2</th>"
 			file.puts "\t\t<th>g2</th>"
 			file.puts "\t\t<th>g3</th>"
 			file.puts "\t\t<th>g4</th>"
