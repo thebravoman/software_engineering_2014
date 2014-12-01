@@ -64,7 +64,7 @@ Dir.glob("#{ARGV[0]}/class016/*").each do |file|
 								if b[0]==a[0]
 									output = `ruby #{b[1]} #{file}/#{sub_file}`
 									Dir.glob("*").each do |checking_for_results|
-										if checking_for_results.split(".").first == "results"
+										if checking_for_results.split(".").first == "results" || checking_for_results.split(".").first == "result"
 											file = `pwd`
 											file = file.delete "\n"
 											complete=""
