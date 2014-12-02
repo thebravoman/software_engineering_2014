@@ -1,5 +1,6 @@
 Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
-You are given an argument for a folder with files.
+You are given an argument for a folder with .txt files.
+In each file there are words separated by space (ex. "word1 word2 word3")
 Count how many times the word "<%=@word%>" occurs in each of the files.
 Produce a result in <%=@format%> format named result.<%=@format%>.
 
