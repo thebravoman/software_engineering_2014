@@ -10,10 +10,10 @@ class Task3 < Task
             :in_what_order => "ASC",
             :format=>"csv",
             :format_example=>
-"file1.txt,9
-file2.txt,11
+"file1.rb,9
+file2.rb,11
 .....
-fileN.txt,N",
+fileN.rb,N",
 			:expected=>
 "never.rb,11
 forget.rb,16
