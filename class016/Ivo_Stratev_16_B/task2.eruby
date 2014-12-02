@@ -2,7 +2,7 @@ Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
 
 1 You are given a folder with files.The Folder is passed as first argument;
 2 Find all csv files wich sum of lines is <%= @number %>. 
-3 Output the results in <%=@format%> file that contains as result filename and sum of file's line.The order in wich results are written is by filename in <%=@order%> order.The <%=@format%> file is named result.<%=@format%>.
+3 Output the results in <%=@format%> file that contains as result filename and sum of file's lines.The order in wich results are written is by filename in <%=@order%> order.The <%=@format%> file is named result.<%=@format%>.
 
 <%= @to_expect %>
 
