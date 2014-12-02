@@ -56,10 +56,9 @@ class Task1 < Task
 			:order=>"DESC",
 			:format=>"json",
 			:to_expect=>
-				"{filenameN:[n],..,filename1:[1]}",		
+				"{\"filenameN\":[n],..,\"filename1\":[1]}",		
 			:expected=>
-				"{filename2:[2],filename1:[1]}"	,		
-			
+				"{\"filename2\":[2],\"filename1\":[1]}"
 		}
 		
 		[context1_1,context1_2]

@@ -1,9 +1,10 @@
 Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
 
-1 You are given a folder with files.The Folder is passed as first argument;
-2 Find all csv files wich sum of (lines) and (values in each line) is <%= @number %>. 
-3 Output the results in <%=@format%> file that contains as result filename and line numbers.The order in wich results are written is by lines in each file in <%=@order%> order.The <%=@format%> file is named result.<%=@format%>.
+1 You are given a folder with files.The Folder is passed as first argument.
+2 Find all csv files wich number of lines is less then <%= @number %>. 
+3 Sort the results by number of lines in <%=@order%> order.
+4 Produce a result in <%=@format%> format named result.<%=@format%>:
 
-<%= @to_expect %>
+	<%= @to_expect %>
 
 
