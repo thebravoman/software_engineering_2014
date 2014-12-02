@@ -3,11 +3,10 @@ require 'securerandom'
 require_relative 'task1.rb'
 require_relative 'task2.rb'
 require_relative 'task3.rb'
-numbers = []
-for i in 0..2
-numbers[i] = ARGV[i]
-end
+
+numbers = [ARGV[0], ARGV[1], ARGV[2]]
+
 tasks = [Task1.new, Task2.new, Task3.new]
 while numbers.size>0
-tasks.shuffle[0].generate(numbers)
+	tasks.shuffle[0].generate(numbers)
 end
