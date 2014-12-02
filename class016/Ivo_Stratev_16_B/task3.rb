@@ -53,8 +53,8 @@ class Task3 < Task
 		}
 		
 		context1_2 = {
-			:task_number=>"4",
-			:number=>"0",
+			:task_number=>"3",
+			:number=>"3",
 			:order=>"DESC",
 			:format=>"json",
 			:to_expect=>
