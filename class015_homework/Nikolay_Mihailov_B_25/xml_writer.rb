@@ -9,7 +9,7 @@ class XMLWriter
 			xml_file.puts("		<student>")
 			xml_file.puts("			<Name> #{key_split_} </Name>")
 			class_index = 2			
-			for i in 0..19 
+			for i in 0..22 
 				xml_file.puts("			<#{classes[class_index]}> #{result[key][i]} </#{classes[class_index]}>")
 				class_index +=1			
 			end

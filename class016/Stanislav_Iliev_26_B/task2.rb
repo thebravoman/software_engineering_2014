@@ -15,8 +15,8 @@ file2,10
 fileN,N",
 			:expected=>
 "never.rb,6
-32lines.rb,2
 sixtyfivelines.rb,4
+32lines.rb,2
 forget.rb,0
 "
 		}
