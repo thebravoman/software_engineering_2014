@@ -4,7 +4,7 @@ Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
 2 Find all csv files wich number of lines is less then <%= @number %>. 
 3 Output the results in <%=@format%> file that contains as result filename and line numbers.
 4 Sort the results by number of lines in <%=@order%> order.
-5 Results file is named result.<%=@format%>.
+5 The output file is named result.<%=@format%>.
 
 <%= @to_expect %>
 
