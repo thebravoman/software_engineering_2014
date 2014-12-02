@@ -10,9 +10,11 @@ class Task2 < Task
 			:sort=>"ASC",
 			:expected=>
 "<numbers>
-  <number>777</number>
-  <number>1241</number>
-  <number>9899</number>
+  <number>9</number>
+  <number>17</number>
+  <number>123</number>
+  <number>765</number>
+  <number>12341</number>
 </numbers>"
 		}
 
@@ -22,11 +24,10 @@ class Task2 < Task
 			:sort=>"DESC",
 			:expected=>
 "<numbers>
-  <number>5123124</number>
-  <number>1230</number>
-  <number>412</number>
+  <number>86</number>
   <number>42</number>
-  <number>12</number>
+  <number>20</number>
+  <number>14</number>
   <number>0</number>
 </numbers>"
 		}
