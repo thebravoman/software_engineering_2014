@@ -1,6 +1,12 @@
 Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
-You are given an argument for a folder with files.
+
+You are given an argument for a folder with .rb files.
 Count how many times the word "<%=@word%>" occurs in each of the files.
-Produce a result in <%=@format%> format named result.<%=@format%>.
+Words are seperated by spaces. Files have more than 1 newline. Example:
+"word1 word2 word3
+word3 word2"
+Sort the result by times the word is found in <%=@in_what_order%>.
+Produce a result in <%=@format%> format named result.<%=@format%>
+Note: if there is a newline after the example below, then you should have a newline at the end of your result.
 
 <%=@format_example%>

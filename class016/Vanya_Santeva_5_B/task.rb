@@ -21,8 +21,13 @@ class Task
 			file.write(eruby.evaluate(context))
 		end	
 		if (context[:format] == "csv")
-			File.open("expects/#{context[:task_number]}.csv","w") do |file|
-				file.write(context[:expected])
+			a = []
+			CSV.open("expects/#{context[:task_number]}.csv","w") do |file|
+				a = context[:expected].split(/\n/)
+				a.each do |line|
+					line = line.split(',')
+					file << [line].flatten
+				end
 			end	
 		elsif (context[:format] == "xml")
 			File.open("expects/#{context[:task_number]}.xml","w") do |file|

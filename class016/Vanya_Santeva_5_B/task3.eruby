@@ -1,7 +1,13 @@
 Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
 You are given an argument for a folder with files.
-Count how many of the words have <%=@length%> letters.
+Count how many of the words in each file consist of <%=@length%> characters.
+Words are seperated by spaces. Special characters and numbers are considered part of the word.
+Files may have more than 1 newline. Example:
+"word1 word2 word3
+word3 word2"
 Sort the result by number of times found in <%=@in_what_order%> order.
-Produce a result in <%=@format%> format named result.<%=@format%>.
+Produce a result in <%=@format%> format named result.<%=@format%>
+Note: if there is a newline after the example below, then you should have a newline at the end of your result.
 
 <%=@format_example%>

@@ -8,11 +8,13 @@ class Task1 < Task
 			:task_number=>"1",
 			:more_or_less=>"more",
 			:in_what_order=>"ASC",
+			:format=>"csv",
 			:format_example=>
-"file1,3
-file2,10
+"file1,30
+file2,40
 ..
-fileN,N",
+fileN,N
+",
 			:expected=>
 "32lines.rb,32
 sixtyfivelines.rb,65
@@ -23,11 +25,13 @@ sixtyfivelines.rb,65
 			:task_number=>"1",
 			:more_or_less=>"less",
 			:in_what_order=>"DESC",
+			:format=>"csv",
 			:format_example=>
-"file1,3
+"file1,20
 file2,10
 ..
-fileN,N",
+fileN,N
+",
 			:expected=>
 "forget.rb,11
 never.rb,9
@@ -38,11 +42,13 @@ never.rb,9
 			:task_number=>"1",
 			:more_or_less=>"less",
 			:in_what_order=>"ASC",
+			:format=>"csv",
 			:format_example=>
-"file1,3
-file2,10
+"file1,10
+file2,20
 ..
-fileN,N",
+fileN,N
+",
 			:expected=>
 "never.rb,9
 forget.rb,11
