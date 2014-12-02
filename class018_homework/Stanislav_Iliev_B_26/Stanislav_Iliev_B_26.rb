@@ -10,6 +10,11 @@ start = Time.now
 i = 0
 softeng = ARGV[0]
 softeng += "/" if softeng[-1] != 47
+if ARGV[3] == "-n"
+	n = ARGV[4].to_i - 1
+else
+	n = -1
+end
 
 directories = Array.new
 directories_hash = YAML.load_file("config.yaml")
@@ -18,6 +23,8 @@ directories_hash.each do |key,val|
 	directories[i] = ["#{key}", [val[0].to_i, val[1].to_i, val[2].to_i]]
 	i += 1
 end
+
+directories = directories[0..n]
 
 results = Hash.new{|hash,key| hash[key] = Array.new(directories.size) {0}}
 vhodno = Hash.new{|hash,key| hash[key] = [0,0]}
