@@ -1,0 +1,32 @@
+<svg width='720px' height='440px' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+<text x="310" y="430" fill="black">Bar chart with the number of 1s.</text>
+<text x="73" y="295" fill="black">VH</text>
+<text x="145" y="295" fill="black">002</text>
+<text x="217" y="295" fill="black">003</text>
+<text x="289" y="295" fill="black">004</text>
+<text x="361" y="295" fill="black">009</text>
+<text x="433" y="295" fill="black">012</text>
+<text x="505" y="295" fill="black">014</text>
+<text x="577" y="295" fill="black">015</text>
+<text x="649" y="295" fill="black">017</text>
+<line x1="50" y1="280" x2="720" y2="280" style="stroke:rgb(0,0,0);stroke-width:2" />
+<line x1="50" y1="280" x2="50" y2="30" style="stroke:rgb(0,0,0);stroke-width:2" />
+<rect x="51" y="216" width="70" height="63" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<text x="78" y="212" fill="black">21</text>
+<rect x="123" y="264" width="70" height="15" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<text x="150" y="260" fill="black">5</text>
+<rect x="195" y="267" width="70" height="12" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<text x="222" y="263" fill="black">4</text>
+<rect x="267" y="270" width="70" height="9" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<text x="294" y="266" fill="black">3</text>
+<rect x="339" y="234" width="70" height="45" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<text x="366" y="230" fill="black">15</text>
+<rect x="411" y="264" width="70" height="15" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<text x="438" y="260" fill="black">5</text>
+<rect x="483" y="267" width="70" height="12" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<text x="510" y="263" fill="black">4</text>
+<rect x="555" y="267" width="70" height="12" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<text x="582" y="263" fill="black">4</text>
+<rect x="627" y="276" width="70" height="3" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<text x="654" y="272" fill="black">1</text>
+</svg>
