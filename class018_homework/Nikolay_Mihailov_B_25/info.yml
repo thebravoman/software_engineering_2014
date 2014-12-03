@@ -27,6 +27,9 @@ classes:
  - "017-2"
  - "Flog17-2"
  - "Flay17-2"
+ - "018"
+ - "Flog18"
+ - "Flay18"
 result_info:
  - 0
  - 0
@@ -54,6 +57,9 @@ result_info:
  - 0
  - '-'
  - '-'
+ - 0
+ - '-'
+ - '-'
 homeworks:
  vhodno_nivo : "/vhodno_nivo/**/*_*_*.*" 
  h2 : "/class002_homework/*_*_*_*.rb" 
@@ -65,6 +71,7 @@ homeworks:
  h15 : "/class015_homework/**/*_*_*_*.rb"
  h17-1 : "/class017_homework/homework1/*_*_*_*.rb"
  h17-2 : "/class017_homework/homework2/**/*_*_*_*.rb"
+ h18 : "/class018_homework/**/*_*_*_*.rb"
 deadlines:
  vhodno_nivo : "Sep--17--2014--20:00:00"
  h2 : "Sep--22--2014--20:00:00" 
@@ -76,3 +83,4 @@ deadlines:
  h15 : "Nov--20--2014--06:00:00"
  h17-1 : "Dec--2--2014--06:00:00"
  h17-2 : "Dec--2--2014--06:00:00"
+ h18 : "Dec--4--2014--06:00:00"
