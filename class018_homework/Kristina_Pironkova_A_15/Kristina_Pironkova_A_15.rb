@@ -12,8 +12,8 @@ config = YAML.load_file('config.yml')
 @counter_009 = 0
 @counter_vh = 0
 @other_counter = 0
-
 @n = 0
+
 if ARGV[3] == "-n"
  if ARGV[4].is_a? NilClass
  	@n = -1
@@ -22,8 +22,6 @@ if ARGV[3] == "-n"
 	abort() if @n == 0
 end
 end
-
-
 
 def reset student_name, results, config_file
 		config_file['mainRow'].each do |element|	
@@ -45,13 +43,13 @@ def OnTime path, config, folder
 end
 
 def flog file, results,student_name, gNum
-	flogResult = `flog #{file} -c -q -s`.split(":").first
+	flogResult = `flog #{file} -c -q -s`.to_i
 	results[student_name][gNum] = flogResult
 	return results
 end
 
 def flay file,results, student_name , yNum
-	flayResult = `flay #{file}`.split("\n").first.scan(/\d+/).first
+	flayResult = `flay #{file}`.split("\n").first.scan(/\d+/).first  
 	results[student_name][yNum] = flayResult
 	return results
 end
@@ -72,7 +70,6 @@ def checkVH config, repo, results, folder
 		end
 		break if @counter_vh == @n    
 	end
-	@counter_vh = 0
 	return results
 end
 
@@ -97,7 +94,6 @@ def check009  config, repo, teams, results, folder
 		end	
 		break if @counter_009 == @n
 	end
-	@counter_009 = 0
 	return results
 end
 
@@ -118,38 +114,19 @@ def checkOthers config, repo, results, hwNum
 	 	else 
 	 		results[student_name][hwNum]= 1
 	 	end
-			flog(file,results, student_name, "g#{hwNum.tr("0", "")}")
- 			flay(file, results, student_name,"y#{hwNum.tr("0", "")}")
- 		break if @other_counter == @n
+		flog(file,results, student_name, "g#{hwNum.tr("0", "")}")
+ 		flay(file, results, student_name,"y#{hwNum.tr("0", "")}")
+ 		break if @other_counter == @n  
 	end
 	@other_counter = 0
 	return results
 end
 
-Dir.glob("#{repo}/*") do |path|
-	case path.split("/").last 
-		when config['directory'][0]
-			checkVH(config, repo, results, config.keys[0])
-		when config['directory'][1]
-			check009(config, repo, teams, results, config.keys[1])
-
-		when config['directory'][2]
-			checkOthers(config, repo, results, config.keys[2])
-		when config['directory'][3]
-			checkOthers(config, repo, results, config.keys[3])
-		when config['directory'][4]
-			checkOthers(config, repo, results, config.keys[4])
-		when config['directory'][5]
-			checkOthers(config, repo, results, config.keys[5])
-		when config['directory'][6]
-			checkOthers(config, repo, results, config.keys[6])
-		when config['directory'][7]
-			checkOthers(config, repo, results, config.keys[7])
-			checkOthers(config, repo, results, config.keys[8])
-
-	end
+checkVH(config, repo, results, "VH")
+check009(config, repo, teams, results, "009")
+config["folders"].each do |folder|
+	checkOthers(config, repo, results, folder)
 end
-
 if ARGV[1] == "-o"
 	case ARGV[2]
 	when "csv"
