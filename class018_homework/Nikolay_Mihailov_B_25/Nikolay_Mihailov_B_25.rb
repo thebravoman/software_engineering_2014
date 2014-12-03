@@ -12,8 +12,7 @@ team_names = Array.new
 def homework_chek (directory_name,log_info,result,folder)
 	program_num = 1 #for VH
 	name_before = "" #for VH
-	Dir.glob(ARGV[0]+"#{directory_name}").each do |file|
-		puts file		
+	Dir.glob(ARGV[0]+"#{directory_name}").each do |file|		
 		short_file_name = file.split(/\//).last		
 		first_name = short_file_name.split(/_/)[0].capitalize
 		last_name = short_file_name.split(/_/)[1].capitalize
@@ -80,6 +79,8 @@ folder = 20
 result = homework_chek(YAML.load_file("info.yml")["homeworks"]["h17-1"],YAML.load_file("info.yml")["deadlines"]["h17-1"],result,folder)
 folder = 23
 result = homework_chek(YAML.load_file("info.yml")["homeworks"]["h17-2"],YAML.load_file("info.yml")["deadlines"]["h17-2"],result,folder)
+folder = 26
+result = homework_chek(YAML.load_file("info.yml")["homeworks"]["h18"],YAML.load_file("info.yml")["deadlines"]["h18"],result,folder)
 	
 write = true
 puts Time.now - time_start
