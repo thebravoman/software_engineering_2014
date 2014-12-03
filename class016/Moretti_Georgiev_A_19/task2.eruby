@@ -28,7 +28,13 @@ class XMLWriter
 	end
 end"
 7. Expected results:
+
 <allStudents>
-	<student>lastName1</student>
-	<student>lastName2</student>
+	<student>
+		<secondName>lastName1</secondName>
+	</student>
+	
+	<student>
+		<secondName>lastName2</secondName>
+	</student>
 </allStudents>
