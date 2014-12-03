@@ -25,7 +25,7 @@ sixtyfivelines.rb,65"
 			:in_what_order=>"DESC",
 			:format=>"csv",
 			:format_example=>
-"file1,3
+"file1,13
 file2,10
 ..
 fileN,N",
