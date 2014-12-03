@@ -1,0 +1,11 @@
+vhodno_nivo: vhodno_nivo/**/*_*_*.*
+'002': class002_homework/*_*_*_*.rb
+'003': class003_homework/*_*_*_*.rb
+'004': class004/*_*_*_*.rb
+009: class009_homework/
+'012': class012_homework/*_*_*_*.rb
+'014': class014_homework/**/*_*_*_*.rb
+'015': class015_homework/**/*_*_*_*.rb
+017-1: class017_homework/homework1/*_*_*_*.rb
+017-2: class017_homework/homework2/**/*_*_*_*.rb
+
