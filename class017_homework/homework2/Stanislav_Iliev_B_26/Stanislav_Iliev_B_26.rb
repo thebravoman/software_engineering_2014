@@ -26,7 +26,6 @@ File.open("#{softeng}class009_homework/project_to_names.csv", "r").each_line{ |l
 	class009[line.chomp.split(",")[0]] << line.chomp.split(",")[1]
 }
 class009.delete("Project Name")
-sss
 i = -1;
 
 directories.each do |directory, deadline|
