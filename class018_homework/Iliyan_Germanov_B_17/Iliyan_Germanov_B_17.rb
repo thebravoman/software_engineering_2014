@@ -5,7 +5,7 @@ require_relative "json_writer.rb"
 require_relative "html_writer.rb"
 require_relative "svg_writer.rb"
 
-@counter = 1
+@counter = 0
 time_start = Time.now
 repoPath = ARGV[0]
 classes = YAML.load_file("init_config.yml").keys
