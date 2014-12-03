@@ -11,15 +11,15 @@
 - class012_homework/**/*_*_*_*.rb
 - --until=10.11.2014:20:00
 '014':
-- class014_homework/**/*_*_*_*.rb
+- class014_homework/*
 - --until=13.11.2014:06:00
 '015':
-- class015_homework/**/*_*_*_*.rb
+- class015_homework/*
 - --until=20.11.2014:06:00
 '017':
-- class017_homework/homework1/**/*_*_*_*.rb
+- class017_homework/homework1/*
 - --until=02.12.2014:06:00
 '018':
-- class018_homework/**/*_*_*_*.rb
+- class018_homework/**/*
 - --until=04.12.2014:06:00
 ---
