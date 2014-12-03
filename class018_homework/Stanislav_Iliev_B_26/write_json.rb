@@ -1,7 +1,7 @@
 require 'json'
 
-def write_to_JSON(results,time)
-	file = File.open("results_Stanislav_Iliev_B_26.json","w")
+def write_to_JSON(results,time,name)
+	file = File.open("#{name}.json","w")
 	results.each do |name, val|
 		hash = {
 			"FirstName" => name.split(' ')[0],

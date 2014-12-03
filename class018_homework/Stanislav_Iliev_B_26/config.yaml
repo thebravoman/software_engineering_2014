@@ -1,8 +1,10 @@
-vhodno_nivo/**/*.*: "17, 9, 20"
-class002_homework/**/*.rb: "22, 9, 20"
-class003_homework/**/*.rb: "24, 9, 20"
-class004/**/*.rb: "29, 9, 20"
-class009_homework/**/*.pdf: "27, 10, 20"
-class012_homework/**/*.rb: "10, 11, 20"
-class014_homework/**/*.rb: "13, 11, 6"
-class017_homework/homework1/*.rb: "02, 12, 6"
+0: [vhodno_nivo/**/*_*_*.*, "17.9.2014:20:00:00"]
+2: [class002_homework/**/*_*_Class*_*.rb, "22.09.2014:20:00:00"]
+3: [class003_homework/**/*_*_Class*_*.rb, "24.09.2014:20:00:00"]
+4: [class004/*_*_Class*_*.rb, "29.09.2014:20:00:00"]
+9: [class009_homework/**/*.pdf, "27.10.2014:20:00:00"]
+12: [class012_homework/*_*_*_*.rb, "10.11.2014:20:00:00"]
+14: [class014_homework/**/*_*_*_*.rb, "13.11.2014:06:00:00"]
+15: [class015_homework/**/*_*_*_*.rb, "20.11.2014:06:00:00"]
+171: [class017_homework/homework1/**/*_*_*_*.rb, "02.12.2014:06:00:00"]
+172: [class017_homework/homework2/**/*_*_*_*.rb, "02.12.2014:06:00:00"]
