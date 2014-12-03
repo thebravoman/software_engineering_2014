@@ -36,13 +36,13 @@ def homework_chek (directory_name,log_info,result,folder)
 	return result
 end
 def homework_chek_009 (directory_name,log_info,result,folder)
-	team_names = CSV.read(ARGV[0] + "/class009_homework/project_to_names.csv")[1, 58]
+	team_names = CSV.read(ARGV[0] + "/class009_homework/project_to_names.csv")
 	Dir.glob(ARGV[0]+"#{directory_name}").each do |file|	
 		name = file.split(/\//).last.split(".").first
 		team_members = 0
 		line = 0
 		first_line = false
-		for counter in 0..55
+		for counter in 1..team_names.length-1
 		 	if team_names[counter][0] == name 			
 				line = counter if first_line != true
 				first_line = true
