@@ -7,49 +7,45 @@ class Task2 < Task
 		context1_1 = {
 			:task_number=>"1",
 			:word=>"software",
-			:in_what_order=>"DESC",
 			:format=>"csv",
+			:in_what_order=>"ASC",
 			:format_example=>
-"file1.rb,30
-file2.txt,10
+"file1,3
+file2,10
 ..
-fileN.extension,N
-",
+fileN,N",
 			:expected=>
-"never.rb,6
-sixtyfivelines.rb,4
+"forget.rb,0
 32lines.rb,2
-forget.rb,0
-"
+sixtyfivelines.rb,4
+never.rb,6"
 		}
 
 		context1_2 = {
 			:task_number=>"1",
 			:word=>"hardware",
-			:in_what_order=>"ASC",
 			:format=>"xml",
+			:in_what_order=>"ASC",
 			:format_example=>
 "<results>
 <file1.rb>3</file1.rb>
 <file2.rb>6</file2.rb>
 ..
-</results>
-",
+</results>",
 			:expected=>
 "<results>
 <never.rb>3</never.rb>
 <32lines.rb>4</32lines.rb>
 <forget.rb>4</forget.rb>
 <sixtyfivelines.rb>8</sixtyfivelines.rb>
-</results>
-"
+</results>"
 		}
 
 		context1_3 = {
 			:task_number=>"1",
 			:word=>"tues",
-			:in_what_order=>"ASC",
 			:format=>"json",
+			:in_what_order=>"ASC",
 			:format_example=>
 "\"file1.rb\":N,\"file2.rb\":N ..",
 			:expected=>

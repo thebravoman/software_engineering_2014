@@ -1,9 +1,8 @@
 Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
 
-You are given an argument for a folder with .rb files.
+You are given an argument for a folder with .rb files. Other arguments should be discarded.
 Find all the files from the folder which have <%= @more_or_less %> than 30 lines.
-Sort the result by number of lines in <%= @in_what_order %>
-Produce a result in CSV format named result.csv
-Note: if there is a newline after the example below, then you should have a newline at the end of your result.
+Sort the result by number of lines <%= @in_what_order %>
+Produce a result in CSV format named result.csv. 
 
 <%=@format_example%>
