@@ -7,7 +7,7 @@ Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
 2.2 if there are other files they should be discarded
 3. find  <%= @what_to_find %>;
 4. Sort the result by <%= @which_to_sort %> <%= @in_what_order %>;
-5. Produce a result in <%= @file_format %> format named results_hash.<%= @file_format %> (example yourName_6ad7f9.<%= @file_format %>;
+5. Produce a result in <%= @file_format %> format named results_hash.<%= @file_format %> (example results_6ad7f9.<%= @file_format %>;
 6. Use xml_writer.rb
 6.1 xml_writer ->
 "require 'builder'
