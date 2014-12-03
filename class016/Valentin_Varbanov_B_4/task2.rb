@@ -6,41 +6,42 @@ class Task2 < Task
 
 		context1_1 = {
 			:task_number=>"1",
-			:which_words => "that contain number",
+			:how_many_letters => "5",
 			:expected=>
-"<html>
-<body>
-<ol>
-<li>app2le</li>
-<li>he2r2e</li>
-<li>numb12er</li>
-</ol>
-</body>
-</html>
+"<result>
+<name>Denis Trenchev</name>
+<name>Kalin Ivanov</name>
+</result>
 "
 		}
 		
 		context1_2 = {
 			:task_number=>"1",
-			:which_words => "that do not contain number",
+			:how_many_letters => "8",
 			:expected=>
-"<html>
-<body>
-<ol>
-<li>banana</li>
-<li>hello</li>
-<li>pie</li>
-</ol>
-</body>
-</html>
+"<result>
+<name>Borislav Nikov</name>
+<name>Vladimir Yordanov</name>
+</result>
 "
 		}
 		
-		[context1_1,context1_2]
+		context1_3 = {
+			:task_number=>"1",
+			:how_many_letters => "6",
+			:expected=>
+"<result>
+<name>Iliyan Germanov</name>
+<name>Stefan Iliev</name>
+</result>
+"
+		}
+		
+		[context1_1,context1_2,context1_3]
 	end
 	
 	def initialize
 		super 'task2.eruby'
 	end
-	
+
 end
