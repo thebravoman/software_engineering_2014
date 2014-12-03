@@ -1,27 +1,6 @@
 Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
-
-1. You are given an argument for a folder with files;
-1.1 if there are other arguments they should be discarded
-2. file names in this folder are in the form First_Last_digits.rb; 
-3. Find all the students that have <%= @more_or_less %> than <%= @letters %> letters in their <%= @which_name %> name;
-4. Sort the result by <%= @which_to_sort %> <%= @in_what_order %>.
-5. Produce a result in <%= @format %> format named results.<%= @format %>
-6. Use csv_writer.rb
-6.1 csv_writer.rb ->
-"
-require 'csv'
-class CSVWriter
-def write(student)
-CSV.open("results.csv", "w") do |csv|
-student.sort.each do |key, value|
-csv << ["#{key}", "#{value}"]
-end
-end
-end
-end
-"
-
-		FirstName1,LastName1
-		FirstName2,LastName2
-		...
-		FirstNameN,LastNameN
+You are given an argument for a folder with .rb files.
+In each file there are words separated by space (ex. "word1 word2 word3")(there may be multiple lines)
+Count how many times the word "<%=@word%>" occurs in each of the files.
+Sort the result by number of times found in <%=@in_what_order%> order.
+Produce a result in <%=@format%> format named result.<%=@format%>.
