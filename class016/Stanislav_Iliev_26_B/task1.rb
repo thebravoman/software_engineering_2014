@@ -15,8 +15,7 @@ file2,10
 fileN,N",
 			:expected=>
 "32lines.rb,32
-sixtyfivelines.rb,65
-"
+sixtyfivelines.rb,65"
 		}
 
 		context1_2 = {
@@ -30,8 +29,7 @@ file2,10
 fileN,N",
 			:expected=>
 "forget.rb,11
-never.rb,9
-"
+never.rb,9"
 		}
 
 		context1_3 = {
@@ -45,8 +43,7 @@ file2,10
 fileN,N",
 			:expected=>
 "never.rb,9
-forget.rb,11
-"
+forget.rb,11"
 		}
 
 		[context1_1,context1_2,context1_3]
