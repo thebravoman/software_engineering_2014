@@ -15,18 +15,17 @@ def homework_chek (directory_name,log_info,result,folder)
 	name_before = "" #for VH
 	stud = 0
 	Dir.glob(ARGV[0]+"#{directory_name}").each do |file|		
-		puts file
 		short_file_name = file.split(/\//).last	
 		name = short_file_name.split(/_/)[0].capitalize + ',' + short_file_name.split(/_/)[1].capitalize 
 		program_num +=1 if folder == 0 && name == name_before #for VH
 		log = `git log --until=#{log_info} #{file}`
 		result[name][folder] = 2 if (!log.empty? && folder !=0) || (!log.empty? && program_num == 3 && folder == 0)	 
 		result[name][folder] = 1 if (log.empty? && folder !=0) || (log.empty? && program_num == 3 && folder == 0)
-		name_before = name #for VH
 
-#		stud +=1 
-#		stud -=1 if folder == 0 && program_num < 3			
-#		break if stud == ARGV[4] 		
+		stud +=1 if  name != name_before			
+		break if stud == ARGV[4].to_i && ARGV[3] == "-n" 		
+
+		name_before = name #for VH
 		program_num = 1 if program_num == 3 #for VH
 		next if folder == 0 || folder == 10  	
 		file_folder = file
