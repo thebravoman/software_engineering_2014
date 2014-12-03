@@ -20,11 +20,19 @@ $res = Hash.new{|h, k| h[k] = Array.new($times.keys.count,0)}
 
 def check_file (dir)
 	#find a better solution some day pls, these exceptions are annoying as hell...
-	if ((dir.split('/').last).split('_')[1] != nil or dir.split('/')[-2] == "class009_homework") and dir.split('/').last != "run_them_all.rb" and dir.split('/').last != "hash_to_fixture.csv" and dir.split('/').last != "result_output_name.csv"
+	if ((dir.split('/').last).split('_')[1] != nil or dir.split('/')[-2] == "class009_homework") and dir.split('/').last != "run_them_all.rb" and dir.split('/').last != "hash_to_fixture.csv" and dir.split('/').last != "result_output_name.csv" 
 		times_row = $times[dir.split('/')[-2]]
-	#class017 fails here because of the -2 ^
 		if times_row != nil
 			grade_file dir, times_row
+		end
+	else
+		if File.directory?(dir) and dir.split('/').last != "r2014113"
+			Dir.glob("#{dir}"'*/*') do |files|
+				times_row = $times[files.split('/')[4]]
+				if times_row != nil
+					grade_file files, times_row
+				end
+			end
 		end
 	end
 end
@@ -55,7 +63,7 @@ def grade_file (dir, times_row)
 	end
 end
 
-Dir.glob("#{ARGV[0]}"'*/*''*/*') do |dir|
+Dir.glob("#{ARGV[0]}"'*/*') do |dir|
 	check_file dir
 end
 
