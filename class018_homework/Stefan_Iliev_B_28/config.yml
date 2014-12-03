@@ -1,0 +1,45 @@
+homeworks_count: 10
+directories: 
+ dir1: "/vhodno_nivo/**/*_*_*.*"
+ dir2: "/class002_homework/**/*_*_*_*.rb"
+ dir3: "/class003_homework/**/*_*_*_*.rb"
+ dir4: "/class004/**/*_*_*_*.rb"
+ dir5: "/class009_homework/**/*.pdf"
+ dir6: "/class012_homework/**/*_*_*_*.rb"
+ dir7: "/class014_homework/**/*_*_*_*.rb"
+ dir8: "/class015_homework/**/*_*_*_*.rb"
+ dir9: "/class017_homework/homework1/**/*_*_*_*.rb"
+ dir10: "/class017_homework/homework2/**/*_*_*_*.rb"
+ dir11: "/class018_homework/**/*_*_*_*.rb"
+ 
+times:
+ time1: "2014:09:17:20:00"
+ time2: "2014:09:22:20:00"
+ time3: "2014:09:24:20:00"
+ time4: "2014:09:29:20:00"
+ time5: "2014:10:27:20:00"
+ time6: "2014:11:10:20:00"
+ time7: "2014:11:13:06:00"
+ time8:	"2014:11:20:06:00"
+ time9: "2014:12:02:06:00"
+ time10: "2014:12:02:06:00"
+ time11: "2014:12:04:06:00"
+ 
+regex:
+ reg1: "[^_]+_[^_]+_[^_]+"
+ reg2: "[^_]+_[^_]+_[^_]+_[^_]+"
+ reg3: "[^_]+_[^_]+_[^_]+_[^_]+"
+ reg4: "[^_]+_[^_]+_[^_]+_[^_]+"
+ reg5: "."
+ reg6: "[^_]+_[^_]+_[^_]+_[^_]+"
+ reg7: "[^_]+_[^_]+_[^_]+_[^_]+"
+ reg8: "[^_]+_[^_]+_[^_]+_[^_]+"
+ reg9: "[^_]+_[^_]+_[^_]+_[^_]+"
+ reg10: "[^_]+_[^_]+_[^_]+_[^_]+"
+ reg11: "[^_]+_[^_]+_[^_]+_[^_]+"
+ 
+file_count:
+ fc_1: 2
+
+translate_files:
+ hw5: "/class009_homework/project_to_names.csv"

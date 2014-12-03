@@ -9,28 +9,30 @@ time_start=Time.now
 classes = file_content= YAML.load_file("info.yml")["classes"]
 result = Hash.new{|hash, key| hash[key] = YAML.load_file("info.yml")["result_info"]}
 team_names = Array.new
+
 def homework_chek (directory_name,log_info,result,folder)
 	program_num = 1 #for VH
 	name_before = "" #for VH
+	stud = 0
 	Dir.glob(ARGV[0]+"#{directory_name}").each do |file|		
-		short_file_name = file.split(/\//).last		
-		first_name = short_file_name.split(/_/)[0].capitalize
-		last_name = short_file_name.split(/_/)[1].capitalize
-		name = first_name + ',' + last_name 
+		puts file
+		short_file_name = file.split(/\//).last	
+		name = short_file_name.split(/_/)[0].capitalize + ',' + short_file_name.split(/_/)[1].capitalize 
 		program_num +=1 if folder == 0 && name == name_before #for VH
 		log = `git log --until=#{log_info} #{file}`
 		result[name][folder] = 2 if (!log.empty? && folder !=0) || (!log.empty? && program_num == 3 && folder == 0)	 
 		result[name][folder] = 1 if (log.empty? && folder !=0) || (log.empty? && program_num == 3 && folder == 0)
 		name_before = name #for VH
+
+#		stud +=1 
+#		stud -=1 if folder == 0 && program_num < 3			
+#		break if stud == ARGV[4] 		
 		program_num = 1 if program_num == 3 #for VH
-		#puts file
-		next if folder == 0 || folder == 10 	#next if folder != 11 && folder != 14 	
+		next if folder == 0 || folder == 10  	
 		file_folder = file
-		file_folder = file.chomp("#{file.split(/\//).last}") if folder == 14 || folder == 17 || folder == 23
-		flog = `flog #{file_folder}`
-		flay = `flay #{file_folder}`
-		result[name][folder + 1] = flog.split(/:/).first 
-		result[name][folder + 2] = flay.split(/=/)[1][1, 4].delete!("\n")
+		file_folder = file.chomp("#{file.split(/\//).last}") if folder == 14 || folder == 17 || folder == 23 || folder == 26
+		result[name][folder + 1] = `flog #{file_folder}`.to_i
+		result[name][folder + 2] = `flay #{file_folder}`.to_i
 	end
 	return result
 end
@@ -60,29 +62,15 @@ def homework_chek_009 (directory_name,log_info,result,folder)
 end
 
 folder = 0
-result = homework_chek(YAML.load_file("info.yml")["homeworks"]["vhodno_nivo"],YAML.load_file("info.yml")["deadlines"]["vhodno_nivo"],result,folder)				
-folder = 1
-result = homework_chek(YAML.load_file("info.yml")["homeworks"]["h2"],YAML.load_file("info.yml")["deadlines"]["h2"],result,folder)
-folder = 4 
-result = homework_chek(YAML.load_file("info.yml")["homeworks"]["h3"],YAML.load_file("info.yml")["deadlines"]["h3"],result,folder)
-folder = 7
-result = homework_chek(YAML.load_file("info.yml")["homeworks"]["h4"],YAML.load_file("info.yml")["deadlines"]["h4"],result,folder)
-folder = 10
-result = homework_chek_009(YAML.load_file("info.yml")["homeworks"]["h9"],YAML.load_file("info.yml")["deadlines"]["h9"],result,folder)	
-folder = 11
-result = homework_chek(YAML.load_file("info.yml")["homeworks"]["h12"],YAML.load_file("info.yml")["deadlines"]["h12"],result,folder)
-folder = 14  
-result = homework_chek(YAML.load_file("info.yml")["homeworks"]["h14"],YAML.load_file("info.yml")["deadlines"]["h14"],result,folder) 
-folder = 17  
-result = homework_chek(YAML.load_file("info.yml")["homeworks"]["h15"],YAML.load_file("info.yml")["deadlines"]["h15"],result,folder) 
-folder = 20  
-result = homework_chek(YAML.load_file("info.yml")["homeworks"]["h17-1"],YAML.load_file("info.yml")["deadlines"]["h17-1"],result,folder)
-folder = 23
-result = homework_chek(YAML.load_file("info.yml")["homeworks"]["h17-2"],YAML.load_file("info.yml")["deadlines"]["h17-2"],result,folder)
-folder = 26
-result = homework_chek(YAML.load_file("info.yml")["homeworks"]["h18"],YAML.load_file("info.yml")["deadlines"]["h18"],result,folder)
-	
-write = true
+YAML.load_file("info.yml")["homeworks"].each do |yaml|
+	result = homework_chek_009(yaml[0],yaml[1],result,folder) if folder == 10
+	result = homework_chek(yaml[0],yaml[1],result,folder) if folder !=10	
+	if folder == 0 || folder == 10 
+		folder +=1
+	else 
+		folder +=3				
+	end
+end
 puts Time.now - time_start
 if ARGV[1] == "-o"
 	case ARGV[2]
@@ -97,8 +85,7 @@ if ARGV[1] == "-o"
 		when "svg"
 		writer = SVGWriter.new
 		else
-		write = false
-		puts "You are drunk"
+		abort()
 	end
-	writer.write(result,classes,folder) if write == true
+	writer.write(result,classes,folder-3)
 end
