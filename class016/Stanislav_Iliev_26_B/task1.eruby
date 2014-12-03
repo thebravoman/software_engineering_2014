@@ -6,3 +6,4 @@ Sort the result by number of lines <%= @in_what_order %>
 Produce a result in CSV format named result.csv. 
 
 <%=@format_example%>
+^ There shouldn't be a newline at the end of the result file.
