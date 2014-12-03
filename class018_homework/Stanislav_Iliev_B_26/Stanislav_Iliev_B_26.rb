@@ -3,6 +3,7 @@ require_relative 'write_csv.rb'
 require_relative 'write_html.rb'
 require_relative 'write_svg.rb'
 require_relative 'write_xml.rb'
+require_relative 'write_json.rb'
 require 'yaml'
 
 start = Time.now
