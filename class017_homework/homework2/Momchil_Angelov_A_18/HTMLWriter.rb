@@ -2,7 +2,7 @@ class HTMLWriter
 	def write (list, timer)
 	html = File.open("result_Momchil_Angelov_18.html", "w")
 		html.puts("<body>")
-		html.puts("	<table border="2">")
+		html.puts("	<table>")
 		html.puts("		<tr>")
 		html.puts("			<td>#{timer}</td>")
 		html.puts("			<td>VN</td>")
