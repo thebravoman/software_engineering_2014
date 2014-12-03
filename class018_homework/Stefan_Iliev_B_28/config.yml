@@ -1,4 +1,4 @@
-homeworks_count: 10
+homeworks_count: 11
 directories: 
  dir1: "/vhodno_nivo/**/*_*_*.*"
  dir2: "/class002_homework/**/*_*_*_*.rb"
@@ -43,3 +43,8 @@ file_count:
 
 translate_files:
  hw5: "/class009_homework/project_to_names.csv"
+
+headers:
+ homeworks: "VH|002|003|004|009|012|014|015|017|018"
+ flog: "-|g02|g03|g04|-|g12|g14|g15|g17-1|g17-2|g18"
+ flay: "-|y02|y03|y04|-|y12|y14|y15|y17-1|y17-2|y18"
