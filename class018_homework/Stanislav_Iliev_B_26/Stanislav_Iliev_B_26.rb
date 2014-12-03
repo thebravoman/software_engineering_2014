@@ -10,11 +10,6 @@ start = Time.now
 i = 0
 softeng = ARGV[0]
 softeng += "/" if softeng[-1] != 47
-if ARGV[3] == "-n"
-	n = ARGV[4].to_i - 1
-else
-	n = -1
-end
 
 directories = Array.new
 directories_hash = YAML.load_file("config.yaml")
@@ -24,7 +19,13 @@ directories_hash.each do |key,val|
 	i += 1
 end
 
-directories = directories[0..n]
+if ARGV[3] == "-n"
+	n = ARGV[4].to_i - 1
+else
+	n = -1
+end
+
+puts n
 
 results = Hash.new{|hash,key| hash[key] = Array.new(directories.size) {0}}
 vhodno = Hash.new{|hash,key| hash[key] = [0,0]}
@@ -38,10 +39,14 @@ class009.delete("Project Name")
 i = -1;
 
 directories.each do |directory, deadline|
+	count = 0
 	i += 1
 	Dir.glob("#{softeng}#{directory}").each do |script_file|
 		short_file = script_file.split(/\//).last
+		p short_file
 		if ((i!=6 and short_file.include?("_")) or i == 4 or (i==6 and (short_file =~ /_[A-B]_/ or short_file =~ /_Class[1-2]_/))) and !script_file.include?("result") and !script_file.include?("~")
+			break if count == n
+			count += 1
 			a = script_file.gsub(/(?=[ -'])/, '\\')
 			file = `git log --format="format:%ci" --reverse #{a}`
 			file = file.split(/\n/).first
