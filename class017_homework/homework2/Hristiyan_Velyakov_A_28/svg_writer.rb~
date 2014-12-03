@@ -36,7 +36,7 @@ end
 
 class SVGWriter
 	def write(results, flog, flay)
-		svg = File.open("results_Hristiyan_Velyakov_A_28.svg", "w")
+		svg = File.open("results_Veselin_Dechev_A_2.svg", "w")
  		svg.puts("<svg width='720px' height='440px' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>")
 		svg.puts("<text x=\"310\" y=\"430\" fill=\"black\">Bar chart with the number of 1s.</text>")
 		counter = convert_results(results)
