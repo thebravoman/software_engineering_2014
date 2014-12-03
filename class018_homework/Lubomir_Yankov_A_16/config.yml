@@ -1,0 +1,43 @@
+homeworks:
+ VH: vhodno_nivo/**/*_*_*.*
+ 2: class002_homework/*_*_*_*.rb
+ 3: class003_homework/*_*_*_*.rb
+ 4: class004/*_*_*_*.rb
+ 9: class009_homework/
+ 12: class012_homework/*_*_*_*.rb
+ 14: class014_homework/**/*_*_*_*.rb
+ 15: class015_homework/**/*_*_*_*.rb
+ 17-1: class017_homework/homework1/*_*_*_*.rb
+ 17-2: class017_homework/homework2/**/*_*_*_*.rb
+ 
+deadlines:
+ VH: Sep-17-2014-20:00:00
+ 2: Sep-22-2014-20:00:00
+ 3: Sep-24-2014-20:00:00
+ 4: Sep-29-2014-20:00:00
+ 9: Oct-27-2014-20:00:00
+ 12: Nov-10-2014-20:00:00
+ 14: Nov-13-2014-06:00:00
+ 15: Nov-20-2014-06:00:00
+ 17-1: Dec-2-2014-06:00:00
+ 17-2: Dec-2-2014-06:00:00
+ 
+flog:
+ 2: g2
+ 3: g3
+ 4: g4
+ 12: g12
+ 14: g14
+ 15: g15
+ 17-1: g17-1
+ 17-2: g17-2
+ 
+flay:
+ 2: y2
+ 3: y3
+ 4: y4
+ 12: y12
+ 14: y14
+ 15: y15
+ 17-1: y17-1
+ 17-2: y17-2
