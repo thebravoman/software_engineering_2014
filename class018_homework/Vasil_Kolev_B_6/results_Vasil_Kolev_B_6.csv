@@ -1,7 +1,7 @@
 First Name,Last Name,vh,002,003,004,009,012,014,015,017,018
-Atanaska,Ivancheva,2,2,2,2,2,2,2,2,0,0
+Atanaska,Ivancheva,2,2,2,2,2,2,2,2,0,2
 Borislav,Rusinov,2,2,2,2,2,2,2,2,0,0
-Borislav,Stratev,2,2,2,2,1,2,2,2,0,0
+Borislav,Stratev,2,2,2,2,1,2,2,2,0,2
 David,Georgiev,2,2,2,2,1,2,2,2,0,0
 Denis,Stoinev,2,2,2,2,2,2,2,2,0,0
 Denis,Trenchev,0,2,2,2,0,2,0,0,0,0
@@ -39,7 +39,7 @@ Mladen,Karadimov,2,2,2,2,2,2,2,2,0,0
 Momchil,Angelov,0,2,2,2,1,2,0,2,0,0
 Moretti,Georgiev,2,2,2,2,2,2,2,2,0,0
 Nikola,Marinov,2,2,2,2,2,2,2,0,0,0
-Nikolay,Mihailov,2,2,2,2,1,2,2,2,0,0
+Nikolay,Mihailov,2,2,2,2,1,2,2,2,0,2
 Petko,Bozhinov,2,2,2,2,2,2,2,2,0,0
 Radoslav,Kostadinov,2,2,2,2,2,2,2,2,0,0
 Simeon,Shopkin,2,2,2,2,0,2,2,2,0,0
@@ -56,5 +56,5 @@ Vanya,Santeva,2,2,2,2,2,2,2,2,0,0
 Vasil,Kolev,2,0,0,2,2,2,2,2,0,2
 Velislav,Kostov,2,2,2,2,2,2,2,2,0,0
 Veselin,Dechev,2,2,2,2,2,2,2,2,0,0
-Veselina,Kolova,2,2,2,2,2,2,2,2,0,0
+Veselina,Kolova,2,2,2,2,2,2,2,2,0,2
 Vladimir,Yordanov,2,2,2,2,2,2,0,2,0,0
