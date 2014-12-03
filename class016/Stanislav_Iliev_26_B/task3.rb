@@ -12,7 +12,8 @@ class Task3 < Task
             :format_example=>
 "file1.rb,9
 file2.rb,11
-.....",
+.....
+fileN.rb,N",
 			:expected=>
 "never.rb,11
 forget.rb,16
@@ -30,8 +31,7 @@ sixtyfivelines.rb,96"
 <file1.rb>N</file1.rb>
 <file2.rb>11</file2.rb>
 ...
-</results>
-",
+</results>",
 			:expected=>
 "<results>
 <never.rb>3</never.rb>

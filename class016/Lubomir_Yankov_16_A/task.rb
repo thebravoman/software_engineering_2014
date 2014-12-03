@@ -14,6 +14,12 @@ class Task
 		context[:task_number] = random_string = SecureRandom.hex(4)
 		numbers.shuffle!
 		sample = numbers.pop
+		if !Dir.exists?('tasks')
+			`mkdir tasks`
+		end
+		if !Dir.exists?('expects')
+		`mkdir expects`
+		end
 		File.open("tasks/#{sample}_#{context[:task_number]}.txt","w") do |file|
 			file.write(eruby.evaluate(context))
 		end	

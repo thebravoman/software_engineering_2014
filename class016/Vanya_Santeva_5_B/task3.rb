@@ -12,11 +12,12 @@ class Task3 < Task
             :format_example=>
 "file1.rb,9
 file2.rb,11
-.....",
+.....
+fileN.rb,N",
 			:expected=>
-"32lines.rb,32
+"never.rb,11
 forget.rb,16
-never.rb,11
+32lines.rb,32
 sixtyfivelines.rb,96"
 		}
 
@@ -30,13 +31,12 @@ sixtyfivelines.rb,96"
 <file1.rb>N</file1.rb>
 <file2.rb>11</file2.rb>
 ...
-</results>
-",
+</results>",
 			:expected=>
 "<results>
-<32lines.rb>15</32lines.rb>
-<forget.rb>5</forget.rb>
 <never.rb>3</never.rb>
+<forget.rb>5</forget.rb>
+<32lines.rb>15</32lines.rb>
 <sixtyfivelines.rb>30</sixtyfivelines.rb>
 </results>"
 		}
@@ -49,8 +49,8 @@ sixtyfivelines.rb,96"
             :format_example=>
 "\"file1.rb\":9,\"file2.rb\":11,......",
 			:expected=>
-"\"32lines.rb\":27,\"forget.rb\":9,\"never.rb\":6,\"sixtyfivelines\":54"
-}
+"\"never.rb\":6,\"forget.rb\":9,\"32lines.rb\":27,\"sixtyfivelines\":54"
+		}
 
 		[context1_1,context1_2,context1_3]
 	end
