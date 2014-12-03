@@ -1,12 +1,12 @@
 Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
 
-1. Find the sum of 1 to N
-1.1 N == ARGV[0]
-2. Save the result in XML file format in <sum></sum> tag (result.xml).
-3. Save the result in HTML file format in <%=@tag%> tag (result.html).
-4. Use two different classes to save the result !
-	Example:
-		XML:
-			<sum>15</sum>
-		HTML:
-			<%=@exmpl%>
+1. You are given one arguments which is a folders with files. Find the file named "students.csv".
+1.1 If there are other arguments they should be discarded.
+2. Parse the file. The first colum are names in format "Fname_Lname". Find all names which have <%= @how_many_letters %> in their first name.
+3. Sort the names by first name in ASC order.
+4. Produce a result in CSV format named result.csv:
+
+			Fname1,Lname1
+			Fname2,Lname2
+			...
+			Fname,Lname
