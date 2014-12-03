@@ -25,7 +25,7 @@ end
 def n_checked
 	if ARGV[3] == "-n"
 		if @counter == ARGV[4].to_i
-			@counter = 1
+			@counter = 0
 			return true
 		end
 		@counter += 1
