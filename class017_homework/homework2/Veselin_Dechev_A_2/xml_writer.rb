@@ -1,46 +1,19 @@
-require 'builder'
-
 class XMLWriter
-	def write results, start
-		file = File.new("results_Radoslav_Kostadinov_A_22.xml", "w")
-		xml = Builder::XmlMarkup.new(:indent => 2)
-		file <<	xml.results {
-				xml.time start
-			results.keys.sort.each do |key|
-				xml.student {
-					xml.name key
-					xml.vh results[key]["VH"]
-					xml.homeworks {
-						xml.HW002 results[key]["002"]
-						xml.HW003 results[key]["003"]
-						xml.HW004 results[key]["004"]
-						xml.HW009 results[key]["009"]
-						xml.HW012 results[key]["012"]
-						xml.HW014 results[key]["014"]
-						xml.HW0171 results[key]["0171"]
-						xml.HW0172 results[key]["0172"]
-					}
-					xml.flog {
-						xml.g2 results[key]["g2"]
-						xml.g3 results[key]["g3"]
-						xml.g4 results[key]["g4"]
-						xml.g9 results[key]["g9"]
-						xml.g12 results[key]["g12"]
-						xml.g14 results[key]["g14"]
-						xml.g171 results[key]["g171"]
-					}
-					xml.flay {
-						xml.y2 results[key]["y2"]
-						xml.y3 results[key]["y3"]
-						xml.y4 results[key]["y4"]
-						xml.y9 results[key]["y9"]
-						xml.y12 results[key]["y12"]
-						xml.y14 results[key]["y14"]
-						xml.y171 results[key]["y171"]
-					}
-				}	
+	def write(results, classes)
+		xml = File.open("results_Veselin_Dechev_A_2.xml", "w")
+		xml.puts("<results>")
+		results.keys.sort.each do |key|	
+			xml.puts("\t<student>")
+			xml.puts("\t\t<FirstName> #{key.split("_").first} </FirstName>")
+			xml.puts("\t\t<LastName> #{key.split("_").last} </LastName>")
+			counter = 0
+			results[key].values.each do |val|
+				xml.puts("\t\t<#{classes[counter]}> #{val} </#{classes[counter]}>")
+				counter += 1
 			end
-		}
-		file.close
+			xml.puts("\t</student>")
+		end
+		xml.puts("</results>")
+		xml.close
 	end
 end
