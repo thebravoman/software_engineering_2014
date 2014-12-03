@@ -55,20 +55,21 @@
 				if not full_file_name =~ /#{regex["reg#{count}"]}/ 
 					next
 				end 
-				students[student_name] = CreateStudent(homeworks_count) if students[student_name] == nil
 				
 				result = gitLog.checkLog(file_path,times["time#{count}"],1,false).to_i 
 				
 				if (file = translate_files["hw#{count}"]) != nil
 					`grep #{full_file_name} #{relative_dir + file}`.split("\n").each do | line |
+						student_name = line.split(",").last
+						student_name = student_name.split(" ").first + "_" + student_name.split(" ").last 
+						students[student_name] = CreateStudent(homeworks_count) if students[student_name] == nil
 						students = writeResult(students,student_name,count,result)
 					end 
 				else 
+					students[student_name] = CreateStudent(homeworks_count) if students[student_name] == nil
 					students = writeResult(students,student_name,count,result)
 				end 
 			end 
-			
-		
 			
 			students.each do |name, hw|
 				if hw["hc_#{count}"] > (fc["fc_#{count}"] || 0) 
