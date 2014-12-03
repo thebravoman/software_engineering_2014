@@ -7,7 +7,6 @@ require 'yaml'
 start_time	= Time.new
 results		= Hash.new { |hash, key| hash[key] = [0,0,0,0,0,0,0,0,0] }
 student_all	= Hash.new { |name, programs| name[programs] = [] }
-student_time	= Hash.new { |name, programs| name[programs] = [] }
 
 config = YAML.load_file("homeworks_dir.yml")
 folder = 0
