@@ -1,6 +1,6 @@
 	require 'yaml'
 	require_relative "git_time_checker.rb"
-	require_relative "Writer.rb"
+	require_relative "writer.rb"
 	
 	def CreateStudent( homeworks_count )
 		hash = Hash.new
@@ -43,12 +43,18 @@
 	fc = config["file_count"]
 	homeworks_count = config["homeworks_count"]
 	translate_files = config["translate_files"]
+
+	homeworks_to_check = -1
+	if (homeworks_to_check = ARGV[ARGV.index("-n") + 1]) == nil
+		homeworks_to_check = -1
+	end 
 	
 	for count in 1..homeworks_count
 			directory = relative_dir + directories["dir#{count}"]
 			p directory
+			loop_break = homeworks_to_check.to_i
 			Dir.glob(directory).each do | file_path| 
-			
+				
 				full_file_name = file_path.split("/").last.split(".").first 
 				student_name = getStudentName(full_file_name) 
 				
@@ -69,6 +75,10 @@
 					students[student_name] = CreateStudent(homeworks_count) if students[student_name] == nil
 					students = writeResult(students,student_name,count,result)
 				end 
+				loop_break -= 1
+				if loop_break == 0
+					 break
+				end
 			end 
 			
 			students.each do |name, hw|
