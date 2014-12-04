@@ -4,7 +4,7 @@ class CSVWriter
 		titles = Hash.new(0)
 		first_line = "#{seconds}, "
 		Dir.chdir File.dirname(__FILE__)
-		csv = File.new("results_Konstantin_Vekilski_B_12.csv", "w+")
+		csv = File.new("results_Konstantin_Vekilski_B_20.csv", "w+")
 			results.sort.each do |key,value|
 				#print "#{key} - "
 				results[key].sort.each do |k,v|
