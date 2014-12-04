@@ -16,7 +16,7 @@ class Task
 		numbers.shuffle!
 		sample = numbers.pop
 
-		File.open("tests/#{sample}_#{context[:task_number]}.txt","w") do |file|
+		File.open("tasks/#{sample}_#{context[:task_number]}.txt","w") do |file|
 			file.write(eruby.evaluate(context))
 		end
 
