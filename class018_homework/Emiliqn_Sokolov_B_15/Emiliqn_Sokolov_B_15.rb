@@ -7,9 +7,8 @@ require 'yaml'
 
 start_time = Time.now
 
-thing = YAML.load_file('config.yml').keys
-thing2 = YAML.load_file('config.yml')
-result = Hash.new{|hash, key| hash[key] = thing2["ini_config"].values}
+thing = YAML.load_file('config.yml')
+result = Hash.new{|hash, key| hash[key] = thing["print_stuff"]["ini_config"].values}
 folder = 0
 prg_count = 0
 n = 0
@@ -59,29 +58,27 @@ end
 
 folder = 1
 
-thing.delete("ini_config")
-
-thing.each do |asd|
+thing["directories"].keys.each do |asd|
 	if asd != "class009"
-		Dir.glob(ARGV[0]+"#{thing2[asd]["folder"]}").each do |file|
+		Dir.glob(ARGV[0]+"#{thing["directories"][asd]["folder"]}").each do |file|
 			short_file = file.split(/\//).last
 			if short_file.split("_").length == 4
 				first_name = short_file.split(/_/).first.capitalize
 				last_name = short_file.split(/_/, 2).last.split("_").first.capitalize
 				name = first_name + ',' + last_name
-				log = `git log #{thing2[asd]["date"]} #{file}`	
+				log = `git log #{thing["directories"][asd]["date"]} #{file}`	
 				if !log.empty?
 					result[name][folder] = 2
 				elsif log.empty?
 					result[name][folder] = 1
 						p[folder]+=1
 				end
-				flog_def(file,result,name,thing2[asd]["flog_argument"])
-				flay_def(file,result,first_name,name,thing2[asd]["flay_argument"])
+				flog_def(file,result,name,thing["directories"][asd]["flog_argument"])
+				flay_def(file,result,first_name,name,thing["directories"][asd]["flay_argument"])
 			end
 		end
 	elsif asd == "class009"
-		name_list = File.open(ARGV[0]+"#{thing2[asd]["folder"]}")
+		name_list = File.open(ARGV[0]+"#{thing["directories"][asd]["folder"]}")
 		file_read = name_list.readlines
 		file_read.each do |line|		
 			teamname_name_array = line.split(",")
@@ -90,7 +87,7 @@ thing.each do |asd|
 			name = first_name + "," + last_name
 			team = teamname_name_array[0]
 			if File.exist? "#{ARGV[0]}class009_homework/#{team}.pdf"
-				log = `git log #{thing2[asd]["date"]}#{ARGV[0]}class009_homework/#{team}.pdf`
+				log = `git log #{thing["directories"][asd]["date"]}#{ARGV[0]}class009_homework/#{team}.pdf`
 				if !log.empty?
 					result[name][folder] = 2
 				elsif log.empty?
@@ -111,7 +108,7 @@ if ARGV[1] == "-o"
 		case ARGV[2]
 			when "csv"
 				writer = CSVWriter.new
-				writer.write result, end_time, thing2
+				writer.write result, end_time, thing
 			when "html"
 				writer = HTMLWriter.new
 				writer.write result, end_time
