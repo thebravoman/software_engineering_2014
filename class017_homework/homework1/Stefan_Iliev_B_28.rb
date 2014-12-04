@@ -10,7 +10,7 @@ repository_path = ARGV.shift || "."
 test_results = Hash.new 
 test_results.compare_by_identity
 
-Dir.glob(repository_path + "/class017_test/files_for_exam_*/results/**/*_*_*_*.rb").each do |file|
+Dir.glob(repository_path + "/class017_test/files_for_exam_*/results/**/*_*_*_*.rb").sort.each do |file|
 
 	full_file_name = file.split("/").last
 	next if full_file_name.split("_").length > 4 
@@ -47,8 +47,7 @@ Dir.glob(repository_path + "/class017_test/files_for_exam_*/results/**/*_*_*_*.r
 	rescue Timeout::Error
 		puts "Program timed out.\n\n"
 	end 
-	
-	grep_result = `grep #{hash} #{repository_path}/class017_homework/result_output_name.csv`
+	grep_result = `grep #{program_hash} #{repository_path}/class017_homework/result_output_name.csv`
 	if grep_result != ""
 			path_to_results = "./" + (grep_result.to_s.split("\n").first.split(",").last || "result.#{result_extension}")
 	else 
