@@ -1,0 +1,14 @@
+Develop a program named FirstName_LastName_ClassNumber_b63bd2.rb
+
+1. You are given an argument for a folder with files;
+1.1 If there are other arguments they should be discarded
+2. Find all words with length of 5 in the CSV files
+4. Sort results by DESC
+5. Produce a result in XML format named result.XML:
+
+ Unexpected results pls no bully if something goes wrong: 
+ <root>
+		<word>Putin</word>
+		<word>Obama</word>
+		<word>Hello</word>
+</root>

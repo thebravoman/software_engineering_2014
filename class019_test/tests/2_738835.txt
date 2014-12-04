@@ -1,0 +1,25 @@
+Develop a program named FirstName_LastName_ClassNumber_738835.rb
+
+1 You are given a folder with files.The Folder is passed as first argument;
+2 Find all csv files wich number of lines is greater then 1. 
+3 Sort the result by filename in ASC order.
+4 Produce a result in xml format named result.xml:
+
+	
+				<results>	
+					<filename2>
+						<numberoflines>
+							2
+						</numberoflines>
+					</filename2>
+					
+						...
+
+					<filenamen>
+						<numberoflines>
+							n
+						</numberoflines>
+					</filenamem>
+				</results>
+
+

@@ -1,0 +1,10 @@
+Develop a program named FirstName_LastName_ClassNumber_315f5e.rb
+
+1 You are given a folder with files.The Folder is passed as first argument;
+2 Find all csv files wich number of lines is greater then 0. 
+3 Sort the result by filename in DESC order.
+4 Produce a result in json format named result.json:
+
+	{"filenameN":[n],..,"filename1":[1]}
+
+

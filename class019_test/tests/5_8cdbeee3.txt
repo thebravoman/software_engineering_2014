@@ -1,0 +1,13 @@
+Develop a program named FirstName_LastName_ClassNumber_8cdbeee3.rb
+You are given an argument for a folder with .rb files.
+In each file there are words separated by space (ex. "word1 word2 word3")(there may be multiple lines)
+Count how many times the word "software" occurs in each of the files.
+Sort the result by number of times found in ASC order.
+Produce a result in csv format named result.csv.
+
+file1,3
+file2,10
+..
+fileN,N
+^
+There shouldn't be a newline at the end of the result file.
