@@ -15,7 +15,8 @@ class ResultWriter
 			when "csv"
 				writer = CSVWriter.new
 			when "html"
-				writer = HTMLWriter.new
+				writer = HTMLWriter.write result
+				exit()
 			when "json"
 				writer = JSONWriter.new
 		end
