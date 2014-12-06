@@ -35,7 +35,7 @@ end
 
 count_hash = count_hash.sort_by{|key,val| val}
 
-File.open("result.xml","w") do |xml|
+File.open("results.xml","w") do |xml|
 	xml.write("<results>\n")
 	count_hash.each do |key,value|
 		xml.write("<#{key}>#{value}</#{key}>\n")
