@@ -5,9 +5,8 @@ require_relative "html_writer.rb"
 require_relative "svg_writer.rb"
 require "yaml"
 time_start =Time.now
-
 def is_it_on_time time_stamp,file
-	`git log --until=#{time_stamp} #{file}`.empty?
+	`git log #{time_stamp} #{file}`.empty?
 end
 
 def get_name file
@@ -20,18 +19,31 @@ def get_name file
 	end
 end
 
+def check_n
+	counter = 0
+	if ARGV[3] == "-n"
+		if counter == ARGV[4].to_i
+			return true
+		end
+		counter += 1
+		return false
+	end
+	return false
+end
+
 def eval (a,d,h,j,g,y)
 	Dir.glob("#{ARGV.first}/#{d}") do |f|
+		break if check_n
 		flag = is_it_on_time a,f
 		n = get_name f
 		fn = n.split(/\ /).first
-		a = `flay #{f} | grep #{fn} | wc -l`.to_i
+		a = `flay #{f} | grep #{n} | wc -l`.to_i
 		b =`flog #{f}`.to_i
 		if n != nil
 			if h.has_key?(n) == false
 				h[n] = Array.new
 			end
-			if flag == false
+			if flag == true
 				h[n][j] = "2"
 			else
 				h[n][j] = "1"
@@ -68,6 +80,7 @@ end
 
 CSV.foreach(ARGV.first+"/class009_homework/project_to_names.csv") do |row|
 	Dir.glob("#{ARGV[0]}/class009_homework/**/*.pdf") do |f|
+		break if check_n
 		a = "--until=2014.10.27.20:00:01"
 		flag = is_it_on_time a,f
 		n = f.split(/\//).last.split(/\./).first
@@ -86,6 +99,7 @@ end
 vh = Array.new
 i = 0
 Dir.glob("#{ARGV[0]}/vhodno_nivo/**/*.*") do |vh_f|
+	break if check_n
 	a = "--until=2014.09.17.20:00:01"
 	flag = is_it_on_time a,vh_f
 	n = get_name vh_f
