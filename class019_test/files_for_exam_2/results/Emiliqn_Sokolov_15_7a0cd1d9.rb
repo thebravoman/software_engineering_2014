@@ -16,6 +16,7 @@ There shouldn't be newline at the end of the result file.
 =end
 
 count_hash = Hash.new
+
 Dir.glob("#{ARGV[0]}/**/*.rb").each do |raw_file|
 	i = 0
 	filename = raw_file.split("/").last
