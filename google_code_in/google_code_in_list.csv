@@ -1,4 +1,4 @@
-class,number,first_name,middle_name,last_name,google_code_in_completed_task,link_to_completed_task
+class,number,First name,Middle name,Last name,Name of completed Task,Link to completed task
 a,14,Красен,Руменов,Ангелов,DESIGN A BRL-CAD STICKER #5,http://www.google-melange.com/gci/task/view/google/gci2014/5307330648342528
 б,28,Стефан,Евгениев,Илиев,KDE: INTRO TO KDE DEVELOPMENT 2, https://www.google-melange.com/gci/task/view/google/gci2014/5030606710767616
 б,17,Илиян,Емилов,Германов,Generate Git commit message validators,http://www.google-melange.com/gci/task/view/google/gci2014/5840842090610688
