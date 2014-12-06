@@ -1,3 +1,4 @@
+require 'yaml'
 hash = Hash.new
 def write(hash)
 	html = File.open("results_Nikolay_Mihailov_B_25.html", "w")
@@ -21,15 +22,15 @@ def write(hash)
 	html.puts("</html>")
 	html.close
 end
-Dir.glob(ARGV[0] + "/class017_test/files_for_exam_2/results/*_*_*_*.rb") do |file|
-	names = file.split(/\//).last.split(/_/)	
-	next if names[3] == nil
-	Dir.glob(ARGV[0] + "/class017_test/files_for_exam_2/expects/*.*") do |file|
-		expects = file.split(/\//).last.split(".").first
-		if names[3] == expects 		
-			#nai tupoto domashno koeto sme imali, nqma da go pravq poveche zashtoto se obicham i me boli gutloto :/ 
-			hash[names[0] + " " + names[1]] = 1 
 
+Dir.glob(ARGV[0] + YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["dir_results"][0]) do |res_file|
+	names = res_file.split(/\//).last.split(".").first.split(/_/)	
+	next if names[3] == nil
+	Dir.glob(ARGV[0] + YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["dir_expects"][0]) do |exp_file|
+		expects = exp_file.split(/\//).last.split(".").first
+		if  names[3] == expects
+			 		
+			hash[names[0] + " " + names[1]] = 1
 		end
 	end
 

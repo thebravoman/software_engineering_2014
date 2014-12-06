@@ -1,0 +1,41 @@
+dir_results:
+ - "/class019_test/files_for_exam_2/results/*_*_*_*.rb"
+dir_expects:
+ - "/class019_test/files_for_exam_2/expects/*.*"
+good:
+ "Borislav_Stratev_2_B": 
+  - "/class016/Borislav_Stratev_2_B/fixtures/"
+ "Denis_Stoinev_13_B": 
+  - "/class016/Denis_Stoinev_13_B/fixture/"
+ "Emiliqn_Sokolov_15_B": 
+  - "/class016/Emiliqn_Sokolov_15_B/fixtures/"
+ "Hristiyan_Velyakov_28_A": 
+  - "/class016/Hristiyan_Velyakov_28_A/fixture/"
+ "Iliyan_Germanov_17_B": 
+  - "/class016/Iliyan_Germanov_17_B/fixture/"
+ "Ivelin_Slavchev_10_A": 
+  - "/class016/Ivelin_Slavchev_10_A/fixtures/"
+ "Ivo_Stratev_16_B": 
+  - "/class016/Ivo_Stratev_16_B/fixtures/"
+ "Kaloyan_Nikov_19_B": 
+  - "/class016/Kaloyan_Nikov_19_B/fixture/"
+ "Krassen_Angelov_14_A": 
+  - "/class016/Krassen_Angelov_14_A/fixtures/"
+ "Lubomir_Yankov_16_A": 
+  - "/class016/Lubomir_Yankov_16_A/fixtures/"
+ "Martin_Grigorov_23_B": 
+  - "/class016/Martin_Grigorov_23_B/fixtures/"
+ "Momchil_Angelov_18_A": 
+  - "/class016/Momchil_Angelov_18_A/"
+ "Stanislav_Gospodinov_26_A": 
+  - "/class016/Stanislav_Gospodinov_26_A/"
+ "Stanislav_Iliev_26_B": 
+  - "/class016/Stanislav_Iliev_26_B/fixture/"
+ "Stefan_Iliev_B_28": 
+  - "/class016/Stefan_Iliev_B_28/fixture/"
+ "Valentin_Varbanov_B_4": 
+  - "/class016/Valentin_Varbanov_B_4/fixture/"
+ "Vanya_Santeva_5_B": 
+  - "/class016/Vanya_Santeva_5_B/fixture/"
+ "Veselin_Dechev_2_A": 
+  - "/class016/Veselin_Dechev_2_A/fixture/"
