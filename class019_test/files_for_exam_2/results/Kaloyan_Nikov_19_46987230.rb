@@ -32,7 +32,7 @@ end
 
 k = 0
 
-File.open("results.json","w") do |json|
+File.open("result.json","w") do |json|
 	count_hash.each do |key,value|
 		if k >= 1
 			json.write(",")
