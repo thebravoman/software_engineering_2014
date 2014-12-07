@@ -43,9 +43,11 @@
 	fc = config["file_count"]
 	homeworks_count = config["homeworks_count"]
 	translate_files = config["translate_files"]
+	flog_header = config["headers"]["flog"]
+	flay_header = config["headers"]["flay"]
 
 	homeworks_to_check = -1
-	if (homeworks_to_check = ARGV[ARGV.index("-n") + 1]) == nil
+	if (homeworks_to_check = ARGV[(ARGV.index("-n") || -10) + 1]) == -9 #nil crash workaround. Will go here if it is nil.
 		homeworks_to_check = -1
 	end 
 	
@@ -75,6 +77,13 @@
 					students[student_name] = CreateStudent(homeworks_count) if students[student_name] == nil
 					students = writeResult(students,student_name,count,result)
 				end 
+				if flog_header.split("|")[count-1] != "-"
+					students[student_name]["flog_#{count}"] = `flog #{file_path}`.split("\n").first.to_i		
+				end
+
+				if flay_header.split("|")[count-1] != "-"
+					students[student_name]["flay_#{count}"] = `flay #{file_path} |grep #{student_name} |wc -l`.to_i
+				end
 				loop_break -= 1
 				if loop_break == 0
 					 break
@@ -89,6 +98,6 @@
 				end 
 			end 
 	end
-	
+	students = Hash[students.sort_by{|k,v| k}]
 	ResultWriter.write( ARGV[ARGV.index("-o") + 1],students )
 	

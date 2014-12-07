@@ -40,23 +40,23 @@ class HTMLWriter
 			html.puts("		<tr>")
 			html.puts("			<td> #{key.split("_").first} </td>")
 			html.puts("			<td> #{key.split("_")[1]} </td>")
-			counter = 0
+			counter = 1
 			homework_header.split("|").each do | header |
 			next if header == "-" 
 			counter += 1
 				html.puts("			<td> #{hw_hash.values_at("homework_#{counter}").first} </td>")
 			end 
-			counter = 0
+			counter = 1
 			flog_header.split("|").each do | header |
 			next if header == "-"
 				counter += 1
 				html.puts("			<td> #{hw_hash.values_at("flog_#{counter}").first} </td>")
 			end 
-			counter = 0
+			counter = 1
 			flay_header.split("|").each do | header |
 			next if header == "-"
 				counter += 1
-				html.puts("			<td> #{hw_hash.values_at("flog_#{counter}").first} </td>")
+				html.puts("			<td> #{hw_hash.values_at("flay_#{counter}").first} </td>")
 			end 
 			html.puts("		</tr>")
 		end
