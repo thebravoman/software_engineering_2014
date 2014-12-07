@@ -45,25 +45,12 @@
 	relative_dir = ARGV.shift	
 	gitLog = GitTimeChecker.new
 	students = Hash.new
+	threads_arr = Array.new
 	program_finished = false 
 	
 	flay_queue = Queue.new
 	flog_queue = Queue.new
 	write_queue = Queue.new
-	
-	flog_t = Thread.new {
-		while !program_finished do 
-			flog_ = flog_queue.pop().split("|||S|||")
-			write_queue << flog_step(flog_)
-		end 
-	}
-	flay_t = Thread.new {
-		while !program_finished do 
-			flay_ = flay_queue.pop().split("|||S|||")
-			write_queue << flay_step(flay_)
-		end 
-	}
-	
 	
 	time = Time.now
 	
@@ -76,6 +63,26 @@
 	translate_files = config["translate_files"]
 	flog_header = config["headers"]["flog"]
 	flay_header = config["headers"]["flay"]
+	flog_threads = config["flog_threads"]
+	flay_threads = config["flog_threads"]
+	
+	flog_threads.times do 
+		threads_arr << Thread.new {
+			while !program_finished do 
+				flog_ = flog_queue.pop().split("|||S|||")
+				write_queue << flog_step(flog_)
+			end 
+		}
+	end 
+	
+	flay_threads.times do
+		threads_arr << flay_t = Thread.new {
+			while !program_finished do 
+				flay_ = flay_queue.pop().split("|||S|||")
+				write_queue << flay_step(flay_)
+			end 
+		}
+	end 
 
 	homeworks_to_check = -1
 	if (homeworks_to_check = ARGV[(ARGV.index("-n") || -10) + 1]) == -9 #nil crash workaround. Will go here if it is nil.

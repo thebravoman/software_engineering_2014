@@ -1,3 +1,5 @@
+flay_threads: 2
+flog_threads: 2
 homeworks_count: 11
 directories: 
  dir1: "/vhodno_nivo/**/*_*_*.*"
