@@ -1,3 +1,4 @@
+require 'yaml'
 def bar(parent, x, y, w, h)
   	parent.puts("<rect x=\"#{x}\" y=\"#{y}\" width=\"#{w}\" height=\"#{h}\" style=\"fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)\" />")
 	return parent
@@ -18,24 +19,24 @@ def initTable(parent)
 	return parent
 end
 
-def convertResults(results)
-	statistic = Array.new(8, 0)	
+def convertResults(results,hw_count)
+	statistic = Array.new(hw_count, 0)	
 	results.each do |key,hw_hash|
-		statistic[0] += hw_hash.values_at("entry_homework").first.to_i
-		statistic[1] += hw_hash.values_at("homework_1").first.to_i
-		statistic[2] += hw_hash.values_at("homework_2").first.to_i
-		statistic[3] += hw_hash.values_at("homework_3").first.to_i
-		statistic[4] += hw_hash.values_at("homework_4").first.to_i
-		statistic[5] += hw_hash.values_at("homework_5").first.to_i
-		statistic[6] += hw_hash.values_at("homework_6").first.to_i
-		statistic[7] += hw_hash.values_at("homework_7").first.to_i
+		for i in 1 .. hw_count
+			statistic[i-1] += hw_hash.values_at("homework_#{i}").first.to_i%2
+		end 
 	end
 	return statistic
 end
 
 class SVGWriter 
-	def write(results)
-		statistic = convertResults(results)
+	@@config = ""
+	def self.write(results)
+	@@config = YAML.load_file("config.yml")
+	homework_header = @@config["headers"]["homeworks"]
+	hw_count = @@config["homeworks_count"]
+	
+	statistic = convertResults(results,hw_count)
 		svg = File.open("results_Stefan_Iliev_B_28.svg", "w")
 		svg.puts("<svg width='680' height='440' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>")
 		svg = initTable(svg)
