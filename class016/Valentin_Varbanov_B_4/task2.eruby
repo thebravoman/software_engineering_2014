@@ -1,24 +1,17 @@
-Program name : First_Last_ClassNumber_<%=@task_number%>.rb
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
 
-1.You are given an argument which is a folder where you should a find file named "task.csv". 
-2.Parse the file and find the words that are in the first colum. 
-3.Check if the word contains a number. Separate the words in two groups.
-4.Sort the words <%=@which_words%> and sort them in ACS order. Output them in a file named result.html in an ordered list.
+1. You are given one arguments which is a folders with files. Find the file named "students.csv".
+1.1 If there are other arguments they should be discarded.
+2. Parse the file. The first colum are names in format "Fname_Lname". Find all names which have <%= @how_many_letters %> in their first name.
+3. Sort the names by first name in ASC order.
+4. Produce a result in XML format named result.xml:
 
-Exit output :  		
-	1. pie
-	2. lamp
-	3. banana
-	
-Help:
-Do not use any spaces or tabs for stylization.
-Example html:
-<html>
-<body>
-<ol>
-<li>pie</li>
-<li>lamp</li>
-<li>banana</li>
-</ol>
-</body>
-</html>
+<result>
+<name>Fname1 Lname1</name>
+<name>Fname2 Lname2</name>
+...
+<name>FnameN LnameN</name>
+</result>
+
+#ATTENTION
+#Do not use any tabs or unnececery spaces!!! 

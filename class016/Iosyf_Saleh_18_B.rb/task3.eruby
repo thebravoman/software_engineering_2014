@@ -1,6 +1,6 @@
 Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
 
-1. You are given an argument for a folder with files that contains names;
+1. You are given an argument for a folder with files that contains names;;
 1.2 If there are other arguments they should be discarded;
 1.2 take the names in this file that are in the format First_Last_digits.rb;
 2. <%= @find %>;

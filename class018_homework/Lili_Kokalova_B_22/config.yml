@@ -1,0 +1,30 @@
+"VH":
+  "folder" : "#{ARGV[0]}/vhodno_nivo/**/*.*"
+  "time" : "17.09.2014:20:00:00"
+"002":
+  "folder" : "#{ARGV[0]}/class002_homework/**/*.rb"
+  "time" : "22.09.2014:20:00:00"
+"003":
+  "folder" : "#{ARGV[0]}/class003_homework/**
+  "time" : "24.09.2014:20:00:00"
+"004":
+  "folder" : "#{ARGV[0]}/class004/**/*.rb"
+  "time" : "29.09.2014:20:00:00"
+"009":
+  "folder" : "#{ARGV[0]}/class009_homework/**/*.pdf"
+  "time" : "27.10.2014:20:00:00"
+"012":
+  "folder" : "#{ARGV[0]}/class012_homework/**/*_*_*_*.rb"
+  "time" : "10.11.2014:20:00:00"
+"014":
+  "folder" : "#{ARGV[0]}/class014_homework/**/*_*_*_*.rb"
+  "time" : "13.11.2014:06:00:00"
+"015":
+  "folder" : "#{ARGV[0]}/class015_homework/**/*_*_*_*.rb"
+  "time" : "20.11.2014:06:00:00"
+"0171":
+  "folder" : "#{ARGV[0]}/class017_homework/homework1/**/*_*_*_*.rb"
+  "time" : "02.12.2014:06:00:00"
+"0172":
+  "folder" : "#{ARGV[0]}/class017_homework/homework2/**/*_*_*_*.rb"
+  "time" : "02.12.2014:06:00:00"

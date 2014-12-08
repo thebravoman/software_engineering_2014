@@ -10,7 +10,7 @@ class Task3 < Task
 			:order=>"ASC",
 			:format=>"xml",
 			:to_expect=>
-				"The following tree structure is required.
+				"
 				<results>	
 					<filename1>
 						<numberoflines>
@@ -53,14 +53,14 @@ class Task3 < Task
 		}
 		
 		context1_2 = {
-			:task_number=>"4",
-			:number=>"0",
+			:task_number=>"3",
+			:number=>"4",
 			:order=>"DESC",
 			:format=>"json",
 			:to_expect=>
-				"{filenamen:[n],...,filename1:[1]}",		
+				"{\"filenameN\":[n],..,\"filename1\":[1]}",		
 			:expected=>
-				"{filename2:[2],filename1:[1]}"	
+				"{\"filename3\":[3],\"filename2\":[2],\"filename1\":[1]}"
 		}
 		
 		[context1_1,context1_2]

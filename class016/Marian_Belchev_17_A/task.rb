@@ -16,7 +16,7 @@ class Task
 		numbers.shuffle!
 		sample = numbers.pop
 
-		File.open("tests/#{sample}_#{context[:task_number]}.txt","w") do |file|
+		File.open("tasks/#{sample}_#{context[:task_number]}.txt","w") do |file|
 			file.write(eruby.evaluate(context))
 		end
 
@@ -25,6 +25,8 @@ class Task
 				format = "csv"
 			when 2
 				format = "xml"
+			when 3
+				format = "json"
 			else
 				format = ""
 		end
