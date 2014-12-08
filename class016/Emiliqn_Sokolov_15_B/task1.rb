@@ -6,7 +6,6 @@ class Task1 < Task
 	
 		context1_1 = {
 			:task_number=>"1",
-			:c_or_rb => "c",
 			:one_two => "2",
 			:format => "csv",
 			:expected=>
