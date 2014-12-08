@@ -6,45 +6,45 @@ require_relative 'html_writer.rb'
 require_relative 'xml_writer.rb'
 require_relative 'svg_writer.rb'
 
-currentDir = Dir.getwd
+currentDirectory = Dir.getwd
 @results = Hash.new
 
 @classes = YAML.load_file("config.yml")
 @teamms = YAML.load_file("st_config.yml")["teams&mmbs"]
-@st = YAML.load_file("st_config.yml")["student_configuration"]
+@student_set = YAML.load_file("st_config.yml")["student_configuration"] #sets all HW to 0 & g & y to -
 
 
-def if_set_student(sfs)
+def if_set_student(sfs) #	checks if there's already hash for that student's HW results in results. if there's not, a new one's created.
 	if @results[sfs] == nil
-		@results[sfs] = @st
+		@results[sfs] = @student_set
 	end
 end
 
-def split(sf)
-	if sf.split('_').length >= 2 then
-		fn = sf.split("_")[0].capitalize
-		ln = sf.split("_")[1].capitalize
-		sp = "#{fn}" + "_" + "#{ln}"
-		return sp
+def split(st_name)
+	if st_name.split('_').length >= 2 then
+		fn = st_name.split("_")[0].capitalize
+		ln = st_name.split("_")[1].capitalize
+		new_st_name = "#{fn}" + "_" + "#{ln}"
+		return new_st_name
 	else
-		return sf
+		return st_name # probably a 009 HW file
 	end
 end
 
 
 
 @classes.keys.each do |k|
-	Dir.glob("#{ARGV[0]}#{@classes[k].first}").each do |f|
-		sf = f.split('/').last.split('.').first
-		sfs = split(sf)
-			case k
+	Dir.glob("#{ARGV[0]}#{@classes[homework].first}").each do |file|
+		short_file_name = file.split('/').last.split('.').first
+		st_name = split(short_file_name) #st_name ->> student name (format First_Last)
+			case homework
 				when "VH"
 					next
 				when "009"
 					next
 				else
-					if_set_student(sfs)
-					@results[sfs][k] = 1
+					if_set_student(st_name)
+					@results[st_name][homework] = 1
 			end
 	end
 end
