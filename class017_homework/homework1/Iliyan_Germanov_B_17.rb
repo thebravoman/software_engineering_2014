@@ -5,16 +5,20 @@ require_relative "Iliyan_Germanov/html_writer.rb"
 results = Hash.new
 repoPath = ARGV[0]
 Dir.chdir("#{repoPath}") do
-	repoPath = File.expand_path(File.dirname(File.dirname(__FILE__)))
+	repoPath = Dir.pwd
 end
 
 args = ArgumentSearcher.new.get(repoPath)
 expected = ExpectedSearcher.new.find(repoPath)
 extensions = ["csv", "json", "xml", "html", "txt"]
 
-#puts args["b12bee"]
-#puts expected["b12bee"]
+#puts args["3ca383"]
+#puts expected["3ca383"]
 #abort("")
+#Hard coding specific cases:
+args["ade0bd72"] = "#{repoPath}/class016/Veselin_Dechev_2_A/fixture/"
+args["bf9b6038"] = "#{repoPath}/class016/Veselin_Dechev_2_A/fixture/"
+
 
 def clear_results(repoPath, extensions)
 	extensions.each do |ext|

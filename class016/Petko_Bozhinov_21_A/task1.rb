@@ -2,13 +2,18 @@ require_relative 'task.rb'
 
 class Task1 < Task
 
+	def return_ext
+		return context1_1[:extension]
+	end
+
 	def init_contexts
 	
 		context1_1 = {
-			:task_number=>"1",
-			:letters=>"5",
-			:which_name=>"first",
-			:in_what_order=>"ASC",
+			:task_number => "1",
+			:letters => "5",
+			:which_name => "first",
+			:in_what_order => "ASC",
+			:extension => "xml",
 			:example =>
 "<class>
 			<length>
@@ -26,7 +31,7 @@ class Task1 < Task
 			...
 		</class>
 ",
-			:expected=>
+			:expected => 
 "<class>
 			<length>
 				<size>5</size>
