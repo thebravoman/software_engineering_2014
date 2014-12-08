@@ -1,7 +1,8 @@
 
 class XMLWriter
 
-	def write (results)
+	def write (results,argv_number)
+		argv_number_counter = 0
 		titles = Hash.new(0)
 		Dir.chdir File.dirname(__FILE__)
 		xml = File.new("results_David_Georgiev_B_12.xml", "w+")
@@ -19,15 +20,18 @@ class XMLWriter
 			end
 		end
 		results.sort.each do |key,value|
-			xml.write "<student><name>#{key}</name>"
-			results[key].sort.each do |k,v|
-				if (k.split("").first == "0") or (k.split("").first == "1") or (k.split("").first == "2") or (k.split("").first == "3") or (k.split("").first == "4") or (k.split("").first == "5") or (k.split("").first == "6") or (k.split("").first == "7") or (k.split("").first == "8") or (k.split("").first == "9") then
-					xml.write "<homework_#{k}>#{v}</homework_#{k}>"
-				else
-					xml.write "<#{k}>#{v}</#{k}>"
+			argv_number_counter += 1
+			if (argv_number_counter <= argv_number) then
+				xml.write "<student><name>#{key}</name>"
+				results[key].sort.each do |k,v|
+					if (k.split("").first == "0") or (k.split("").first == "1") or (k.split("").first == "2") or (k.split("").first == "3") or (k.split("").first == "4") or (k.split("").first == "5") or (k.split("").first == "6") or (k.split("").first == "7") or (k.split("").first == "8") or (k.split("").first == "9") then
+						xml.write "<homework_#{k}>#{v}</homework_#{k}>"
+					else
+						xml.write "<#{k}>#{v}</#{k}>"
+					end
 				end
+				xml.puts "</student>"
 			end
-			xml.puts "</student>"
 		end
 		xml.puts "</results>"
 		xml.close

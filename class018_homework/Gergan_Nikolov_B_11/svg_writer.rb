@@ -1,4 +1,6 @@
-
+=begin
+!!!! CAUTION !!!!
+!!!! BETA TESTING !!!!
 class SVG #helping class
 	@@colors = ["237, 28, 36", "255, 127, 3", "255, 242, 0", "181, 230, 29", "0, 162, 232", "163, 73, 164"]
 	@@colorIndex = 0
@@ -68,4 +70,4 @@ class SVGWriter
 		}
 	end
 end
-
+=end

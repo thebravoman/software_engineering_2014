@@ -1,5 +1,6 @@
 class SVGWriter
-	def write (results,num_of_hashes)
+	def write (results,num_of_hashes,argv_number)
+		argv_number_counter = 0
 		titles = Hash.new(0)
 		count = Array.new
 		homeworks = Array.new
@@ -26,11 +27,14 @@ class SVGWriter
 			end
 		end
 		results.sort.each do |key,value|
-			results[key].sort.each do |k,v|
-				titles.sort.each do |k2,v2|
-					if k == k2 then
-						if (v == 1) then
-							titles[k] += v
+			argv_number_counter += 1
+			if (argv_number_counter <= argv_number) then
+				results[key].sort.each do |k,v|
+					titles.sort.each do |k2,v2|
+						if k == k2 then
+							if (v == 1) then
+								titles[k] += v
+							end
 						end
 					end
 				end

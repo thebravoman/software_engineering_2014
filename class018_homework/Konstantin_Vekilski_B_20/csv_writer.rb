@@ -1,6 +1,7 @@
 class CSVWriter 
 
-	def write (seconds,results)
+	def write (seconds,results,argv_number)
+		argv_number_counter = 0
 		titles = Hash.new(0)
 		first_line = "#{seconds}, "
 		Dir.chdir File.dirname(__FILE__)
@@ -20,12 +21,15 @@ class CSVWriter
 		end
 		csv.puts first_line
 		results.sort.each do |key,value|
-			key1 = key.split(" ")
-			csv.write "#{key1[0]}, #{key1[1]}"
-			results[key].sort.each do |k,v|
-				csv.write ",#{v}"
+			argv_number_counter += 1
+			if (argv_number_counter <= argv_number) then
+				key1 = key.split(" ")
+				csv.write "#{key1[0]}, #{key1[1]}"
+				results[key].sort.each do |k,v|
+					csv.write ",#{v}"
+				end
+				csv.puts ""
 			end
-			csv.puts ""
 		end
 		csv.close
 	end

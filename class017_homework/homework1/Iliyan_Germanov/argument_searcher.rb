@@ -2,7 +2,7 @@ require "yaml"
 
 class ArgumentSearcher
 	def get(repoPath)
-		test_to_arg = YAML.load_file("./Iliyan_Germanov/config.yml")
+		test_to_arg = YAML.load_file("#{repoPath}/class017_homework/homework1/Iliyan_Germanov/config.yml")
 		args = Hash.new
 		Dir.glob("#{repoPath}/class019_test/files_for_exam_2/tests/*.txt") do |path|
 			test = File.read(path).tr("\n", "")

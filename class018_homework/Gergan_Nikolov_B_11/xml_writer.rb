@@ -1,6 +1,5 @@
 class XMLWriter
-	def write (hash, filename, time)
-	order = ["vhodno_nivo", "002", "003", "004", "009", "012", "014", "015", "017-1", "017-2", "g2", "g3", "g4", "g12", "g14", "g15", "g17-1", "g17-2", "y2", "y3", "y4", "y12", "y14", "y15", "y17-1", "y17-2"]
+	def write (hash, filename, order, time)
 		File.open(filename + ".xml" ,'w') do |file|
 			file << "<results>"
 			hash.each do |name, result|

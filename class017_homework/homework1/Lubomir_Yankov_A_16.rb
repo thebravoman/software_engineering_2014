@@ -4,14 +4,15 @@
 grades = Hash.new # Creating hash
 
 #----------------------------------------------- HASHCODES ---------------------------------------------------------------------------#
-stefchu = ["c79cebde", "da3e5702", "e2d2e61b", "db2c5549", "6933f104", "a059b1d0", "2c40c53d", "14d2c190", "007ac6de", "82e7bff5", "4ba9968b", 
-		   "27ed8788", "f74e194f", "2899304a", "d614ce69", "8fc44197", "769ce879", "990d42f4", "7097778f", "fce4d375", "600ed2d4", "e68e2949"]
+denis = ["8083b646", "db2c5549", "20f8b3bf", "70f62633", "d7f99c35", "318bd0c9", "de9aae7f", "4196b719", "adc37608", "db748167", "3f0b3105", "cfc3fed5"]
 
-vanya = ["44e94fc4", "582de2e5", "6c3d2ca8", "7d2544d7", "bad8d1c2", "f33e8621", "46025b3d", "03c6ca26", "07c5163f", "f76433c1", "1a7b3031", "193e7097", "2bef4341", "ccaf7125", "209924b8"]
+vanya = ["5182303e", "8cdbeee3", "7a0cd1d9", "ba0be6d2", "277028c8", "16378d00", "46987230", "33b82143", "24357dae", "ade0bd72", "5341dcc6", "eefff8cc", "bf9b6038"]
 
-radoslavchu = ["b128c3", "6f8073", "fd50e0", "755d84", "8a6e81", "bd4324", "02e338"]
+martin = ["840cf8", "3ca383", "d353b5", "4dd932", "d3be84", "b12bee", "cd93ec"]
 
-moreti 	= ["be4045", "5fcdeb", "ad735a", "5b868a", "fcb67d"]
+ivo 	= ["738835"]
+
+qze = ["003f7cb7", "89460c12", "68a91571", "710716f5"]
 
 #-------------------------------------------------- METHODS ---------------------------------------------------------------------------------#
 def rnl(string)
@@ -36,7 +37,7 @@ end
 
 
 #---------------------------------------------------------- PARSING DIRCTORIES-----------------------------------------------------------------#
-Dir.glob(ARGV[0]+"class017_test/files_for_exam_2/results/*_*_*_*.rb").each do |script_file|
+Dir.glob(ARGV[0]+"class019_test/files_for_exam_2/results/*_*_*_*.rb").each do |script_file|
 	
 	program = script_file.split(".").first.split("_").last
 	
@@ -50,7 +51,7 @@ Dir.glob(ARGV[0]+"class017_test/files_for_exam_2/results/*_*_*_*.rb").each do |s
 	
 	end
 	
-	Dir.glob(ARGV[0]+"class017_test/files_for_exam_2/expects/*.*").each do |fixture|
+	Dir.glob(ARGV[0]+"class019_test/files_for_exam_2/expects/*.*").each do |fixture|
 		
 		expected = fixture.split(".").first.split("/").last 
 		
@@ -58,9 +59,9 @@ Dir.glob(ARGV[0]+"class017_test/files_for_exam_2/results/*_*_*_*.rb").each do |s
 			
 			next if script_name.include?("writer") || script_name.include?("Writer")
 				
-			if stefchu.include?"#{expected}" 
+			if denis.include?"#{expected}" 
 					
-				arguments = ARGV[0] + "/class016/Stefan_Iliev_B_28/fixture/"
+				arguments = ARGV[0] + "/class016/Denis_Stoinev_B_13/fixture/"
 
 			end
 
@@ -70,23 +71,29 @@ Dir.glob(ARGV[0]+"class017_test/files_for_exam_2/results/*_*_*_*.rb").each do |s
 				
 			end
 
-			if radoslavchu.include?"#{expected}" 
+			if martin.include?"#{expected}" 
 				
-				arguments = ARGV[0] + "/class016/Radoslav_Kostadinov_22_A/fixture/"
+				arguments = ARGV[0] + "/class016/Martin_Grigorov_23_B/fixture/"
 				
 			end
 
-			if moreti.include?"#{expected}" 
+			if qze.include?"#{expected}" 
 				
-				arguments = ARGV[0] + "/class014_homework/"
+				arguments = ARGV[0] + "/class016/Lubomir_Yankov_16_A/fixtures/"
+				
+			end
+			
+			if ivo.include?"#{expected}" 
+				
+				arguments = ARGV[0] + "/class016/Ivo_Stratev_16_B/fixtures/"
 				
 			end
 				
-			system("ruby #{script_file} {arguments}")
+			system("ruby #{script_file} #{arguments}")
 				
 			success = $?.success? # returns true if the execute was successful
 				
-			system("clear") # clearing console
+			# system("clear") # clearing console
 
 			if success == true
 					
@@ -127,6 +134,7 @@ system("rm -f result.*")
 system("rm -f results.*")
 system("rm -f results_*_*_*_*.xml")
 system("rm -f result_*_*_*.xml")
+system("rm -f *.json")
 
 #-------------------------------------------------- PRODUCING HTML FILE WITH RESULTS --------------------------------------------------#
 html = File.open("results_Lubomir_Yankov_A_16.html", "w")
