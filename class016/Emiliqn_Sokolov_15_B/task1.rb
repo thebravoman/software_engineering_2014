@@ -10,6 +10,7 @@ class Task1 < Task
 			:one_two => "2",
 			:format => "csv",
 			:expected=>
+"Kamen_Iosyf_2.rb"
 "Iosyf_Saleh_12.c"
 		}
 		
