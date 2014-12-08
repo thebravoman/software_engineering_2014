@@ -25,7 +25,7 @@ Dir.glob("#{ARGV[0]}/**/*.rb").each do |raw_file|
 	file_read = file.readlines
 	file_read.each do |line|
 		line.split(" ").each do |word|
-			if word.length == 0
+			if word.length > 0
 				i += 1
 				count_hash[filename] = i
 			end
