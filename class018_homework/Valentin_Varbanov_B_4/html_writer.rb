@@ -1,10 +1,10 @@
 class HTMLWriter
 	def write (hash, filename, order, time)
 		File.open(filename + ".html" ,'w') do |file|
-			file << "<html>\n<body>\n<table border = \"1\">"
-			file << "<tr>\n<td>#{time}</td>\n<td></td>"
+			file << "<html>\n<head>\n<link href=\"table.css\" rel=\"stylesheet\" type=\"text/css\" media=\"all\" />\n</head>\n<body>\n<table border = \"1\">"
+			file << "<tr>\n<th>#{time}</th>\n<th></th>"
 			order.each do |a|
-				file << "<td>#{a}</td>"
+				file << "<th>#{a}</th>"
 			end
 			file << "</tr>"
 			hash.each do |name, result|
