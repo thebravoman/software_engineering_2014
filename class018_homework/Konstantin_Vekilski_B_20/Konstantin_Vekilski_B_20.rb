@@ -12,37 +12,56 @@ folders_and_types = YAML.load_file("config.yml")
 results = Hash.new(0)
 students = Array.new
 all_students = Array.new
+$argv_number = 1000
 files_vhodno_nivo_without_repeat = Array.new
 
 class OptionO
-	def check_arguments
-		if ARGV[1] == "-o" then
-			for i in 2..6
-				if ((ARGV[i] == "csv") or (ARGV[i] == "html") or (ARGV[i] == "json") or (ARGV[i] == "xml") or (ARGV[i] == "svg") or (ARGV[i] == nil)) then
-				else
-					print "error: wrong argument for -o: \"#{ARGV[2]}\"\n"
-					abort
+	def check_arguments(argv_number)
+		for j in 1..100
+			if ARGV[j] == "-o" then
+				for i in (j+1)..(j+5)
+					if ((ARGV[i] == "csv") or (ARGV[i] == "html") or (ARGV[i] == "json") or (ARGV[i] == "xml") or (ARGV[i] == "svg") or (ARGV[i] == nil)) then
+					else
+						if ARGV[i] != "-n" then
+							print "error: wrong argument for -o: \"#{ARGV[i]}\"\n"
+							abort
+						end
+					end
 				end
 			end
 		end
+		for j in 1..100
+			if ARGV[j] == "-n" then
+					if ARGV[j+1].is_integer? then
+						$argv_number = ARGV[j+1].to_i
+					else
+						if ARGV[j+1] != "-o" then
+							print "error: wrong argument for -o: \"#{ARGV[j+1]}\"\n"
+							abort
+						end
+					end
+			end
+		end
 	end
-	def write_to_file_in_the_option(seconds,results,the_number_of_the_keys)
-		if ARGV[1] == "-o" then
-			for i in 2..6
-				if ARGV[i] == "csv" then
-					CSVWriter.new.write(seconds,results)
-				end
-				if ARGV[i] == "html" then
-					HTMLWriter.new.write(seconds,results)
-				end
-				if ARGV[i] == "xml" then
-					XMLWriter.new.write(results)
-				end
-				if ARGV[i] == "json" then
-					JSONWriter.new.write(results)
-				end
-				if ARGV[i] == "svg" then
-					SVGWriter.new.write(results,the_number_of_the_keys)
+	def write_to_file_in_the_option(seconds,results,the_number_of_the_keys,argv_number)
+		for j in 1..100
+			if ARGV[j] == "-o" then
+				for i in (j+1)..(j+5)
+					if ARGV[i] == "csv" then
+						CSVWriter.new.write(seconds,results,$argv_number)
+					end
+					if ARGV[i] == "html" then
+						HTMLWriter.new.write(seconds,results,$argv_number)
+					end
+					if ARGV[i] == "xml" then
+						XMLWriter.new.write(results,$argv_number)
+					end
+					if ARGV[i] == "json" then
+						JSONWriter.new.write(results,$argv_number)
+					end
+					if ARGV[i] == "svg" then
+						SVGWriter.new.write(results,the_number_of_the_keys,$argv_number)
+					end
 				end
 			end
 		end
@@ -51,6 +70,9 @@ end
 class String
 	def is_number?
 		true if Float(self) rescue false
+	end
+	def is_integer?
+		self.to_i.to_s == self
 	end
 end
 class CheckFolders
@@ -196,7 +218,7 @@ end
 
 the_number_of_the_keys = folders_and_types.keys.length
 Dir.chdir "#{ARGV[0]}"
-OptionO.new.check_arguments
+OptionO.new.check_arguments($argv_number)
 folders_and_types.each do |key,value|
 	if (value[1] == "type_3_programs") then
 		CheckFolders.new.type_3_programs(key,"#{ARGV[0]}/#{value[0]}",results,value[2],files_vhodno_nivo_without_repeat,students,all_students)
@@ -213,4 +235,4 @@ folders_and_types.each do |key,value|
 end
 seconds = Time.now - start
 p results
-OptionO.new.write_to_file_in_the_option(seconds,results,the_number_of_the_keys)
+OptionO.new.write_to_file_in_the_option(seconds,results,the_number_of_the_keys,$argv_number)
