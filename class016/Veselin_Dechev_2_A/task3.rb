@@ -15,8 +15,8 @@ file2,10
 ..
 fileN,N",
 			:expected=>
-"mlqko.rb,32
-nesquik.rb,65"
+"32lines.rb,32
+sixtyfivelines.rb,65"
 		}
 
 		context1_2 = {
