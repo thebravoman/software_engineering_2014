@@ -1,5 +1,6 @@
 	require 'yaml'
 	require 'thread'
+	require 'shellwords'
 	require_relative "git_time_checker.rb"
 	require_relative "writer.rb"
 	
@@ -105,9 +106,15 @@
 				result = gitLog.checkLog(file_path,times["time#{count}"],1,false).to_i 
 				
 				if (file = translate_files["hw#{count}"]) != nil
-					`grep #{full_file_name} #{relative_dir + file}`.split("\n").each do | line |
+					prev_s_name = student_name
+					`grep '#{full_file_name.shellescape}' #{relative_dir + file}`.split("\n").each do | line |
+						next if line.empty?
 						student_name = line.split(",").last
-						student_name = student_name.split(" ").first + "_" + student_name.split(" ").last 
+						student_name = student_name.tr(" ","_")
+						students[student_name] = CreateStudent(homeworks_count) if students[student_name] == nil
+						students = writeResult(students,student_name,count,result)
+					end 
+					if prev_s_name == student_name
 						students[student_name] = CreateStudent(homeworks_count) if students[student_name] == nil
 						students = writeResult(students,student_name,count,result)
 					end 
@@ -115,9 +122,9 @@
 					students[student_name] = CreateStudent(homeworks_count) if students[student_name] == nil
 					students = writeResult(students,student_name,count,result)
 				end 
+				
 				if flog_header.split("|")[count-1] != "-"
 					flog_queue << "#{student_name}|||S|||flog_#{count}|||S|||flog #{file_path}"
-				#	students[student_name]["flog_#{count}"] = `flog #{file_path}`.split("\n").first.to_i		
 				end
 
 				if flay_header.split("|")[count-1] != "-"
@@ -146,10 +153,8 @@
 		write_queue << flay_step(flay_) 
 	end 
 	program_finished = true 
-	p "synched"
-	#home - result | student_name | hw_number 
-	#flog - result | student_name | flog_number
-	#flay - result | student_name | flay_number
+	p "Threads Synchronized."
+	
 	while !write_queue.empty?() 
 		write_ = write_queue.pop().split("|")
 		students[write_[1]][write_[2]] = write_[0]
