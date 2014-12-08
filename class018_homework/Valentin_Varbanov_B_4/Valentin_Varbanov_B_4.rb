@@ -56,12 +56,20 @@ else
 	puts "Time Saver - OFF."
 end
 
+threads = Array.new
+
 HOMEWORKS.keys.each do |hw|
-	puts "Checking homework #{hw} ..."
-	flayRes = `flay #{REPO + HOMEWORKS[hw].split('/').first + '/'} 2>/dev/null`
-	checkHomework(hw, HOMEWORKS[hw], DEADLINES[hw],flayRes)
-	print "\r" + ("\e[A\e[K") # Delete 1 line
-	puts "Homework #{hw} checked."
+	#puts "Checking homework #{hw} ..."
+	threads << Thread.new {
+		flayRes = `flay #{REPO + HOMEWORKS[hw].split('/').first + '/'} 2>/dev/null`
+		checkHomework(hw, HOMEWORKS[hw], DEADLINES[hw],flayRes)
+	}
+	#print "\r" + ("\e[A\e[K") # Delete 1 line
+	#puts "Homework #{hw} checked."
+end
+
+threads.each do |thread|
+	thread.join
 end
 
 $results  = $results.sort
@@ -70,3 +78,4 @@ executionTime = Time.now - startTime
 
 writer.write($results, FILENAME, ORDER, executionTime)
 puts "Results written in .#{ARGV[2]} file."
+puts "Runtime: #{executionTime}"

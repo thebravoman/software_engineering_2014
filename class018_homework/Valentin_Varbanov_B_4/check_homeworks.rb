@@ -73,8 +73,9 @@ def checkHomework(homework, path, deadline, flayResults)
 				end
 				$results[name][FLOG[homework]] = calculateFlog(file, homework)
 				$results[name][FLAY[homework]] = calculateFlay(flayResults, tmp)
-			if $timeSaver then times +=1 end
-			if times >= 2 then	break end
+				if $timeSaver then times +=1 end
+				if times >= 2 then	break end
 			end	
 	end
+	puts "Homework #{homework} checked."
 end

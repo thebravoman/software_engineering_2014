@@ -12,12 +12,12 @@ def initStudent()
 		tmp[hw] = 0
 	end
 	
-	FLOG.each do |flog, v|
-		tmp[flog] = 0
+	FLOG.each do |k, flog|
+		tmp[flog] = '-'
 	end
 	
-	FLAY.each do |flay, v|
-		tmp[flay] = 0
+	FLAY.each do |k, flay|
+		tmp[flay] = '-'
 	end
 	
 	return tmp
