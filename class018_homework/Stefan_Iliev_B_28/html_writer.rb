@@ -28,7 +28,7 @@ class HTMLWriter
 		homework_header = @@config["homeworks"]
 		flog_header = @@config["flog"]
 		flay_header = @@config["flay"]
-	
+		
 		html = File.open("results_Stefan_Iliev_B_28.html", "w")
 		html.puts("<!DOCTYPE html>")
 		html.puts("<html>")
@@ -43,23 +43,32 @@ class HTMLWriter
 			
 			counter = 1
 			homework_header.split("|").each do | header |
-			next if header == "-" 
-			counter += 1
+				if header == "-" 
+					counter += 1
+					next
+				end 
 				html.puts("			<td> #{hw_hash.values_at("homework_#{counter}").first} </td>")
+				counter += 1 
 			end 
 			
 			counter = 1
 			flog_header.split("|").each do | header |
-			next if header == "-"
-				counter += 1
+				if header == "-" 
+					counter += 1
+					next
+				end 
 				html.puts("			<td> #{hw_hash.values_at("flog_#{counter}").first} </td>")
+				counter += 1 
 			end 
 			
 			counter = 1
 			flay_header.split("|").each do | header |
-			next if header == "-"
-				counter += 1
+				if header == "-" 
+					counter += 1
+					next
+				end 
 				html.puts("			<td> #{hw_hash.values_at("flay_#{counter}").first} </td>")
+				counter += 1 
 			end 
 			html.puts("		</tr>")
 		end
