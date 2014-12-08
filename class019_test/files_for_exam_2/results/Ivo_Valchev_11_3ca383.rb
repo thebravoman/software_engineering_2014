@@ -10,7 +10,7 @@ Develop a program named FirstName_LastName_ClassNumber_3ca383.rb :D
 "Name1,
  Name2,
  ..."
- =end
+=end
 
 require_relative 'csv_writer'
 

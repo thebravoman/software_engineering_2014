@@ -17,8 +17,8 @@ fileN.rb,N",
 			:expected=>
 "never.rb,11
 forget.rb,16
-mlqko.rb,32
-nesquik.rb,96"
+32lines.rb,32
+sixtyfivelines.rb,96"
 		}
 
 		context1_2 = {
@@ -36,8 +36,8 @@ nesquik.rb,96"
 "<results>
 <never.rb>3</never.rb>
 <forget.rb>5</forget.rb>
-<mlqko.rb>15</mlqko.rb>
-<nesquik.rb>30</nesquik.rb>
+<32lines.rb>15</32lines.rb>
+<sixtyfivelines.rb>30</sixtyfivelines.rb>
 </results>"
 		}
 
@@ -49,7 +49,7 @@ nesquik.rb,96"
             :format_example=>
 "\"file1.rb\":9,\"file2.rb\":11,......",
 			:expected=>
-"\"never.rb\":6,\"forget.rb\":9,\"mlqko.rb\":27,\"nesquik.rb\":54"
+"\"never.rb\":6,\"forget.rb\":9,\"32lines.rb\":27,\"sixtyfivelines.rb\":54"
 		}
 
 		[context1_1,context1_2,context1_3]
