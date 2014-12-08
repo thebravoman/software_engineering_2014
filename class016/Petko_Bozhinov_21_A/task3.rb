@@ -2,6 +2,10 @@ require_relative 'task.rb'
 
 class Task3 < Task
 
+	def return_ext
+		return context1_1[:extension]
+	end
+
 	def init_contexts
 
 		context1_1 = {
@@ -9,6 +13,7 @@ class Task3 < Task
 			:which_to_sort => "first name",
 			:in_what_order => "ASC",
 			:output_format => "csv",
+			:extension => "csv",
 			:example_output => 
 "First_Name_5.rb
 			Gadno_Ime_10.rb",
@@ -17,7 +22,7 @@ class Task3 < Task
 "
 		}
 		
-		[context1_1,context1_2,context1_3,context1_4]
+		[context1_1]
 	end
 	
 	def initialize
