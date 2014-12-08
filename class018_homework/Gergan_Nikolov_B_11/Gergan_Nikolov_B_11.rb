@@ -5,25 +5,28 @@ require_relative "html_writer.rb"
 #require_relative "svg_writer.rb"
 require_relative "check_homeworks.rb"
 require_relative "other_functions.rb"
-######
-#
-#run: ruby script.rb /home/*user*/*repo*/ -o *fileformat*
-#
-######
 require 'yaml'
+######
+#
+#run: ruby script.rb /home/*user*/*repo*/ -o *fileformat* -n *number(optional)*
+#
+######
 startTime = Time.now
-HOMEWORKS = YAML.load_file('config-homeworks.yml')	
-								
-DEADLINES = YAML.load_file('config-deadlines.yml')
-					
-FLOG = YAML.load_file('config-flog.yml')
-						
-FLAY = YAML.load_file('config-flay.yml')
 
 REPO = ARGV[0]
-FILENAME = "results_Gergan_Nikolov_B_11"
+
+yaml = YAML.load_file(REPO + "class018_homework/Gergan_Nikolov_B_11/config.yml")
+
+HOMEWORKS = yaml["homeworks"]
+DEADLINES = yaml["deadlines"]
+FLOG = yaml["flog"]
+FLAY = yaml["flay"]
+FILENAME = yaml["filename"].to_s
+ORDER = yaml["order"]
+
 $results = Hash.new
 
+puts "Config loaded successfully."
 
 if ARGV[1] == "-o"
 	case ARGV[2]
@@ -40,18 +43,30 @@ if ARGV[1] == "-o"
 		else
 			abort "Cannot write in #{ARGV[2]}!"
 	end
+else
+	abort "Program executed with wrong arguments."
 end
 
+$timeSaver = false # Check only the first 2 programs
+
+if (ARGV[3] == "-n") && (ARGV[4].to_i != 0)
+	$timeSaver = true
+	puts "Time Saver - ON."
+else
+	puts "Time Saver - OFF."
+end
 
 HOMEWORKS.keys.each do |hw|
-	flayRes = `flay #{REPO + HOMEWORKS[hw].split('/').first + '/'}`
+	puts "Checking homework #{hw} ..."
+	flayRes = `flay #{REPO + HOMEWORKS[hw].split('/').first + '/'} 2>/dev/null`
 	checkHomework(hw, HOMEWORKS[hw], DEADLINES[hw],flayRes)
+	print "\r" + ("\e[A\e[K") # Delete 1 line
+	puts "Homework #{hw} checked."
 end
 
 $results  = $results.sort
 
 executionTime = Time.now - startTime
 
-
-writer.write($results, FILENAME, executionTime)
-
+writer.write($results, FILENAME, ORDER, executionTime)
+puts "Results written in .#{ARGV[2]} file."

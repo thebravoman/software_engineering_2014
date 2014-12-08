@@ -9,7 +9,10 @@ def checkEntryLevel(path, deadline)
 	
 	tmp = Hash.new
 	tmpOnTime = Hash.new
+	times = 0
 	Dir.glob(REPO + path).each do |file|
+		if $timeSaver then times +=1 end
+		if times >= 10 then	break end
 		name = file.split(/\//).last.split(/_/)
 		firstName = name[0].capitalize
 		lastName = name[1].capitalize
@@ -33,6 +36,7 @@ end
 
 def checkClass009(path, deadline)
 	names = parseNames(REPO + "class009_homework/project_to_names.csv")
+	times = 0
 	names.each do |name, team|
 		file = REPO + path + team + ".pdf"
 		file2 = REPO + path + team + '/' + team + ".pdf"
@@ -42,6 +46,8 @@ def checkClass009(path, deadline)
 			end
 			$results[name]["009"] += isOnTime(file, deadline)
 		end
+		if $timeSaver then times +=1 end
+		if times >= 2 then break end
 	end	
 end
 
@@ -52,6 +58,7 @@ def checkHomework(homework, path, deadline, flayResults)
 		when "009"
 			checkClass009(path, deadline)
 		else
+			times = 0
 			Dir.glob(REPO + path).each do |file|
 				name = file.split(/\//).last.split(/_/)
 				firstName = name[0].capitalize
@@ -66,6 +73,8 @@ def checkHomework(homework, path, deadline, flayResults)
 				end
 				$results[name][FLOG[homework]] = calculateFlog(file, homework)
 				$results[name][FLAY[homework]] = calculateFlay(flayResults, tmp)
+			if $timeSaver then times +=1 end
+			if times >= 2 then	break end
 			end	
 	end
 end
