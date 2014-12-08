@@ -1,5 +1,3 @@
-#require './statement.rb'
-
 class Task
 	
 	@template = ""
@@ -10,8 +8,6 @@ class Task
 	end
 	
 	def generate numbers
-		#number_distribution template
-		#generate2 @template
 		input = File.read(@template)
 		eruby = Erubis::Eruby.new(input)
 		context = @contexts.shuffle[0]
@@ -24,6 +20,5 @@ class Task
 		File.open("expects/#{context[:task_number]}.csv","w") do |file|
 			file.write(context[:expected])
 		end
-		# puts "end of generate"
 	end
 end

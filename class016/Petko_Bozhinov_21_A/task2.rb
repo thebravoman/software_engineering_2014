@@ -6,7 +6,6 @@ class Task2 < Task
 
 		context1_1 = {
 			:task_number=>"1",
-			:what_to_find=>"the students with 5 letters in the first name that are in both folders. A student is in both folders if it there is a file with the same First and Last Name. Digits might be different",
 			:which_to_sort => "Last name",
 			:sort_by => "f_length",
 			:which_name => "first",
@@ -26,7 +25,7 @@ class Task2 < Task
 "
 		}
 		
-		[context1_1,context1_2,context1_3]
+		[context1_1]
 	end
 	
 	def initialize

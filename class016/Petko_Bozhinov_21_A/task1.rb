@@ -39,7 +39,7 @@ class Task1 < Task
 "
 		}
 
-		[context1_1,context1_2,context1_3,context1_4]
+		[context1_1]
 	end
 	
 	def initialize
