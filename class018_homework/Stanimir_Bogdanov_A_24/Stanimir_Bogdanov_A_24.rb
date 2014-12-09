@@ -22,7 +22,7 @@ end
 require_relative "#{format.upcase}Writer"
 
 # --- -n option
-programs_to_check = 0
+programs_to_check = 100000000000 # long live logic
 if ARGV.include?('-n')
 	num_index = ARGV.index('-n') + 1
 	programs_to_check = (ARGV[num_index].nil?) ? 2 : ARGV[num_index]
