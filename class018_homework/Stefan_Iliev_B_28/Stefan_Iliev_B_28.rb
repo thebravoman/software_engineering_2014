@@ -79,6 +79,7 @@
 	translate_files = config["translate_files"]
 	flog_header = config["headers"]["flog"]
 	flay_header = config["headers"]["flay"]
+	flog_single = config["flog_single"]
 	flog_threads = config["flog_threads"]
 	flay_threads = config["flog_threads"]
 	
@@ -154,13 +155,16 @@
 					students[student_name] = CreateStudent(homeworks_count) if students[student_name] == nil
 					students = writeResult(students,student_name,count,result)
 				end 
-				
+				old_file_path = file_path
+				if flog_single["hw_#{count}"] == nil
+					file_path = file_path.chomp(file_path.split("/").last)
+				end 
 				if flog_header.split("|")[count-1] != "-"
 					flog_queue << "#{student_name}|||S|||flog_#{count}|||S|||flog #{file_path}"
 				end
 
 				if flay_header.split("|")[count-1] != "-"
-					flay_queue << "#{student_name}|||S|||flay_#{count}|||S|||flay #{file_path} |grep #{student_name} |wc -l" 
+					flay_queue << "#{student_name}|||S|||flay_#{count}|||S|||flay #{old_file_path} |grep #{student_name} |wc -l" 
 				end
 				loop_break -= 1
 				if loop_break == 0

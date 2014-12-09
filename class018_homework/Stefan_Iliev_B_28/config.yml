@@ -45,6 +45,12 @@ file_count:
 
 translate_files:
  hw5: "/class009_homework/project_to_names.csv"
+ 
+flog_single:
+ hw_2: 1
+ hw_3: 1
+ hw_4: 1
+ hw_12: 1 
 
 headers:
  homeworks: "VH|002|003|004|009|012|014|015|017-1|017-2|018"
