@@ -23,12 +23,14 @@ def write(hash)
 	html.close
 end
 
-config_file = YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["good"]
 
-Dir.glob(ARGV[0] + YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["dir_results"][0]) do |res_file|
+#config_file = YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["good"]
+
+#Dir.glob(ARGV[0] + YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["dir_results"][0]) do |res_file|
+Dir.glob(ARGV[0] + "/class019_test/files_for_exam_2/results/*_*_*_*.rb") do |res_file|
 	names = res_file.split(/\//).last.split(".").first.split(/_/)	
 	next if names[3] == nil
-	
+=begin	
 	count = 0
 	data = ""
 	fixture = ""
@@ -65,11 +67,14 @@ Dir.glob(ARGV[0] + YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["dir_result
 		buffer_res = `cat #{ARGV[0]}/#{YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["dir_results"][0]}/results.csv`
 		`rm #{ARGV[0]}/#{YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["dir_results"][0]}/results.csv`
 	end
-	Dir.glob(ARGV[0] + YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["dir_expects"][0]) do |exp_file|
+=end
+	buffer_res = " "
+#	Dir.glob(ARGV[0] + YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["dir_expects"][0]) do |exp_file|
+	Dir.glob(ARGV[0] + "/class019_test/files_for_exam_2/expects/*.*") do |exp_file|
 		expects_for_file = exp_file.split("/").last 
 		expects = expects_for_file.split(".").first
 		if  names[3] == expects
-			buffer = `cat #{expects_for_file}`		
+			buffer_ex = `cat #{exp_file}`		
 			hash[names[0] + " " + names[1]] = 0 			 
 			hash[names[0] + " " + names[1]] = 1 if buffer_ex == buffer_res
 		end
