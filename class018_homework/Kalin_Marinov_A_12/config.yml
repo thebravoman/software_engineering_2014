@@ -16,3 +16,6 @@ folders:
  "/class014_homework/*/": "1415858400"
  "/class017_homework/homework1/*_*_*_*.rb": "1417543200" 
  "/class017_homework/homework2/*/": "1417543200"
+
+pdf_check: 4
+zero_level_check: 0
