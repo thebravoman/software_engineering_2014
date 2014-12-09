@@ -1,6 +1,7 @@
 	require 'yaml'
 	require 'thread'
 	require 'shellwords'
+	require 'open3'
 	require_relative "git_time_checker.rb"
 	require_relative "writer.rb"
 	
@@ -35,15 +36,29 @@
 	end 
 	
 	def flog_step(flog_)
-		result_ = `#{flog_.last}`.split("\n").first.to_i
+		stdin,stdout,stderr = Open3.popen3("#{flog_.last}")
+		result_ = stdout.read.split("\n").first.to_i
+		stdin.close
+		stderr.close
+		stdout.close 
 		return "#{result_}|#{flog_[0]}|#{flog_[1]}"
 	end 
 	def flay_step(flay_) 
-		result_ = `#{flay_.last}`.to_i
+		stdin,stdout,stderr = Open3.popen3("#{flay_.last}")
+		result_ = stdout.read.to_i
+		stdin.close
+		stderr.close
+		stdout.close 
 		return "#{result_}|#{flay_[0]}|#{flay_[1]}"
 	end 
+	def clearBuffer(prev_output_length) 
+		prev_output_length.times { print "\b" }
+	end
+	def deleteSymbols(symbols) 
+		symbols.times { print " " }
+	end 
 	
-	relative_dir = ARGV.shift	
+	relative_dir = ARGV.shift	|| "Error"
 	gitLog = GitTimeChecker.new
 	students = Hash.new
 	threads_arr = Array.new
@@ -67,6 +82,11 @@
 	flog_threads = config["flog_threads"]
 	flay_threads = config["flog_threads"]
 	
+	if relative_dir == "Error"
+		puts "Pass the path to the repository to be checked as argument.\n\nSpecify writer type with -o TYPE\n\nWriter types:JSON,HTML,XML,CSV,SVG\n\nTurn time saver on with -n NUMBER\n\n"
+		exit()
+	end 
+	
 	flog_threads.times do 
 		threads_arr << Thread.new {
 			while !program_finished do 
@@ -75,6 +95,7 @@
 			end 
 		}
 	end 
+	puts "Launched #{flog_threads} flog threads."
 	
 	flay_threads.times do
 		threads_arr << flay_t = Thread.new {
@@ -84,16 +105,27 @@
 			end 
 		}
 	end 
+	
+	puts "Launched #{flay_threads} flay threads."
 
 	homeworks_to_check = -1
 	if (homeworks_to_check = ARGV[(ARGV.index("-n") || -10) + 1]) == -9 #nil crash workaround. Will go here if it is nil.
 		homeworks_to_check = -1
+		puts "Time saver is off."
 	end 
 	
+	
+	prev_output_length = 0;
 	for count in 1..homeworks_count
 			directory = relative_dir + directories["dir#{count}"]
-			p directory
+			output = "Queueing directory: #{directory}"
+			
+			print "\r#{output}"
+			deleteSymbols(prev_output_length - (prev_output_length = output.length))
+
+			
 			loop_break = homeworks_to_check.to_i
+			
 			Dir.glob(directory).each do | file_path| 
 				
 				full_file_name = file_path.split("/").last.split(".").first 
@@ -144,22 +176,34 @@
 				end 
 			end 
 	end
+	prev_output_length = 0
+	print "\n"
 	while !flog_queue.empty?() 
 		flog_ = flog_queue.pop().split("|||S|||")
 		write_queue << flog_step(flog_)
+		print "\r" 
+		output = "Homeworks remaining: #{flog_queue.length + flay_queue.length}"
+		print output
+		deleteSymbols(prev_output_length - (prev_output_length = output.length))
 	end
+	
 	while !flay_queue.empty?() 
 		flay_ = flay_queue.pop().split("|||S|||")
 		write_queue << flay_step(flay_) 
+		print "\r" 
+		output = "Homeworks remaining: #{flay_queue.length}"
+		print output
+		deleteSymbols(prev_output_length - (prev_output_length = output.length))
 	end 
+	print "\n"
 	program_finished = true 
-	p "Threads Synchronized."
+	puts "Threads Synchronized."
 	
 	while !write_queue.empty?() 
 		write_ = write_queue.pop().split("|")
 		students[write_[1]][write_[2]] = write_[0]
 	end 
 	students = Hash[students.sort_by{|k,v| k}]
-	p "Runtime: #{Time.now - time}"
-	ResultWriter.write( ARGV[ARGV.index("-o") + 1],students )
+	puts "Runtime: #{Time.now - time} sec."
+	ResultWriter.write( ARGV[(ARGV.index("-o") || 0) + 1],students )
 	

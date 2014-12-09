@@ -1,4 +1,5 @@
 require 'date'
+require 'shellwords'
 
 class GitTimeChecker
 
@@ -10,7 +11,11 @@ class GitTimeChecker
 		#Equalize timeLimit to match requirement in case it's not passed as required. (YY:MM:DD:HH:MM) (Two symbols per ':' after the first ':')#
 
 		dir = File.expand_path(File.dirname(__FILE__))
-		output = `git log "#{dir}/#{filePath}"`
+		stdin,stdout,stderr = Open3.popen3("git log '#{dir}/#{filePath.shellescape}'")
+		output = stdout.read
+		stdin.close
+		stderr.close
+		stdout.close 
 		commitTimes = Array.new() 
 		output.split("\n").each do |new_line|
 			if new_line.include?("Date:")
