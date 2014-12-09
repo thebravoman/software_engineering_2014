@@ -42,7 +42,7 @@ end
 
 names = set_output_hash names, size_prog
 
-$folder_names.first = (Time.now - starting_time).to_i
+$folder_names[0] = (Time.now - starting_time).to_i
 
 writer = option_picked
 writer.write(names, get_info["result_file_name"], $folder_names)

@@ -29,7 +29,6 @@ def pdf_checking(full_pdf_name, names)
 		names[info] = make_array if names[info].nil?
 		names[info][4] = check_date($folders[4].last, full_pdf_name)
 	end
-	return ""
 end
 
 def zero_level_checking(short_name, program_name, names)
