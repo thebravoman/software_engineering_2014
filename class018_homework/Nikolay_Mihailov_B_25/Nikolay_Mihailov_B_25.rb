@@ -10,6 +10,11 @@ classes = file_content= YAML.load_file("info.yml")["classes"]
 result = Hash.new{|hash, key| hash[key] = YAML.load_file("info.yml")["result_info"]}
 team_names = Array.new
 #ruby Nikolay_Mihailov_25.rb ../../ -o html
+if ARGV[0] == nil || ARGV[1] == nil || ARGV[2] == nil || ARGV[0] == "-help"
+	puts " ARGV[0] --> repo * \n ARGV[1] --> -o * \n ARGV[2] --> file_format * \n ARGV[3] --> -n \n ARGV[4] --> students_number "
+	abort()
+end
+
 def homework_chek (directory_name,log_info,result,folder)
 	program_num = 1 #for VH
 	name_before = "" #for VH
@@ -61,16 +66,16 @@ def homework_chek_009 (directory_name,log_info,result,folder)
 end
 
 $stderr.reopen("/dev/null", "w")
-
+puts "Nikolay Mihailov productions"
 music = YAML.load_file("info.yml")["music"]
 if music[0] == "YES"
 	installed = `apt-cache policy vlc`
 	if !installed.include? "none"
+		puts "Music-ON"
 		system( "cvlc #{music[1]} -q &" )  	
 	else
-		puts "For sound you shold install VLC player"
+		puts "Music_ON BUT: FOR SOUND YOU SHOULD INSTALL \"VLC player\" --> http://computernetworkingnotes.com/ubuntu-12-04-tips-and-tricks/how-to-install-vlc-in-ubuntu.html "
 	end	
-	puts "Music-ON" # you should install VLC player for this option
 else 
 	puts "Music-OFF --> to turn it ON just change info.yml music:\"NO\" to \"YES\" "
 end
