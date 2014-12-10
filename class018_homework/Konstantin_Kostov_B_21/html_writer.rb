@@ -1,6 +1,6 @@
 class HTMLWriter
 	def write(result,classes,folder)
-		html = File.open("results_Nikolay_Mihailov_B_25.html", "w")
+		html = File.open("results_Konstantin_Kostov_B_21.html", "w")
 		html.puts("<!DOCTYPE html>")
 		html.puts("<html>")
 		html.puts("	<table border=\"1\" style=\"width:80%\">")
