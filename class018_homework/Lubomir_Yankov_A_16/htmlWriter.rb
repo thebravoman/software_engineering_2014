@@ -3,7 +3,7 @@ class HTMLWriter
 	def write(results)
 	
 		File.open("results_Lubomir_Yankov_A_16.html", "w") do |f|
-		
+			
 			f.puts("<!DOCTYPE html>")
 			
 			f.puts("<html>\n")
@@ -18,7 +18,7 @@ class HTMLWriter
 				
 				f.puts("<tr>\n")
 				f.puts("<td>Name</td>\n")
-				results.each do |key, value|
+				results.sort.each do |key, value|
 				
 					value.each do |k, v|
 				
@@ -28,7 +28,7 @@ class HTMLWriter
 					break
 				end
 				
-				results.each do |key, value|
+				results.sort.each do |key, value|
 				
 					f.puts("<tr>\n")
 					f.puts("<td>#{key}</td>\n")

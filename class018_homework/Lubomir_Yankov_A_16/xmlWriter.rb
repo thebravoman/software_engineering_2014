@@ -7,7 +7,7 @@ class XMLWriter
 			f.puts("<?xml version=\"1.0\" encoding=\"UTF-8\"?>")
 			f.puts("<students>\n")
 			
-			results.each do |key, value|
+			results.sort.each do |key, value|
 			
 				f.puts("<name>#{key}</name>\n")
 				

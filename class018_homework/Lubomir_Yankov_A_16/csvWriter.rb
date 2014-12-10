@@ -8,7 +8,7 @@ class CSVWriter
 				break
 			end
 			
-			results.each_key do |key|
+			results.keys.sort.each do |key|
 				csv << [key,results[key].values].flatten
 			end
 		end
