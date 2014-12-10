@@ -1,103 +1,56 @@
-require 'yaml'
-require_relative "csv_writer.rb"
-require_relative "xml_writer.rb"
-require_relative "json_writer.rb"
-require_relative "html_writer.rb"
-require_relative "svg_writer.rb"
-
-@counter = 0
-time_start = Time.now
-repoPath = ARGV[0]
-classes = YAML.load_file("config.yml").keys
-results = Hash.new{|h, k| h[k] = YAML.load_file("config.yml")}
-homeworks = YAML.load_file("homeworks.yml")
-def getName(path)
-	filename = path.split("/").last.split("_")
-	first_name = filename.first
-	last_name = filename[1]
-	return first_name.capitalize + '_' + last_name.capitalize
-end
-
-def onTime(path, deadline)
-	return `git log #{deadline} #{path}`.empty? ? 1 : 2
-end
-
-def n_checked
-	if ARGV[3] == "-n"
-		if @counter == ARGV[4].to_i
-			@counter = 0
-			return true
+require 'csv'
+@results=Hash.new{|hash, key| hash[key] = []}	
+@flog_flay=Hash.new{|key,value| key[value]=[]}
+start=Time.now
+def homework (location,time,index,otherindex) 
+	Dir.glob("#{ARGV[0]}""#{location}""/*.*") do |script_file|
+		#puts script_file
+		first_name=script_file.split("/").last.split(".").first.split("_")[0]
+		last_name=script_file.split("/").last.split(".").first.split("_")[1]
+		fullname="#{first_name}" + " " + "#{last_name}"
+	  	commit = `git log #{script_file}`
+		if (commit==(`git log --until=#{time} #{script_file}`))
+			score=2
+	        elsif
+			 (commit!=(`git log --until=#{time} #{script_file}`))
+	 		score=1
+			
+		else	 		
+			score=0						
+	   	
 		end
-		@counter += 1
-		return false
-	end
-	return false
-end
-
-homeworks.keys.each do |hw|
-	Dir.glob("#{repoPath}/#{homeworks[hw].first}") do |path|
-		break if n_checked
-		student_name = getName(path)
-		results[student_name][hw] = onTime(path, homeworks[hw][1])	
-		results[student_name]["g#{hw.tr("0", '')}"] = `flog #{path}`.to_i
-		results[student_name]["y#{hw.tr("0", '')}"] = `flay #{path} | grep #{student_name} | wc -l`.to_i	
-	end	
-end
-
-Dir.glob("#{repoPath}/vhodno_nivo/**/*_*_*.*") do |path|
-	break if n_checked	
-	student_name = getName(path)
-	if onTime(path, "--until=17.09.2014:20:00") == 2
-		results[student_name]["VH"] += 1
-	else
-		results[student_name]["VH"] += 101
-	end
-end
-
-results.keys.each do |student|
-	if results[student]["VH"] % 100 >= 3
-		if results[student]["VH"] < 100
-			results[student]["VH"] = 2
-		else
-			results[student]["VH"] = 1
+		flog = `flog #{script_file}`
+		flog=flog.split(":").first
+		@results["#{fullname}"][index] = score
+	  	@flog_flay["#{fullname}"][otherindex] = flog
+		
 		end
-	else
-		results[student]["VH"] = 0
+	
+		@results.keys.each do |key|
+ 		for i in 0..4
+ 		if @results["#{key}"][i] == nil
+ 		@results["#{key}"][i] = "0"
+			
+			end
+ 		end
 	end
 end
-
-teams = Hash.new{|h, k| h[k] = Array.new}
-content = File.read("#{repoPath}/class009_homework/project_to_names.csv").split("\n")
-content.each do |line|
-	team_name = line.split(",").first
-	student = line.split(",")[1] 
-	student = student.split(" ").first + "_" + student.split(" ")[1] if student != nil
-	teams[team_name] << student
-end
-
-Dir.glob("#{repoPath}/class009_homework/**/*.pdf") do |path|
-	break if n_checked	
-	team = path.split("/").last.split(".").first
-	teams[team].each do |student|
-		results[student]["009"] = onTime(path, "--until=27.10.2014:20:00")
+homework "class002_homework/","Sep--22--2014--20:00:00",0,0
+homework "class003_homework/","Sep--24--2014--20:00:00",1,1
+homework "class004/","Sep--29--2014--20:00:00",2,2
+homework "class012_homework/","Nov--10--2014--20:00:00",3,3
+homework "class014_homework/","Nov--13--2014--20:00:00",4,4
+#puts @results
+#puts @flog_flay
+	CSV.open("Hristiyan_Velyakov_28.csv", "w") do |csv|
+		@results.keys.each do |element1|
+		csv << [element1,@results["#{element1}"]].flatten
+	 	end
+	@flog_flay.keys.each do |element2|
+		csv << [element2,@flog_flay["#{element2}"]].flatten
+		
 	end
 end	
-
-puts "Time: #{Time.now - time_start}"
-if ARGV[1] == "-o"
-	case ARGV[2]
-	when "csv"
-		writer = CSVWriter.new
-	when "xml"
-		writer = XMLWriter.new
-	when "json"
-		writer = JSONWriter.new
-	when "html"
-		writer = HTMLWriter.new
-	when "svg"
-		writer = SVGWriter.new
-	else
-		abort("Invalid output type!")
-	end
-	writer.write(results, classes)
-end
+puts Time.now-start
+		
+			
