@@ -9,7 +9,7 @@ time_start=Time.now
 classes = file_content= YAML.load_file("info.yml")["classes"]
 result = Hash.new{|hash, key| hash[key] = YAML.load_file("info.yml")["result_info"]}
 team_names = Array.new
-
+#ruby Nikolay_Mihailov_25.rb ../../ -o html
 def homework_chek (directory_name,log_info,result,folder)
 	program_num = 1 #for VH
 	name_before = "" #for VH
@@ -61,6 +61,20 @@ def homework_chek_009 (directory_name,log_info,result,folder)
 end
 
 $stderr.reopen("/dev/null", "w")
+
+music = YAML.load_file("info.yml")["music"]
+if music[0] == "YES"
+	installed = `apt-cache policy vlc`
+	if !installed.include? "none"
+		system( "cvlc #{music[1]} -q &" )  	
+	else
+		puts "For sound you shold install VLC player"
+	end	
+	puts "Music-ON" # you should install VLC player for this option
+else 
+	puts "Music-OFF --> to turn it ON just change info.yml music:\"NO\" to \"YES\" "
+end
+
 folder = 0
 YAML.load_file("info.yml")["homeworks"].each do |yaml|
 	puts "Working on folder: ", yaml[0]
@@ -73,6 +87,7 @@ YAML.load_file("info.yml")["homeworks"].each do |yaml|
 	end 					
 end
 puts "Time: ",Time.now - time_start
+`killall vlc`
 if ARGV[1] == "-o"
 	case ARGV[2]
 		when "csv"
