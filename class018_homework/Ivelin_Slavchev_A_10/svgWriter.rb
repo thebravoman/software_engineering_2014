@@ -21,7 +21,7 @@ class Drawer
 		r.attributes["y"] = self.y-h
 		r.attributes["stroke"] = "black"
 		r.attributes["stroke-width"] = "4"
-		r.attributes["fill"] = "#{col}"	
+		r.attributes["fill"] = "#{col}"
 	end
 
 	def start		
@@ -48,7 +48,7 @@ class Drawer
 	  l.attributes["style"] = "stroke:black;stroke-width:5"	
 	end
 	
-	def cs	
+	def cs		
 		line(0,0,0,-450)
 		line(1300,0,0,0)	
 	end
@@ -62,8 +62,7 @@ class Drawer
 	def write (results, end_time)	
 		vh = 0; c2 = 0; c3 = 0; c4 = 0; c9 = 0; c12 = 0; c14 = 0; c15 = 0; c171 = 0; c172 = 0;
 		g2 = 0; g3 = 0; g4 = 0; g12 = 0; g14 = 0; g15 = 0; g171 = 0; g172 = 0;
-		y2 = 0; y3 = 0; y4 = 0; y12 = 0; y14 = 0; y15 = 0; y171 = 0; y172 = 0;
-		
+		y2 = 0; y3 = 0; y4 = 0; y12 = 0; y14 = 0; y15 = 0; y171 = 0; y172 = 0;		
 		results.keys.each do |name|
 			vh += results[name][0].to_i
 			c2 += results[name][1].to_i
@@ -92,7 +91,6 @@ class Drawer
 			y171 += results[name][24].to_i
 			y172 += results[name][25].to_i
 		end
-
 		vh = vh * 3
 		c2 = c2 * 3
 		c3 = c3 * 3
@@ -150,7 +148,8 @@ class Drawer
 		drawer.text "y14", 1108, -20, 20
 		drawer.text "y15", 1158, -20, 20
 		drawer.text "y171", 1208, -20, 20
-		drawer.text "y172", 1258, -20, 20		
+		drawer.text "y172", 1258, -20, 20
+		
 		drawer.rect 30, vh, 15, "orange"
 		drawer.rect 30, c2, 55, "yellow"
 		drawer.rect 30, c3, 105, "orange"
@@ -160,7 +159,7 @@ class Drawer
 		drawer.rect 30, c14, 305, "orange"
 		drawer.rect 30, c15, 355, "yellow"
 		drawer.rect 30, c171, 405, "orange"
-		drawer.rect 30, c172, 455, "yellow"	
+		drawer.rect 30, c172, 455, "yellow"		
 		drawer.rect 30, g2, 505, "orange"
 		drawer.rect 30, g3, 555, "yellow"
 		drawer.rect 30, g4, 605, "orange"
@@ -177,6 +176,24 @@ class Drawer
 		drawer.rect 30, y15, 1158, "orange"
 		drawer.rect 30, y171, 1208, "yellow"
 		drawer.rect 30, y172, 1258, "orange"
+		
+		# drawer.text "#{(vh/3).to_s}", 20, 20, 14
+		# drawer.text "#{(c2/3).to_s}", 60, 20, 14
+		# drawer.text "#{(c3/3).to_s}", 100, 20, 14
+		# drawer.text "#{(c4/3).to_s}", 140, 20, 14
+		# drawer.text "#{(c9/3).to_s}", 180, 20, 14
+		# drawer.text "#{(c12/3).to_s}", 220, 20, 14
+		# drawer.text "#{(g2*15).to_s}", 256, 20, 14
+		# drawer.text "#{(g3*15).to_s}", 296, 20, 14
+		# drawer.text "#{(g4*15).to_s}", 336, 20, 14
+		# drawer.text "#{(g12*35).to_s}", 376, 20, 14
+		# drawer.text "#{(g14*35).to_s}", 416, 20, 14
+		# drawer.text "#{(y2).to_s}", 462, 20, 14
+		# drawer.text "#{(y3).to_s}", 502, 20, 14
+		# drawer.text "#{(y4).to_s}", 542, 20, 14
+		# drawer.text "#{(y12*2).to_s}", 582, 20, 14
+		# drawer.text "#{(y14).to_s}", 622, 20, 14
+
 		drawer.finish
 	end
 
