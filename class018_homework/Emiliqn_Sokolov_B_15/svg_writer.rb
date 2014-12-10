@@ -1,7 +1,7 @@
 require 'rexml/document'
 
 class SVGWriter
-	def write p, end_time, thing
+	def write p, end_time
 		def initTable(parent)
 			parent.puts("<text x=\"0\" y=\"9\" fill=\"white\">VH</text>")
 			parent.puts("<text x=\"0\" y=\"20\" fill=\"white\">002</text>")
