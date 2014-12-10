@@ -44,7 +44,7 @@ else
 	puts "The script runned successfully and #{output_format} output format selected."
 end
 
-$stderr.reopen("err.txt", "w")
+$stderr.reopen("/dev/null", "w")
 
 puts "Starting thread for \"#{repoPath}vhodno_nivo/\" ..."
 threads << Thread.new {
@@ -110,7 +110,6 @@ end
 
 threads.each {|thread| thread.join }
 
-`rm err.txt`
 time = Time.now - time
 puts "Script executed for #{time}s."
 if ARGV[1] == "-o"
@@ -128,9 +127,5 @@ if ARGV[1] == "-o"
 	else
 		abort("Invalid output type!")
 	end
-	if output_format != "csv"
-		writer.write(results, classes)
-	else
-		writer.write(results,classes, time)
-	end
+	writer.write(results,classes, time)
 end

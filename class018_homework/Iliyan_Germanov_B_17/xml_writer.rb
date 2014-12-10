@@ -1,7 +1,8 @@
 class XMLWriter
-	def write(results, classes)
+	def write(results, classes, time)
 		xml = File.open("results_Iliyan_Germanov_B_17.xml", "w")
 		xml.puts("<results>")
+		xml.puts("\t<time> #{time} </time>")
 		results.keys.sort.each do |key|	
 			xml.puts("\t<student>")
 			xml.puts("\t\t<FirstName> #{key.split("_").first} </FirstName>")
