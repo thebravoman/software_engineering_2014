@@ -1,6 +1,5 @@
 # encoding: utf-8
 require 'yaml'
-
 require_relative 'write_csv.rb'
 require_relative 'write_html.rb'
 require_relative 'write_svg.rb'
@@ -9,15 +8,17 @@ require_relative 'write_json.rb'
 
 start = Time.now
 
-softeng = ARGV[0]
-if softeng[-1] != "/"
-	softeng += "/"
+if ARGV[0] == nil
+	puts "Expected: ruby Kaloyan_Nikov_B_19.rb {path to repo} -o {output format}"
+	exit 1
+end
+
+if ARGV[0][-1] != "/"
+	ARGV[0] += "/"
 end
 
 n = -1
-if ARGV[3] == "-n"
-	n = ARGV[4].to_i
-end
+n = ARGV[4].to_i if ARGV[3] == "-n"
 
 directories = YAML.load_file("config.yaml")
 
@@ -25,7 +26,7 @@ results = Hash.new{|hash,key| hash[key] = Array.new(directories.size) {0}}
 vhodno = Hash.new{|hash,key| hash[key] = [0,0]}
 class009 = Hash.new{|hash,key| hash[key] = []}
 
-File.open("#{softeng}class009_homework/project_to_names.csv", "r").each_line{ |line|
+File.open("#{ARGV[0]}class009_homework/project_to_names.csv", "r").each_line{ |line|
 	class009[line.chomp.split(",")[0]] << line.chomp.split(",")[1]
 }
 class009.delete("Project Name")
@@ -34,10 +35,11 @@ i = 0 #position in results hash
 fl = directories.size #position for flog and flay
 
 directories.each do |dir, directory_and_deadline|
+	puts "Checking #{directory_and_deadline[0].split("/").first} (#{i+1}/#{directories.length})"
 	count = 0
 	directory = directory_and_deadline[0]
 	deadline = directory_and_deadline[1]
-	Dir.glob("#{softeng}#{directory}").each do |script_file|
+	Dir.glob("#{ARGV[0]}#{directory}").each do |script_file|
 		break if count == n
 		count += 1
 		first_name = script_file.split(/\//).last.split("_").first.capitalize
@@ -48,7 +50,7 @@ directories.each do |dir, directory_and_deadline|
 		end
 		
 		result = `git log --until=#{deadline} #{script_file.gsub(/(?=[ -'])/, '\\')}`
-		if  result != "" and result != nil
+		if result != "" and result != nil
 			if dir == 0
 				vhodno["#{name}"][0] += 1
 				if vhodno["#{name}"][0] != 3
@@ -81,8 +83,8 @@ directories.each do |dir, directory_and_deadline|
 		end
 		
 		if dir != 0 and dir != 9 and dir != 172
-			flog = `flog #{script_file} --continue`
-			flay = `flay #{script_file} | grep #{script_file.split(/\//).last.split("_").first.capitalize} | wc -l`
+			flog = `flog #{script_file} --continue 2>/dev/null`
+			flay = `flay #{script_file} 2>/dev/null | grep #{script_file.split(/\//).last.split("_").first.capitalize} | wc -l`
 			if flog != "" then
 				flog = flog.split(/\n/).first.split(/:/).first.to_f
 			end
@@ -98,8 +100,7 @@ directories.each do |dir, directory_and_deadline|
 	end
 end
 
-finish = Time.now
-time = (finish - start).to_f
+time = (Time.now - start).to_f
 result_name = "results_Kaloyan_Nikov_B_19"
 results = results.sort
 
