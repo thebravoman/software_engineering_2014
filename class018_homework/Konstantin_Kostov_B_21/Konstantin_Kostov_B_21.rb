@@ -9,7 +9,7 @@ time_start=Time.now
 classes = file_content= YAML.load_file("info.yml")["classes"]
 result = Hash.new{|hash, key| hash[key] = YAML.load_file("info.yml")["result_info"]}
 team_names = Array.new
-
+#ruby Nikolay_Mihailov_25.rb ../../ -o html
 def homework_chek (directory_name,log_info,result,folder)
 	program_num = 1 #for VH
 	name_before = "" #for VH
@@ -28,10 +28,10 @@ def homework_chek (directory_name,log_info,result,folder)
 		name_before = name #for VH
 		program_num = 1 if program_num == 3 #for VH
 		next if folder == 0 || folder == 10  	
-		file_folder = file
-		file_folder = file.chomp("#{file.split(/\//).last}") if folder == 14 || folder == 17 || folder == 23 || folder == 26
-		result[name][folder + 9] = `flog #{file_folder}`.to_i
-		result[name][folder + 17] = `flay #{file_folder}`.to_i
+		file_folder = file.chomp("#{file.split(/\//).last}") 
+		file_folder = file if folder == 1 || folder == 4 || folder == 7 || folder == 11 || folder == 20
+		result[name][folder + 1] = `flog #{file_folder}`.to_i
+		result[name][folder + 2] = `flay #{file_folder}`.to_i
 	end
 	return result
 end
@@ -60,17 +60,34 @@ def homework_chek_009 (directory_name,log_info,result,folder)
 	return result
 end
 
+$stderr.reopen("/dev/null", "w")
+
+music = YAML.load_file("info.yml")["music"]
+if music[0] == "YES"
+	installed = `apt-cache policy vlc`
+	if !installed.include? "none"
+		system( "cvlc #{music[1]} -q &" )  	
+	else
+		puts "For sound you shold install VLC player"
+	end	
+	puts "Music-ON" # you should install VLC player for this option
+else 
+	puts "Music-OFF --> to turn it ON just change info.yml music:\"NO\" to \"YES\" "
+end
+
 folder = 0
 YAML.load_file("info.yml")["homeworks"].each do |yaml|
+	puts "Working on folder: ", yaml[0]
 	result = homework_chek_009(yaml[0],yaml[1],result,folder) if folder == 10
 	result = homework_chek(yaml[0],yaml[1],result,folder) if folder !=10	
-	if folder == 0 || folder == 10 
-		folder +=1
-	else 
-		folder +=3				
-	end
+	if folder == 0 || folder == 10
+		folder +=1 
+	else
+		folder +=3
+	end 					
 end
-puts Time.now - time_start
+puts "Time: ",Time.now - time_start
+`killall vlc`
 if ARGV[1] == "-o"
 	case ARGV[2]
 		when "csv"
