@@ -6,7 +6,7 @@ require_relative 'html_writer.rb'
 require_relative 'xml_writer.rb'
 require_relative 'svg_writer.rb'
 
-# ruby Veselina_Kolova_B_8.rb Repository -o FileFormat -n Number(optional)
+# ruby Atanaska_Ivancheva_B_1.rb Repository -o FileFormat -n Number(optional)
 
 @currentDirectory = Dir.getwd
 @results = Hash.new
