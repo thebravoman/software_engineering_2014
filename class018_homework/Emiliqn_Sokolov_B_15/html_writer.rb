@@ -1,6 +1,6 @@
 
 class HTMLWriter
-	def write result, end_time
+	def write result, end_time, thing
 		File.open("results_Emiliqn_Sokolov_B_15.html","w") do |file|
 			file.puts "<html>"
 			file.puts "<head></head>"
@@ -11,31 +11,10 @@ class HTMLWriter
 			file.puts "\t\t<th></th>"
 			file.puts "\t\t<th>#{end_time}</th>"
 			file.puts "\t\t<th></th>"
-			file.puts "\t\t<th>VH</th>"
-			file.puts "\t\t<th>002</th>"
-			file.puts "\t\t<th>003</th>"
-			file.puts "\t\t<th>004</th>"
-			file.puts "\t\t<th>009</th>"
-			file.puts "\t\t<th>012</th>"
-			file.puts "\t\t<th>014</th>"
-			file.puts "\t\t<th>017/1</th>"
-			file.puts "\t\t<th>017/2</th>"
-			file.puts "\t\t<th>g2</th>"
-			file.puts "\t\t<th>g3</th>"
-			file.puts "\t\t<th>g4</th>"
-			file.puts "\t\t<th>g12</th>"
-			file.puts "\t\t<th>g14</th>"
-			file.puts "\t\t<th>g17/1</th>"
-			file.puts "\t\t<th>g17/2</th>"
-			file.puts "\t\t<th>y2</th>"
-			file.puts "\t\t<th>y3</th>"
-			file.puts "\t\t<th>y4</th>"
-			file.puts "\t\t<th>y12</th>"
-			file.puts "\t\t<th>y14</th>"
-			file.puts "\t\t<th>y17/1</th>"
-			file.puts "\t\t<th>y17/2</th>"
+			thing["print_stuff"]["ini_config"].keys.each do |asd|
+				file.puts "\t\t<th>#{asd}</th>"
+			end
 			file.puts "\t</tr>"
-			#file.puts "\t<tr>"
 			result.keys.each do |key|
 				file.puts "\t<tr>"
 				key_split = key.split(",")
