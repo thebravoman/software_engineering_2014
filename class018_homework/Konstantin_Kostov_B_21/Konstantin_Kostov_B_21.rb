@@ -9,7 +9,7 @@ time_start=Time.now
 classes = file_content= YAML.load_file("info.yml")["classes"]
 result = Hash.new{|hash, key| hash[key] = YAML.load_file("info.yml")["result_info"]}
 team_names = Array.new
-#ruby Nikolay_Mihailov_25.rb ../../ -o html
+
 def homework_chek (directory_name,log_info,result,folder)
 	program_num = 1 #for VH
 	name_before = "" #for VH
