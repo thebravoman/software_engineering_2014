@@ -1,1 +1,0 @@
-Task 1 does not generates  @rb_or_c variable. Task cannot be understood.
