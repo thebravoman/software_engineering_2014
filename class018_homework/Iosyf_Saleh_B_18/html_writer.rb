@@ -51,3 +51,5 @@ class HTMLWriter
 			file.puts "</body>"
 			file.puts "</html>"
 		end
+	end
+end
