@@ -40,9 +40,10 @@ homework "class003_homework/","Sep--24--2014--20:00:00",1,1
 homework "class004/","Sep--29--2014--20:00:00",2,2
 homework "class012_homework/","Nov--10--2014--20:00:00",3,3
 homework "class014_homework/","Nov--13--2014--20:00:00",4,4
+homework "class015_homework/","Nov--20--2014--06:00:00",5,5
 #puts @results
 #puts @flog_flay
-	CSV.open("Hristiyan_Velyakov_28.csv", "w") do |csv|
+	CSV.open("Veselin_Dechev_A_2.csv", "w") do |csv|
 		@results.keys.each do |element1|
 		csv << [element1,@results["#{element1}"]].flatten
 	 	end
