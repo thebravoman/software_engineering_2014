@@ -18,8 +18,8 @@ def get_fixture hash
 end
 		
 def find_expected_and_task script_file, fixture_to_result
-	expects_path = ARGV[0]+"expects/"
-	tasks_path = ARGV[0]+"tasks/"
+	expects_path = ARGV[0]+"/class019_test/files_for_exam_2/expects/"
+	tasks_path = ARGV[0]+"/class019_test/files_for_exam_2/tests/"
 	begin
 		hex = script_file.split("/").last.split('_')[3].split('.')[0]
 		number = script_file.split("/").last.split('_')[2]
@@ -39,7 +39,7 @@ hash_to_fix["../"+ARGV[0]+"/class016/Radoslav_Kostadinov_22_A/fixture/"] = ["b12
 hash_to_fix["../"+ARGV[0]+"/class016/Moreti_Angelov_19_A/fixture/"]  = ["be4045", "5fcdeb", "ad735a", "5b868a", "fcb67d"]
 results = Hash.new
 count =0
-results_path =ARGV[0]+"results/*.rb"
+results_path =ARGV[0]+"class019_test/files_for_exam_2/results/*.rb"
 Dir.glob(results_path).each do |script_file|
 
 	arg = get_fixture hash_to_fix
