@@ -1,7 +1,7 @@
 
 class HTMLWriter
 	def write result, end_time, thing
-		File.open("results_Iosyf_Saleh_B_18.html","w") do |file|
+		File.open("results_Martin_Grigorov_B_23.html","w") do |file|
 			file.puts "<html>"
 			file.puts "<head></head>"
 			file.puts "<body>"
