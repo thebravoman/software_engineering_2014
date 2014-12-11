@@ -1,6 +1,6 @@
 class XMLWriter
 	def write result, end_time
- 		file = File.new("results_Emiliqn_Sokolov_B_15.xml", "w")
+ 		file = File.new("results_Iosyf_Saleh_B_18.xml", "w")
 		file.write("<results>")
 		file.write("<program_run_time>"+end_time.to_s+"</program_run_time>\n")
 		result.keys.each do |key|
