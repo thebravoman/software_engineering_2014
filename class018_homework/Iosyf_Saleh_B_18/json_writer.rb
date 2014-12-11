@@ -2,7 +2,7 @@ require 'json'
 
 class JSONWriter
 	def write result, end_time
-		fJson = File.open("results_Emiliqn_Sokolov_B_15.json","w")
+		fJson = File.open("results_Iosyf_Saleh_B_18.json","w")
 		fJson.write("{\"results\":[\n").to_json
 		fJson.write("{\"time\": #{end_time}},\n").to_json
 		result.keys.each do |key|
