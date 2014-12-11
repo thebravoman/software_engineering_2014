@@ -12,6 +12,7 @@ class SVGWriter
 			parent.puts("<text x=\"0\" y=\"75\" fill=\"white\">014</text>")
 			parent.puts("<text x=\"0\" y=\"86\" fill=\"white\">017/1</text>")
 			parent.puts("<text x=\"0\" y=\"97\" fill=\"white\">017/2</text>")
+			parent.puts("<text x=\"0\" y=\"108\" fill=\"white\">018</text>")
 			return parent
 		end
 
@@ -32,7 +33,7 @@ class SVGWriter
 		q=0
 		e=-11
 
-		for i in 0..8 do
+		for i in 0..9 do
 			e+=11
 			rect(el_svg,q,e,p[i]+2)
 		end
