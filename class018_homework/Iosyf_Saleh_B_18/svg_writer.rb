@@ -33,7 +33,7 @@ class SVGWriter
 		q=0
 		e=-11
 
-		for i in 0..8 do
+		for i in 0..10 do
 			e+=11
 			rect(el_svg,q,e,p[i]+2)
 		end
