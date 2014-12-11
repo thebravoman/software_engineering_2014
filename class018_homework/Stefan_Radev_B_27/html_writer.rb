@@ -1,6 +1,6 @@
 class HTMLwriter
 	def write(time_program, results)
-		file = File.new("results_Lili_Kokalova_B_22.html", "w")
+		file = File.new("results_Stefan_Radev_B_27.html", "w")
 		file << "<div class=\"student\">
 				  	<table width=\"200%\" align=\'center\' cellpadding=\'1\' cellspacing=\'1\' border=\'1\' style=\'table-layout:fixed\'>
 						<tr>Time: #{time_program}</tr>
