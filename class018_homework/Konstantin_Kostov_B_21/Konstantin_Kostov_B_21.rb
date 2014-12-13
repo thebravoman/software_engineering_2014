@@ -31,7 +31,7 @@ def homework_chek (directory_name,log_info,result,folder)
 		program_num = 1 if program_num == 3 #for VH
 		next if folder == 0 || folder == 1  	
 		file_folder = file.chomp("#{file.split(/\//).last}") 
-		file_folder = file if folder == 1 || folder == 2 || folder == 3 || folder == 4 || folder == 5 || folder == 6 || folder == 7 || folder ==8
+		file_folder = file if folder == 1 || folder == 2 || folder == 3 || folder == 4 || folder == 5 || folder == 6 || folder == 7 || folder ==8 || folder == 8
 			
 		result[name][folder + 9] = `flog #{file_folder}`.to_i
 		
