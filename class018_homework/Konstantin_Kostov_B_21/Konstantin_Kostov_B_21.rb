@@ -16,7 +16,9 @@ def homework_chek (directory_name,log_info,result,folder)
 	stud = 0
 	Dir.glob(ARGV[0]+"#{directory_name}").each do |file|		
 		short_file_name = file.split(/\//).last	
-		name = short_file_name.split(/_/)[0].capitalize + ',' + short_file_name.split(/_/)[1].capitalize 
+		first_name = short_file_name.split(/_/)[0].capitalize
+ 		second_name = short_file_name.split(/_/)[1].capitalize 
+		name = first_name + "," + second_name 
 		program_num +=1 if folder == 0 && name == name_before #for VH
 		log = `git log --until=#{log_info} #{file}`
 		result[name][folder] = 2 if (!log.empty? && folder !=0) || (!log.empty? && program_num == 3 && folder == 0)	 
@@ -32,9 +34,8 @@ def homework_chek (directory_name,log_info,result,folder)
 		file_folder = file if folder == 1 || folder == 2 || folder == 3 || folder == 4 || folder == 5
 		result[name][folder + 9] = `flog #{file_folder}`.to_i
 		
-		#flay = `flay #{file_folder}`
-		 #result[name][folder + 18] = flay.split(/=/)[1][1, 4].delete!("\n")
-		flay = `flay #{file_folder} | grep #{name} | wc -l`.to_i
+		
+		flay = `flay #{file_folder} | grep #{first_name} | wc -l `.to_i
 	result[name][folder + 18] = flay
 		
 	end
