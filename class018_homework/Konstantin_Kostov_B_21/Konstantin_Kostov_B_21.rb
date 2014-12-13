@@ -27,11 +27,16 @@ def homework_chek (directory_name,log_info,result,folder)
 
 		name_before = name #for VH
 		program_num = 1 if program_num == 3 #for VH
-		next if folder == 0 || folder == 10  	
+		next if folder == 0 || folder == 1  	
 		file_folder = file.chomp("#{file.split(/\//).last}") 
-		file_folder = file if folder == 1 || folder == 4 || folder == 7 || folder == 11 || folder == 20
-		result[name][folder + 1] = `flog #{file_folder}`.to_i
-		result[name][folder + 2] = `flay #{file_folder}`.to_i
+		file_folder = file if folder == 1 || folder == 2 || folder == 3 || folder == 4 || folder == 5
+		result[name][folder + 9] = `flog #{file_folder}`.to_i
+		
+		#flay = `flay #{file_folder}`
+		 #result[name][folder + 18] = flay.split(/=/)[1][1, 4].delete!("\n")
+		flay = `flay #{file_folder} | grep #{name} | wc -l`.to_i
+	result[name][folder + 18] = flay
+		
 	end
 	return result
 end
@@ -62,28 +67,16 @@ end
 
 $stderr.reopen("/dev/null", "w")
 
-music = YAML.load_file("info.yml")["music"]
-if music[0] == "YES"
-	installed = `apt-cache policy vlc`
-	if !installed.include? "none"
-		system( "cvlc #{music[1]} -q &" )  	
-	else
-		puts "For sound you shold install VLC player"
-	end	
-	puts "Music-ON" # you should install VLC player for this option
-else 
-	puts "Music-OFF --> to turn it ON just change info.yml music:\"NO\" to \"YES\" "
-end
 
 folder = 0
 YAML.load_file("info.yml")["homeworks"].each do |yaml|
 	puts "Working on folder: ", yaml[0]
-	result = homework_chek_009(yaml[0],yaml[1],result,folder) if folder == 10
-	result = homework_chek(yaml[0],yaml[1],result,folder) if folder !=10	
-	if folder == 0 || folder == 10
+	result = homework_chek_009(yaml[0],yaml[1],result,folder) if folder == 1
+	result = homework_chek(yaml[0],yaml[1],result,folder) if folder !=1	
+	if folder == 0 || folder == 1
 		folder +=1 
 	else
-		folder +=3
+		folder +=1
 	end 					
 end
 puts "Time: ",Time.now - time_start
