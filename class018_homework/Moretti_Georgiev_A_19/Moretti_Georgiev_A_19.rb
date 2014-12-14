@@ -120,29 +120,8 @@ config["deadlines"].each do |hwNum, deadline|
 	currentFolder =  config["folders"][hwNum]
 	Dir.glob(ARGV[0] + "#{currentFolder}*_*_*").each do |path|
 		setResultsOfStudent(path, hwNum, deadline)
-		p path
 	end
 end
-=begin
-#go through all the homework folders
-folders.each do |currentFolder|
-	#go through all the homeworks
-		Dir.glob(ARGV[0]+"#{currentFolder}/*_*_*").each do |fullDirectory|
-			#p fullDirectory
-			case currentFolder
-				when "vhodno_nivo" then setResultsOfStudent(fullDirectory, "VN", "17.09.2014:20:00:00")
- 				when "class002_homework" then setResultsOfStudent(fullDirectory, "002", "22.09.2014:20:00:00")
-				when "class003_homework" then setResultsOfStudent(fullDirectory, "003", "24.09.2014:20:00:00")
-				when "class004" then setResultsOfStudent(fullDirectory, "004", "29.09.2014:20:00:00")
-				when "class009_homework" then setResultsOfStudent(fullDirectory, "009", "27.10.2014:20:00:00")
-				when "class012_homework" then setResultsOfStudent(fullDirectory, "012", "10.11.2014:20:00:00") 
-				when "class014_homework" then setResultsOfStudent(fullDirectory, "014", "13.11.2014:06:00:00")
-				when "class017_homework/homework1" then setResultsOfStudent(fullDirectory, "017(1)", "02.12.2014:06:00:00")
-				when "class017_homework/homework2" then setResultsOfStudent(fullDirectory, "017(2)", "02.12.2014:06:00:00")	
-			end
-		end	
-end
-=end
 if ARGV[1] == "-o"
 	resultType = ARGV[2]
 		case resultType
