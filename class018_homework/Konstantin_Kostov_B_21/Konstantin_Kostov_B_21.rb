@@ -10,21 +10,17 @@ classes = file_content= YAML.load_file("info.yml")["classes"]
 result = Hash.new{|hash, key| hash[key] = YAML.load_file("info.yml")["result_info"]}
 team_names = Array.new
 def homework_chek (directory_name,log_info,result,folder)
-
 Dir.glob(ARGV[0]+"#{directory_name}").each do |file|
 short_file_name = file.split(/\//).last
 first_name = short_file_name.split(/_/)[0].capitalize
 second_name = short_file_name.split(/_/)[1].capitalize
 name = first_name + "," + second_name
-
 log = `git log --until=#{log_info} #{file}`
-result[name][folder] = 2 if (!log.empty? ) 
-result[name][folder] = 1 if (log.empty? ) 
+result[name][folder] = 2 if (!log.empty? )
+result[name][folder] = 1 if (log.empty? )
 if folder != 0
-file_folder = file.chomp("#{file.split(/\//).last}")
-file_folder = file  if folder < 9
-result[name][folder + 9] = `flog #{file_folder}`.to_i
-flay = `flay #{file_folder} | grep #{first_name} | wc -l `.to_i
+result[name][folder + 9] = `flog #{file}`.to_i
+flay = `flay #{file} | grep #{first_name} | wc -l `.to_i
 result[name][folder + 18] = flay
 end
 end
@@ -59,7 +55,7 @@ folder = 0
 YAML.load_file("info.yml")["homeworks"].each do |yaml|
 puts "Working on folder: ", yaml[0]
 result = homework_chek_009(yaml[0],yaml[1],result,folder) if folder == 1
-result = homework_chek(yaml[0],yaml[1],result,folder) if folder !=1 
+result = homework_chek(yaml[0],yaml[1],result,folder) if folder !=1
 folder+=1
 end
 puts "Time: ",Time.now - time_start
