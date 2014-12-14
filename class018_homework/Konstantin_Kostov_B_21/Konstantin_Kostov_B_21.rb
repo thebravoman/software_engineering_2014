@@ -22,7 +22,7 @@ result[name][folder] = 2 if (!log.empty? )
 result[name][folder] = 1 if (log.empty? ) 
 if folder != 0
 file_folder = file.chomp("#{file.split(/\//).last}")
-file_folder = file if folder != 0 if folder < 9
+file_folder = file  if folder < 9
 result[name][folder + 9] = `flog #{file_folder}`.to_i
 flay = `flay #{file_folder} | grep #{first_name} | wc -l `.to_i
 result[name][folder + 18] = flay
