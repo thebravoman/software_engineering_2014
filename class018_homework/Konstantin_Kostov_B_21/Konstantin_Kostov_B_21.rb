@@ -10,9 +10,7 @@ classes = file_content= YAML.load_file("info.yml")["classes"]
 result = Hash.new{|hash, key| hash[key] = YAML.load_file("info.yml")["result_info"]}
 team_names = Array.new
 def homework_chek (directory_name,log_info,result,folder)
-program_num = 1 #for VH
-name_before = "" #for VH
-stud = 0
+
 Dir.glob(ARGV[0]+"#{directory_name}").each do |file|
 short_file_name = file.split(/\//).last
 first_name = short_file_name.split(/_/)[0].capitalize
@@ -62,11 +60,7 @@ YAML.load_file("info.yml")["homeworks"].each do |yaml|
 puts "Working on folder: ", yaml[0]
 result = homework_chek_009(yaml[0],yaml[1],result,folder) if folder == 1
 result = homework_chek(yaml[0],yaml[1],result,folder) if folder !=1 
-if folder == 0 || folder == 1
-folder +=1
-else
-folder +=1
-end
+folder+=1
 end
 puts "Time: ",Time.now - time_start
 `killall vlc`
