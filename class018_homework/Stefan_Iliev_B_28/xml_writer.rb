@@ -1,14 +1,16 @@
 require 'yaml'
 class XMLWriter
 	@@config = ""
-	def self.write(results)
+	def self.write(results,config_file_path)
 	
-		@@config = YAML.load_file("config.yml")["headers"]
+		@@config = YAML.load_file(config_file_path)["headers"]
 		homework_header = @@config["homeworks"]
 		flog_header = @@config["flog"]
 		flay_header = @@config["flay"]
+		res_out_name = @@config["result_output_name"]
+
 		
-		xml = File.open("results_Stefan_Iliev_B_28.xml", "w")
+		xml = File.open("#{res_out_name}.xml", "w")
 		xml.puts("<results>")
 		results.each do |key, hw_hash|	
 			xml.puts("	<student>")

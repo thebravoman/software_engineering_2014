@@ -31,13 +31,15 @@ end
 
 class SVGWriter 
 	@@config = ""
-	def self.write(results)
-	@@config = YAML.load_file("config.yml")
+	def self.write(results,config_file_path)
+	@@config = YAML.load_file(config_file_path)
 	homework_header = @@config["headers"]["homeworks"]
 	hw_count = @@config["homeworks_count"]
+	res_out_name = @@config["headers"]["result_output_name"]
+
 	
 	statistic = convertResults(results,hw_count)
-		svg = File.open("results_Stefan_Iliev_B_28.svg", "w")
+		svg = File.open("#{res_out_name}.svg", "w")
 		svg.puts("<svg width='680' height='440' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>")
 		svg = initTable(svg)
 		x = 51

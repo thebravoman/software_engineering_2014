@@ -1,6 +1,7 @@
 flay_threads: 2
 flog_threads: 2
 homeworks_count: 11
+
 directories: 
  dir1: "/vhodno_nivo/**/*_*_*.*"
  dir2: "/class002_homework/**/*_*_*_*.rb"
@@ -56,3 +57,4 @@ headers:
  homeworks: "VH|002|003|004|009|012|014|015|017-1|017-2|018"
  flog: "-|g02|g03|g04|-|g12|g14|g15|g17-1|g17-2|g18"
  flay: "-|y02|y03|y04|-|y12|y14|y15|y17-1|y17-2|y18"
+ result_output_name: "results_Stefan_Iliev_B_28"

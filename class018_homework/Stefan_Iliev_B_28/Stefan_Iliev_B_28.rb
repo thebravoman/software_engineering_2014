@@ -58,7 +58,9 @@
 		symbols.times { print " " }
 	end 
 	
-	relative_dir = ARGV.shift	|| "Error"
+	relative_dir = ARGV.shift	|| "Error" #Directory of the repository to be checked.
+
+		
 	gitLog = GitTimeChecker.new
 	students = Hash.new
 	threads_arr = Array.new
@@ -70,7 +72,16 @@
 	
 	time = Time.now
 	
-	config = YAML.load_file("config.yml")
+	config_file_path = "config.yml"
+	if not File.exists?(config_file_path)
+		puts "Config file not found. Switching to failsafe."
+		config_file_path = relative_dir +"/class018_homework/Stefan_Iliev_B_28/config.yml"
+		if not File.exists?(config_file_path)
+			puts "Failsafe failed. Exiting..."
+			exit()
+		end 
+	end 
+	config = YAML.load_file(config_file_path)
 	times = config["times"]
 	regex = config["regex"]
 	directories = config["directories"]
@@ -84,7 +95,7 @@
 	flay_threads = config["flog_threads"]
 	
 	if relative_dir == "Error"
-		puts "Pass the path to the repository to be checked as argument.\n\nSpecify writer type with -o TYPE\n\nWriter types:JSON,HTML,XML,CSV,SVG\n\nTurn time saver on with -n NUMBER\n\n"
+		puts "Pass the path to the repository to be checked as argument.\n\nSpecify writer type with -o TYPE\n\nWriter types:JSON,HTML,XML,CSV,SVG or ALL\n\nTurn time saver on with -n NUMBER\n\n"
 		exit()
 	end 
 	
@@ -180,6 +191,7 @@
 				end 
 			end 
 	end
+	
 	prev_output_length = 0
 	print "\n"
 	while !flog_queue.empty?() 
@@ -207,7 +219,8 @@
 		write_ = write_queue.pop().split("|")
 		students[write_[1]][write_[2]] = write_[0]
 	end 
+	
 	students = Hash[students.sort_by{|k,v| k}]
 	puts "Runtime: #{Time.now - time} sec."
-	ResultWriter.write( ARGV[(ARGV.index("-o") || 0) + 1],students )
+	ResultWriter.write( ARGV[(ARGV.index("-o") || 0) + 1],students , config_file_path)
 	
