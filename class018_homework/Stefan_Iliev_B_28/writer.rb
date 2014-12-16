@@ -30,7 +30,7 @@ class ResultWriter
 				writer = JSONWriter.new
 			else 
 				print "\n Output not specified with -o OUTPUT. Writing to html by default.\n"
-				writer = HTMLWriter.write result
+				writer = HTMLWriter.write( result, config_file_path)
 				exit()
 		end
 		writer.write result
