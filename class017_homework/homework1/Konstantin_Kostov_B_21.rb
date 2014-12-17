@@ -1,5 +1,5 @@
 result=Hash.new
-require_relative "html_Konstantin_Kostov_21_B_writer.rb"
+require_relative "Konstantin_Kostov_21_B_html_writer.rb"
 require 'csv'
 Dir.glob("#{ARGV.first}/**/*.*") do |file|
 short_file = file.split(/\//).last
