@@ -34,9 +34,11 @@ def convert_results(results)
 	end
 	return counter
 end
+=end
 
 class SVGWriter
 	def write(results, classes, time)
+=begin
 		svg = File.open("results_Iliyan_Germanov_B_17.svg", "w")
  		svg.puts("<svg width='720px' height='440px' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>")
 		svg.puts("<text x=\"310\" y=\"430\" fill=\"black\">Bar chart with the number of 1s.</text>")
@@ -52,6 +54,7 @@ class SVGWriter
 		end
 		svg.puts("</svg>")
 		svg.close
+=end
 	end
 end
-=end
+
