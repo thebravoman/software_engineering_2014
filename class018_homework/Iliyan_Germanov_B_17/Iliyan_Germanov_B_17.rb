@@ -88,7 +88,7 @@ Dir.glob("#{repoPath}/class009_homework/**/*.pdf") do |path|
 		results[student]["009"] = onTime(path, "--until=27.10.2014:20:00")
 	end
 end	
-puts "class009_homework checked."
+puts "homework - 009 checked."
 	
 homeworks.keys.each do |hw|
 	Dir.glob("#{repoPath}/#{homeworks[hw].first}") do |path|
@@ -98,7 +98,7 @@ homeworks.keys.each do |hw|
 		results[student_name]["g#{hw.delete("0")}"] = `flog #{path}`.to_i
 		results[student_name]["y#{hw.delete("0")}"] = `flay #{path} | grep #{student_name} | wc -l`.to_i	
 	end	
-	puts "#{hw} checked."
+	puts "homework - #{hw} checked."
 end
 
 time = Time.now - time
