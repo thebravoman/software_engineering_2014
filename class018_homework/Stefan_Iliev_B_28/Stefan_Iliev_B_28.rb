@@ -151,7 +151,7 @@
 				
 				if (file = translate_files["hw#{count}"]) != nil
 					prev_s_name = student_name
-					`grep '#{full_file_name.shellescape}' #{relative_dir + file}`.split("\n").each do | line |
+					`grep "#{full_file_name.shellescape}" #{relative_dir + file}`.split("\n").each do | line |
 						next if line.empty?
 						student_name = line.split(",").last
 						student_name = student_name.tr(" ","_")
