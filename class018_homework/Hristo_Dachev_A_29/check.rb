@@ -9,9 +9,9 @@ class Check
 			split = Split.new
 			results[split.split(file)][hwNum] = checkTime(file, deadline)
 			if hwNum != "VH"
-				#ff = Fandf.new
-				#ff.flog(file, hwNum, results)
-				#ff.flay(file, hwNum, results)
+				ff = Fandf.new
+				ff.flog(file, hwNum, results)
+				ff.flay(file, hwNum, results)
 			end
 		end
 		puts "Homework #{hwNum} checked!"
