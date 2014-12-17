@@ -13,7 +13,7 @@ end
 start = Time.now
 
 if ARGV[0] == nil
-	puts "Expected: ruby Kaloyan_Nikoc_B_19.rb {path to repo} -o {output format}"
+	puts "Expected: ruby Stanislav_Iliev_B_26.rb {path to repo} -o {output format}"
 	exit 1
 end
 
@@ -105,7 +105,7 @@ directories.each do |dir, directory_and_deadline|
 end
 
 time = (Time.now - start).to_f
-result_name = "results_Kaloyan_Nikov_B_19"
+result_name = "results_Stanislav_Iliev_B_26"
 results = results.sort
 
 if ARGV[1] == "-o"
