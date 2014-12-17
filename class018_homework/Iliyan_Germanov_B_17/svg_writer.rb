@@ -1,3 +1,4 @@
+=begin
 def bar(svg, x, y, w, h)
 	svg.puts("<rect x=\"#{x}\" y=\"#{y}\" width=\"#{w}\" height=\"#{h}\" style=\"fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)\" />")	
 	return svg
@@ -53,5 +54,4 @@ class SVGWriter
 		svg.close
 	end
 end
-
-
+=end
