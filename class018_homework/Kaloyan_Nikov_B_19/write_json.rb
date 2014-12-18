@@ -1,39 +1,20 @@
 require 'json'
 
 def write_to_JSON(results,time,name)
+	classes = "VH", "002", "003", "004", "009", "012", "014", "015", "017-1", "017-2", "g2", "g3", "g4", "g12", "g14", "g15", "g17-1", "y2", "y3", "y4", "y12", "y14", "y15", "y17-1"
+	i = 0
 	file = File.open("#{name}.json","w")
+	hash = Hash.new
+	res_hash = Hash.new
 	results.each do |name, val|
-		hash = {
-			"FirstName" => name.split(' ')[0],
-			"LastName" => name.split(' ')[1],
-			"results" => {
-				"Seconds" => time,
-				"VH" => val[0],
-				"002" => val[1],
-				"003" => val[2],
-				"004" => val[3],
-				"009" => val[4],
-				"012" => val[5],
-				"014" => val[6],
-				"015" => val[7],
-				"017-1" => val[8],
-				"017-2" => val[9],
-				"g2" => val[10],
-				"g3" => val[11],
-				"g4" => val[12],
-				"g12" => val[13],
-				"g14" => val[14],
-				"g15" => val[],
-				"g17-1" => val[15],
-				"y2" => val[16],
-				"y3" => val[17],
-				"y4" => val[18],
-				"y12" => val[19],
-				"y14" => val[20],
-				"y15" => val[],
-				"y17-1" => val[21]
-			}
-		}
+		hash["FirstName"] = name.split(' ')[0]
+		hash["LastName"] = name.split(' ')[1]
+		res_hash["Seconds"] = time
+		classes.each do |hw|
+			res_hash[hw] = val[i]
+			i += 1
+		end
+		hash["results"] = res_hash
 		file.write(hash.sort.to_json)
 	end
 end

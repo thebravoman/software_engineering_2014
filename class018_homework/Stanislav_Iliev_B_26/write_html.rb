@@ -1,9 +1,7 @@
 def write_to_HTML(result,time,name)
 	classes = "#{time}"," "," "," ","VH", "002", "003", "004", "009", "012", "014", "015", "017-1", "017-2", "g2", "g3", "g4", "g12", "g14", "g15", "g17-1", "y2", "y3", "y4", "y12", "y14", "y15", "y17-1"
 	File.open("#{name}.html","w") do |file|
-		file.puts "<html>"
-		file.puts "<head></head>"
-		file.puts "<body>"
+		file.puts "<html>\n<head></head>\n<body>"
 		file.puts "<table border=\"1\">"
 		file.puts "\t<tr>"
 		classes.each do |hw|
@@ -22,8 +20,6 @@ def write_to_HTML(result,time,name)
 			end
 			file.puts "\t</tr>"
 		end
-		file.puts "</table>"
-		file.puts "</body>"
-		file.puts "</html>"
+		file.puts "</table>\n</body>\n</html>"
 	end
 end

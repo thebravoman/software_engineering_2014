@@ -5,14 +5,21 @@
 #    | |  | |____| |____| |___| |__| | \  /\  /    | |  / ____ \| |  | . \  / ____ \  
 #    |_|  |______|______|______\____/   \/  \/     |_| /_/    \_\_|  |_|\_\/_/    \_\
 
-require 'json'
+require_relative 'split.rb'
 
-class JSONWriter
-	def write results, time
-		File.open("results_Hristo_Dachev_A_29.json", "w") do |f|
-			time = {:"Measure time" => time}
-			f.write JSON.generate(time)
-			f.write JSON.pretty_generate(results)
-		end
+class Fandf
+	def flog file, hwNum, results
+		flogResult = `flog #{file} -c -q -s`.split(":").first
+		numCase(hwNum, file, 'g', flogResult, results)
+	end
+
+	def flay file, hwNum, results
+		flayResult = `flay #{file}`.split("\n").first.scan(/\d+/).first
+		numCase(hwNum, file, 'y', flayResult, results)
+	end
+
+	def numCase hwNum, file, yOrG, result, results
+		split = Split.new
+		results[split.split(file)]["#{yOrG}#{hwNum.to_i.to_s}"] = result
 	end
 end

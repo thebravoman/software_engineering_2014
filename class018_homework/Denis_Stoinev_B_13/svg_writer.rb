@@ -1,3 +1,4 @@
+=begin
 def bar(svg, x, y, w, h)
 	svg.puts("<rect x=\"#{x}\" y=\"#{y}\" width=\"#{w}\" height=\"#{h}\" style=\"fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)\" />")	
 	return svg
@@ -12,7 +13,7 @@ def init_graph(svg)
 	svg.puts("<text x=\"433\" y=\"295\" fill=\"black\">012</text>")
 	svg.puts("<text x=\"505\" y=\"295\" fill=\"black\">014</text>")
 	svg.puts("<text x=\"577\" y=\"295\" fill=\"black\">015</text>")
-	svg.puts("<text x=\"649\" y=\"295\" fill=\"black\">017</text>")
+	svg.puts("<text x=\"649\" y=\"295\" fill=\"black\">017-1</text>")
 	svg.puts("<line x1=\"50\" y1=\"280\" x2=\"720\" y2=\"280\" style=\"stroke:rgb(0,0,0);stroke-width:2\" />")
 	svg.puts("<line x1=\"50\" y1=\"280\" x2=\"50\" y2=\"30\" style=\"stroke:rgb(0,0,0);stroke-width:2\" />")
 	return svg
@@ -29,13 +30,15 @@ def convert_results(results)
 		counter[5] += results[key]["012"]%2
 		counter[6] += results[key]["014"]%2
 		counter[7] += results[key]["015"]%2
-		counter[8] += results[key]["017"]%2
+		counter[8] += results[key]["017-1"]%2
 	end
 	return counter
 end
+=end
 
 class SVGWriter
-	def write(results, flog, flay)
+	def write(results, classes, time)
+=begin
 		svg = File.open("results_Denis_Stoinev_B_13.svg", "w")
  		svg.puts("<svg width='720px' height='440px' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>")
 		svg.puts("<text x=\"310\" y=\"430\" fill=\"black\">Bar chart with the number of 1s.</text>")
@@ -51,7 +54,7 @@ class SVGWriter
 		end
 		svg.puts("</svg>")
 		svg.close
+=end
 	end
 end
-
 

@@ -11,7 +11,7 @@ result = Hash.new{|hash, key| hash[key] = YAML.load_file("info.yml")["result_inf
 team_names = Array.new
 #ruby Nikolay_Mihailov_25.rb ../../ -o html
 if ARGV[0] == nil || ARGV[1] == nil || ARGV[2] == nil || ARGV[0] == "-help"
-	puts " ARGV[0] --> repo * \n ARGV[1] --> -o * \n ARGV[2] --> file_format * \n ARGV[3] --> -n \n ARGV[4] --> students_number "
+	puts " ex:ruby Nikolay_Mihailov_25.rb ../../ -o html \n ARGV[0] --> repo * \n ARGV[1] --> -o * \n ARGV[2] --> file_format * \n ARGV[3] --> -n \n ARGV[4] --> students_number "
 	abort()
 end
 
