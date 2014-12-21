@@ -6,6 +6,7 @@ require_relative "svg_writer.rb"
 require 'csv'
 require 'yaml'
 time_start=Time.now
+@repoPath=ARGV[0]
 classes = file_content= YAML.load_file("info.yml")["classes"]
 result = Hash.new{|hash, key| hash[key] = YAML.load_file("info.yml")["result_info"]}
 team_names = Array.new
@@ -24,11 +25,10 @@ def homework_chek (directory_name,log_info,result)
 	i=1
 	end
 	log_info = log_info.split(",")[0]
-	Dir.glob(ARGV[0]+"#{directory_name}").each do |file|
+	Dir.glob(@repoPath + "#{directory_name}").each do |file|
 		short_file_name = file.split(/\//).last
 		first_name = short_file_name.split(/_/)[0].capitalize
-		second_name = short_file_name.split(/_/)[1].capitalize
-		name = first_name + "," + second_name
+		name = first_name + "," + short_file_name.split(/_/)[1].capitalize
 		result=logget(log_info,name,result,file)
 		if flogg =="flog"
 			result[name][@folder + 1] = `flog #{file}`.to_i
@@ -46,12 +46,11 @@ def homework_chek (directory_name,log_info,result)
 	@folder+=1
 	return result
 end
-def homework_chek_009 (directory_name,log_info,result)
-	fire=directory_name.split("/")[1]
+def pdfhw(directory_name,log_info,result)
 	cop = log_info.split(",").last
-	log_info = log_info.split(",")[0]
-	team_names = CSV.read(ARGV[0]+"#{fire}""/""#{cop}")
-	Dir.glob(ARGV[0]+"#{directory_name}").each do |file|
+	log_info = log_info.split(",")[0]	
+	team_names = CSV.read(@repoPath + "#{cop}")
+	Dir.glob(@repoPath + "#{directory_name}").each do |file|
 		name = file.split(/\//).last.split(".").first
 		team_members = 0
 		line = 0
@@ -77,7 +76,7 @@ YAML.load_file("info.yml")["homeworks"].each do |yaml|
 puts "Working on folder: ", yaml[0]
 	enemy=yaml[0].split(".").last
 	if enemy == "pdf"
-		result = homework_chek_009(yaml[0],yaml[1],result) 
+		result = pdfhw(yaml[0],yaml[1],result) 
 	else
 		result = homework_chek(yaml[0],yaml[1],result) 
 	end
