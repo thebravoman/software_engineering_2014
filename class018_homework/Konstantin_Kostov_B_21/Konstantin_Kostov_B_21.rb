@@ -18,68 +18,57 @@ def logget(log_info,name,result,file)
 return result
 end
 def homework_chek (directory_name,log_info,result)
+	enemy=directory_name.split(".").last
 	flayy = log_info.split(",").last
 	flogg =log_info.split(",")[1]
-	i=2	
-	if flogg=="flay"
-	i=1
-	end
 	log_info = log_info.split(",")[0]
-	Dir.glob(@repoPath + "#{directory_name}").each do |file|
-		short_file_name = file.split(/\//).last
-		first_name = short_file_name.split(/_/)[0].capitalize
-		name = first_name + "," + short_file_name.split(/_/)[1].capitalize
-		result=logget(log_info,name,result,file)
-		if flogg =="flog"
-			result[name][@folder + 1] = `flog #{file}`.to_i
-		end
-		if flayy =="flay"
-			result[name][@folder + i] = `flay #{file} | grep #{first_name} | wc -l `.to_i
-		end
-		end
-		if flogg=="flog"   
-			@folder+=1
-		end
-		if flayy=="flay"  
-			@folder+=1
-		end
-	@folder+=1
-	return result
-end
-def pdfhw(directory_name,log_info,result)
-	cop = log_info.split(",").last
-	log_info = log_info.split(",")[0]	
-	team_names = CSV.read(@repoPath + "#{cop}")
-	Dir.glob(@repoPath + "#{directory_name}").each do |file|
-		name = file.split(/\//).last.split(".").first
-		team_members = 0
-		line = 0
-		first_line = false
-		for counter in 1..team_names.length-1
-			if team_names[counter][0] == name
-			line = counter if first_line != true
-			first_line = true
-			team_members +=1	
-			end	
-		end
+	i=2	
+	i=1 if flogg=="flay"
+	
+
+	if enemy=="pdf"
+		team_names = CSV.read(@repoPath + "#{flayy}")
+		Dir.glob(@repoPath + "#{directory_name}").each do |file|
+			name = file.split(/\//).last.split(".").first
+			team_members = 0
+			first_line = false
+			for counter in 1..team_names.length-1
+				if team_names[counter][0] == name
+					line = counter if first_line != true
+					first_line = true
+					team_members +=1	
+				end	
+			end
 		for index in 0..team_members-1
 			name = team_names[line + index][1]
 			name = name.split(" ")[0] + "," + name.split(" ")[1]
 			result=logget(log_info,name,result,file)
 		end	
 	end
+	else
+	Dir.glob(@repoPath + "#{directory_name}").each do |file|
+		short_file_name = file.split(/\//).last
+		first_name = short_file_name.split(/_/)[0].capitalize
+		second_name = short_file_name.split(/_/)[1].capitalize
+		name = first_name + "," + second_name
+		result=logget(log_info,name,result,file)
+			result[name][@folder + 1] = `flog #{file}`.to_i if flogg =="flog"
+		
+		
+			result[name][@folder + i] = `flay #{file} | grep #{first_name} | wc -l `.to_i if flayy =="flay"
+		end
+	@folder+=1 if flogg=="flog"   
+	@folder+=1 if flayy=="flay"  
+			
+	
+		end
+	puts  "#{directory_name}  checked"
 	@folder+=1
 	return result
 end
 $stderr.reopen("/dev/null", "w")
 YAML.load_file("info.yml")["homeworks"].each do |yaml|
-puts "Working on folder: ", yaml[0]
-	enemy=yaml[0].split(".").last
-	if enemy == "pdf"
-		result = pdfhw(yaml[0],yaml[1],result) 
-	else
 		result = homework_chek(yaml[0],yaml[1],result) 
-	end
 end
 puts "Time: ",Time.now - time_start
 folder=@folder
