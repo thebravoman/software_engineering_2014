@@ -67,7 +67,7 @@ homeworks:
  "/class002_homework/*_*_*_*.rb"  :  Sep--22--2014--20:00:00	,flog,flay
  "/class003_homework/*_*_*_*.rb"  :  Sep--24--2014--20:00:00	,flog,flay
  "/class004/*_*_*_*.rb"  :  Sep--29--2014--20:00:00	,flog,flay
- "/class009_homework/**/*.pdf" : Oct--27--2014--20:00:00	,project_to_names.csv
+ "/class009_homework/**/*.pdf" : Oct--27--2014--20:00:00	,class009_homework/project_to_names.csv
  "/class012_homework/*_*_*_*.rb"  :  Nov--10--2014--20:00:00	,flog,flay
  "/class014_homework/**/*_*_*_*.rb"  :  Nov--13--2014--06:00:00	,flog,flay
  "/class015_homework/**/*_*_*_*.rb"  :  Nov--20--2014--06:00:00	,flog,flay
