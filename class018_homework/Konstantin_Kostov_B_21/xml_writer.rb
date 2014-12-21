@@ -6,14 +6,12 @@ class XMLWriter
 			key_split = key.split(",")
 			key_split_ = key_split[0] + " " + key_split[1]
 			
-			xml_file.puts("		<student>")
-			xml_file.puts("			<Name> #{key_split_} </Name>")
+			xml_file.puts("		<Name>	#{key_split_} </Name> ")
 			class_index = 2			
 			for i in 0..folder+2 
 				xml_file.puts("			<#{classes[class_index]}> #{result[key][i]} </#{classes[class_index]}>")
 				class_index +=1			
 			end
-			xml_file.puts("		</student>")
 		end
 		xml_file.puts("</results>")
 		xml_file.close
