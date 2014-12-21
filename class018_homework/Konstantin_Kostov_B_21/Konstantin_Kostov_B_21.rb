@@ -10,32 +10,37 @@ classes = file_content= YAML.load_file("info.yml")["classes"]
 result = Hash.new{|hash, key| hash[key] = YAML.load_file("info.yml")["result_info"]}
 team_names = Array.new
 @folder=0
+def logget(log_info,name,result,file)
+	log = ` git log --until=#{log_info} #{file}`
+	result[name][@folder] = 2 if (!log.empty? )
+	result[name][@folder] = 1 if (log.empty? )
+return result
+end
 def homework_chek (directory_name,log_info,result)
 	flayy = log_info.split(",").last
 	flogg =log_info.split(",")[1]
+	i=2	
+	if flogg=="flay"
+	i=1
+	end
 	log_info = log_info.split(",")[0]
 	Dir.glob(ARGV[0]+"#{directory_name}").each do |file|
 		short_file_name = file.split(/\//).last
 		first_name = short_file_name.split(/_/)[0].capitalize
 		second_name = short_file_name.split(/_/)[1].capitalize
 		name = first_name + "," + second_name
-		log = ` git log --until=#{log_info} #{file}`
-		result[name][@folder] = 2 if (!log.empty? )
-		result[name][@folder] = 1 if (log.empty? )
+		result=logget(log_info,name,result,file)
 		if flogg =="flog"
 			result[name][@folder + 1] = `flog #{file}`.to_i
 		end
-		if flayy =="flay" && flogg !="flay"
-			result[name][@folder + 2] =  `flay #{file} | grep #{first_name} | wc -l `.to_i
-		end
-		if flayy =="flay" && flogg =="flay"
-			result[name][@folder + 1] = `flay #{file} | grep #{first_name} | wc -l `.to_i
+		if flayy =="flay"
+			result[name][@folder + i] = `flay #{file} | grep #{first_name} | wc -l `.to_i
 		end
 		end
-		if flogg=="flog" && flayy=="flay"   
-			@folder+=2
+		if flogg=="flog"   
+			@folder+=1
 		end
-		if flayy=="flay" && flogg=="flay" || flogg=="flog" && flayy =="flog" 
+		if flayy=="flay"  
 			@folder+=1
 		end
 	@folder+=1
@@ -58,12 +63,10 @@ def homework_chek_009 (directory_name,log_info,result)
 			team_members +=1	
 			end	
 		end
-		log = ` git log --until=#{log_info} #{file}`
 		for index in 0..team_members-1
-			final_name = team_names[line + index][1]
-			final_name = final_name.split(" ")[0] + "," + final_name.split(" ")[1]
-			result[final_name][@folder] = 2 if !log.empty?
-			result[final_name][@folder] = 1 if log.empty?
+			name = team_names[line + index][1]
+			name = name.split(" ")[0] + "," + name.split(" ")[1]
+			result=logget(log_info,name,result,file)
 		end	
 	end
 	@folder+=1
