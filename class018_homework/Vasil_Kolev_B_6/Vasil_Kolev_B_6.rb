@@ -79,3 +79,5 @@ if ARGV[1] == "-o"
 		
 	end
 end
+
+puts results
