@@ -10,9 +10,13 @@ class Task3 < Task
 			:sort=>"ASC",
 			:expected=>
 "<ul>
-  <li>777</li>
-  <li>888</li>
-  <li>999</li>
+	<li>0</li>
+	<li>12</li>
+	<li>42</li>
+	<li>412</li>
+	<li>777</li>
+	<li>888</li>
+	<li>999</li>
 </ul>"
 		}
 

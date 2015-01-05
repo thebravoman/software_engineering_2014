@@ -1,48 +1,23 @@
-vhodno_nivo:
-    adress: vhodno_nivo/**/*_*_*.*
-    deadline: Sep--17--2014--20:00:00
-002:
-    adress: class002_homework/*_*_*_*.rb
-    deadline: Sep--22--2014--20:00:00
-    flog: g2
-    flay: y2
-003:
-    adress: class003_homework/*_*_*_*.rb
-    deadline: Sep--24--2014--20:00:00
-    flog: g3
-    flay: y3
-004:
-    adress: class004/*_*_*_*.rb
-    deadline: Sep--29--2014--20:00:00
-    flog: g4
-    flay: y4
-009:
-    adress: class009_homework/
-    deadline: Oct--27--2014--20:00:00
-    flog: g9
-    flay: y9
-012:
-    adress: class012_homework/*_*_*_*.rb
-    deadline: Nov--10--2014--20:00:00
-    flog: g12
-    flay: y12
-014:
-    adress: class014_homework/**/*_*_*_*.rb
-    deadline: Nov--13--2014--06:00:00
-    flog: g14
-    flay: y14
-015:
-    adress: class015_homework/**/*_*_*_*.rb
-    deadline: Nov--20--2014--06:00:00
-    flog: g15
-    flay: y15
-017_1:
-    adress: class017_homework/homework1/*_*_*_*.rb
-    deadline: Dec--2--2014--06:00:00
-    flog: g17_1
-    flay: y17_1
-017_2:
-    adress: class017_homework/homework2/**/*_*_*_*.rb
-    deadline: Nov--10--2014--06:00:00
-    flog: g17_2
-    flay: y17_2
+path:
+002: class002_homework/*_*_*_*.rb
+003: class003_homework/*_*_*_*.rb
+004: class004/*_*_*_*.rb
+012: class012_homework/*_*_*_*.rb
+014: class014_homework/**/*_*_*_*.rb
+015: class015_homework/**/*_*_*_*.rb
+017_1: class017_homework/homework1/*_*_*_*.rb
+017_2: class017_homework/homework2/**/*_*_*_*.rb
+018: class018_homework/**/*_*_*_*.rb
+
+deadlines:
+'002': 22.09.2014:20:00:00
+'003': 24.09.2014:20:00:00
+'004': 29.09.2014:20:00:00
+'012': 10.11.2014:20:00:00
+'014': 13.11.2014:06:00:00
+'015': 20.11.2014:06:00:00
+'017_1': 2.12.2014:06:00:00
+'017_2': 2.12.2014:06:00:00
+'018': 4.12.2014:06:00:00
+
+clas: ['002', '003', '004', '012', '014', '015', '017_1', '017_2', '018']
