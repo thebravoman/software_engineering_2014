@@ -5,13 +5,14 @@ require_relative "JSONWriter.rb"
 require "yaml"
 thing = YAML.load_file('config.yml')
 timer = Time.now
-list = Hash.new { |hash, key| hash[key] =  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
-folders = Array["vhodno_nivo/", "class002_homework/", "class003_homework/", "class004/", "class009_homework/", "class012_homework/", "class014_homework/", "class015_homework/", "class017_homework/homework1/", "class017_homework/homework2/"]
-deadlines = Array["17.09.2014:20:00:00", "22.09.2014:20:00:00", "24.09.2014:20:00:00", "29.09.2014:20:00:00", "27.10.2014:20:00:00", "10.11.2014:20:00:00", "13.11.2014:06:00:00", "20.11.2014:06:00:00", "02.12.2014:06:00:00", "02.12.2014:06:00:00"]
+list = Hash.new { |hash, key| hash[key] = Array.new(26, 0)}
+deadlines = thing["deadlines"]
+folders = thing["folders"]
 def func (hash, adress, colonum, deadline)
 	count = ARGV[4].to_i if ARGV[3] == "-n"
 	i = 0
 	Dir.glob("#{ARGV[0]}#{adress}*") do |file|
+		system("clear")
 		break if i == count
 		file_name = file.split('/').last
 		if file.split('/').last.split('.').first.split('_').length == 4
@@ -34,11 +35,13 @@ def func (hash, adress, colonum, deadline)
 	end
 end
 def func0 (hash, adress, colonum, deadline)
+	system("clear")
 	onTime = 0
 	pastTime = 0
 	count = ARGV[4].to_i*3 if ARGV[3] == "-n"
 	i = 0
 	Dir.glob("#{ARGV[0]}#{adress}*/*.*") do |file|
+		system("clear")
 		break if i == count
 		file_name = file.split('/').last
 		if file.split('/').last.split('.').first.split('_').length == 3
@@ -60,6 +63,7 @@ def func0 (hash, adress, colonum, deadline)
 	end
 	count = ARGV[4].to_i*3 if ARGV[3] == "-n"
 	Dir.glob("#{ARGV[0]}#{adress}*.*") do |file|
+		system("clear")
 		break if i == count
 		file_name = file.split('/').last
 		if file.split('/').last.split('.').first.split('_').length == 3
