@@ -1,0 +1,58 @@
+commit 7d68556c666dda55c2a962c2a725208ef97120e3
+Author: IvoSlavchev <ivelin.slavchev97@gmail.com>
+Date:   Thu Jan 8 00:02:25 2015 +0200
+
+    Adding patch file
+
+diff --git a/spec/models/channel_spec.rb b/spec/models/channel_spec.rb
+index fccf52d..c6f7392 100644
+--- a/spec/models/channel_spec.rb
++++ b/spec/models/channel_spec.rb
+@@ -15,6 +15,45 @@ describe Yt::Channel do
+     context 'given fetching a channel returns a status' do
+       let(:attrs) { {status: {"privacyStatus"=>"public"}} }
+       it { expect(channel.status).to be_a Yt::Status }
++    end   
++  end
++  
++  describe '#initialize' do
++	context 'initializing statistics' do
++		let(:attrs) { {statistics: {"135" => "0"}} }
++		it { expect(channel.statistics_set).to be_an Yt::StatisticsSet }
++	end
++	context 'initializing viewer percentages' do
++    	let(:attrs) { {viewer_percentages: {"40" => "0"}} }
++    	it { expect(channel.viewer_percentages).to eq 0}
++    end
++  end
++ 
++  describe '#subscribe!' do
++  	context 'when subscribe' do
++  		let(:attrs) { {unsubscribed?: true} }
++  		it { expect (channel.subscribe!).to be true }
++  	end
++  end
++  
++  describe '#unsubscribe!' do
++  	context 'when unsubscribe!' do
++	  	let(:attrs) { {subscribed?: true} }
++	  	it { expect (channel.unsubscribe!).to be true }
++  	end
++  end
++  
++  describe '#delete_playlists' do
++  	context 'when delete playlists' do
++  		let(:attrs) { {playlists: {"playlist" => "deleted"}} }
++  		it { expect(channel.delete_playlists).to be_empty }
++  	end
++  end
++  
++  describe '#throttle_subscriptions' do
++  	context 'when throttling subscriptions' do
++  		let(:attrs) { {seconds: {"seconds" => "10"}} }
++  		it { expect(channel.throttle_subscriptions).to be_within(1.second).of(Time.now + 10) }
++  	end
++  end 
++end
+-end
+\ No newline at end of file
