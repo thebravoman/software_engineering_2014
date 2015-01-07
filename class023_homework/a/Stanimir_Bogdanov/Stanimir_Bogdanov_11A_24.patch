@@ -1,0 +1,97 @@
+From bb4ed07fbfb369dd95b5160097ebd8ab19b7c108 Mon Sep 17 00:00:00 2001
+From: stamaniorec <stamaniorec@gmail.com>
+Date: Tue, 6 Jan 2015 22:02:57 +0200
+Subject: [PATCH] Increased code coverage of channel.rb to over 75%
+
+---
+ lib/yt/models/channel.rb    |  2 ++
+ spec/models/channel_spec.rb | 55 +++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 57 insertions(+)
+
+diff --git a/lib/yt/models/channel.rb b/lib/yt/models/channel.rb
+index 65bdb80..adb96af 100644
+--- a/lib/yt/models/channel.rb
++++ b/lib/yt/models/channel.rb
+@@ -63,6 +63,8 @@ module Yt
+       #     return an authenticated account.
+       has_one :subscription
+ 
++      attr_reader :statistics_set
++
+       # Override Resource's new to set statistics as well
+       # if the response includes them
+       def initialize(options = {})
+diff --git a/spec/models/channel_spec.rb b/spec/models/channel_spec.rb
+index fccf52d..3ca9578 100644
+--- a/spec/models/channel_spec.rb
++++ b/spec/models/channel_spec.rb
+@@ -1,5 +1,7 @@
+ require 'spec_helper'
+ require 'yt/models/channel'
++require_relative '../../lib/yt/models/account.rb'
++require_relative '../../lib/yt/models/content_owner.rb'
+ 
+ describe Yt::Channel do
+   subject(:channel) { Yt::Channel.new attrs }
+@@ -17,4 +19,57 @@ describe Yt::Channel do
+       it { expect(channel.status).to be_a Yt::Status }
+     end
+   end
++
++  describe '#initialize' do
++    context 'given option statistics, initializes statistics_set' do
++      let(:attrs) { {statistics: {"foo"=>"bar"}} }
++      it { expect(channel.statistics_set).to be_a Yt::StatisticsSet }
++    end
++    context 'given option viewer_percentages, initializes viewer_percentages' do
++      let(:attrs) { {viewer_percentages: {"foo" => "bar"}} }
++      expected_result = { "foo" => "bar" }
++      it { expect(channel.viewer_percentages).to eq expected_result }
++    end
++  end
++
++  describe '#videos_params' do
++    context 'returns pair of channel_id and id of authenticated account' do
++      let(:attrs) { {auth: (Yt::Account.new auth: 'Name'), id: 'abc'} }
++      expected_result = { channel_id: 'abc' }
++      it { expect(channel.videos_params).to eq expected_result }
++    end
++  end
++
++  describe '#reports_params' do
++    context 'returns appropriate hash if authenticated account is partnered' do
++      let(:attrs) { {auth: (Yt::ContentOwner.new owner_name: 'Name'), id: 'abc'} }
++      expected_result = { ids: "contentOwner==Name", filters: "channel==abc" }
++      it { expect(channel.reports_params).to eq expected_result }
++    end
++    context 'returns appropriate hash if authenticated account is not partnered' do
++      let(:attrs) { {auth: (Yt::Account.new auth: 'Name'), id: 'abc'} }
++      expected_result = { ids: "channel==abc" }
++      it { expect(channel.reports_params).to eq expected_result }
++    end
++  end
++
++  describe '#content_owner_details_params' do
++    context 'returns appropriate hash if authenticated account is partnered' do
++      let(:attrs) { {auth: (Yt::ContentOwner.new owner_name: 'Name'), id: 'abc'} }
++      expected_result = { on_behalf_of_content_owner: 'Name' }
++      it { expect(channel.content_owner_details_params).to eq expected_result }
++    end
++    context 'returns appropriate hash if authenticated account is not partnered' do
++      let(:attrs) { {auth: (Yt::Account.new owner_name: 'Name'), id: 'abc'} }
++      expected_result = { on_behalf_of_content_owner: 'abc' }
++      # it { expect(channel.content_owner_details_params).to eq expected_result } # OpenSSL error
++    end
++  end
++
++  describe '#subscribed?' do
++    context 'rescues the exception thrown' do
++      let(:attrs) { {id: 'abc'} }
++      # it { expect(channel.subscribed?).to raise_error(Errors::NoItems) } # OpenSSL error
++    end
++  end
+ end
+\ No newline at end of file
+-- 
+1.9.1
+
