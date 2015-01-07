@@ -22,7 +22,7 @@
 +  describe '#unsubscribe!' do
 +      let(:attrs) { {status: {"privacyStatus"=>"public"}} }
 +      it "unsubscribes from the channel" do
-+        expect(channel.unsubscribe!).to be_a Yt::subscribe!
++        expect(channel.unsubscribe!).to be_a Yt::Models::subscribe!
 +      end
 +  end
 +
