@@ -1,6 +1,6 @@
-require_relative "spec_helper.rb"
-require_relative "video.rb"
-
+--- video_spec.rb	2015-01-08 00:20:01.752664787 +0200
++++ video_spec_my.rb	2015-01-08 00:20:42.556665002 +0200
+@@ -25,2 +25,34 @@
 describe Yt::Video do
   subject(:video) { Yt::Video.new attrs }
 
@@ -69,3 +69,4 @@ describe Yt::Video do
     end
   end
 end
+\ No newline at end of file
