@@ -11,30 +11,30 @@ describe Yt::Video do
     end
   end
   
-  describe '#tags' do
-	context 'given tags' do
-		it {expect(video.snippet).to be 10}
-	end
-  end
++  describe '#tags' do
++	context 'given tags' do
++		it {expect(video.snippet).to be 10}
++	end
++  end
++  
++  describe '#exists?' do
++	context 'is it really nil?' do
++		it {expect(video.id).to be nil}
++	end
++  end
   
-  describe '#exists?' do
-	context 'is it really nil?' do
-		it {expect(video.id).to be nil}
-	end
-  end
-  
-  describe '#reports_params' do
-	context 'if acc not partnered ret. appropriate hash' do
-      let(:attrs) { {auth: (Yt::Account.new auth: 'Name'), id: 'test123'} }
-      expected_result = { ids: "channel==test123" }
-     it { expect(channel.reports_params).to eq expected_result }
-    end
-    context 'if acc partnered ret. appropriate hash' do
-      let(:attrs) { {auth: (Yt::ContentOwner.new owner_name: 'Name'), id: 'need_test123'} }
-      expected_result = { ids: "contentOwner==Name", filters: "channel==need_test123" }
-      it { expect(channel.reports_params).to eq expected_result }
-    end
-  end
++  describe '#reports_params' do
++	context 'if acc not partnered ret. appropriate hash' do
++      let(:attrs) { {auth: (Yt::Account.new auth: 'Name'), id: 'test123'} }
++      expected_result = { ids: "channel==test123" }
++     it { expect(channel.reports_params).to eq expected_result }
++    end
++    context 'if acc partnered ret. appropriate hash' do
++      let(:attrs) { {auth: (Yt::ContentOwner.new owner_name: 'Name'), id: 'need_test123'} }
++      expected_result = { ids: "contentOwner==Name", filters: "channel==need_test123" }
++     it { expect(channel.reports_params).to eq expected_result }
++    end
++  end
   
   describe '#delete' do
     let(:attrs) { {id: 'video-id'} }
