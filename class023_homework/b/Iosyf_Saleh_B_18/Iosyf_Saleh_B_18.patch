@@ -1,5 +1,5 @@
 //require 'spec_helper'
-
+//video-spec.rb
 describe Video do
 	vid = Video.new
 	context '#success?' do
