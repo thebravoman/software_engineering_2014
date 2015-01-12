@@ -9,12 +9,12 @@ index 84b087f..58cc60f 100644
 -end
 \ No newline at end of file
 +
-+	describe '#tags' do
-+    let(:attrs) { {snippet: {"tags"=>"gaben"}} }
++      describe '#tags' do
++             let(:attrs) { {snippet: {"tags"=>"gaben"}} }
 +
-+    context 'checking for tags' do
-+      it { expect(video.snippet.tags).to eq("gaben") }
-+    end
++             context 'checking for tags' do
++                    it { expect(video.snippet.tags).to eq("gaben") }
++             end
 +
 +		context 'snippet should be nil' do
 +			it { expect(@snippet).to eq(nil) }
@@ -23,7 +23,7 @@ index 84b087f..58cc60f 100644
 +		context 'snippet should be nil' do
 +			it { expect(@snippet).not_to eq("gaben") }
 +		end
-+  end
++      end
 +
 +	describe '#like' do
 +		let(:attrs) { {id: 'video-id'} }
@@ -81,17 +81,17 @@ index 84b087f..58cc60f 100644
 +		end
 +	end
 +
-+	describe '#number_of_likes' do
-+    context 'checks number of likes' do
-+      let(:attrs) { {statistics: {"likes"=>"9001"}} }
-+      it { expect(video.statistics_set).to be_a Yt::StatisticsSet }
-+    end
-+  end
++      describe '#number_of_likes' do
++             context 'checks number of likes' do
++                    let(:attrs) { {statistics: {"likes"=>"9001"}} }
++                    it { expect(video.statistics_set).to be_a Yt::StatisticsSet }
++             end
++      end
 +
-+	describe '#number_of_dislikes' do
-+    context 'checks number of dislikes' do
-+      let(:attrs) { {statistics: {"dislikes"=>"9001"}} }
-+      it { expect(video.statistics_set).to be_a Yt::StatisticsSet }
-+    end
-+  end
++      describe '#number_of_dislikes' do
++             context 'checks number of dislikes' do
++                    let(:attrs) { {statistics: {"dislikes"=>"9001"}} }
++                    it { expect(video.statistics_set).to be_a Yt::StatisticsSet }
++             end
++      end
 +end
