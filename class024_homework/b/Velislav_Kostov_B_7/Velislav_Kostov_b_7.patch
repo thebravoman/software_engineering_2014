@@ -1,0 +1,89 @@
+diff --git a/yt/.git/index b/ytV2/.git/index
+index 55d87ac..a483e24 100644
+Binary files a/yt/.git/index and b/ytV2/.git/index differ
+diff --git a/yt/.git/logs/HEAD b/ytV2/.git/logs/HEAD
+index d1d679c..bd7c307 100644
+--- a/yt/.git/logs/HEAD
++++ b/ytV2/.git/logs/HEAD
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 4c17bf0567bd83b96faf7c87a2e97443fb222461 Velislav <nescbeats@gmail.com> 1421104633 +0200	clone: from https://github.com/Fullscreen/yt
++0000000000000000000000000000000000000000 4c17bf0567bd83b96faf7c87a2e97443fb222461 Velislav <nescbeats@gmail.com> 1421104661 +0200	clone: from https://github.com/Fullscreen/yt
+diff --git a/yt/.git/logs/refs/heads/master b/ytV2/.git/logs/refs/heads/master
+index d1d679c..bd7c307 100644
+--- a/yt/.git/logs/refs/heads/master
++++ b/ytV2/.git/logs/refs/heads/master
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 4c17bf0567bd83b96faf7c87a2e97443fb222461 Velislav <nescbeats@gmail.com> 1421104633 +0200	clone: from https://github.com/Fullscreen/yt
++0000000000000000000000000000000000000000 4c17bf0567bd83b96faf7c87a2e97443fb222461 Velislav <nescbeats@gmail.com> 1421104661 +0200	clone: from https://github.com/Fullscreen/yt
+diff --git a/yt/.git/logs/refs/remotes/origin/HEAD b/ytV2/.git/logs/refs/remotes/origin/HEAD
+index d1d679c..bd7c307 100644
+--- a/yt/.git/logs/refs/remotes/origin/HEAD
++++ b/ytV2/.git/logs/refs/remotes/origin/HEAD
+@@ -1 +1 @@
+-0000000000000000000000000000000000000000 4c17bf0567bd83b96faf7c87a2e97443fb222461 Velislav <nescbeats@gmail.com> 1421104633 +0200	clone: from https://github.com/Fullscreen/yt
++0000000000000000000000000000000000000000 4c17bf0567bd83b96faf7c87a2e97443fb222461 Velislav <nescbeats@gmail.com> 1421104661 +0200	clone: from https://github.com/Fullscreen/yt
+diff --git a/yt/spec/models/video_spec.rb b/ytV2/spec/models/video_spec.rb
+index 84b087f..549ac7f 100644
+--- a/yt/spec/models/video_spec.rb
++++ b/ytV2/spec/models/video_spec.rb
+@@ -43,4 +43,58 @@ describe Yt::Video do
+       it { expect{video.delete}.to change{video.exists?} }
+     end
+   end
+-end
+\ No newline at end of file
++  
++  rating = nil
++  before :each do
++    rating = double('rating')
++ 	  allow(video).to receive(:rating).and_return(rating)
++  end
++  
++  describe '#liked' do
++ 	  let(:attrs) { {id: 'video-id'} }
++
++ 	  context 'video liked' do
++ 		  it "liked returning true" do
++ 			  allow(rating).to receive(:rating).and_return(:like)
++ 			  expect(video.liked?).to eq(true)
++ 		  end
++    end
++  end
++  
++  describe '#like' do
++    let(:attrs) { {id: 'video-id'} }
++    
++    context 'not already liked' do
++      it "can like video" do
++        allow(rating).to receive(:set).and_return(:like)
++        allow(video).to receive(:liked?).and_return(true)
++        expect(video.like).to eq(true)
++      end
++    end
++  end
++  
++  describe '#dislike' do
++    let(:attrs) { {id: 'video-id'} }
++    
++    context 'already liked' do
++      it "can dislike a video" do
++        allow(rating).to receive(:set).and_return(:dislike)
++        allow(video).to receive(:liked?).and_return(false)
++        expect(video.dislike).to eq(true)
++      end
++    end
++  end
++  
++  describe '#unlike' do
++    let(:attrs) { {id: 'video-id'} }
++    
++    context 'already liked' do
++      it "unlikes a video" do
++        allow(rating).to receive(:set).and_return(:none)
++        allow(video).to receive(:liked?).and_return(false)
++        expect(video.unlike).to eq(true)
++      end
++    end
++  end
++  
++end
