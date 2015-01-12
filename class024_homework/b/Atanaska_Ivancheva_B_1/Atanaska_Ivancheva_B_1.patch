@@ -1,17 +1,17 @@
 diff --git a/spec/models/video_spec.rb b/spec/models/video_spec.rb
-index 84b087f..044a18f 100644
+index 84b087f..6c03dca 100644
 --- a/spec/models/video_spec.rb
 +++ b/spec/models/video_spec.rb
-@@ -1,5 +1,7 @@
+@@ -1,6 +1,8 @@
 -require 'spec_helper'
--require 'yt/models/video'
 +require_relative '../spec_helper'
-+require '/home/atanaska/rspec_prog/video.rb'
-+
-+	
+ require 'yt/models/video'
  
++	
++
  describe Yt::Video do
    subject(:video) { Yt::Video.new attrs }
+ 
 @@ -43,4 +45,52 @@ describe Yt::Video do
        it { expect{video.delete}.to change{video.exists?} }
      end
