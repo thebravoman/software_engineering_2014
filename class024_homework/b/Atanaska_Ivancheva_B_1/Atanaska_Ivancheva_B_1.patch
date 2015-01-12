@@ -1,66 +1,69 @@
-From 416637d12eadbb58f6689d0d5bbe0aa8ab9365c3 Mon Sep 17 00:00:00 2001
-From: Atanaska <a_ivancheva97@abv.bg>
-Date: Tue, 13 Jan 2015 00:01:06 +0200
-Subject: [PATCH] Atanaska_Ivancheva
-
----
- spec/models/video_spec.rb~ | 46 ----------------------------------------------
- 1 file changed, 46 deletions(-)
- delete mode 100644 spec/models/video_spec.rb~
-
-diff --git a/spec/models/video_spec.rb~ b/spec/models/video_spec.rb~
-deleted file mode 100644
-index 84b087f..0000000
---- a/spec/models/video_spec.rb~
-+++ /dev/null
-@@ -1,46 +0,0 @@
+diff --git a/spec/models/video_spec.rb b/spec/models/video_spec.rb
+index 84b087f..044a18f 100644
+--- a/spec/models/video_spec.rb
++++ b/spec/models/video_spec.rb
+@@ -1,5 +1,7 @@
 -require 'spec_helper'
 -require 'yt/models/video'
--
--describe Yt::Video do
--  subject(:video) { Yt::Video.new attrs }
--
--  describe '#snippet' do
--    context 'given fetching a video returns a snippet' do
--      let(:attrs) { {snippet: {"title"=>"Fullscreen Creator Platform"}} }
--      it { expect(video.snippet).to be_a Yt::Snippet }
--    end
--  end
--
--  describe '#statistics_set' do
--    context 'given fetching a video returns statistics' do
--      let(:attrs) { {statistics: {"viewCount"=>"202"}} }
--      it { expect(video.statistics_set).to be_a Yt::StatisticsSet }
--    end
--  end
--
--  describe '#content_details' do
--    context 'given fetching a video returns content details' do
--      let(:attrs) { {content_details: {"definition"=>"hd"}} }
--      it { expect(video.content_detail).to be_a Yt::ContentDetail }
--    end
--  end
--
--  describe '#update' do
--    let(:attrs) { {id: 'MESycYJytkU', snippet: {'title'=>'old'}} }
--    before { expect(video).to receive(:do_update).and_yield 'snippet'=>{'title'=>'new'} }
--
--    it { expect(video.update title: 'new').to be true }
--    it { expect{video.update title: 'new'}.to change{video.title} }
--  end
--
--  describe '#delete' do
--    let(:attrs) { {id: 'video-id'} }
--
--    context 'given an existing video' do
--      before { expect(video).to receive(:do_delete).and_yield }
--
--      it { expect(video.delete).to be true }
--      it { expect{video.delete}.to change{video.exists?} }
--    end
--  end
++require_relative '../spec_helper'
++require '/home/atanaska/rspec_prog/video.rb'
++
++	
+ 
+ describe Yt::Video do
+   subject(:video) { Yt::Video.new attrs }
+@@ -43,4 +45,52 @@ describe Yt::Video do
+       it { expect{video.delete}.to change{video.exists?} }
+     end
+   end
 -end
 \ No newline at end of file
--- 
-1.9.1
-
++
++ 
++describe '#dislike' do
++ let(:attrs) { {id: 'video-id'} }
++
++    context 'given an existing video' do
++	it ".dislike changes video ratings" do
++				rating  = double("rating")
++				rating_new_value = :dislike
++				allow(video).to receive(:rating).and_return(rating)
++				allow(rating).to receive(:set).and_return(rating_new_value)
++				allow(rating).to receive(:rating).and_return(rating_new_value)
++				expect(video.dislike).to be true
++		end
++	end
++end
++
++describe '#like' do
++ let(:attrs) { {id: 'video-id'} }
++
++    context 'given an existing video' do
++	it ".like changes video ratings" do
++				rating  = double("rating")
++				rating_new_value = :like
++				allow(video).to receive(:rating).and_return(rating)
++				allow(rating).to receive(:set).and_return(rating_new_value)
++				allow(rating).to receive(:rating).and_return(rating_new_value)
++				expect(video.like).to be true
++		end
++	end
++end
++
++describe '#unlike' do
++ let(:attrs) { {id: 'video-id'} }
++
++    context 'given an existing video' do
++	it ".unlike changes video ratings" do
++				rating  = double("rating")
++				rating_new_value = :unlike
++				allow(video).to receive(:rating).and_return(rating)
++				allow(rating).to receive(:set).and_return(rating_new_value)
++				allow(rating).to receive(:rating).and_return(rating_new_value)
++				expect(video.unlike).to be true
++		end
++	end
++end
++
++
++end
