@@ -82,16 +82,16 @@ index 84b087f..58cc60f 100644
 +	end
 +
 +	describe '#number_of_likes' do
-+    context 'checks number of likes' do
-+      let(:attrs) { {statistics: {"likes"=>"9001"}} }
-+      it { expect(video.statistics_set).to be_a Yt::StatisticsSet }
-+    end
-+ end
++             context 'checks number of likes' do
++                    let(:attrs) { {statistics: {"likes"=>"9001"}} }
++                    it { expect(video.statistics_set).to be_a Yt::StatisticsSet }
++             end
++      end
 +
 +	describe '#number_of_dislikes' do
-+    context 'checks number of dislikes' do
-+      let(:attrs) { {statistics: {"dislikes"=>"9001"}} }
-+      it { expect(video.statistics_set).to be_a Yt::StatisticsSet }
-+    end
-+  end
-+ end
++             context 'checks number of dislikes' do
++                    let(:attrs) { {statistics: {"dislikes"=>"9001"}} }
++                    it { expect(video.statistics_set).to be_a Yt::StatisticsSet }
++             end
++      end
++end
