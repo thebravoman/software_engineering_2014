@@ -1,0 +1,51 @@
+diff --git a/spec/models/video_spec.rb b/spec/models/video_spec.rb
+index 84b087f..0d2fa6a 100644
+--- a/spec/models/video_spec.rb
++++ b/spec/models/video_spec.rb
+@@ -43,4 +43,63 @@ describe Yt::Video do
+       it { expect{video.delete}.to change{video.exists?} }
+     end
+   end
+-end
+\ No newline at end of file
++
++	before :each do
++		@rating = double("rating")
++		allow(video).to receive(:rating).and_return(@rating)
++	end
++
++	describe '#like' do
++		let(:attrs) { {id: 'video-id'} }
++
++		context 'given a not liked video' do
++			it ".like method calls rating.set and liked?" do
++				allow(video).to receive(:liked?).and_return(true)
++				allow(@rating).to receive(:set).and_return(:like)
++				expect(video.like).to be true
++			end
++		end
++	end
++
++	describe '#unlike' do
++		let(:attrs) { {id: 'video-id'} }
++
++		context 'given a liked video' do
++			it ".unlike method calls rating.set and liked?" do
++				allow(@rating).to receive(:set).and_return(:none)
++				expect(video.unlike).to be true
++			end
++		end
++	end
++
++	describe '#dislike' do
++		let(:attrs) { {id: 'video-id'} }
++
++		context 'given a liked video' do
++			it ".dislike method calls rating.set and liked?" do
++				allow(video).to receive(:liked?).and_return(false)
++				allow(@rating).to receive(:set).and_return(:dislike)
++				expect(video.dislike).to be true
++			end
++		end
++	end
++end
