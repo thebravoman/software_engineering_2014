@@ -1,0 +1,46 @@
+diff --git a/spec/models/video_spec.rb b/spec/models/video_spec.rb
+index 84b087f..9a95244 100644
+--- a/spec/models/video_spec.rb
++++ b/spec/models/video_spec.rb
+@@ -4,6 +4,34 @@ require 'yt/models/video'
+ describe Yt::Video do
+   subject(:video) { Yt::Video.new attrs }
+ 
++
++  describe '#like' do
++    let(:attrs) { {id: 'video-id'} }
++    
++	context 'liked video' do
++	      it { expect(video.unlike).to_return(:like) }
++	      it { expect(video.like).to be true }
++    end
++  end
++
++  describe '#dislike' do
++    let(:attrs) { {id: 'video-id'} }
++    
++	context 'disliked video' do
++		it { expect(video.unlike).to_return(:dislike) }
++	      it { expect(video.dislike).to be true }
++    end
++  end
++
++  describe '#unlike' do
++    let(:attrs) { {id: 'video-id'} }
++    
++	context 'unliked video' do
++		it { expect(video.unlike).to_return(:none) }
++	      it { expect(video.unlike).to be true }
++    end
++  end
++
+   describe '#snippet' do
+     context 'given fetching a video returns a snippet' do
+       let(:attrs) { {snippet: {"title"=>"Fullscreen Creator Platform"}} }
+@@ -43,4 +71,4 @@ describe Yt::Video do
+       it { expect{video.delete}.to change{video.exists?} }
+     end
+   end
+-end
+\ No newline at end of file
++end
