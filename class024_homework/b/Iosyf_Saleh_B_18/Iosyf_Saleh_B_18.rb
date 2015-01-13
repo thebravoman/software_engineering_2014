@@ -38,7 +38,7 @@ describe Yt::Video do
 		end
 	end
 	describe '#update' do
-		let(:attrs) { {id: 'MESycYJytkU', snippet: {'title'=>'old'}} }
+		let(:attrs) { {id: 'XUhVCoTsBaM', snippet: {'title'=>'old'}} }
 		before { expect(video).to receive(:do_update).and_yield 'snippet'=>{'title'=>'new'} }
 		it { expect(video.update title: 'new').to be true }
 		it { expect{video.update title: 'new'}.to change{video.title} }
@@ -46,7 +46,7 @@ describe Yt::Video do
 
 	describe '#delete' do	
 		let(:attrs) { {id: 'video-id'} }
-		context 'given an existing video' do
+		context '!vid_exists!' do
 			before { expect(video).to receive(:do_delete).and_yield }
 			it { expect(video.delete).to be true }
 			it { expect{video.delete}.to change{video.exists?} }
