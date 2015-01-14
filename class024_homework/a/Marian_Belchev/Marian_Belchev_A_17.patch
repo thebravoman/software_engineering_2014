@@ -1,0 +1,76 @@
+From: mbelchev <marianbelchev@gmail.com>
+Subject: [PATCH] Uploading better spec for channel class
+
+---
+ spec/models/channel_spec.rb | 56 +++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 56 insertions(+)
+
+diff --git a/spec/models/channel_spec.rb b/spec/models/channel_spec.rb
+index fccf52d..5e87d54 100644
+--- a/spec/models/channel_spec.rb
++++ b/spec/models/channel_spec.rb
+@@ -17,4 +17,60 @@ describe Yt::Channel do
+       it { expect(channel.status).to be_a Yt::Status }
+     end
+   end
++
++  describe '#initialize' do
++    context 'initialize statistics' do
++      let(:attrs) { {statistics: {"commentCount" => 773}} }
++      it { expect(channel.statistics_set).to be_a Yt::StatisticsSet }
++    end
++
++    context 'initialize viewer percentages' do
++      let(:attrs) { {viewer_percentages: {"test" => 0}} }
++      expected = {"test" => 0}
++      it { expect(channel.viewer_percentages).to eq expected}
++    end 
++  end
++
++  describe '#throttle_subscriptions' do
++    let(:attrs) { {time: {"seconds" => "10"}} }
++    it{expect(channel.throttle_subscriptions 10)}
++  end
++
++  describe 'All subscribtions' do
++    context 'unsubscribes the authenticated account' do
++      let(:attrs) { {:id => "id"} }
++      it { expect(channel.unsubscribe!) rescue Yt::Errors::Unauthorized }
++    end
++
++    context '#unsubscribe' do
++      let(:attrs) { {:id => "id"} }
++      it { expect(channel.unsubscribe) rescue Yt::Errors::Unauthorized }
++    end
++
++    context '#subscribe!' do
++      let(:attrs) { {:id => "id"} }
++      it { expect(channel.subscribe!) rescue Yt::Errors::Unauthorized }
++    end
++
++    context '#subscribe' do
++      let(:attrs) { {:id => "id"} }
++      it { expect(channel.subscribe) rescue Yt::Errors::Unauthorized }  
++    end
++  end
++
++  describe '#videos_params' do
++    context 'krisi e mnogo hubavo i umnichko patence :) ;) :] <3 :* (hug)' do 
++      let(:attrs) { {:id => "AZ SUM ID"} }
++      expected = {:channel_id => "AZ SUM ID"}
++      it { expect(channel.videos_params).to eq expected}
++    end
++  end
++
++  describe '#content_owner_details_params' do
++    context 'nisho' do
++      let(:attrs) { {:owner_name => "Marian Almighty"} } # :id => "id"
++      expected = {:owner_name => "Marian Almighty"}
++      it { expect(channel.content_owner_details_params) rescue NoMethodError }
++    end
++  end
+ end
+\ No newline at end of file
+-- 
+1.9.1
+
