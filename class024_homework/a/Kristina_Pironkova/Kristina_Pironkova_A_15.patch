@@ -24,7 +24,7 @@ index fccf52d..5e87d54 100644
 +      let(:attrs) { {viewer_percentages: {"test" => 0}} }
 +      expected = {"test" => 0}
 +      it { expect(channel.viewer_percentages).to eq expected}
-+    end 
++    end
 +  end
 +
 +  describe '#throttle_subscriptions' do
@@ -50,12 +50,12 @@ index fccf52d..5e87d54 100644
 +
 +    context '#subscribe' do
 +      let(:attrs) { {:id => "id"} }
-+      it { expect(channel.subscribe) rescue Yt::Errors::Unauthorized }  
++      it { expect(channel.subscribe) rescue Yt::Errors::Unauthorized }
 +    end
 +  end
 +
 +  describe '#videos_params' do
-+    context '#videos_params' do 
++    context '#videos_params' do
 +      let(:attrs) { {:id => "id"} }
 +      expected = {:channel_id => "id"}
 +      it { expect(channel.videos_params).to eq expected}
@@ -64,7 +64,7 @@ index fccf52d..5e87d54 100644
 +
 +  describe '#content_owner_details_params' do
 +    context '#content_owner_details_params' do
-+      let(:attrs) { {:owner_name => "id"} } 
++      let(:attrs) { {:owner_name => "id"} }
 +      expected = {:owner_name => "id"}
 +      it { expect(channel.content_owner_details_params) rescue NoMethodError }
 +    end
