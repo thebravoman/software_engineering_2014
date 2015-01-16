@@ -1,7 +1,6 @@
 require 'json'
 
 class JSONWriter
-
 	def write h,no_need_of_this_arg
 		File.open("results_Ivo_Stratev_B_16.json","w") do |f|
 			h.keys.sort.each do |k, v|
