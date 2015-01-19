@@ -2,7 +2,7 @@ require_relative "csv_writer.rb"
 require_relative "json_writer.rb"
 require_relative "xml_writer.rb"
 require_relative "html_writer.rb"
-
+require_relative "svg_writer.rb"
 time_start =Time.now
 system("git checkout `git rev-list -n 1 --before=now master`")
 
