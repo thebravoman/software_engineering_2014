@@ -211,4 +211,3 @@ h.delete_if{|k,v| k == nil}
 		end
 	end
 	writer.write hash, time
-end
