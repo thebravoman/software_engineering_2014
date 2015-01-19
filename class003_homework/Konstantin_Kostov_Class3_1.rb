@@ -9,7 +9,7 @@ c[i]=c[i]+1
 end
 end
 end
-for i in 2..19 do
+for i in 2..18 do
 print "#{i},"
 end
 print("\n")
