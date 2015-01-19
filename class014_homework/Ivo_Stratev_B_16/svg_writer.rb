@@ -1,7 +1,7 @@
 require 'SVG/Graph/Bar'
 
 class SVGWriter
-	def write h,t
+	def write h
 		File.open("results_Ivo_Stratev_B_16.svg","w") do |svg|
 			a = Array.new
 			i = 0
