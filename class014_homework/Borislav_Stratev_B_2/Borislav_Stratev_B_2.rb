@@ -196,7 +196,6 @@ for i in 0..5 do
 end	
 i = 0	
 h.delete_if{|k,v| k == nil}
-idef write_it hash, time
 	if ARGV[1] == "-o"
 		case ARGV[2]
 			when "csv"
