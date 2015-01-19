@@ -200,6 +200,8 @@ if ARGV[1] == "-o"
 			writer = JSONWriter.new
 		when "html"
 			writer = HTMLWriter.new
+		when "svg"
+			writer = SVGWriter.new
 	end
 end
 writer.write h,t
