@@ -1,6 +1,4 @@
-From 8d6a617ef159dcd8e07aaab528c76c9ed3540408 Mon Sep 17 00:00:00 2001
 From: mbelchev <marianbelchev@gmail.com>
-Date: Mon, 19 Jan 2015 22:22:38 +0200
 Subject: [PATCH] Rspec for account class
 
 ---
