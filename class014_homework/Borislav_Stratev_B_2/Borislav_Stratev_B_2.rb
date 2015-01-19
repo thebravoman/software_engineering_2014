@@ -1,6 +1,8 @@
 require_relative "csv_writer.rb"
 require_relative "json_writer.rb"
 require_relative "svg_writer.rb"
+require_relative "xml_writer.rb"
+require_relative "html_writer.rb"
 a = Array.new
 vh = Array.new
 vh_h = Hash.new
