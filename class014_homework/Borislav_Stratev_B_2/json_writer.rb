@@ -1,4 +1,3 @@
-RawBlameHistory  
 require 'json'
 
 class JSONWriter
