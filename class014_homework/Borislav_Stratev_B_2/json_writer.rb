@@ -1,7 +1,7 @@
 RawBlameHistory  
 require 'json'
 
-class CSVWriter
+class JSONWriter
 
 	def write h
 		CSV.open("results_Borislav_Stratev_B_2.json", "w") do |j|
