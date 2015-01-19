@@ -24,7 +24,7 @@ def eval time_stamp,dir,hash,position_in_hash_for_name, position_in_hash_for_flo
 		flag = is_it_on_time time_stamp, file
 		name = get_name file
 		first_name = name.split(/ /).first
-		flay_res = `flay #{file} | grep #{first_name} | wc -l`.to_i
+		flay_res = `flay #{file} | grep #{first_name} | wc -l`.to_s
 		flog_res =`flog #{file}`.to_i
 		if name != nil
 			if hash.has_key?(name) == false
@@ -36,7 +36,7 @@ def eval time_stamp,dir,hash,position_in_hash_for_name, position_in_hash_for_flo
 				hash[name][position_in_hash_for_name] = "1"
 			end
 
-			hash[name][position_in_hash_for_flay] = flay_res.to_s
+			hash[name][position_in_hash_for_flay] = flay_res
 			hash[name][position_in_hash_for_flog] = flog_res.to_s
 		end
 
@@ -51,7 +51,7 @@ def projects  csv_file,dir,stamp,hash
 	homeworks_counter = 0
 	index = 0
 	position = 4
-	CSV.foreach(ARGV.first+csv_file) do |row|
+	CSV.foreach("#{ARGV.first}/#{csv_file}") do |row|
 		Dir.glob("#{ARGV.first}/#{dir}") do |file|
 			flag = is_it_on_time stamp,file
 			name = file.split(/\//).last.split(/\./).first

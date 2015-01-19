@@ -1,7 +1,7 @@
 <results>
 	<student>
 		<first>@</first>
-		<last>8.43114982</last>
+		<last>14.772990468</last>
 		<res>Vh</res>
 		<res>002</res>
 		<res>003</res>
@@ -50,7 +50,7 @@
 		<res>1</res>
 		<res>0</res>
 		<res>0</res>
-		<res>0</res>
+		<res>1</res>
 		<res>1</res>
 		<res>0</res>
 		<res>0</res>
@@ -60,13 +60,12 @@
 		<res>200</res>
 		<res>0</res>
 		<res>0</res>
-		<res>0</res>
+		<res>205</res>
 		<res>235</res>
 		<res>0</res>
 		<res>0</res>
 		<res>0</res>
 		<res>0</res>
-		<res>4</res>
 		<res>0</res>
 		<res>0</res>
 		<res>0</res>
@@ -106,7 +105,6 @@
 		<res>0</res>
 		<res>0</res>
 		<res>0</res>
-		<res>2</res>
 		<res>0</res>
 		<res>0</res>
 		<res>0</res>
@@ -130,6 +128,46 @@
 		<res>0</res>
 		<res>0</res>
 		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+	</student>
+	<student>
+		<first>Georgi</first>
+		<last>Velev</last>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>2</res>
 		<res>0</res>
 		<res>0</res>
 		<res>0</res>
@@ -203,7 +241,6 @@
 		<res>0</res>
 		<res>0</res>
 		<res>0</res>
-		<res>0</res>
 	</student>
 	<student>
 		<first>Iosyf</first>
@@ -227,7 +264,6 @@
 		<res>0</res>
 		<res>0</res>
 		<res>70</res>
-		<res>0</res>
 		<res>0</res>
 		<res>0</res>
 		<res>0</res>
@@ -275,7 +311,47 @@
 		<res>0</res>
 		<res>0</res>
 		<res>0</res>
-		<res>4</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+	</student>
+	<student>
+		<first>Kamena</first>
+		<last>Dacheva</last>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>1</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>118</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
 		<res>0</res>
 		<res>0</res>
 		<res>0</res>
@@ -329,7 +405,6 @@
 		<res>0</res>
 		<res>0</res>
 		<res>0</res>
-		<res>0</res>
 	</student>
 	<student>
 		<first>Nikolay</first>
@@ -340,16 +415,179 @@
 		<res>0</res>
 		<res>2</res>
 		<res>0</res>
+		<res>1</res>
+		<res>1</res>
 		<res>0</res>
 		<res>0</res>
-		<res>0</res>
-		<res>0</res>
-		<res>0</res>
-		<res>0</res>
+		<res>1</res>
+		<res>1</res>
 		<res>0</res>
 		<res>29</res>
 		<res>0</res>
 		<res>0</res>
+		<res>159</res>
+		<res>196</res>
+		<res>0</res>
+		<res>0</res>
+		<res>198</res>
+		<res>257</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+	</student>
+	<student>
+		<first>Simeon</first>
+		<last>Shopkin</last>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>2</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>291</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+	</student>
+	<student>
+		<first>Stanimir</first>
+		<last>Bogdanov</last>
+		<res>0</res>
+		<res>0</res>
+		<res>1</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>96</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+	</student>
+	<student>
+		<first>Stanislav</first>
+		<last>Gospodinov</last>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>2</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>78</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+	</student>
+	<student>
+		<first>Stanislav</first>
+		<last>Valkanov</last>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>1</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>108</res>
 		<res>0</res>
 		<res>0</res>
 		<res>0</res>
@@ -413,6 +651,87 @@
 		<res>0</res>
 		<res>0</res>
 		<res>0</res>
+	</student>
+	<student>
+		<first>Stefan</first>
+		<last>Radev</last>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>1</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>183</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+	</student>
+	<student>
+		<first>Tihomir</first>
+		<last>Lidanski</last>
+		<res>0</res>
+		<res>1</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>16</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
+		<res>0</res>
 		<res>0</res>
 	</student>
 	<student>
@@ -428,7 +747,7 @@
 		<res>1</res>
 		<res>0</res>
 		<res>0</res>
-		<res>0</res>
+		<res>1</res>
 		<res>1</res>
 		<res>0</res>
 		<res>0</res>
@@ -438,17 +757,16 @@
 		<res>261</res>
 		<res>0</res>
 		<res>0</res>
-		<res>0</res>
+		<res>281</res>
 		<res>278</res>
 		<res>0</res>
 		<res>0</res>
 		<res>0</res>
 		<res>0</res>
-		<res>2</res>
-		<res>2</res>
 		<res>0</res>
 		<res>0</res>
-		<res>4</res>
+		<res>0</res>
+		<res>0</res>
 		<res>0</res>
 		<res>0</res>
 		<res>0</res>
@@ -475,7 +793,6 @@
 		<res>0</res>
 		<res>0</res>
 		<res>37</res>
-		<res>0</res>
 		<res>0</res>
 		<res>0</res>
 		<res>0</res>

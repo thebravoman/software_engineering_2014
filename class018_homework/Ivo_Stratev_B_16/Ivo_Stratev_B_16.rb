@@ -10,7 +10,7 @@ configuration_hash.each do |key,value|
 	
 end
 
-csv_file = "/class009_homework/project_to_names.csv"
+csv_file = "class009_homework/project_to_names.csv"
 dir = "class009_homework/**/*.pdf"
 stamp = "--until=2014.10.27.20:00:01"
 projects  csv_file, dir, stamp, eval_hash
@@ -19,7 +19,7 @@ dir = "vhodno_nivo/**/*.*"
 stamp = "--until=2014.09.17.20:00:01"
 entry_lv dir,stamp,eval_hash
 
-range = 37
+range = 36
 putzeros range,eval_hash
 	
 delete eval_hash
