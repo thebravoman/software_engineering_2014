@@ -136,17 +136,54 @@ index 84b087f..793e978 100644
 +
 + 
 +
-+  describe '#dislike' do
-+    let(:attrs) {{id: 'hIaUGHGJaiiagfjaiFJigjI'} }
 +
-+    context 'given a liked video' do
-+       before { expect(video).to receive(:dislike).and_yield(true,true)}
++describe '#dislike' do
++  let(:attrs) { {id: 'video-id'} }
 +
-+      it { expect(video.dislike).to be true }
-+      it { expect{video.dislike}.to change{video.liked?} }
-+      
-+    end
-+  end
++    context 'given a video' do
++	it ".dislike changes video rating" do
++				rating  = double("rating")
++				rating_new_value = :dislike
++				allow(video).to receive(:rating).and_return(rating)
++				allow(rating).to receive(:set).and_return(rating_new_value)
++				allow(rating).to receive(:rating).and_return(rating_new_value)
++				expect(video.dislike).to be true
++		end
++	end
++end
++
++describe '#like' do
++ let(:attrs) { {id: 'video-id'} }
++
++    context 'given a video' do
++	it ".like changes video rating" do
++				rating  = double("rating")
++				rating_new_value = :like
++				allow(video).to receive(:rating).and_return(rating)
++				allow(rating).to receive(:set).and_return(rating_new_value)
++				allow(rating).to receive(:rating).and_return(rating_new_value)
++				expect(video.like).to be true
++				expect(video.liked?).to be true
++		end
++	end
++end
++
++describe '#unlike' do
++ let(:attrs) { {id: 'video-id'} }
++
++    context 'given a video' do
++	it ".unlike doesn,t change video rating" do
++				rating  = double("rating")
++				rating_new_value = :unlike
++				allow(video).to receive(:rating).and_return(rating)
++				allow(rating).to receive(:set).and_return(rating_new_value)
++				allow(rating).to receive(:rating).and_return(rating_new_value)
++				expect(video.unlike).to be true
++		end
++	end
++end
++
++
 +
 +   
 +
@@ -205,17 +242,54 @@ index 0000000..fa64305
 +
 + 
 +
-+  describe '#dislike' do
-+    let(:attrs) {{id: 'hIaUGHGJaiiagfjaiFJigjI'} }
 +
-+    context 'given a liked video' do
-+       before { expect(video).to receive(:dislike).and_yield(true)}
-+      video.dislike {x = true}
-+      it { expect(video.dislike).to eql x }
-+      #it { expect{video.dislike}.to change{video.liked?} }
-+      
-+    end
-+  end
++describe '#dislike' do
++  let(:attrs) { {id: 'video-id'} }
++
++    context 'given a video' do
++	it ".dislike changes video rating" do
++				rating  = double("rating")
++				rating_new_value = :dislike
++				allow(video).to receive(:rating).and_return(rating)
++				allow(rating).to receive(:set).and_return(rating_new_value)
++				allow(rating).to receive(:rating).and_return(rating_new_value)
++				expect(video.dislike).to be true
++		end
++	end
++end
++
++describe '#like' do
++ let(:attrs) { {id: 'video-id'} }
++
++    context 'given a video' do
++	it ".like changes video rating" do
++				rating  = double("rating")
++				rating_new_value = :like
++				allow(video).to receive(:rating).and_return(rating)
++				allow(rating).to receive(:set).and_return(rating_new_value)
++				allow(rating).to receive(:rating).and_return(rating_new_value)
++				expect(video.like).to be true
++				expect(video.liked?).to be true
++		end
++	end
++end
++
++describe '#unlike' do
++ let(:attrs) { {id: 'video-id'} }
++
++    context 'given a video' do
++	it ".unlike doesn,t change video rating" do
++				rating  = double("rating")
++				rating_new_value = :unlike
++				allow(video).to receive(:rating).and_return(rating)
++				allow(rating).to receive(:set).and_return(rating_new_value)
++				allow(rating).to receive(:rating).and_return(rating_new_value)
++				expect(video.unlike).to be true
++		end
++	end
++end
++
++
 +
 +   
 +
@@ -274,5 +348,4 @@ index 0000000..4170e9a
 +  spec.add_development_dependency 'yard' #, '~> 0.8.0'
 +  spec.add_development_dependency 'coveralls' #, '~> 0.7.0'
 +end
--- 
-1.9.1
+
