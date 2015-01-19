@@ -1,0 +1,77 @@
+From 7b1c1034467b045480032ebb6b6bbb1468e6e158 Mon Sep 17 00:00:00 2001
+From: 3phase <pbozhinov@yahoo.com>
+Date: Tue, 20 Jan 2015 01:52:24 +0200
+Subject: [PATCH] Petko_Bozhinov_11A_21
+
+---
+ spec/models/video_spec.rb |   48 ++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 47 insertions(+), 1 deletion(-)
+
+diff --git a/spec/models/video_spec.rb b/spec/models/video_spec.rb
+index 84b087f..83579c0 100644
+--- a/spec/models/video_spec.rb
++++ b/spec/models/video_spec.rb
+@@ -1,5 +1,6 @@
+-require 'spec_helper'
++# require 'spec_helper'
+ require 'yt/models/video'
++require 'yt/models/content_owner'
+ 
+ describe Yt::Video do
+   subject(:video) { Yt::Video.new attrs }
+@@ -41,6 +42,51 @@ describe Yt::Video do
+ 
+       it { expect(video.delete).to be true }
+       it { expect{video.delete}.to change{video.exists?} }
++
+     end
+   end
++
++  describe '#liked?' do 
++    account = Yt::Account.new access_token: 'ya29.1.ABCDEFGHIJ'
++    let(:attrs) {{ auth: account, url: 'https://youtu.be/P1QUZzeZoPQ'} }
++    it {
++      rating = double("rating")
++      allow(video).to receive(:rating).and_return(rating)
++      allow(rating).to receive(:rating).and_return(false)
++      expect(video.liked?).to be false
++    }
++  end 
++
++  describe '#like' do 
++    account = Yt::Account.new access_token: 'ya29.1.ABCDEFGHIJ'
++    let(:attrs) {{ auth: account, url: 'https://youtu.be/P1QUZzeZoPQ'} }
++    it {
++      rating = double("rating")
++      allow(video).to receive(:rating).and_return(rating)
++      allow(rating).to receive(:set).and_return(:like)
++      allow(rating).to receive(:rating).and_return(:like)
++      expect(video.like).to be true
++    }
++  end
++
++  describe '#dislike' do 
++    account = Yt::Account.new access_token: 'ya29.1.ABCDEFGHIJ'
++    let(:attrs) {{ auth: account, url: 'https://youtu.be/P1QUZzeZoPQ'} }
++    it {
++      rating = double("rating")
++      allow(video).to receive(:rating).and_return(rating)
++      allow(rating).to receive(:set).and_return(:dislike)
++      allow(rating).to receive(:rating).and_return(:dislike)
++      expect(video.like).to be false
++    }
++  end
++
++  describe '#report_params' do 
++    account = Yt::Account.new access_token: 'ya29.1.ABCDEFGHIJ'
++    let(:attrs) { {auth: (Yt::ContentOwner.new owner_name: 'Random'), id: '123'} }
++    it {
++      expect(video.reports_params).to eq(:ids=>"contentOwner==Random", :filters=>"video==123")
++    }
++  end
++
+ end
+\ No newline at end of file
+-- 
+1.7.9.5
+
