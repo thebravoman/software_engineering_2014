@@ -1,7 +1,7 @@
 i = 0
 array = Array.new
 
-Dir.glob("ARGV[0]/vhodno_nivo/**/*.*") do |my_text_file|
+Dir.glob("#{ARGV.first}/vhodno_nivo/**/*.*") do |my_text_file|
   
 	split_first = my_text_file.split(/_/)
 	split_second = split_first.last.split(/\./).first
