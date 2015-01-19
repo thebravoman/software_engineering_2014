@@ -2,7 +2,6 @@ From aa5b98756a0b4f4f7005a5b9206380652ae95e36 Mon Sep 17 00:00:00 2001
 From: NoHomey <ivo_stratev@abv.bg>
 Date: Mon, 12 Jan 2015 19:22:30 +0200
 Subject: [PATCH] Improved CC of YT:Models::Video from 79.37% to 80.95%
-
 ---
  Gemfile.lock~              | 67 ++++++++++++++++++++++++++++++++++++++++++++++
  lor                        | 28 +++++++++++++++++++
@@ -348,4 +347,3 @@ index 0000000..4170e9a
 +  spec.add_development_dependency 'yard' #, '~> 0.8.0'
 +  spec.add_development_dependency 'coveralls' #, '~> 0.7.0'
 +end
-
