@@ -1,6 +1,6 @@
 class HTMLWriter
-	def write results,no_need_of_this_arg
-		File.open("results_Borislav_Stratev_B_2.html", "w") do |row|
+	def write results
+		File.open("results_Ivo_Stratev_B_16.html", "w") do |row|
 			row << "<!DOCTYPE html>\n" << "<html>\n" << "\t<body>\n"
 				row << "\t\t<table style='width:100%;'>\n" 
 			results.sort.each do |k, v|
@@ -9,7 +9,7 @@ class HTMLWriter
 				v.each do |l|
 					row << "\t\t\t<td>" << "#{l}" << "</td>\n"
 					i = i + 1
-					if i == 34
+					if i == 7
 						break
 					end
 				end

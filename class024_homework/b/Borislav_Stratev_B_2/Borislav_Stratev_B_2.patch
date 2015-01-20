@@ -1,278 +1,55 @@
-From aa5b98756a0b4f4f7005a5b9206380652ae95e36 Mon Sep 17 00:00:00 2001
-From: NoHomey <ivo_stratev@abv.bg>
-Date: Mon, 12 Jan 2015 19:22:30 +0200
-Subject: [PATCH] Improved CC of YT:Models::Video from 79.37% to 80.95%
-
----
- Gemfile.lock~              | 67 ++++++++++++++++++++++++++++++++++++++++++++++
- lor                        | 28 +++++++++++++++++++
- spec/models/video_spec.rb  | 19 ++++++++++++-
- spec/models/video_spec.rb~ | 63 +++++++++++++++++++++++++++++++++++++++++++
- yt.gemspec                 |  4 +--
- yt.gemspec~                | 32 ++++++++++++++++++++++
- 6 files changed, 210 insertions(+), 3 deletions(-)
- create mode 100644 Gemfile.lock~
- create mode 100644 lor
- create mode 100644 spec/models/video_spec.rb~
- create mode 100644 yt.gemspec~
-
-diff --git a/Gemfile.lock~ b/Gemfile.lock~
-new file mode 100644
-index 0000000..139c376
---- /dev/null
-+++ b/Gemfile.lock~
-@@ -0,0 +1,67 @@
-+PATH
-+  remote: .
-+  specs:
-+    yt (0.13.7)
-+      activesupport
-+
-+GEM
-+  remote: https://rubygems.org/
-+  specs:
-+    activesupport (4.2.0)
-+      i18n (~> 0.7)
-+      json (~> 1.7, >= 1.7.7)
-+      minitest (~> 5.1)
-+      thread_safe (~> 0.3, >= 0.3.4)
-+      tzinfo (~> 1.1)
-+    coveralls (0.7.2)
-+      multi_json (~> 1.3)
-+      rest-client (= 1.6.7)
-+      simplecov (>= 0.7)
-+      term-ansicolor (= 1.2.2)
-+      thor (= 0.18.1)
-+    diff-lcs (1.2.5)
-+    docile (1.1.5)
-+    i18n (0.7.0)
-+    json (1.8.1)
-+    mime-types (2.4.3)
-+    minitest (5.5.0)
-+    multi_json (1.10.1)
-+    rake (10.4.2)
-+    rest-client (1.6.7)
-+      mime-types (>= 1.16)
-+    rspec (3.1.0)
-+      rspec-core (~> 3.1.0)
-+      rspec-expectations (~> 3.1.0)
-+      rspec-mocks (~> 3.1.0)
-+    rspec-core (3.1.7)
-+      rspec-support (~> 3.1.0)
-+    rspec-expectations (3.1.2)
-+      diff-lcs (>= 1.2.0, < 2.0)
-+      rspec-support (~> 3.1.0)
-+    rspec-mocks (3.1.3)
-+      rspec-support (~> 3.1.0)
-+    rspec-support (3.1.2)
-+    simplecov (0.9.1)
-+      docile (~> 1.1.0)
-+      multi_json (~> 1.0)
-+      simplecov-html (~> 0.8.0)
-+    simplecov-html (0.8.0)
-+    term-ansicolor (1.2.2)
-+      tins (~> 0.8)
-+    thor (0.18.1)
-+    thread_safe (0.3.4)
-+    tins (0.13.2)
-+    tzinfo (1.2.2)
-+      thread_safe (~> 0.1)
-+    yard (0.8.7.6)
-+
-+PLATFORMS
-+  ruby
-+
-+DEPENDENCIES
-+  bundler
-+  coveralls
-+  rake
-+  rspec
-+  yard
-+  yt!
-diff --git a/lor b/lor
-new file mode 100644
-index 0000000..7936370
---- /dev/null
-+++ b/lor
-@@ -0,0 +1,28 @@
-+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m
-+
-+Failures:
-+
-+  1) Yt::Collections::Reports#within given the request raises error 400 with "Invalid Query" message but returns a success code 2XX the second time should not fail
-+     [31mFailure/Error: let(:result) { reports.within Range.new(5.days.ago, 4.days.ago) }[0m
-+     [31mSignalException:[0m
-+     [31m  SIGHUP[0m
-+     [36m# ./lib/yt/collections/reports.rb:18:in `initialize'[0m
-+     [36m# ./lib/yt/collections/reports.rb:18:in `exception'[0m
-+     [36m# ./lib/yt/collections/reports.rb:18:in `sleep'[0m
-+     [36m# ./lib/yt/collections/reports.rb:18:in `rescue in within'[0m
-+     [36m# ./lib/yt/collections/reports.rb:9:in `within'[0m
-+     [36m# ./spec/collections/reports_spec.rb:12:in `block (3 levels) in <top (required)>'[0m
-+     [36m# ./spec/collections/reports_spec.rb:26:in `block (6 levels) in <top (required)>'[0m
-+     [36m# ./spec/support/fail_matcher.rb:5:in `call'[0m
-+     [36m# ./spec/support/fail_matcher.rb:5:in `block (2 levels) in <top (required)>'[0m
-+     [36m# ./spec/collections/reports_spec.rb:26:in `block (5 levels) in <top (required)>'[0m
-+
-+Finished in 204 minutes 44 seconds (files took 1.17 seconds to load)
-+[31m9 examples, 1 failure[0m
-+
-+Failed examples:
-+
-+[31mrspec ./spec/collections/reports_spec.rb:26[0m [36m# Yt::Collections::Reports#within given the request raises error 400 with "Invalid Query" message but returns a success code 2XX the second time should not fail[0m
-+
-+Randomized with seed 8379
-+
 diff --git a/spec/models/video_spec.rb b/spec/models/video_spec.rb
-index 84b087f..793e978 100644
+index 84b087f..1dcee6c 100644
 --- a/spec/models/video_spec.rb
 +++ b/spec/models/video_spec.rb
-@@ -43,4 +43,21 @@ describe Yt::Video do
+@@ -43,4 +43,48 @@ describe Yt::Video do
        it { expect{video.delete}.to change{video.exists?} }
      end
    end
 -end
 \ No newline at end of file
++		describe '#dislike' do
++		let(:attrs) { {id: 'video-id'} }
 +
-+ 
++		context 'given a video' do
++			it ".dislike changes video's ratings" do
++				rating  = double("rating")
++				rating_new_value = :dislike
++				allow(video).to receive(:rating).and_return(rating)
++				allow(rating).to receive(:set).and_return(rating_new_value)
++				allow(rating).to receive(:rating).and_return(rating_new_value)
++				expect(video.dislike).to be true
++			end
++		end
++	end
 +
-+  describe '#dislike' do
-+    let(:attrs) {{id: 'hIaUGHGJaiiagfjaiFJigjI'} }
++	describe '#like' do
++		let(:attrs) { {id: 'video-id'} }
 +
-+    context 'given a liked video' do
-+       before { expect(video).to receive(:dislike).and_yield(true,true)}
++		context 'given a video' do
++			it ".like changes video's ratings" do
++				rating  = double("rating")
++				rating_new_value = :like
++				allow(video).to receive(:rating).and_return(rating)
++				allow(rating).to receive(:set).and_return(rating_new_value)
++				allow(rating).to receive(:rating).and_return(rating_new_value)
++				expect(video.like).to be true
++			end
++		end
++	end
 +
-+      it { expect(video.dislike).to be true }
-+      it { expect{video.dislike}.to change{video.liked?} }
-+      
-+    end
-+  end
++	describe '#unlike' do
++		let(:attrs) { {id: 'video-id'} }
 +
-+   
-+
++		context 'given avideo' do
++			it ".unlike doesn't change video's ratings" do
++				rating  = double("rating")
++				rating_new_value = :unlike
++				allow(video).to receive(:rating).and_return(rating)
++				allow(rating).to receive(:set).and_return(rating_new_value)
++				allow(rating).to receive(:rating).and_return(rating_new_value)
++				expect(video.unlike).to be true
++			end
++		end
++	end
 +end
-diff --git a/spec/models/video_spec.rb~ b/spec/models/video_spec.rb~
-new file mode 100644
-index 0000000..fa64305
---- /dev/null
-+++ b/spec/models/video_spec.rb~
-@@ -0,0 +1,63 @@
-+require 'spec_helper'
-+require 'yt/models/video'
-+
-+describe Yt::Video do
-+  subject(:video) { Yt::Video.new attrs }
-+
-+  describe '#snippet' do
-+    context 'given fetching a video returns a snippet' do
-+      let(:attrs) { {snippet: {"title"=>"Fullscreen Creator Platform"}} }
-+      it { expect(video.snippet).to be_a Yt::Snippet }
-+    end
-+  end
-+
-+  describe '#statistics_set' do
-+    context 'given fetching a video returns statistics' do
-+      let(:attrs) { {statistics: {"viewCount"=>"202"}} }
-+      it { expect(video.statistics_set).to be_a Yt::StatisticsSet }
-+    end
-+  end
-+
-+  describe '#content_details' do
-+    context 'given fetching a video returns content details' do
-+      let(:attrs) { {content_details: {"definition"=>"hd"}} }
-+      it { expect(video.content_detail).to be_a Yt::ContentDetail }
-+    end
-+  end
-+
-+  describe '#update' do
-+    let(:attrs) { {id: 'MESycYJytkU', snippet: {'title'=>'old'}} }
-+    before { expect(video).to receive(:do_update).and_yield 'snippet'=>{'title'=>'new'} }
-+
-+    it { expect(video.update title: 'new').to be true }
-+    it { expect{video.update title: 'new'}.to change{video.title} }
-+  end
-+
-+  describe '#delete' do
-+    let(:attrs) { {id: 'video-id'} }
-+
-+    context 'given an existing video' do
-+      before { expect(video).to receive(:do_delete).and_yield }
-+
-+      it { expect(video.delete).to be true }
-+      it { expect{video.delete}.to change{video.exists?} }
-+    end
-+  end
-+
-+ 
-+
-+  describe '#dislike' do
-+    let(:attrs) {{id: 'hIaUGHGJaiiagfjaiFJigjI'} }
-+
-+    context 'given a liked video' do
-+       before { expect(video).to receive(:dislike).and_yield(true)}
-+      video.dislike {x = true}
-+      it { expect(video.dislike).to eql x }
-+      #it { expect{video.dislike}.to change{video.liked?} }
-+      
-+    end
-+  end
-+
-+   
-+
-+end
-diff --git a/yt.gemspec b/yt.gemspec
-index cb4f07a..4170e9a 100644
---- a/yt.gemspec
-+++ b/yt.gemspec
-@@ -25,8 +25,8 @@ Gem::Specification.new do |spec|
- 
-   # For development / Code coverage / Documentation
-   spec.add_development_dependency 'bundler' #, '~> 1.0'
--  spec.add_development_dependency 'rspec' #, '~> 2.0'
-+  spec.add_development_dependency 'rspec' #, '~> 3.1.7'
-   spec.add_development_dependency 'rake' #, '~> 10.0'
-   spec.add_development_dependency 'yard' #, '~> 0.8.0'
-   spec.add_development_dependency 'coveralls' #, '~> 0.7.0'
--end
-\ No newline at end of file
-+end
-diff --git a/yt.gemspec~ b/yt.gemspec~
-new file mode 100644
-index 0000000..4170e9a
---- /dev/null
-+++ b/yt.gemspec~
-@@ -0,0 +1,32 @@
-+# coding: utf-8
-+lib = File.expand_path('../lib', __FILE__)
-+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-+require 'yt/version'
-+
-+Gem::Specification.new do |spec|
-+  spec.name          = "yt"
-+  spec.version       = Yt::VERSION
-+  spec.authors       = ["Claudio Baccigalupo"]
-+  spec.email         = ["claudio@fullscreen.net"]
-+  spec.description   = %q{Youtube V3 API client.}
-+  spec.summary       = %q{Yt makes it easy to interact with Youtube V3 API by
-+    providing a modular, intuitive and tested Ruby-style API.}
-+  spec.homepage      = "http://github.com/Fullscreen/yt"
-+  spec.license       = "MIT"
-+
-+  spec.required_ruby_version = '>= 1.9.3'
-+
-+  spec.files         = `git ls-files`.split($/)
-+  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
-+  spec.require_paths = ["lib"]
-+
-+  spec.add_dependency 'activesupport' # '3 (Ruby 1.9) or 4 (Ruby 2)'
-+
-+  # For development / Code coverage / Documentation
-+  spec.add_development_dependency 'bundler' #, '~> 1.0'
-+  spec.add_development_dependency 'rspec' #, '~> 3.1.7'
-+  spec.add_development_dependency 'rake' #, '~> 10.0'
-+  spec.add_development_dependency 'yard' #, '~> 0.8.0'
-+  spec.add_development_dependency 'coveralls' #, '~> 0.7.0'
-+end
--- 
-1.9.1

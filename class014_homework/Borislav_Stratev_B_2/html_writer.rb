@@ -9,7 +9,7 @@ class HTMLWriter
 				v.each do |l|
 					row << "\t\t\t<td>" << "#{l}" << "</td>\n"
 					i = i + 1
-					if i == 34
+					if i == 7
 						break
 					end
 				end

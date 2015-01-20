@@ -6,9 +6,9 @@ class SVGWriter
 			a = Array.new
 			i = 0
 			data = Array.new
-			fields = %w(Vh 2 3 4 9 12 14 15 16 17_1 17_2 18);
+			fields = %w(Vh 2 3 4 9 12 14);
 			
-			for j in 0..11
+			for j in 0..7
 				i = 0
 				h.each do |k,v|
 					a[i] = v[j]

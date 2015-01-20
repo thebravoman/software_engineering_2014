@@ -1,4 +1,8 @@
-require "csv_writer.rb"
+require_relative "csv_writer.rb"
+require_relative "json_writer.rb"
+require_relative "svg_writer.rb"
+require_relative "xml_writer.rb"
+require_relative "html_writer.rb"
 a = Array.new
 vh = Array.new
 vh_h = Hash.new
@@ -192,5 +196,18 @@ for i in 0..5 do
 end	
 i = 0	
 h.delete_if{|k,v| k == nil}
-writer = CSVWriter.new
-writer.write h
+	if ARGV[1] == "-o"
+		case ARGV[2]
+			when "csv"
+				writer = CSVWriter.new
+			when "xml"
+				writer = XMLWriter.new
+			when "json"
+				writer = JSONWriter.new
+			when "html"
+				writer = HTMLWriter.new
+			when "svg"
+				writer = SVGWriter.new
+		end
+	end
+	writer.write hash, time
