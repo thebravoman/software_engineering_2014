@@ -2,6 +2,9 @@ require 'rubygems'
 require 'nokogiri'
 require 'csv'
 
+# run as
+# ruby check_yt_tests.rb results/a/yt_specs/ yt/coverage/index.html 
+
 def get_model_and_student file
 	model = file.split("/").last.split("_")[0..-2].join("_")
 	student = file.split("/")[-2]
