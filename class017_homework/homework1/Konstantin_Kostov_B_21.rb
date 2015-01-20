@@ -1,7 +1,7 @@
 require 'yaml'
 hash = Hash.new
 def write(hash)
-	html = File.open("results_Nikolay_Mihailov_B_25.html", "w")
+	html = File.open("results_Konstantin_Kostov_B_21.html", "w")
 	
 	html.puts("<!DOCTYPE html>")
 	html.puts("<html>")
@@ -25,15 +25,15 @@ end
 
 $stderr.reopen("/dev/null", "w")
 
-config_file = YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["good"]
-Dir.glob(ARGV[0] + YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["dir_results"][0]) do |res_file|
+config_file = YAML.load_file("Konstantin_Kostov_B_21_yamal.yml")["good"]
+Dir.glob(ARGV[0] + YAML.load_file("Konstantin_Kostov_B_21_yamal.yml")["dir_results"][0]) do |res_file|
 	names = res_file.split(/\//).last.split(".").first.split(/_/)	
 	next if names[3] == nil
 
 	count = 0
 	data = ""
 	fixture = ""
-	config_file = YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["good"]
+	config_file = YAML.load_file("Konstantin_Kostov_B_21_yamal.yml")["good"]
 	File.open("#{res_file}") do |file|
 		file.each_line do |line|
 			line.slice! "=begin"
@@ -55,9 +55,9 @@ Dir.glob(ARGV[0] + YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["dir_result
 	next if data == ""
 
 
-	out_dir = YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["dir_out_dir"][0]
+	out_dir = YAML.load_file("Konstantin_Kostov_B_21_yamal.yml")["dir_out_dir"][0]
 
-	YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["dir_output"].each do |dir|
+	YAML.load_file("Konstantin_Kostov_B_21_yamal.yml")["dir_output"].each do |dir|
 		Dir.glob(ARGV[0] + dir) do |output|
 			`rm #{ARGV[0]}/#{out_dir}/#{output}`
 		end
@@ -66,7 +66,7 @@ Dir.glob(ARGV[0] + YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["dir_result
 	`ruby #{res_file} #{fixture}`
 
 	buffer_res = ""		
-	YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["dir_output"].each do |dir|
+	YAML.load_file("Konstantin_Kostov_B_21_yamal.yml")["dir_output"].each do |dir|
 		Dir.glob(ARGV[0] + dir) do |output|
 			next if output == "" || output == nil
 			buffer_res = `cat #{ARGV[0]}/#{out_dir}/#{output}`			
@@ -74,7 +74,7 @@ Dir.glob(ARGV[0] + YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["dir_result
 		end
 	end		
 
-	Dir.glob(ARGV[0] + YAML.load_file("Nikolay_Mihailov_B_25_yamal.yml")["dir_expects"][0]) do |exp_file|
+	Dir.glob(ARGV[0] + YAML.load_file("Konstantin_Kostov_B_21_yamal.yml")["dir_expects"][0]) do |exp_file|
 		expects_for_file = exp_file.split("/").last 
 		expects = expects_for_file.split(".").first
 		if  names[3] == expects
