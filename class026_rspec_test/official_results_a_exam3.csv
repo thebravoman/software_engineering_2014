@@ -1,0 +1,19 @@
+Student,Passed,Diff Coverage,Existing spec,Coverage,New spec,Coverage
+Stanimir_Bogdanov_A_24,true,20.83,account,79.17,account,100.0
+Georgi_Ivanov_A_3,false,-12.5,asset,70.83,asset,58.33
+Radoslav_Kostadinov_A_22,true,23.53,playlist_item,76.47,playlist_item,100.0
+Kamena_Dacheva_A_13,false,-15.150000000000006,ownership,72.73,ownership,57.58
+Simeon_Shopkin_A_23,false,-23.53,rating,76.47,rating,52.94
+DImitar_Matev_11a_5,false,0,Dimitar_Matev_11a_5_ownership,0,Dimitar_Matev_11a_5_ownership,0
+Momchil_Angelov_A_18,false,0.0,advertising_options_set,45.0,advertising_options_set,45.0
+Elena_Karakoleva_A_8,false,0.0,account,79.17,account,79.17
+Tihomir_Lidanski_A_27,false,0,Tihomir_Lidanski_A_27_asset,0,Tihomir_Lidanski_A_27_asset,0
+Veselin_Dechev_A_2,false,0.0,advertising_options_set,45.0,advertising_options_set,45.0
+Stanislav_Valkanov_11A_25,false,0,resumable,0,resumable,0
+Lubomir_Yankov_A_16,true,20.83,account,79.17,account,100.0
+Ivo_Valchev_A_11,false,0.0,asset,70.83,asset,70.83
+Denis_Trenchev_11a_4,false,0,Denis_Trenchev_11a_4:playlist,0,Denis_Trenchev_11a_4:playlist,0
+Borislav_Rusinov_A_1,false,0,resumablesession,0,resumablesession,0
+Dimitar_Nestorov_A_7,false,-23.53,rating,76.47,rating,52.94
+Kalin_Marinov_A_14,false,6.25,playlist,71.88,playlist,78.13
+Ivelin_Slavchev_A_10,false,0.0,advertising_options_set,45.0,advertising_options_set,45.0

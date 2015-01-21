@@ -1,0 +1,14 @@
+Student,Passed,Diff Coverage,Existing spec,Coverage,New spec,Coverage
+Martin_Grigorov_b_23,false,-23.53,rating,76.47,rating,52.94
+Konstantin_Kostov_B_21,false,0,Konstanti_Kostov_B_21_ownership,0,Konstanti_Kostov_B_21_ownership,0
+Vasil_Kolev_11b_6,false,-76.47,playlist_item,76.47,playlist_item,0
+Atanaska_Ivancheva_B_1,false,0.0,resumable_session,41.67,resumable_session,41.67
+Denis_Stoinev_11B_3,false,0.0,ownership,72.73,ownership,72.73
+Veselina_Kolova_b_8,true,16.659999999999997,account,79.17,account,95.83
+Vanya_Santeva_B_5,false,-24.250000000000007,ownership,72.73,ownership,48.48
+Ivo_Stratev_16,true,16.659999999999997,account,79.17,account,95.83
+Kaloyan_Nikov_B_19,false,0.0,asset,70.83,asset,70.83
+Iliyan_Germanov_B_17,false,4.159999999999997,resumable_session,41.67,resumable_session,45.83
+Vladimir_Yordanov_B_9,false,4.159999999999997,resumable_session,41.67,resumable_session,45.83
+Gergan_Nikolov_b_11,false,0.0,asset,70.83,asset,70.83
+Borislav_Stratev_b_2,false,0.0,advertising_options_set,45.0,advertising_options_set,45.0
