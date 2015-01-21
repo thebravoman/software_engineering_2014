@@ -99,16 +99,16 @@ specs.each do |spec|
 	runner = RunSpecs.new spec
 	res = runner.run_for_coverage
 	results[res[:student]] = {old_coverage: res[:coverage]}
+	p results
 end
-p results
 
 specs.each do |spec|
 	p "Running spec with repo reset: #{spec}"
 	runner = RunSpecsWithRepoReset.new spec
 	res = runner.run_for_coverage
 	results[res[:student]][:new_coverage] = res[:coverage]
+	p results
 end
-p results
 
 CSV.open("results.csv","w") do |csv|
 	csv << ["Student","Passed","Diff Coverage","Existing spec","Coverage","New spec","Coverage"]
