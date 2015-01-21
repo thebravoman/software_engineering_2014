@@ -1,38 +1,42 @@
 diff --git a/spec/models/account_spec.rb b/spec/models/account_spec.rb
-index e69de29..857dacd 100644
+index e69de29..e5f523b 100644
 --- a/spec/models/account_spec.rb
 +++ b/spec/models/account_spec.rb
-@@ -0,0 +1,33 @@
+@@ -0,0 +1,37 @@
 +require 'spec_helper'
 +require 'yt/models/account'
-+require 'yt/models/video'
-+require 'yt/models/playlist'
 +
 +describe Yt::Account do
-+	subject(:account) { Yt::Account.new }
++	before :each do
++		@account = Yt::Account.new
++	end
 +
 +	describe '#upload_video' do
-+		context 'given a valid account returns a video' do
-+			it do
-+				session = double('mocked session')
-+				resumable_sessions = double('mocked resumeable_sessions')
-+				allow(account).to receive(:open).and_return('open covered')
-+				allow(account).to receive(:resumable_sessions).and_return(resumable_sessions)
-+				allow(resumable_sessions).to receive(:insert).and_return(session)
-+				allow(session).to receive(:upload_video).and_return(Yt::Video.new)
-+				expect(account.upload_video('test_path', {})).to be_instance_of(Yt::Video)
-+			end
++		it do
++			mocked_file = double("file")
++			mocked_resumable_sessions = double("resumable_sessions")
++			mocked_session = double("session")
++			allow(@account).to receive(:open).with('url', 'rb').and_return(mocked_file)
++			allow(@account).to receive(:resumable_sessions).and_return(mocked_resumable_sessions)
++			allow(mocked_file).to receive(:size).and_return('size')
++			allow(mocked_resumable_sessions).to receive(:insert).with('size', 'good').and_return(mocked_session)
++			allow(mocked_session).to receive(:upload_video).with(mocked_file).and_return('success!')
++			expect(@account.upload_video('url', 'good')).to eq('success!')
 +		end
 +	end
 +
 +	describe '#create_playlist' do
-+		context 'given a valid account returns a playlist' do
-+			it do
-+				playlists = double('mocked playlists')
-+				allow(account).to receive(:playlists).and_return(playlists)
-+				allow(playlists).to receive(:insert).and_return(Yt::Playlist.new)
-+				expect(account.create_playlist({})).to be_instance_of(Yt::Playlist)
-+			end
++		it do
++			mocked_playlists = double("playlists")
++			allow(@account).to receive(:playlists).and_return(mocked_playlists)
++			allow(mocked_playlists).to receive(:insert).with('params').and_return('success!')
++			expect(@account.create_playlist('params')).to eq('success!')
++		end
++	end
++
++	describe 'video_params' do
++		it do
++			expect(@account.videos_params).to eq({for_mine: true})
 +		end
 +	end
 +end
