@@ -76,10 +76,7 @@ Dir.glob("#{ARGV[0]}/class016/*").each do |file|
 																
 													data.each do |d|
 														if d[1]==c[0]
-															
 															result_ex2[d[0]] = 1 #GIVE THIS PERSON A KIUFTE HE GOT A 1
-														else
-															result_ex2[d[0]] = 0
 														end
 													end
 													
