@@ -19,7 +19,6 @@ def get_name file
 end
 
 def eval time_stamp,dir,hash,position_in_hash_for_name, position_in_hash_for_flog, position_in_hash_for_flay
-	homeworks_counter = 0
 	Dir.glob("#{ARGV.first}/#{dir}") do |file|
 		flag = is_it_on_time time_stamp, file
 		name = get_name file
@@ -39,16 +38,10 @@ def eval time_stamp,dir,hash,position_in_hash_for_name, position_in_hash_for_flo
 			hash[name][position_in_hash_for_flay] = flay_res.to_s
 			hash[name][position_in_hash_for_flog] = flog_res.to_s
 		end
-
-		homeworks_counter = homeworks_counter + 1;
-		if ARGV[3] == '-n' && homeworks_counter == ARGV[4].to_i
-			return
-		end
 	end	
 end
 
 def projects  csv_file,dir,stamp,hash
-	homeworks_counter = 0
 	index = 0
 	position = 4
 	CSV.foreach("#{ARGV.first}/#{csv_file}") do |row|
@@ -66,17 +59,12 @@ def projects  csv_file,dir,stamp,hash
 				end
 			end
 			
-		end
-		homeworks_counter = homeworks_counter + 1;
-		if ARGV[3] == '-n' && homeworks_counter == ARGV[4].to_i
-			return
 		end	
 	end
 end
 
 def entry_lv dir,stamp,hash
 	entry_lv_ary = Array.new
-	homeworks_counter = 0
 	index = 0
 	position = 0
 	Dir.glob("#{ARGV.first}/#{dir}") do |entry_lv_file|
@@ -94,11 +82,6 @@ def entry_lv dir,stamp,hash
 				hash[name][position] = "1"
 			end
 		end
-
-		homeworks_counter = homeworks_counter + 1;
-		if ARGV[3] == '-n' && homeworks_counter == ARGV[4].to_i
-			return
-		end	
 	end
 end
 
@@ -116,7 +99,7 @@ end
 
 def board hash,time
 	key = ('@'+' '+"#{time}").to_s
-	hash[key] = ["Vh", "002", "003", "004", "009", "012","014","015","016","017_1","017_2","018","g002", "g003", "g004", "g009", "g012","g014","g015","g016","g017_1","g017_2","g018","y002", "y003", "y004", "y009", "y012","y014","y015","y016","y017_1","y017_2","y018"]
+	hash[key] = ["Vh", "002", "003", "004", "009", "012","014","015","g002", "g003", "g004", "g009", "g012","g014","g015","y002", "y003", "y004", "y009", "y012","y014","y015"]
 end
 
 def delete hash
