@@ -24,7 +24,7 @@ def eval time_stamp,dir,hash,position_in_hash_for_name
 			if hash.has_key?(name) == false
 				hash[name] = Array.new
 			end
-			if flag == false
+			if flag == true
 				hash[name][position_in_hash_for_name] = "2"
 			else
 				hash[name][position_in_hash_for_name] = "1"
@@ -45,7 +45,7 @@ def projects  csv_file,dir,stamp,hash
 				if hash.has_key?(row[1]) == false
 					hash[row[1]] = Array.new
 				end
-				if flag == false
+				if flag == true
 					hash[row[1]][position] = "2"
 				else
 					hash[row[1]][position] = "1"
@@ -69,7 +69,7 @@ def entry_lv dir,stamp,hash
 			hash[name] = Array.new
 		end
 		if entry_lv_ary.count(name) > 2	
-			if flag == false
+			if flag == true
 				hash[name][position] = "2"
 			else
 				hash[name][position] = "1"
