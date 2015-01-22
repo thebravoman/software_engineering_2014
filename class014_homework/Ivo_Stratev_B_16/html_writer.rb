@@ -1,5 +1,5 @@
 class HTMLWriter
-	def write results
+	def write results,no_need_of_this_arg
 		File.open("results_Ivo_Stratev_B_16.html", "w") do |row|
 			row << "<!DOCTYPE html>\n" << "<html>\n" << "\t<body>\n"
 				row << "\t\t<table style='width:100%;'>\n" 
@@ -9,7 +9,7 @@ class HTMLWriter
 				v.each do |l|
 					row << "\t\t\t<td>" << "#{l}" << "</td>\n"
 					i = i + 1
-					if i == 7
+					if i == 6
 						break
 					end
 				end

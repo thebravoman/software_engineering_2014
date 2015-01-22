@@ -1,14 +1,14 @@
 require 'SVG/Graph/Bar'
 
 class SVGWriter
-	def write h
+	def write h,t
 		File.open("results_Ivo_Stratev_B_16.svg","w") do |svg|
 			a = Array.new
 			i = 0
 			data = Array.new
-			fields = %w(Vh 2 3 4 9 12 14);
+			fields = %w(Vh 2 3 4 9 12);
 			
-			for j in 0..7
+			for j in 0..6
 				i = 0
 				h.each do |k,v|
 					a[i] = v[j]

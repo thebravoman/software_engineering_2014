@@ -1,6 +1,6 @@
 class XMLWriter
-	def write results
-		File.open("results_Ivo_Stratev_B_2.xml", "w") do |r|
+	def write results,no_need_of_this_arg
+		File.open("results_Ivo_Stratev_B_16.xml", "w") do |r|
 			r <<"<results>\n"
 			results.sort.each do |k,v|
 				r << "\t<student>\n"
