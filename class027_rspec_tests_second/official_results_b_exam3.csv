@@ -1,0 +1,23 @@
+Student,Passed,Diff Coverage,Existing spec,Coverage,New spec,Coverage
+Iosyf_Saleh_11b_18,false,0,subscription,83.33,subscription,83.33
+Valentin_Varbanov_B_4,true,23.53,rating,76.47,rating,100
+Martin_Grigorov_b_23,true,20.83,account,79.17,account,100
+Konstantin_Kostov_B_21,true,21.21,ownership,72.73,ownership,93.94
+Denis_Stoinev_B_13,true,23.53,rating,76.47,rating,100
+Vanya_Santeva_b_5,true,20.83,account,79.17,account,100
+Atanaska_Ivancheva_B_1,true,16.66,resumable_session,41.67,resumable_session,58.33
+Stefan_Iliev_11B_28,true,54.16,resumable_session,41.67,resumable_session,95.83
+Lili_Kokalova_B_22,true,23.53,rating,76.47,rating,100
+Mladen_Karadimov_b_24,true,20.83,account,79.17,account,100
+Emiliqn_Sokolov_15,false,8.33,account,79.17,account,87.5
+Kaloyan_Nikov_B_19,true,54.16,resumable_session,41.67,resumable_session,95.83
+Iliyan_Germanov_B_17,true,12.5,configuration,87.5,configuration,100
+Stanislav_Iliev_b_26,true,12.5,configuration,87.5,configuration,100
+Valentin_Georgiev_b_3,true,21.21,ownership,72.73,ownership,93.94
+Gergan_Nikolov_b_11,true,29.17,asset,70.83,asset,100
+Vladimir_Yordanov_b_9,true,12.5,configuration,87.5,configuration,100
+Borislav_Stratev_B_2,true,29.17,asset,70.83,asset,100
+Hristiyan_Dodov_B_29,true,29.17,asset,70.83,asset,100
+Emiliqn_Sokolov_B_15,false,8.33,account,79.17,account,87.5
+Nikolay_Mihailov_B_25,true,16.67,subscription,83.33,subscription,100
+Stefan_Radev_B_27,true,54.16,resumable_session,41.67,resumable_session,95.83
