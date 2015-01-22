@@ -135,7 +135,7 @@ dir = "vhodno_nivo/**/*.*"
 stamp = "--until=2014.09.17.20:00:01"
 entry_lv dir,stamp,eval_hash
 
-range = 15
+range = 5
 putzeros range,eval_hash
 	
 delete eval_hash
