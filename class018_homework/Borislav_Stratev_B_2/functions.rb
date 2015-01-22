@@ -36,7 +36,7 @@ def eval time_stamp,dir,hash,position_in_hash_for_name, position_in_hash_for_flo
 				hash[name][position_in_hash_for_name] = "1"
 			end
 
-			hash[name][position_in_hash_for_flay] = flay_res
+			hash[name][position_in_hash_for_flay] = flay_res.to_s
 			hash[name][position_in_hash_for_flog] = flog_res.to_s
 		end
 
