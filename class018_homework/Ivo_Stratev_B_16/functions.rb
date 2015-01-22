@@ -23,7 +23,7 @@ def eval time_stamp,dir,hash,position_in_hash_for_name, position_in_hash_for_flo
 	Dir.glob("#{ARGV.first}/#{dir}") do |file|
 		flag = is_it_on_time time_stamp, file
 		name = get_name file
-		first_name = name.split(/ /).first
+		first_name = name.split(/\ /).first
 		flay_res = `flay #{file} | grep #{first_name} | wc -l`.to_s
 		flog_res =`flog #{file}`.to_i
 		if name != nil
