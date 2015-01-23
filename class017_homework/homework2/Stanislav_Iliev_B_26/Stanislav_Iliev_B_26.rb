@@ -3,6 +3,7 @@ require_relative 'write_csv.rb'
 require_relative 'write_html.rb'
 require_relative 'write_svg.rb'
 require_relative 'write_xml.rb'
+require_relative 'write_json.rb'
 
 start = Time.now
 
@@ -10,13 +11,13 @@ softeng = ARGV[0]
 softeng += "/" if softeng[-1] != 47
 
 directories = [["vhodno_nivo/**/*.*", [17, 9, 20]],
-				["class002_homework/**/*.rb", [22, 9, 20]],
-				["class003_homework/**/*.rb", [24, 9, 20]],
-				["class004/**/*.rb", [29, 9, 20]],
-				["class009_homework/**/*.pdf", [27, 10, 20]],
-				["class012_homework/**/*.rb", [10, 11, 20]],
-				["class014_homework/**/*.rb", [13, 11, 6]],
-				["class017_homework/homework1/*.rb", [02, 12, 6]]]
+		["class002_homework/**/*.rb", [22, 9, 20]],
+		["class003_homework/**/*.rb", [24, 9, 20]],
+		["class004/**/*.rb", [29, 9, 20]],
+		["class009_homework/**/*.pdf", [27, 10, 20]],
+		["class012_homework/**/*.rb", [10, 11, 20]],
+		["class014_homework/**/*.rb", [13, 11, 6]],
+		["class017_homework/homework1/*.rb", [02, 12, 6]]]
 
 results = Hash.new{|hash,key| hash[key] = Array.new(directories.size) {0}}
 vhodno = Hash.new{|hash,key| hash[key] = [0,0]}
