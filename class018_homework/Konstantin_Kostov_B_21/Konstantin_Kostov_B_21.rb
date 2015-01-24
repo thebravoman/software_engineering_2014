@@ -3,7 +3,6 @@ require_relative "json_writer.rb"
 require_relative "xml_writer.rb"
 require_relative "html_writer.rb"
 require_relative "svg_writer.rb"
-require 'csv'
 require 'yaml'
 time_start=Time.now
 @repoPath=ARGV[0]
@@ -11,6 +10,7 @@ classes = file_content= YAML.load_file("info.yml")["classes"]
 result = Hash.new{|hash, key| hash[key] = YAML.load_file("info.yml")["result_info"]}
 team_names = Array.new
 @folder=0
+@c=0
 def logget(log_info,name,result,file)
 	log = ` git log --until=#{log_info} #{file}`
 	result[name][@folder] = 2 if (!log.empty? )
@@ -22,7 +22,8 @@ def homework_chek (directory_name,log_info,result)
 	flayy = log_info.split(",").last
 	flogg =log_info.split(",")[1]
 	log_info = log_info.split(",")[0]
-	i=2	
+	i=2
+		
 	i=1 if flogg=="flay"
 	
 
@@ -45,30 +46,36 @@ def homework_chek (directory_name,log_info,result)
 			result=logget(log_info,name,result,file)
 		end	
 	end
-	else
+	else 	
+	
 	Dir.glob(@repoPath + "#{directory_name}").each do |file|
 		short_file_name = file.split(/\//).last
 		first_name = short_file_name.split(/_/)[0].capitalize
 		second_name = short_file_name.split(/_/)[1].capitalize
 		name = first_name + "," + second_name
 		result=logget(log_info,name,result,file)
+		if @c > ARGV[4].to_i && ARGV[3] == "-n" 	
+		break		
+		end
 			result[name][@folder + 1] = `flog #{file}`.to_i if flogg =="flog"
 		
 		
 			result[name][@folder + i] = `flay #{file} | grep #{first_name} | wc -l `.to_i if flayy =="flay"
-		end
+	end
 	@folder+=1 if flogg=="flog"   
 	@folder+=1 if flayy=="flay"  
-			
-	
-		end
+	end		
 	puts  "#{directory_name}  checked"
 	@folder+=1
+	@c+=1	
+		
 	return result
 end
 $stderr.reopen("/dev/null", "w")
 YAML.load_file("info.yml")["homeworks"].each do |yaml|
-		result = homework_chek(yaml[0],yaml[1],result) 
+		
+	result = homework_chek(yaml[0],yaml[1],result) 
+
 end
 puts "Time: ",Time.now - time_start
 folder=@folder
