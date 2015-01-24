@@ -3,98 +3,95 @@ require_relative "json_writer.rb"
 require_relative "xml_writer.rb"
 require_relative "html_writer.rb"
 require_relative "svg_writer.rb"
-
-	require "csv"
+require 'yaml'
 time_start=Time.now
-classes = " "," ","VH","002","003","004","09","012","014","015","017","flog02","Flog03","Flog04","||" "flog12","Flog14","Flog15","flay02","Flay03","Flay04","flay12","flay14","flay15"
-result = Hash.new{|hash, key| hash[key] = [0,0,0,0,0,0,0,0,'-','-','-','-','-','-','-',0,'-','-']}
+@repoPath=ARGV[0]
+classes = " "," ","VH","002","Flog02","Flay02","003","Flog03","Flay03","004","Flog04","Flay04","009","012","Flog12","Flay12","014","Flog14","Flay14","015","Flog15","Flay15","017","Flog17","Flay17"
+result = Hash.new{|hash, key| hash[key] = [0,0,'-','-',0,'-','-',0,'-','-',0,0,'-','-',0,'-','-',0,'-','-',0,'-','-']}
 team_names = Array.new
-def homework_chek (directory_name,log_info,result,folder)
-program_num = 1 #for VH
-name_before = "" #for VH
-Dir.glob(ARGV[0]+"#{directory_name}").each do |file|
-short_file_name = file.split(/\//).last
-first_name = short_file_name.split(/_/)[0].capitalize
-last_name = short_file_name.split(/_/)[1].capitalize
-name = first_name + ',' + last_name
-program_num +=1 if folder == 0 && name == name_before #for VH
-log = `git log --until=#{log_info} #{file}`
-result[name][folder] = 2 if (!log.empty? && folder !=0) || (!log.empty? && program_num == 3 && folder == 0)
-result[name][folder] = 1 if (log.empty? && folder !=0) || (log.empty? && program_num == 3 && folder == 0)
-name_before = name #for VH
-program_num = 1 if program_num == 3 #for VH
-next if folder == 0 || folder == 20 #next if folder != 11 && folder != 14
-file_folder = file
-file_folder = file.chomp("#{file.split(/\//).last}") if folder == 14 || folder == 25
-flog = `flog #{file_folder}`
-flay = `flay #{file_folder}`
-if folder== 4
-folder=folder-1
-end
-result[name][folder + 8] = flog.split(/:/).first
-result[name][folder + 12] = flay.split(/=/)[1][1, 4].delete!("\n")
-end
+@folder=0
+@c=0
+def logget(log_info,name,result,file)
+	log = ` git log --until=#{log_info} #{file}`
+	result[name][@folder] = 2 if (!log.empty? )
+	result[name][@folder] = 1 if (log.empty? )
 return result
 end
-def homework_chek_009 (directory_name,log_info,result,folder)
-team_names = CSV.read("../../class009_homework/project_to_names.csv")[1, 58]
-Dir.glob(ARGV[0]+"#{directory_name}").each do |file|
-name = file.split(/\//).last.split(".").first
-team_members = 0
-line = 0
-first_line = false
-for counter in 0..55
-if team_names[counter][0] == name
-line = counter if first_line != true
-first_line = true
-team_members +=1	
-end	
-end
-log = ` git log --until=#{log_info} #{file}`
-for index in 0..team_members-1
-final_name = team_names[line + index][1]
-final_name = final_name.split(" ")[0] + "," + final_name.split(" ")[1]
-result[final_name][folder] = 2 if !log.empty?
-result[final_name][folder] = 1 if log.empty?
-end	
-end
+def homework_chek (directory_name,log_info,result)
+	if directory_name == "/class009_homework/**/*.pdf"
+		team_names = CSV.read(@repoPath + "/class009_homework/project_to_names.csv")
+		Dir.glob(@repoPath + "#{directory_name}").each do |file|
+			name = file.split(/\//).last.split(".").first
+			team_members = 0
+			first_line = false
+			for counter in 1..team_names.length-1
+				if team_names[counter][0] == name
+					line = counter if first_line != true
+					first_line = true
+					team_members +=1	
+				end	
+			end
+		for index in 0..team_members-1
+			name = team_names[line + index][1]
+			name = name.split(" ")[0] + "," + name.split(" ")[1]
+			result=logget(log_info,name,result,file)
+		end	
+	end
+	else 	
+	
+	Dir.glob(@repoPath + "#{directory_name}").each do |file|
+		short_file_name = file.split(/\//).last
+		first_name = short_file_name.split(/_/)[0].capitalize
+		second_name = short_file_name.split(/_/)[1].capitalize
+		name = first_name + "," + second_name
+		result=logget(log_info,name,result,file)
+		if @c > ARGV[4].to_i && ARGV[3] == "-n" 	
+		break		
+		end
+		
+			if @folder !=0
+			result[name][@folder + 1] = `flog #{file}`.to_i 
+		
+		
+			result[name][@folder + 2] = `flay #{file} | grep #{first_name} | wc -l `.to_i 
+	end
+	end
+	@folder+=1 if @folder !=0
+	@folder+=1   if @folder !=0
+	end		
+	puts  "#{directory_name}  checked"
+	@folder+=1	
+		
 	return result
 end
-folder = 0
-result = homework_chek("/vhodno_nivo/**/*_*_*.*", "Sep--17--2014--20:00:00",result,folder)
-folder = 1
-result = homework_chek("/class002_homework/*_*_*_*.rb", "Sep--22--2014--20:00:00",result,folder)
-folder = 4 #[0,0,'-','-',0,'-','-',0,'-','-',0,0,'-','-',0,'-','-',0,'-','-',0,'-','-']
-result = homework_chek("/class003_homework/*_*_*_*.rb", "Sep--24--2014--20:00:00",result,folder)
-folder = 7
-result = homework_chek("/class004/*_*_*_*.rb", "Sep--29--2014--20:00:00",result,folder)
-folder = 10
-result = homework_chek_009("/class009_homework/**/*.pdf", "Oct--27--2014--20:00:00",result,folder)
-folder = 11
-result = homework_chek("/class012_homework/*_*_*_*.rb", "Nov--10--2014--20:00:00",result,folder)
-folder = 14
-result = homework_chek("/class014_homework/**/*_*_*_*.rb", "Nov--13--2014--06:00:00",result,folder)
-folder = 17
-result = homework_chek("/class015_homework/**/*_*_*_*.rb", "Nov--20--2014--06:00:00",result,folder)
-folder = 20
-result = homework_chek("/class017_homework/homework1/*_*_*_*.rb","Dec--2--2014--06:00:00",result,folder)
-write = true
-puts Time.now - time_start
-if ARGV[1] == "-o"
-case ARGV[2]
-when "csv"
-writer = CSVWriter.new
-when "xml"
-writer = XMLWriter.new
-when "json"
-writer = JSONWriter.new
-when "html"
-writer = HTMLWriter.new
-when "svg"
-writer = SVGWriter.new
-else
-write = false
-puts "You are drunk"
-end
-writer.write(result,classes,folder) if write == true
+$stderr.reopen("/dev/null", "w")
+
+		
+	result = homework_chek("/vhodno_nivo/**/*_*_*.*", "Sep--17--2014--20:00:00",result)
+result = homework_chek("/class002_homework/*_*_*_*.rb", "Sep--22--2014--20:00:00",result)
+result = homework_chek("/class003_homework/*_*_*_*.rb", "Sep--24--2014--20:00:00",result)
+result = homework_chek("/class004/*_*_*_*.rb", "Sep--29--2014--20:00:00",result) 
+result = homework_chek("/class009_homework/**/*.pdf", "Oct--27--2014--20:00:00",result)
+result = homework_chek("/class012_homework/*_*_*_*.rb", "Nov--10--2014--20:00:00",result)
+result = homework_chek("/class014_homework/**/*_*_*_*.rb", "Nov--13--2014--06:00:00",result) 
+result = homework_chek("/class015_homework/**/*_*_*_*.rb", "Nov--20--2014--06:00:00",result) 
+result = homework_chek("/class017_homework/homework1/*_*_*_*.rb","Dec--2--2014--06:00:00",result) 
+puts "Time: ",Time.now - time_start
+folder=@folder
+	if ARGV[1] == "-o"
+		case ARGV[2]
+		when "csv"
+		writer = CSVWriter.new
+		when "xml"
+		writer = XMLWriter.new
+		when "json"
+		writer = JSONWriter.new
+		when "html"
+		writer = HTMLWriter.new
+		when "svg"
+		writer = SVGWriter.new
+		else
+		abort()
+	end
+	writer.write(result,classes,folder-3)
 end
