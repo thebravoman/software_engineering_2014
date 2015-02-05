@@ -9,3 +9,9 @@ class Part
 	end
 	
 end
+
+#~ is a -> Part .. SubtitlesParser - > inheritance
+#~ 
+#~ Part is a SubtitlesParser 
+#~ 
+#~ has a -> SubtilesParser .. Part -> composition

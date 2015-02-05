@@ -7,11 +7,23 @@ class SubtitlesParser
 	end
 	
 	def transcript 
-		content1 = @content.split("\n\n")[0]
-		content2 = @content.split("\n\n")[1]
-		
-		part1 = Part.new(content1)
-		part2 = Part.new(content2)
-		part1.transcript + " " + part2.transcript
+		parts = get_parts
+		result = ""
+		parts.each do |part|
+			result += part.transcript
+			result += " " if part != parts.last
+		end
+		result
 	end
+	
+	private
+	def get_parts
+		#[p1,p2,p3]
+		result =[]
+		@content.split("\n\n").each do |content|
+			result << Part.new(content)
+		end
+		result
+	end
+	
 end
