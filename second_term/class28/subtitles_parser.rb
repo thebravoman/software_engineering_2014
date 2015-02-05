@@ -4,6 +4,12 @@ class SubtitlesParser
 
 	def initialize content
 		@content = content
+		@parts =[]
+		@content.split("\n\n").each { |c| @parts << Part.new(c) }
+	end
+
+	def duration
+		get_parts.last.finish
 	end
 	
 	def transcript 
@@ -14,10 +20,7 @@ class SubtitlesParser
 	
 	private
 	def get_parts
-		#[p1,p2,p3]
-		result =[]
-		@content.split("\n\n").each { |c| result << Part.new(c) }
-		result
+		@parts
 	end
 	
 end
