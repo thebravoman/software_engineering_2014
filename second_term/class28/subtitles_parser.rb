@@ -5,7 +5,7 @@ class SubtitlesParser
 	end
 	
 	def transcript
-		@content.split("\n")[3]
+		@content.split("\n")[3..-1].join(" ")
 	end
 	
 end
