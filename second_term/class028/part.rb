@@ -1,14 +1,25 @@
 require 'time'
+
 class Part
 	
 	def initialize content
 		@content = content
 	end
-
+	
+	def move timems
+		parse_time if @start == nil
+		@start+=timems
+		@finish+=timems
+	end
+	
+	def start
+		parse_time if @start == nil
+		@start
+	end
+	
 	def finish
-		line = get_lines[1]
-		finish_as_string = line.split(" --> ").last
-		time_to_milliseconds finish_as_string
+		parse_time if @finish == nil
+		@finish
 	end
 	
 	def transcript
@@ -16,6 +27,13 @@ class Part
 	end
 	
 	private 
+	
+	def parse_time
+		line = get_lines[1]
+		time_line = line.split(" --> ")
+		@start = time_to_milliseconds time_line.first
+		@finish = time_to_milliseconds time_line.last
+	end
 	
 	def get_lines
 		@lines ||= @content.split("\n")
