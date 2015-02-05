@@ -1,11 +1,11 @@
 class SubtitlesParser
 
 	def initialize content
-	
+		@content = content
 	end
 	
 	def transcript
-		"Hands in the air!"
+		@content.split("\n")[3]
 	end
 	
 end
