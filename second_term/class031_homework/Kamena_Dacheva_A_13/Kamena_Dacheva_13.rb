@@ -8,9 +8,9 @@ def get_file_name(file)
    return file.split("/").last.split(".").first
 end
 
-Dir.glob(ARGV[0]+"/*.*").each do |file_for_word|
+Dir.glob(ARGV[0]+"/*.html*").each do |file_for_word|
 	word = get_file_name(file_for_word)
-	Dir.glob(ARGV[0]+"/*.*").each do |file|
+	Dir.glob(ARGV[0]+"/*.html*").each do |file|
 		text = File.read(file)
 		lines = text.split("\n")
 		new_content = ""
