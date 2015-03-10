@@ -1,0 +1,12 @@
+uses ruby gem treat
+
+the gem works only on ruby versions below 2
+
+to be installed : 
+
+gem install treat
+
+and run a ruby file with the following code:
+
+require 'treat'
+Treat::Core::Installer.install 'english'
