@@ -16,8 +16,8 @@ Dir.glob(ARGV[0]+"/*.html*").each do |file_for_word|
 			lines = text.split("\n")
 			new_content = ""
 			lines.each do |line|
-				line.sub!(word, makelink(word))	if !line.include?("<h") && !new_content.include?(makelink(word))	
-				new_content << line + "\n"
+				words = line.split(" ")
+				words.each { |word_from_file| line.sub!(word, makelink(word)) if !line.include?("<h") && !new_content.include?(makelink(word)) && word_from_file == word }				new_content << line + "\n"
 			end
 			File.open(file, "w+") { |f| f << new_content }	
 		end
