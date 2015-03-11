@@ -12,15 +12,15 @@ Dir.glob(ARGV[0]+"/*.html").each do |file_for_word|
 	word = get_file_name(file_for_word)
 	Dir.glob(ARGV[0]+"/*.html").each do |file|
 		text = File.read(file)
-		lines = text.split("\n")
-		new_content = ""
-		lines.each do |line|
-			if (!(word == get_file_name(file)) && !text.include?(makelink(word)) && !line.include?("<h") && !new_content.include?(makelink(word)))
-				line.sub!(word, makelink(word))		
+		if !text.include?(makelink(word)) && !(word == get_file_name(file)) 
+			lines = text.split("\n")
+			new_content = ""
+			lines.each do |line|
+				words = line.split(" ")
+				words.each { |word_from_file| line.sub!(word, makelink(word)) if !line.include?("<h") && !new_content.include?(makelink(word)) && word_from_file == word }				
+				new_content << line + "\n"
 			end
-			new_content << line + "\n"
+			File.open(file, "w+") { |f| f << new_content }	
 		end
-		File.open(file, "w+") { |f| f << new_content }	
 	end
 end
-
