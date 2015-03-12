@@ -30,14 +30,14 @@ Dir.glob(ARGV[0]+"/*.html") do |file_title|
     content.gsub!(word_plur_up, "<a href=\"#{current_file_name}.html\">#{word_up}</a>") if content.include? word_plur_up # pluralize & upcase
 
     File.open(file, "w") do |f|
-      f.puts("<!DOCTYPE html>")
-        f.puts("<head>")
-          f.puts("<title>#{current_file_name}</title>")
-        f.puts("</head>")
-        f.puts("<body>")
-          f.puts("#{content}")
-        f.puts("</body>")
-			f.puts("</html>")
-			end
+     f.puts("<!DOCTYPE html>")
+      f.puts("<head>")
+       f.puts("<title>#{current_file_name}</title>")
+      f.puts("</head>")
+      f.puts("<body>")
+       f.puts("#{content}")
+      f.puts("</body>")
+		 f.puts("</html>")
+		end
   end
 end
