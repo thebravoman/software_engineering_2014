@@ -23,12 +23,12 @@ Dir.glob(ARGV[0]+"/*.html") do |file_title|
 
     next if title == current_file_name
 
-    content.gsub!(title, "<a href=\"#{title}.html\">#{title}</a>") if content.include? title # nothing
-    content.gsub!(word_capi, "<a href=\"#{title}.html\">#{word_capi}</a>") if content.include? word_capi # capitalize
-    content.gsub!(word_plur, "<a href=\"#{title}.html\">#{title}</a>") if content.include? word_plur # pluralize
-    content.gsub!(word_up, "<a href=\"#{title}.html\">#{word_up}</a>") if content.include? word_up # upcase
-    content.gsub!(word_capi_plur, "<a href=\"#{title}.html\">#{word_capi}</a>") if content.include? word_capi_plur # capitalize & pluralize
-    content.gsub!(word_plur_up, "<a href=\"#{title}.html\">#{word_up}</a>") if content.include? word_plur_up # pluralize & upcase
+    content.gsub!(title, "<a href=\"#{title_with_ex}\">#{title}</a>") if content.include? title # nothing
+    content.gsub!(word_capi, "<a href=\"#{title_with_ex}\">#{word_capi}</a>") if content.include? word_capi # capitalize
+    content.gsub!(word_plur, "<a href=\"#{title_with_ex}\">#{title}</a>") if content.include? word_plur # pluralize
+    content.gsub!(word_up, "<a href=\"#{title_with_ex}\">#{word_up}</a>") if content.include? word_up # upcase
+    content.gsub!(word_capi_plur, "<a href=\"#{title_with_ex}\">#{word_capi}</a>") if content.include? word_capi_plur # capitalize & pluralize
+    content.gsub!(word_plur_up, "<a href=\"#{title_with_ex}\">#{word_up}</a>") if content.include? word_plur_up # pluralize & upcase
 
     File.open(file, "w") do |f|
      f.puts("<!DOCTYPE html>")
