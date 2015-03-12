@@ -1,0 +1,9 @@
+Setup:
+Put on a PHP Server with this file/folder structure:
+ - pages (this is where the old pages stay) [read permissions required from linker.php]
+ - newpages (this is where the new pages will stay after linker is ran) [write premissions required from linker.php]
+
+Variables:
+	$max - how many links to generate from the first
+	$folder - the folder of the old pages
+	$newfolder - the folder where the newly generated files will be put
