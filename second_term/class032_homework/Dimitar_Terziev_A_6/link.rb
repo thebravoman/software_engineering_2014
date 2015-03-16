@@ -1,16 +1,17 @@
-
 def makeLink(word)
-	return "<a href=" + word + ".html>" + word + "</a>"	
+	"<a href=" + word + ".html>" + word + "</a>"	
 end
 
 links = Array.new
-Dir.glob(ARGV[0] + "/*.html") do |word_to_link|
+path = ARGV[0]+"*.html"
+
+Dir.glob(path) do |word_to_link|
 	#split to word
 	word_to_link = File.basename word_to_link.split('.html').first
 	links << word_to_link
 end
 
-Dir.glob(ARGV[0] + "/*.html") do |file_name|
+Dir.glob(path) do |file_name|
 	#read the file 
 	text = File.read(file_name)
 	#find the words and make them links
