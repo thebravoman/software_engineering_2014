@@ -1,0 +1,13 @@
+Uses a natural language processing gem called 'treat'
+Works only on Ruby < v2
+
+To install the gem:
+gem install treat
+
+Open an irb console and type:
+require 'treat'
+Treat::Core::Installer.install 'english'
+
+Done!
+
+The program expects to be given a command-line argument, which is the directory to do work on.
