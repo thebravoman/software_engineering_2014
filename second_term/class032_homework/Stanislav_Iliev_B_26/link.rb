@@ -12,5 +12,5 @@ Dir.glob(ARGV[0] + '/*.html') do |file_name|
 		file_contents = file_contents.gsub(filename, make_link(filename))
 	end
 	
-	File.write(file_name, new_text)
+	File.write(file_name, file_contents)
 end
