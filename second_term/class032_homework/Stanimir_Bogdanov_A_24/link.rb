@@ -5,7 +5,7 @@ def make_link word, extension
 end
 
 def word_from_filename file
-  file.split('/').last.split('.').first
+  File.basename file, File.extname(file)
 end
 
 glob_content = Dir.glob "#{ARGV[0]}/*.#{extension}"
