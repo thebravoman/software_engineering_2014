@@ -3,12 +3,10 @@ def makeLink(word)
 end
 
 def wordsToLink()
-	result = Array.new
-	i = 0
+	result = []
 	Dir.glob(ARGV[0] + "/*.html") do |word_to_link|
 		word_to_link = word_to_link.split("/").last.split(".").first
-		result[i] = word_to_link
-		i = i + 1
+		result.push(word_to_link)
 	end
 	return result
 end
@@ -20,6 +18,5 @@ Dir.glob(ARGV[0] + "/*.html") do |file_name|
   	words.each do |word|
   		text = text.gsub(word, makeLink(word))
   	end
-  	File.open(file_name, "w") {|file| file.puts text }
-		
+	File.write(file_name, test)	
 end
