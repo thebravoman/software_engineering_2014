@@ -1,0 +1,13 @@
+Language,% used in projects
+Ruby,393.3%
+PHP,286.8%
+Java,282.4%
+HTML,170.3%
+JavaScript,102.5%
+CSS,47.0%
+Python,8.7%
+XML,2.3%
+Other,2.2%
+Shell,1.4%
+Makefile,0.1%
+You can get the source at:,../scripts/project_stats.py
