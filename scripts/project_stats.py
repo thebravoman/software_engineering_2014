@@ -26,4 +26,4 @@ with open('project_stats.csv', 'w+') as file:
 	file.write('Language,% used in projects\n')
 	for k,v in sorted(lang_dict.items(), key=lambda x: x[1], reverse=True):
 		file.write('{k},{v}%\n'.format(**vars()))
-	file.write('You can get the source at:,../scripts/project_stats.py,\n')
+	file.write('You can get the source at:,../scripts/project_stats.py\n')
