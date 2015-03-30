@@ -3,7 +3,8 @@ require './encryption.rb'
 require './decryption.rb'
 
 if !ARGV[0]
-	puts "Please, submit an argument"
+	# puts "Please, submit an argument"
+	abort("Please, submit an argument")
 end
 
 z = Keys.new
