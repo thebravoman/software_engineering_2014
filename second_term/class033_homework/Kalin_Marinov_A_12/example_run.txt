@@ -1,0 +1,1 @@
+ruby cryptor.rb "some text"
