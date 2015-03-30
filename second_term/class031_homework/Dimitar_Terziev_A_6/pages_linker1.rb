@@ -1,4 +1,4 @@
-require 'treat'
+qrequire 'treat'
 include Treat::Core::DSL
 
 prse = ""
