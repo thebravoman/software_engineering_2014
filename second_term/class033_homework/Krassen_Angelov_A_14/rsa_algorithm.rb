@@ -163,11 +163,6 @@ first_prime = prime("first", 1, 99)
 second_prime = prime("second", 1, 99)
 puts "---------------------------------------"
 
-File.open("transmitter_message.txt", "w") do |content|
-  content.puts "Your first prime number is: #{first_prime}"
-  content.puts "Your second prime number is: #{second_prime}"
-end
-
 File.open("transmitter_key.txt", "w") do |content|
   content.puts "New encryption key"
 end
@@ -182,6 +177,11 @@ end
 
 File.open("receiver_message.txt", "w") do |content|
   content.puts "The Message for you"
+end
+
+File.open("transmitter_key.txt", "a") do |content|
+  content.puts "Your first prime number is: #{first_prime}"
+  content.puts "Your second prime number is: #{second_prime}"
 end
 
 n = key_find_n(first_prime, second_prime)

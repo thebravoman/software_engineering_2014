@@ -1,4 +1,6 @@
 New encryption key
-Your 'n' number is: 2407 = 29*83
-Your 'euler' number is: 2296 = (29-1)*(83-1)
-Your 'e' number is: 1103 (Encryption key)
+Your first prime number is: 31
+Your second prime number is: 59
+Your 'n' number is: 1829 = 31*59
+Your 'euler' number is: 1740 = (31-1)*(59-1)
+Your 'e' number is: 503 (Encryption key)

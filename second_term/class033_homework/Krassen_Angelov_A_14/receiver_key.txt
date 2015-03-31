@@ -2,38 +2,56 @@ New decryption key
 These are the results, by each loop to find the decryption key:
 ---------------------------------------
 loop (1)
-first column, first row: 2296
-first column, second row: 1103
-second column, first row: 2296
+first column, first row: 1740
+first column, second row: 503
+second column, first row: 1740
 second column, second row: 1
 ---------------------------------------
 loop (2)
-first column, first row: 1103
-first column, second row: 90
+first column, first row: 503
+first column, second row: 231
 second column, first row: 1
-second column, second row: 2294
+second column, second row: 1737
 ---------------------------------------
 loop (3)
-first column, first row: 90
-first column, second row: 23
-second column, first row: 2294
-second column, second row: 25
+first column, first row: 231
+first column, second row: 41
+second column, first row: 1737
+second column, second row: 7
 ---------------------------------------
 loop (4)
-first column, first row: 23
-first column, second row: 21
-second column, first row: 25
-second column, second row: 2219
+first column, first row: 41
+first column, second row: 26
+second column, first row: 7
+second column, second row: 1702
 ---------------------------------------
 loop (5)
-first column, first row: 21
-first column, second row: 2
-second column, first row: 2219
-second column, second row: 102
+first column, first row: 26
+first column, second row: 15
+second column, first row: 1702
+second column, second row: 45
 ---------------------------------------
 loop (6)
-first column, first row: 2
+first column, first row: 15
+first column, second row: 11
+second column, first row: 45
+second column, second row: 1657
+---------------------------------------
+loop (7)
+first column, first row: 11
+first column, second row: 4
+second column, first row: 1657
+second column, second row: 128
+---------------------------------------
+loop (8)
+first column, first row: 4
+first column, second row: 3
+second column, first row: 128
+second column, second row: 1401
+---------------------------------------
+loop (9)
+first column, first row: 3
 first column, second row: 1
-second column, first row: 102
-second column, second row: 1199
-Your 'd' is: 1199 (Decryption key)
+second column, first row: 1401
+second column, second row: 467
+Your 'd' is: 467 (Decryption key)
