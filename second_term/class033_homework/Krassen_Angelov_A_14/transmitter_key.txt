@@ -1,0 +1,4 @@
+New encryption key
+Your 'n' number is: 2407 = 29*83
+Your 'euler' number is: 2296 = (29-1)*(83-1)
+Your 'e' number is: 1103 (Encryption key)
