@@ -1,147 +1,47 @@
-#include <stdio.h>
-#include <stdlib.h>
+prime_numbers = [2, 3, 5, 11, 13, 17, 19, 23, 29, 31, 39, 41, 43, 47]
 
-#include <openssl/evp.h>
-#include <openssl/pem.h>
-#include <openssl/rsa.h>
-#include <openssl/err.h>
+# generate keys
+prime_numbers.shuffle!
+numbers = prime_numbers.pop(2)
 
-#include <arpa/inet.h> /* For htonl() */
+n = numbers[0] * numbers[1]
 
-int do_evp_seal(FILE *rsa_pkey_file, FILE *in_file, FILE *out_file)
-{
-    int retval = 0;
-    RSA *rsa_pkey = NULL;
-    EVP_PKEY *pkey = EVP_PKEY_new();
-    EVP_CIPHER_CTX ctx;
-    unsigned char buffer[4096];
-    unsigned char buffer_out[4096 + EVP_MAX_IV_LENGTH];
-    size_t len;
-    int len_out;
-    unsigned char *ek = NULL;
-    int eklen;
-    uint32_t eklen_n;
-    unsigned char iv[EVP_MAX_IV_LENGTH];
+fn = (numbers[0] - 1) * (numbers[1] - 1)
 
-    if (!PEM_read_RSA_PUBKEY(rsa_pkey_file, &rsa_pkey, NULL, NULL))
-    {
-        fprintf(stderr, "Error loading RSA Public Key File.\n");
-        ERR_print_errors_fp(stderr);
-        retval = 2;
-        goto out;
-    }
+e = fn
 
-    if (!EVP_PKEY_assign_RSA(pkey, rsa_pkey))
-    {
-        fprintf(stderr, "EVP_PKEY_assign_RSA: failed.\n");
-        retval = 3;
-        goto out;
-    }
+while(1) do
+	break if e.gcd(fn) == 1
+	e -= 1
+end
 
-    EVP_CIPHER_CTX_init(&ctx);
-    ek = malloc(EVP_PKEY_size(pkey));
+public_key = e
 
-    if (!EVP_SealInit(&ctx, EVP_aes_128_cbc(), &ek, &eklen, iv, &pkey, 1))
-    {
-        fprintf(stderr, "EVP_SealInit: failed.\n");
-        retval = 3;
-        goto out_free;
-    }
+d = 1000
+while(1) do
+	break if  (d * e) % fn  == 1
+	d += 1
+end
+private_key =  d
+# generate keys
 
-    /* First we write out the encrypted key length, then the encrypted key,
-     * then the iv (the IV length is fixed by the cipher we have chosen).
-     */
+puts "public key: #{public_key}"
+puts "private key: #{private_key}"
 
-    eklen_n = htonl(eklen);
-    if (fwrite(&eklen_n, sizeof eklen_n, 1, out_file) != 1)
-    {
-        perror("output file");
-        retval = 5;
-        goto out_free;
-    }
-    if (fwrite(ek, eklen, 1, out_file) != 1)
-    {
-        perror("output file");
-        retval = 5;
-        goto out_free;
-    }
-    if (fwrite(iv, EVP_CIPHER_iv_length(EVP_aes_128_cbc()), 1, out_file) != 1)
-    {
-        perror("output file");
-        retval = 5;
-        goto out_free;
-    }
 
-    /* Now we process the input file and write the encrypted data to the
-     * output file. */
+# crypting
+str = "This is a test ..."
+crypted = Array.new
+str.each_char do |char|
+	 cry = (char.ord ** public_key) % n
+	 crypted.push(cry)
+end
 
-    while ((len = fread(buffer, 1, sizeof buffer, in_file)) > 0)
-    {
-        if (!EVP_SealUpdate(&ctx, buffer_out, &len_out, buffer, len))
-        {
-            fprintf(stderr, "EVP_SealUpdate: failed.\n");
-            retval = 3;
-            goto out_free;
-        }
+# decrypting
+decrypted = ""
+crypted.each do |char|
+	res =  (char ** private_key % n).chr
+	decrypted += res
+end
 
-        if (fwrite(buffer_out, len_out, 1, out_file) != 1)
-        {
-            perror("output file");
-            retval = 5;
-            goto out_free;
-        }
-    }
-
-    if (ferror(in_file))
-    {
-        perror("input file");
-        retval = 4;
-        goto out_free;
-    }
-
-    if (!EVP_SealFinal(&ctx, buffer_out, &len_out))
-    {
-        fprintf(stderr, "EVP_SealFinal: failed.\n");
-        retval = 3;
-        goto out_free;
-    }
-
-    if (fwrite(buffer_out, len_out, 1, out_file) != 1)
-    {
-        perror("output file");
-        retval = 5;
-        goto out_free;
-    }
-
-    out_free:
-    EVP_PKEY_free(pkey);
-    free(ek);
-
-    out:
-    return retval;
-}
-
-int main(int argc, char *argv[])
-{
-    FILE *rsa_pkey_file;
-    int rv;
-
-    if (argc < 2)
-    {
-        fprintf(stderr, "Usage: %s <PEM RSA Public Key File>\n", argv[0]);
-        exit(1);
-    }
-
-    rsa_pkey_file = fopen(argv[1], "rb");
-    if (!rsa_pkey_file)
-    {
-        perror(argv[1]);
-        fprintf(stderr, "Error loading PEM RSA Public Key File.\n");
-        exit(2);
-    }
-
-    rv = do_evp_seal(rsa_pkey_file, stdin, stdout);
-
-    fclose(rsa_pkey_file);
-    return rv;
-}
+p decrypted
