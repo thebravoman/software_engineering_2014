@@ -35,7 +35,7 @@ private
       [y, x - y * (a / b)]
     end
     	def gen_pub_key
-		puts find_euler_n
+		find_euler_n
 		1.upto(100) do |i| 
 			 l = rand(@en)
 			 if coprime? l, @en
@@ -52,7 +52,7 @@ private
 	end
 public
 	def initialize
-		puts gen_pub_key
+		gen_pub_key
 		gen_priv_key
 	end
 	def encrypt mes
@@ -69,11 +69,32 @@ public
 		end
 		decrypted
 	end
+	def fancy_encrypt mes
+		@public_key = gen_pub_key
+		puts "public key: #{@public_key}\nn: #{@n}\nen: #{@en}\nencrypted message: "
+		encr_mes = encrypt mes
+		p encr_mes
+		puts "\nshort: #{@public_key} #{@n} #{@en} #{p encr_mes}"
+	end
+	def fancy_decrypt pub_key, n, en, encr_mes
+		@public_key = pub_key
+		@en = en
+		@n = n
+		gen_priv_key
+		puts "decrypted message: #{decrypt encr_mes}\n"
+	end
 end
 
 r = RSA.new
-message = "The swallow barks twice at midnight"
-encrypted_message = r.encrypt message
-p encrypted_message
-decrypted_message = r.decrypt encrypted_message
-puts decrypted_message
+#message = "The swallow barks twice at midnight"
+if ARGV[0].eql? "encrypt"
+	encrypted_message = r.fancy_encrypt ARGV[1..ARGV.size].join(" ")
+end
+if ARGV[0].eql? "decrypt"
+	encr_mes =  ARGV[4..ARGV.size].join("").split("[").last.split("]").first.split(",").map(&:to_i)
+	p encr_mes
+	pub_key = ARGV[1].to_i
+	n = ARGV[2].to_i
+	en = ARGV[3].to_i
+	decrypted_message = r.fancy_decrypt pub_key, n, en, encr_mes
+end
