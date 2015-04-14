@@ -1,0 +1,11 @@
+Requirements and dependencies:
+Python 2.7
+Skype4Py - get it from here: https://pypi.python.org/pypi/Skype4Py/
+Crypto (on windows machines only)
+
+How to use:
+Turn on your skype
+Run the scrypt using "python consoleSkype.py"
+Type "user:#{username_of_the_person_to_chat_with}"
+Start sending your crypted messages...
+Donate here: http://www.elsys-bg.org/ :)
