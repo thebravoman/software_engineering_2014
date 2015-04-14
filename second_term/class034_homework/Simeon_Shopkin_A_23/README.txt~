@@ -1,0 +1,7 @@
+For generating keys, type in command prompt: ruby rsa.rb generate
+
+For crypting text, type in command prompt: ruby rsa.rb crypt public_key n_key text_that_you_want_to_crypt
+For crypting file, type in command prompt: ruby rsa.rb crypt public_key n_key -f your_file.txt
+
+For decrypting, type in command prompt: ruby rsa.rb decrypt crypt_message
+Note that if you want to decrypt 
