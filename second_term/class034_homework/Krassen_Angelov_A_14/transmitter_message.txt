@@ -1,0 +1,3 @@
+Your Message
+Your message is: Orange is orange!
+Your Encrypted message is: [2131, 1468, 2524, 36, 3122, 2860, 2494, 364, 2433, 2494, 518, 1468, 2524, 36, 3122, 2860, 83]

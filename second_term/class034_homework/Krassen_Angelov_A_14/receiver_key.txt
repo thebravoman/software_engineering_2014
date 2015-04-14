@@ -1,0 +1,27 @@
+New decryption key
+These are the results, by each loop to find the decryption key:
+---------------------------------------
+loop (1)
+first column, first row: 3168
+first column, second row: 449
+second column, first row: 3168
+second column, second row: 1
+---------------------------------------
+loop (2)
+first column, first row: 449
+first column, second row: 25
+second column, first row: 1
+second column, second row: 3161
+---------------------------------------
+loop (3)
+first column, first row: 25
+first column, second row: 24
+second column, first row: 3161
+second column, second row: 120
+---------------------------------------
+loop (4)
+first column, first row: 24
+first column, second row: 1
+second column, first row: 120
+second column, second row: 3041
+Your 'd' is: 3041 (Decryption key)
