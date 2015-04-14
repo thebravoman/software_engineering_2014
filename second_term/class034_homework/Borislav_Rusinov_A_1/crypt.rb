@@ -49,7 +49,7 @@ end
 
 
 #103,779
-#puts "Private key: [#{d},#{n}]"
+puts "Private key: [#{d},#{n}]"
 
 #Crypt
 
