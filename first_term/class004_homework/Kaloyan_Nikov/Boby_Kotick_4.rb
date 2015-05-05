@@ -1,1 +1,0 @@
-puts "Gibe mouney BLS"

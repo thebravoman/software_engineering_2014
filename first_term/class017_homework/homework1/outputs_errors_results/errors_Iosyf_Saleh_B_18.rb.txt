@@ -1,3 +1,0 @@
-/usr/local/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- similar_text (LoadError)
-	from /usr/local/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
-	from Iosyf_Saleh_B_18.rb:1:in `<main>'

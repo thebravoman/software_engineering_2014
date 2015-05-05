@@ -1,6 +1,0 @@
-SUM: 1 to n
-n == ARGV[0]
-Save the result in XML file with name XMLResult.xml in tag <sum>sum</sum>
-&&
-Save the result in HTML file with name HTMLResult.xml imt in <h>sum</h>
-Use 2 classes for the writers.
