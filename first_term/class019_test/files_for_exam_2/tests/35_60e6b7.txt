@@ -1,0 +1,24 @@
+Develop a program named FirstName_LastName_ClassNumber_60e6b7.rb
+
+1. you are given an arguments for a folder with CSV files;
+1.1 if there are other arguments they should be discarded;
+2. take all the numbers in the CSV files;
+3. The numbers should not be above 500 (<= 500) 
+4. Produce a result in HTML format named result.html and sort the numbers DESC:
+
+	<ul>
+		<li>Number1</li>
+		<li>Number2</li>
+		...
+		<li>NumberN</li>
+	</ul>
+	
+	Just in the case the above isn't good enough:
+	
+	<ul>
+  <li>412</li>
+  <li>42</li>
+  <li>12</li>
+  <li>0</li>
+</ul>
+	

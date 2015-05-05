@@ -1,0 +1,40 @@
+From 6473bc82a34f5d99df503f78558c31b25b20c471 Mon Sep 17 00:00:00 2001
+From: 3phase <pbozhinov@yahoo.com>
+Date: Tue, 20 Jan 2015 02:39:40 +0200
+Subject: [PATCH] Petko_Bozhinov_11A_21
+
+---
+ spec/models/playlist_spec.rb |   13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+diff --git a/spec/models/playlist_spec.rb b/spec/models/playlist_spec.rb
+index eaefa32..69b5a55 100644
+--- a/spec/models/playlist_spec.rb
++++ b/spec/models/playlist_spec.rb
+@@ -1,5 +1,6 @@
+-require 'spec_helper'
++# require 'spec_helper'
+ require 'yt/models/playlist'
++require 'yt/models/content_owner'
+ 
+ describe Yt::Playlist do
+   subject(:playlist) { Yt::Playlist.new attrs }
+@@ -48,4 +49,14 @@ describe Yt::Playlist do
+       it { expect{playlist.delete}.to change{playlist.exists?} }
+     end
+   end
++
++  describe '#add_video' do
++    account = Yt::Account.new access_token: 'ya29.1.ABCDEFGHIJ'
++    let(:attrs) { {auth: account, video_id: 'https://youtu.be/P1QUZzeZoPQ'} }    
++    it {
++      playlist_item_params = double("playlist_item_params")
++      allow(playlist).to receive(:playlist_item_params).and_return(playlist_item_params)
++    }
++  end
++
+ end
+\ No newline at end of file
+-- 
+1.7.9.5
+

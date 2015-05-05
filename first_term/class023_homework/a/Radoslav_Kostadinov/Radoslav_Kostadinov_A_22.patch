@@ -1,0 +1,57 @@
+--- channel_spec.rb	2015-01-08 01:13:01.439001229 +0200
++++ channel_spec_RKo.rb	2015-01-08 01:08:04.416384085 +0200
+@@ -1,5 +1,6 @@
+ require 'spec_helper'
+-require 'yt/models/channel'
++require 'yt/models/resource'
++require 'yt/errors/no_items'
+ 
+ describe Yt::Channel do
+   subject(:channel) { Yt::Channel.new attrs }
+@@ -17,4 +18,44 @@
+       it { expect(channel.status).to be_a Yt::Status }
+     end
+   end
+-end
++
++  describe '#initialize' do
++  	context 'create empty hash' do
++  		let(:attrs) { {id:{"number"=>"random"}} }
++  		it {expect(channel).to be_a Yt::Channel}
++  	end
++
++  	context 'viewer descriptions' do
++  		let(:attrs) {{viewer_percentages: {"viewer"=>"20"}}}
++  		expects = {"viewer"=>"20"}
++  		it{expect(channel.viewer_percentages).to eq expects}
++  	end
++
++  	context 'Statistics set' do
++    	let(:attrs) { {statistics: {"FULL"=>"RANDOM"}} }
++    	it {expect(channel.statistics_set).to be_a Yt::StatisticsSet}
++    end
++  end
++
++  describe '#subscibed?' do
++  	context 'Rescue check' do
++  		let(:attrs){{to_be_rescued: {"or_not_to_be"=>"rescued"}}}
++  		  # it {expect {channel.subscribed?}.to raise_error Yt::Errors::NoItems}
++  	end
++  end
++
++ describe '#videos_params' do
++    context 'returns pair of channel_id and id of authenticated account' do
++      let(:attrs) {{ id: 'random'}}
++      expected_result = { channel_id: 'random' }
++      it { expect(channel.videos_params).to eq expected_result }
++    end
++  end
++
++   describe '#throttle_subscriptions' do
++      context 'time check' do
++      	let(:attrs) {{time: {"seconds"=>"10"}}}
++       it{expect(channel.throttle_subscriptions).to be_within(1.second).of(Time.now + 10)}
++      end
++  end
++end
+\ No newline at end of file

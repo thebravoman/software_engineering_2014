@@ -1,0 +1,11 @@
+Develop a program named FirstName_LastName_ClassNumber_f33e8621.rb
+You are given an argument for a folder with files.
+Count how many of the words have 10 letters.
+Sort the result by number of times found in ASC order.
+Produce a result in xml format named result.xml.
+
+<results>
+<file1.rb>N</file1.rb>
+<file2.rb>11</file2.rb>
+...
+</results>

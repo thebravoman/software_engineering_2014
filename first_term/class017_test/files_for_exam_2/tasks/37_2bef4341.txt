@@ -1,0 +1,10 @@
+Develop a program named FirstName_LastName_ClassNumber_2bef4341.rb
+You are given an argument for a folder with files.
+Count how many times the word "hardware" occurs in each of the files.
+Produce a result in xml format named result.xml.
+
+<results>
+<file1.rb>3</file1.rb>
+<file2.rb>6</file2.rb>
+..
+</results>

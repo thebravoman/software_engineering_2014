@@ -1,0 +1,29 @@
+<svg width='680' height='440' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+<line x1="50" y1="280" x2="600" y2="280" style="stroke:rgb(0,0,0);stroke-width:2" />
+<line x1="50" y1="280" x2="50" y2="30" style="stroke:rgb(0,0,0);stroke-width:2" />
+<text x="60" y="295" fill="black">VH</text>
+<text x="111" y="295" fill="black">002</text>
+<text x="162" y="295" fill="black">003</text>
+<text x="213" y="295" fill="black">004</text>
+<text x="264" y="295" fill="black">009</text>
+<text x="315" y="295" fill="black">012</text>
+<text x="366" y="295" fill="black">014</text>
+<text x="417" y="295" fill="black">015</text>
+<text x="310" y="430" fill="black">Bar chart with the number of 1s.</text>
+<rect x="51" y="217" width="50" height="63" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<text x="63" y="214" fill="black">21</text>
+<rect x="102" y="268" width="50" height="12" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<text x="114" y="265" fill="black">4</text>
+<rect x="153" y="271" width="50" height="9" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<text x="165" y="268" fill="black">3</text>
+<rect x="204" y="271" width="50" height="9" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<text x="216" y="268" fill="black">3</text>
+<rect x="255" y="241" width="50" height="39" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<text x="267" y="238" fill="black">13</text>
+<rect x="306" y="268" width="50" height="12" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<text x="318" y="265" fill="black">4</text>
+<rect x="357" y="271" width="50" height="9" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<text x="369" y="268" fill="black">3</text>
+<rect x="408" y="280" width="50" height="0" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+<text x="420" y="277" fill="black">0</text>
+</svg>

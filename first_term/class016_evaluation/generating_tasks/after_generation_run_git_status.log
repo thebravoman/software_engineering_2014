@@ -1,0 +1,133 @@
+kireto@kireto-laptop:~/tues/tp/software_engineering_2014$ git status
+On branch master
+Your branch is behind 'origin/master' by 112 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:    class016/Denis_Stoinev_13_B/expects/26f25600.txt
+	deleted:    class016/Denis_Stoinev_13_B/expects/884d45e5.txt
+	deleted:    class016/Denis_Stoinev_13_B/expects/ee407c53.txt
+	deleted:    class016/Denis_Stoinev_13_B/tasks/13_ee407c53.txt
+	deleted:    class016/Denis_Stoinev_13_B/tasks/16_884d45e5.txt
+	deleted:    class016/Denis_Stoinev_13_B/tasks/17_26f25600.txt
+	deleted:    class016/Denis_Trenchev_4_A/expects/empty folder
+	deleted:    class016/Denis_Trenchev_4_A/tasks/empty folder
+	deleted:    class016/Dimitar_Nestorov_7_A/expects/empty folder
+	deleted:    class016/Dimitar_Nestorov_7_A/tasks/empty folder
+	deleted:    class016/Georgi_Ivanov_3_A/expects/empty folder
+	deleted:    class016/Georgi_Ivanov_3_A/tasks/empty folder
+	deleted:    class016/Iliyan_Germanov_17_B/expects/26f25600.txt
+	deleted:    class016/Iliyan_Germanov_17_B/expects/884d45e5.txt
+	deleted:    class016/Iliyan_Germanov_17_B/expects/ee407c53.txt
+	deleted:    class016/Iliyan_Germanov_17_B/tasks/13_ee407c53.txt
+	deleted:    class016/Iliyan_Germanov_17_B/tasks/16_884d45e5.txt
+	deleted:    class016/Iliyan_Germanov_17_B/tasks/17_26f25600.txt
+	deleted:    class016/Ivailo_Ivanov_A_9/expects/1bf13e.xml
+	deleted:    class016/Ivailo_Ivanov_A_9/expects/d20d34.csv
+	deleted:    class016/Ivailo_Ivanov_A_9/expects/ee1e55.xml
+	deleted:    class016/Ivailo_Ivanov_A_9/tests/17_ee1e55.txt
+	deleted:    class016/Ivailo_Ivanov_A_9/tests/19_1bf13e.txt
+	deleted:    class016/Ivailo_Ivanov_A_9/tests/9_d20d34.txt
+	deleted:    class016/Moretti_Georgiev_A_19/expects/1bf13e.xml
+	deleted:    class016/Moretti_Georgiev_A_19/expects/d20d34.csv
+	deleted:    class016/Moretti_Georgiev_A_19/expects/ee1e55.xml
+	deleted:    class016/Moretti_Georgiev_A_19/tests/17_ee1e55.txt
+	deleted:    class016/Moretti_Georgiev_A_19/tests/19_1bf13e.txt
+	deleted:    class016/Moretti_Georgiev_A_19/tests/9_d20d34.txt
+	deleted:    class016/Radoslav_Kostadinov_22_A/expects/generate.rb
+	deleted:    class016/Radoslav_Kostadinov_22_A/tests/generate.rb
+	deleted:    class016/Stefan_Iliev_B_28/expects/26f25600.txt
+	deleted:    class016/Stefan_Iliev_B_28/expects/884d45e5.txt
+	deleted:    class016/Stefan_Iliev_B_28/expects/ee407c53.txt
+	deleted:    class016/Stefan_Iliev_B_28/tasks/13_ee407c53.txt
+	deleted:    class016/Stefan_Iliev_B_28/tasks/16_884d45e5.txt
+	deleted:    class016/Stefan_Iliev_B_28/tasks/17_26f25600.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	class016/Denis_Stoinev_13_B/expects/1965390b.txt
+	class016/Denis_Stoinev_13_B/expects/3a87b2b9.txt
+	class016/Denis_Stoinev_13_B/expects/abf2f194.txt
+	class016/Denis_Stoinev_13_B/expects/c4994d75.txt
+	class016/Denis_Stoinev_13_B/expects/c87105ca.txt
+	class016/Denis_Stoinev_13_B/expects/fc1ea715.txt
+	class016/Denis_Stoinev_13_B/tasks/21_c4994d75.txt
+	class016/Denis_Stoinev_13_B/tasks/22_abf2f194.txt
+	class016/Denis_Stoinev_13_B/tasks/29_c87105ca.txt
+	class016/Denis_Stoinev_13_B/tasks/31_fc1ea715.txt
+	class016/Denis_Stoinev_13_B/tasks/33_3a87b2b9.txt
+	class016/Denis_Stoinev_13_B/tasks/35_1965390b.txt
+	class016/Iliyan_Germanov_17_B/expects/37ae7563.txt
+	class016/Iliyan_Germanov_17_B/expects/7ccc0cfd.txt
+	class016/Iliyan_Germanov_17_B/expects/a06c1405.txt
+	class016/Iliyan_Germanov_17_B/expects/cb7e582b.txt
+	class016/Iliyan_Germanov_17_B/expects/d7a2bf76.txt
+	class016/Iliyan_Germanov_17_B/expects/edd0231f.txt
+	class016/Iliyan_Germanov_17_B/tasks/18_cb7e582b.txt
+	class016/Iliyan_Germanov_17_B/tasks/27_edd0231f.txt
+	class016/Iliyan_Germanov_17_B/tasks/28_37ae7563.txt
+	class016/Iliyan_Germanov_17_B/tasks/28_a06c1405.txt
+	class016/Iliyan_Germanov_17_B/tasks/28_d7a2bf76.txt
+	class016/Iliyan_Germanov_17_B/tasks/56_7ccc0cfd.txt
+	class016/Moretti_Georgiev_A_19/expects/2ad4f9.json
+	class016/Moretti_Georgiev_A_19/expects/380540.csv
+	class016/Moretti_Georgiev_A_19/expects/4560f9.xml
+	class016/Moretti_Georgiev_A_19/expects/465894.xml
+	class016/Moretti_Georgiev_A_19/expects/712903.xml
+	class016/Moretti_Georgiev_A_19/expects/908bb0.json
+	class016/Moretti_Georgiev_A_19/expects/c29c0d.json
+	class016/Moretti_Georgiev_A_19/expects/dca227.json
+	class016/Moretti_Georgiev_A_19/expects/f0302e.xml
+	class016/Moretti_Georgiev_A_19/tests/10_f0302e.txt
+	class016/Moretti_Georgiev_A_19/tests/12_c29c0d.txt
+	class016/Moretti_Georgiev_A_19/tests/13_712903.txt
+	class016/Moretti_Georgiev_A_19/tests/1_dca227.txt
+	class016/Moretti_Georgiev_A_19/tests/30_4560f9.txt
+	class016/Moretti_Georgiev_A_19/tests/37_465894.txt
+	class016/Moretti_Georgiev_A_19/tests/40_380540.txt
+	class016/Moretti_Georgiev_A_19/tests/57_908bb0.txt
+	class016/Moretti_Georgiev_A_19/tests/58_2ad4f9.txt
+	class016/Radoslav_Kostadinov_22_A/expects/0757f9.html
+	class016/Radoslav_Kostadinov_22_A/expects/0a3757.xml
+	class016/Radoslav_Kostadinov_22_A/expects/297070.html
+	class016/Radoslav_Kostadinov_22_A/expects/6514b1.xml
+	class016/Radoslav_Kostadinov_22_A/expects/796999.html
+	class016/Radoslav_Kostadinov_22_A/expects/7ab41f.html
+	class016/Radoslav_Kostadinov_22_A/expects/a5a180.html
+	class016/Radoslav_Kostadinov_22_A/expects/e57e22.html
+	class016/Radoslav_Kostadinov_22_A/expects/ecd285.html
+	class016/Radoslav_Kostadinov_22_A/tests/15_ecd285.txt
+	class016/Radoslav_Kostadinov_22_A/tests/24_796999.txt
+	class016/Radoslav_Kostadinov_22_A/tests/26_e57e22.txt
+	class016/Radoslav_Kostadinov_22_A/tests/46_a5a180.txt
+	class016/Radoslav_Kostadinov_22_A/tests/47_297070.txt
+	class016/Radoslav_Kostadinov_22_A/tests/51_0a3757.txt
+	class016/Radoslav_Kostadinov_22_A/tests/54_6514b1.txt
+	class016/Radoslav_Kostadinov_22_A/tests/6_0757f9.txt
+	class016/Radoslav_Kostadinov_22_A/tests/8_7ab41f.txt
+	class016/Stanislav_Iliev_26_B/expects/
+	class016/Stanislav_Iliev_26_B/tasks/
+	class016/Stefan_Iliev_B_28/expects/2df2e96f.txt
+	class016/Stefan_Iliev_B_28/expects/48f09879.txt
+	class016/Stefan_Iliev_B_28/expects/6013740d.txt
+	class016/Stefan_Iliev_B_28/expects/7e327aab.txt
+	class016/Stefan_Iliev_B_28/expects/9b9caea8.txt
+	class016/Stefan_Iliev_B_28/expects/a0ac2bb7.txt
+	class016/Stefan_Iliev_B_28/expects/bba6e9de.txt
+	class016/Stefan_Iliev_B_28/expects/bea2fb4c.txt
+	class016/Stefan_Iliev_B_28/expects/cd3ffc64.txt
+	class016/Stefan_Iliev_B_28/tasks/11_bea2fb4c.txt
+	class016/Stefan_Iliev_B_28/tasks/17_2df2e96f.txt
+	class016/Stefan_Iliev_B_28/tasks/34_7e327aab.txt
+	class016/Stefan_Iliev_B_28/tasks/39_9b9caea8.txt
+	class016/Stefan_Iliev_B_28/tasks/41_6013740d.txt
+	class016/Stefan_Iliev_B_28/tasks/48_bba6e9de.txt
+	class016/Stefan_Iliev_B_28/tasks/49_a0ac2bb7.txt
+	class016/Stefan_Iliev_B_28/tasks/52_48f09879.txt
+	class016/Stefan_Iliev_B_28/tasks/5_cd3ffc64.txt
+	class016/Vanya_Santeva_5_B/expects/
+	class016/Vanya_Santeva_5_B/tasks/

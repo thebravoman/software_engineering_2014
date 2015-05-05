@@ -1,0 +1,29 @@
+diff --git a/spec/models/video_spec.rb b/spec/models/video_spec.rb
+index 84b087f..56df962 100644
+--- a/spec/models/video_spec.rb
++++ b/spec/models/video_spec.rb
+@@ -34,7 +34,16 @@ describe Yt::Video do
+   end
+ 
+   describe '#delete' do
+-    let(:attrs) { {id: 'video-id'} }
++	let(:attrs) { {id: 'video-id'} }
++	it "deletes video" do
++		options = nil
++		options = double('options')
++		allow(video).to receive(:do_delete).and_return(options)
++	
++		expect(video.delete).to be true
++		end
++
++    
+ 
+     context 'given an existing video' do
+       before { expect(video).to receive(:do_delete).and_yield }
+@@ -43,4 +52,4 @@ describe Yt::Video do
+       it { expect{video.delete}.to change{video.exists?} }
+     end
+   end
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,76 @@
+classes:
+ - " "
+ - " "
+ - "VH"
+ - "hw2"
+ - "g2"
+ - "y2"
+ - "hw3"
+ - "g3"
+ - "y3"
+ - "hw4"
+ - "g4"
+ - "y4"
+ - "hw9"
+ - "hw12"
+ - "g12"
+ - "y12"
+ - "hw14"
+ - "g14"
+ - "y14"
+ - "hw15"
+ - "g15"
+ - "y15"
+ - "hw17-1"
+ - "g17-1"
+ - "y17-1"
+ - "hw17-2"
+ - "g17-2"
+ - "y17-2"
+ - "hw18"
+ - "g18"
+ - "y18"
+result_info:
+ - 0
+ - 0
+ - '-'
+ - '-'
+ - 0
+ - '-'
+ - '-'
+ - 0
+ - '-'
+ - '-'
+ - 0
+ - 0
+ - '-'
+ - '-'
+ - 0
+ - '-'
+ - '-'
+ - 0
+ - '-'
+ - '-'
+ - 0
+ - '-'
+ - '-'
+ - 0
+ - '-'
+ - '-'
+ - 0
+ - '-'
+ - '-'
+
+
+homeworks:
+ "/vhodno_nivo/**/*_*_*.*"  :  Sep--17--2014--20:00:00	
+ "/class002_homework/*_*_*_*.rb"  :  Sep--22--2014--20:00:00	,flog,flay
+ "/class003_homework/*_*_*_*.rb"  :  Sep--24--2014--20:00:00	,flog,flay
+ "/class004/*_*_*_*.rb"  :  Sep--29--2014--20:00:00	,flog,flay
+ "/class009_homework/**/*.pdf" : Oct--27--2014--20:00:00	,class009_homework/project_to_names.csv
+ "/class012_homework/*_*_*_*.rb"  :  Nov--10--2014--20:00:00	,flog,flay
+ "/class014_homework/**/*_*_*_*.rb"  :  Nov--13--2014--06:00:00	,flog,flay
+ "/class015_homework/**/*_*_*_*.rb"  :  Nov--20--2014--06:00:00	,flog,flay
+ "/class017_homework/homework1/*_*_*_*.rb"  :  Dec--2--2014--06:00:00	,flog,flay
+ "/class017_homework/homework2/*"  :  Dec--2--2014--06:00:00	,flog,flay
+ "/class018_homework/*" :  Dec--4--2014--06:00:00	,flog,flay

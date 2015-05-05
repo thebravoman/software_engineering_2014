@@ -1,0 +1,14 @@
+Develop a program named FirstName_LastName_ClassNumber_3b36396f.rb
+
+1. You are given an argument for a folder with files.
+1.1. If there are other arguments they should be discarded.
+2. In this folder there is a JSON file, containing student names, along with other file formats.
+3. Parse the JSON file.
+3. Find all students with 5 or more symbols in their First Name.
+4. Sort the result by Last Name DESC.
+5. Produce a result in CSV format named 3b36396f.csv:
+
+	LastName1,FirstName1
+	LastName2,FirstName2
+	...
+	LastNameN,FirstNameN

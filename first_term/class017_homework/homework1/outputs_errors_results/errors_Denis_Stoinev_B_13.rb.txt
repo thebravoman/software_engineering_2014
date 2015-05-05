@@ -1,0 +1,20 @@
+/repo//class017_test/files_for_exam_2/results/Iosyf_Saleh_18_007ac6de.rb:6:in `block in <main>': uninitialized constant CSV (NameError)
+	from /repo//class017_test/files_for_exam_2/results/Iosyf_Saleh_18_007ac6de.rb:4:in `each'
+	from /repo//class017_test/files_for_exam_2/results/Iosyf_Saleh_18_007ac6de.rb:4:in `<main>'
+/repo//class017_test/files_for_exam_2/results/Dimitar_Matev_5_e2d2e61b.rb:18:in `load': cannot load such file -- Dimitar_Matev_Writer_e2d2e61b.rb (LoadError)
+	from /repo//class017_test/files_for_exam_2/results/Dimitar_Matev_5_e2d2e61b.rb:18:in `<main>'
+/repo//class017_test/files_for_exam_2/results/Vladimir_Yordanov_9_e68e2949.rb:25: syntax error, unexpected ==
+	if firstname.length == 7 & lastname.length == 7
+	                                             ^
+/repo//class017_test/files_for_exam_2/results/Vladimir_Yordanov_9_e68e2949.rb:28: syntax error, unexpected keyword_end, expecting end-of-input
+/usr/local/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- builder (LoadError)
+	from /usr/local/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /repo//class017_test/files_for_exam_2/results/Petko_Bozhinov_21_769ce879.rb:24:in `<main>'
+/usr/local/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- builder (LoadError)
+	from /usr/local/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /repo/class017_test/files_for_exam_2/results/xml_writer.rb:1:in `<top (required)>'
+	from /repo//class017_test/files_for_exam_2/results/Stefan_Radev_27_fce4d375.rb:25:in `require_relative'
+	from /repo//class017_test/files_for_exam_2/results/Stefan_Radev_27_fce4d375.rb:25:in `<main>'
+/usr/local/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- ./html_writer.rb (LoadError)
+	from /usr/local/lib/ruby/site_ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /repo//class017_test/files_for_exam_2/results/Elena_Karakoleva_8_6933f104.rb:18:in `<main>'

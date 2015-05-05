@@ -1,0 +1,11 @@
+1. You are giving an argument for a folder with files;
+1.1 if ther are other arguments they should be descаrded
+2. some files names in this folder are in the format First_Last_DIGITS.rb. But there are also other files;
+3. for each student calculate the DIGITS and write in <%=@new_file_format1%> file only those that have sum more than <%=@number%>;
+4. in <%=@new_file_format2%> file write those students that have DIGIT's sum less than <%=@number%>;
+5. the results must include the student's names and the DIGIT's sum;
+6. sort the results by DIGIT's sum <%=@in_what_order%> for both formats;
+7. The <%=@new_file_format1%> file must be named result.extension:
+<%=@example1%>
+8. The <%=@new_file_format2%> file must be named result.extension:
+<%=@example2%>

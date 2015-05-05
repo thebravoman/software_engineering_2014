@@ -1,0 +1,33 @@
+From a09ab1ba41aa557f2d8920f6c3f22efc88b78597 Mon Sep 17 00:00:00 2001
+From: LuboYankov <ahhak123@gmail.com>
+Date: Mon, 12 Jan 2015 16:12:59 +0200
+Subject: [PATCH] Increasing coverage of playlist_item.rb with 15%
+
+---
+ spec/models/playlist_item_spec.rb | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+
+diff --git a/spec/models/playlist_item_spec.rb b/spec/models/playlist_item_spec.rb
+index afab282..d7896e8 100644
+--- a/spec/models/playlist_item_spec.rb
++++ b/spec/models/playlist_item_spec.rb
+@@ -28,4 +28,14 @@ describe Yt::PlaylistItem do
+       it { expect{playlist_item.delete}.to change{playlist_item.exists?} }
+     end
+   end
+-end
+\ No newline at end of file
++  
++  describe '#update' do
++	 context 'updating params' do
++	  let(:attrs) { {id: 'lo62kvjLHvY', snippet: {'title'=>'foo'}} }
++	  before { expect(playlist_item).to receive(:do_update).and_yield 'snippet'=>{'title'=>'bar'} }
++
++	  it { expect(playlist_item.update title: 'bar').to be true }
++	  it { expect{playlist_item.update title: 'bar'}.to change{playlist_item.title} }
++	 end
++  end
++end
+-- 
+1.9.1
+

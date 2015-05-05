@@ -1,0 +1,19 @@
+Develop a program named FirstName_LastName_ClassNumber_29bf3f.rb
+
+1. you are given homework014(class014_homework) folder;
+1.2 file names in this folder are in the form First_Last_class_digits.rb; 
+1.2 if there are other arguments they should be discarded;
+2. Find the sum of the two digits of the student number that is greater than 7;
+4. Sort the result by First name ASC;
+5. Produce a result in JSON format named results.json:
+6.Use json_writer.rb
+7.json_writer.rb -> 
+"require 'json'
+
+class JSONWriter
+	def write(student)
+		File.open("results.json", "w") do |file|
+			file.write(JSON.pretty_generate(student))
+		end
+	end
+end"

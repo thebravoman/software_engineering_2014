@@ -1,0 +1,68 @@
+diff --git a/spec/models/video_spec.rb b/spec/models/video_spec.rb
+index 84b087f..bdec9cf 100644
+--- a/spec/models/video_spec.rb
++++ b/spec/models/video_spec.rb
+@@ -43,4 +43,61 @@ describe Yt::Video do
+       it { expect{video.delete}.to change{video.exists?} }
+     end
+   end
+-end
+\ No newline at end of file
++		before :each do
++			@rating = double("mocked rating")
++			allow(video).to receive(:rating).and_return(@rating)
++		end
++		describe '#liked?' do
++			let(:attrs) { {id: 'video-id'} }
++
++			context 'the video is liked' do
++				it ".liked? should return ture" do
++					allow(@rating).to receive(:rating).and_return(:like)
++					expect(video.liked?).to be true
++				end
++			end
++
++			context 'the video is not liked' do
++				it ".liked? should return false" do
++					allow(@rating).to receive(:rating).and_return(:none)
++					expect(video.liked?).to be false
++				end
++			end
++		end
++
++		describe '#like' do
++			let(:attrs) { {id: 'video-id'} }
++
++			context 'the video is not liked' do
++				it "likes the video and checks if it is liked" do
++					allow(@rating).to receive(:set).and_return(:like)
++					allow(video).to receive(:liked?).and_return(true)
++					expect(video.like).to be true
++				end
++			end
++		end
++
++		describe '#dislike' do
++			let(:attrs) { {id: 'video-id'} }
++
++			context 'the video is liked' do
++				it "dislikes the video" do
++					allow(@rating).to receive(:set).and_return(:dislike)
++					allow(video).to receive(:liked?).and_return(false)
++					expect(video.dislike).to be true
++				end
++			end
++		end
++
++		describe '#unlike' do
++			let(:attrs) { {id: 'video-id'} }
++
++			context 'the video is liked' do
++				it "unlikes the video" do
++					allow(@rating).to receive(:set).and_return(:none)
++					allow(video).to receive(:liked?).and_return(false)
++					expect(video.unlike).to be true
++				end
++			end
++		end
++end

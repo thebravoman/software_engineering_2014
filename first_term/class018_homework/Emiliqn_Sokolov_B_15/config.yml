@@ -1,0 +1,80 @@
+directories:
+   class002:
+      folder : class002_homework/**/*_*_*_*.rb
+      flog_argument : 10
+      flay_argument : 18
+      date : --until=22.09.2014:20:00:00
+
+   class003:
+      folder : class003_homework/**/*_*_*_*.rb
+      flog_argument : 11
+      flay_argument : 19
+      date : --until=24.09.2014:20:00:00
+
+   class004:
+      folder : class004/**/*_*_*_*.rb
+      flog_argument : 12
+      flay_argument : 20
+      date : --until=29.09.2014:20:00:00
+
+   class009:
+      folder : class009_homework/project_to_names.csv
+      date : --until=27.10.2014:20:00:00
+
+   class012:
+      folder : class012_homework/**/*_*_*_*.rb
+      flog_argument : 13
+      flay_argument : 21
+      date : --until=10.11.2014:20:00:00
+
+   class014:
+      folder : class014_homework/**/*_*_*_*.rb
+      flog_argument : 14
+      flay_argument : 22
+      date : --until=13.11.2014:06:00:00
+
+   class017/1:
+      folder : class017_homework/homework1/**/*_*_*_*.rb
+      flog_argument : 15
+      flay_argument : 23
+      date : --until=02.12.2014:06:00:00
+
+   class017/2:
+      folder : class017_homework/homework2/**/*_*_*_*.rb
+      flog_argument : 16
+      flay_argument : 24
+      date : --until=02.12.2014:06:00:00
+   class018:
+      folder : class018_homework/**/*_*_*_*.rb
+      flog_argument : 17
+      flay_argument : 25
+      date : --until=04.12.2014:06:00:00
+
+print_stuff:
+   ini_config:
+      'VH' : 0
+      '002' : 0
+      '003' : 0
+      '004' : 0
+      '009' : 0
+      '012' : 0
+      '014' : 0
+      '017/1' : 0
+      '017/2' : 0
+      '018' : 0
+      'g2' : '-'
+      'g3' : '-'
+      'g4' : '-'
+      'g12' : '-'
+      'g14' : '-'
+      'g17/1' : '-'
+      'g17/2' : '-'
+      'g18' : '-'
+      'y2' : '-'
+      'y3' : '-'
+      'y4' : '-'
+      'y12' : '-'
+      'y14' : '-'
+      'y17/1' : '-'
+      'y17/2' : '-'
+      'y18' : '-'

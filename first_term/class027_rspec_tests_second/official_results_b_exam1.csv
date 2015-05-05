@@ -1,0 +1,75 @@
+Name,Result,Program error,Task,Expected,Output csv
+../../class027_rspec_tests_second/files_for_exam_1/results/Konstantin_Vekilski_20_010b81.rb,1,,"Develop a program named FirstName_LastName_ClassNumber_010b81.rb
+
+1. you are given two arguments for a folders with files;
+1.1 if there are other arguments they should be discarded;
+2. Find all the files from both folders that have only letters from a-z or A-Z in their names excluding extension. If there are duplicates the file must be written only once.;
+3. Calculate the length of their names (including extensions) divided by 2.;
+4. Sort the result by length DESC;
+5. Produce a result in CSV format named result.csv:
+
+			File1.extension,3
+			File2.extension,4
+			...
+			FileN.extension,3
+","invalid.rb,5
+","invalid.rb,5
+"
+../../class027_rspec_tests_second/files_for_exam_1/results/David_Georgiev_12_8177f7.rb,1,,"Develop a program named FirstName_LastName_ClassNumber_8177f7.rb
+
+1. you are given two arguments for a folders with files;
+1.1 if there are other arguments they should be discarded;
+2. Find all the files from both folders that have exactly 7 digits from 0 to 9 in their names excluding extension. If there are duplicates the file must be written only once.;
+3. Calculate the length of their names (including extensions) divided by 2 rounded to the smalles number;
+4. Sort the result by File name DESC;
+5. Produce a result in CSV format named result.csv:
+
+			File1.extension,3
+			File2.extension,4
+			...
+			FileN.extension,3
+","F10letter3_L10letter4_3.rb,13
+F10letter2_L10letter2_6.rb,13
+F10letter0_L10letter1_7.rb,13
+","F10letter3_L10letter4_3.rb,13
+F10letter2_L10letter2_6.rb,13
+F10letter0_L10letter1_7.rb,13
+"
+../../class027_rspec_tests_second/files_for_exam_1/results/Dimitar_Andreev_14_166bf5.rb,0,,"Develop a program named FirstName_LastName_ClassNumber_166bf5.rb
+
+1. you are given two arguments for a folders with files;
+1.1 if there are other arguments they should be discarded;
+2. file names in this folders are in the form First_Last_digits.rb; 
+3. find  the students that are only in the first folder and not in the second. A student is in both folders if it there is a file with the same First and Last Name. Digits might be different;
+4. Sort the result by Last name DESC;
+5. Produce a result in CSV format named result.csv:
+
+	LastName1,FirstName1
+	LastName2,FirstName2
+	...
+	LastNameN,FirstNameN
+
+","L5le3,F5le3
+",""
+../../class027_rspec_tests_second/files_for_exam_1/results/Georgi_Velev_10_8aa1b1.rb,0,"../../class027_rspec_tests_second/files_for_exam_1/results/Georgi_Velev_10_8aa1b1.rb:35: syntax error, unexpected keyword_end, expecting end-of-input
+","Develop a program named FirstName_LastName_ClassNumber_8aa1b1.rb
+
+1. you are given two arguments for a folders with files;
+1.1 if there are other arguments they should be discarded;
+2. Find all the files from both folders that are not in the format FirsrName_LastName_digit.rb. If there are duplicates the file must be written only once. If two files are of the same lenght those files should be sorted in ASC order;
+3. Calculate the length of their names (including extensions).;
+4. Sort the result by length DESC;
+5. Produce a result in CSV format named result.csv:
+
+			File1.extension,3
+			File2.extension,4
+			...
+			FileN.extension,3
+","invalid.rb,10
+FirstName3_LastName3Invalid.rb,31
+FirstName3Invalid_LastName3Invalid.rb,37
+F10letter1_L10letter1.rb,24
+F10letter2_L10letter2.rb,24
+F10letter3_L10letter4.rb,24
+F10letters_L10letters.rb,24
+",No such file or directory @ rb_sysopen - result.csv. No result.csv file was found.

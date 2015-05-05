@@ -1,0 +1,33 @@
+'VH':
+- vhodno_nivo/**/*
+- ["Sep", 17, 20]
+'002':
+- class002_homework/**/*.rb
+- ["Sep", 22, 20]
+'003':
+- class003_homework/**/*.rb
+- ["Sep", 24, 20]
+'004':
+- class004/**/*.rb
+- ["Sep", 29, 20]
+'009':
+- class009_homework/*.pdf
+- ["Oct", 27, 20]
+'012':
+- class012_homework/**/*.rb
+- ["Nov", 10, 20]
+'014':
+- class014_homework/**/*_*_*_*.rb
+- ["Nov", 13, 06]
+'015':
+- class015_homework/**/*_*_*_*.rb
+- ["Nov", 20, 06]
+'017h1':
+- class017_homework/homework1/**/*_*_*_*.rb
+- ["Dec", 2, 06]
+'017h2':
+- class017_homework/homework2/**/*_*_*_*.rb
+- ["Dec", 2, 06]
+'018':
+- class018_homework/**/*_*_*_*.rb
+- ["Dec", 4, 06]

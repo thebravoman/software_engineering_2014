@@ -1,0 +1,10 @@
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
+1.You are given as first argument a file named "expressions.csv" with 3 values per line X,operation,Y 
+    where X and Y are positive integer values, and operation is a symbol between +,-,*,/
+2.Find each line that compares <%=@comparison%> to <%=@value%>
+    Line compares <%=@comparison%> if X operation Y <%=@sign%> <%=@value%>
+3.The order of the results must match their original order in the file
+4.Produce a result in <%=@format%> format in the form X operation Y <%=@sign%> <%=@value%> named "result.<%=@format%>"
+
+<%=@expected%>

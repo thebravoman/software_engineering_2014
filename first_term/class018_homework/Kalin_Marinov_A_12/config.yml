@@ -1,0 +1,21 @@
+runnable_programs: 1, 2, 3, 5, 6, 7, 8
+
+result_file_name: results_Kalin_Marinov_A_12
+
+presentation: "/class009_homework/project_to_names.csv"
+
+homework_names: '" ", " ", "VH", "002", "003", "004", "009", "012", "014", "017_1", "017_2", "g2", "g3", "g4", "g12", "g14", "g17_1", "g17_2", "y2", "y3", "y4", "y12", "y14", "y17_1", "y17_2"'
+
+folders:
+ "/vhodno_nivo/**/*.*": "1412020800" 
+ "/class002_homework/*.rb": "1411416000"
+ "/class003_homework/*.rb": "1412020800"
+ "/class004/*.rb": "1412020800" 
+ "/class009_homework/*": "1414440000"
+ "/class012_homework/*_*_*_*.rb": "1415649600"
+ "/class014_homework/*/": "1415858400"
+ "/class017_homework/homework1/*_*_*_*.rb": "1417543200" 
+ "/class017_homework/homework2/*/": "1417543200"
+
+pdf_check: 4
+zero_level_check: 0

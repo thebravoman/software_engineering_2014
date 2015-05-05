@@ -1,0 +1,12 @@
+Develop a program named FirstName_LastName_ClassNumber_8cc2c8.rb
+
+1. You are given an argument for a folder with files;
+1.1 If there are other arguments they should be discarded
+2. Find all p tags in the HTML files and get their values.
+4. Sort results by DESC
+5. Produce a result in CSV format named result.csv:
+
+ Unexpected results pls no bully if something goes wrong: 
+ Paragraf1,
+Paragraf2,
+Paragraf3

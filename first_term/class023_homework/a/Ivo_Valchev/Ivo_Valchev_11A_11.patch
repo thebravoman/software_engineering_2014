@@ -1,0 +1,44 @@
+--- channel_spec.rb	2015-01-07 20:49:01.752664787 +0200
++++ channel_spec_my.rb	2015-01-07 20:48:42.556665002 +0200
+@@ -17,4 +17,40 @@
+       it { expect(channel.status).to be_a Yt::Status }
+     end
+   end
++
++  describe '#throttle_subscriptions' do
++      let(:attrs) { {status: {"seconds"=>"10"}} }
++      it "subscribes it" do
++        expect(channel.throttle_subscriptions).to eq Time.now+10
++      end
++  end
++
++  describe '#subscribed?' do
++      let(:attrs) { {id: "id"} }
++      it 'throws an exception' do
++       expect(channel.subscribed?).to raise_error(Errors::NoItems)
++      end
++  end
++
++  describe '#unsubscribe!' do
++      let(:attrs) { {status: {"privacyStatus"=>"public"}} }
++      it "unsubscribes from the channel" do
++        expect(channel.unsubscribe!).to be_a Yt::Models::subscribe!
++      end
++  end
++
++  describe '#subscribe!' do
++      let(:attrs) { {status: {""=>""}} }
++      it 'subscribes for a channel' do
++        expect(channel.subscribe!).to eq Yt::Models::subscribe!
++      end
++  end
++
++   describe '#videos_params' do
++      let(:attrs) { {auth: (Yt::Account.new auth: 'Name'), id: "Channel_id"} }
++      it "returns id of the channel and auth. account" do
++        expect(channel.videos_params).to eq "Channel_id"
++      end
++    end
++  end
+ end
+\ No newline at end of file

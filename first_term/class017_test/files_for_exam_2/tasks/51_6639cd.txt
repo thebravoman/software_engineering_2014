@@ -1,0 +1,23 @@
+Develop a program named FirstName_LastName_ClassNumber_6639cd.rb
+
+1. you are given an argument for a folder with files;
+1.1 if there are other arguments they should be discarded
+2. some file names in this folder are in the format Firstname_LastName.csv . But there are also other files; 
+3. find all the CSV files that include "correct" in the file.
+4. Sort the result by Last Name ASC.
+5. Produce a result in HTML named result.html:
+
+
+<div class="students">
+		<ul>
+			<li>FirstName LastName</li>
+		</ul>
+	</div><div class="students">
+		<ul>
+			<li>FirstName2 LastName2</li>
+		</ul>
+	</div><div class="students">
+		<ul>
+			<li>FirstNameN LastNameN</li>
+		</ul>
+	</div>

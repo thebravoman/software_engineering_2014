@@ -1,0 +1,14 @@
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
+
+1. you are given an argument for a folder with files;
+2. file names in this folders are in the form First_Last_digits.rb; 
+3. find the students that have <%=@letters%> letters in either name ;
+4. Sort the result by <%= @which_to_sort %> <%= @in_what_order %>;
+5. Produce a result in CSV format named result.csv:
+
+
+			LastName1,FirstName1
+			LastName2,FirstName2
+			...
+			LastNameN,FirstNameN

@@ -1,0 +1,47 @@
+class HTMLWriter
+	def write (list, timer)
+	html = File.open("result_Momchil_Angelov_18.html", "w")
+		html.puts("<body>")
+		html.puts("	<table>")
+		html.puts("		<tr>")
+		html.puts("			<td>#{timer}</td>")
+		html.puts("			<td>VN</td>")
+		html.puts("			<td>002</td>")
+		html.puts("			<td>003</td>")
+		html.puts("			<td>004</td>")
+		html.puts("			<td>009</td>")
+		html.puts("			<td>012</td>")
+		html.puts("			<td>014</td>")
+		html.puts("			<td>015</td>")
+		html.puts("			<td>017-1</td>")
+		html.puts("			<td>017-2</td>")
+		html.puts("			<td>g2</td>")
+		html.puts("			<td>g3</td>")
+		html.puts("			<td>g4</td>")
+		html.puts("			<td>g12</td>")
+		html.puts("			<td>g14</td>")
+		html.puts("			<td>g15</td>")
+		html.puts("			<td>g17-1</td>")
+		html.puts("			<td>g17-2</td>")
+		html.puts("			<td>y2</td>")
+		html.puts("			<td>y3</td>")
+		html.puts("			<td>y4</td>")
+		html.puts("			<td>y12</td>")
+		html.puts("			<td>y14</td>")
+		html.puts("			<td>y15</td>")
+		html.puts("			<td>y17-1</td>")
+		html.puts("			<td>y17-2</td>")
+		html.puts("		</tr>")
+		list.keys.each do |key|
+			html.puts("		<tr>")
+			html.puts("			<td>#{key}</td>")
+			for i in 0..25
+				html.puts("			<td>#{list[key][i]}</td>")
+			end
+			html.puts("		</tr>")
+		end
+		html.puts("</table>")
+		html.puts("</body>")
+		html.close
+	end
+end

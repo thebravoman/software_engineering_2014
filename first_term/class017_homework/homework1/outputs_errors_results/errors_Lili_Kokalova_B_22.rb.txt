@@ -1,0 +1,5 @@
+/usr/local/lib/ruby/2.1.0/csv.rb:1256:in `initialize': No such file or directory @ rb_sysopen - software_engineering_2014/class017_homework/hash_to_fixture.csv (Errno::ENOENT)
+	from /usr/local/lib/ruby/2.1.0/csv.rb:1256:in `open'
+	from /usr/local/lib/ruby/2.1.0/csv.rb:1256:in `open'
+	from /usr/local/lib/ruby/2.1.0/csv.rb:1121:in `foreach'
+	from Lili_Kokalova_B_22.rb:18:in `<main>'

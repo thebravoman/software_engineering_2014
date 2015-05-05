@@ -1,0 +1,10 @@
+Develop a program named FirstName_LastName_ClassNumber_e4e5cc70.rb
+You are given an argument for a folder with .rb files.
+In each file there are words separated by space (ex. "word1 word2 word3")(there may be multiple lines)
+Count how many of the words have 6 characters (numbers,special chars are part of the word) in each of the files.
+Sort the result by number of times found in ASC order.
+Produce a result in json format named result.json.
+
+"file1.rb":9,"file2.rb":11,......
+^
+There shouldn't be newline at the end of the result file.

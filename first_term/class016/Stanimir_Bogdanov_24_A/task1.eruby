@@ -1,0 +1,31 @@
+Develop a program named FirstName_LastName_ClassNumber_<%=@task_number%>.rb
+
+1. You are given a command-line argument with an XML document
+2. If there are other arguments they should be discarded
+3. Create a CSV file with all albums <%= @condition %> <%= @value %>
+4. Sort the result by AlbumName <%= @in_what_order %>
+5. Produce a result in CSV format named result.csv:
+	AlbumName1,AlbumName2,AlbumName3...AlbumNameN
+
+The XML document provided has the following structure:
+<music_store>
+	<album>
+		<name>Name1</name>
+		<artist>Artist1</artist>
+		<release_year>Year1</release_year>
+		<price>Price1</price>
+	</album>
+	<album>
+		<name>Name2</name>
+		<artist>Artist2</artist>
+		<release_year>Year2</release_year>
+		<price>Price2</price>
+	</album>
+	...
+	<album>
+		<name>NameN</name>
+		<artist>ArtistN</artist>
+		<release_year>YearN</release_year>
+		<price>PriceN</price>
+	</album>
+</music_store>

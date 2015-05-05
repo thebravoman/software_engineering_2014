@@ -1,0 +1,40 @@
+--- channel_spec.rb	2015-01-08 01:19:53.960512795 +0200
++++ channel_spec_LYa.rb	2015-01-08 01:14:05.496501000 +0200
+@@ -17,4 +17,36 @@
+       it { expect(channel.status).to be_a Yt::Status }
+     end
+   end
++
++   describe '#initialize' do
++    context 'initialize statistics_set' do
++    	let(:attrs) { {statistics: {"old"=>"new"}} }
++    	it { expect(channel.statistics_set).to be_a Yt::StatisticsSet }
++    end
++
++    context 'initialize viewer_percentages' do 
++    	let(:attrs) { {viewer_percentages: {"old" => "new"}} }
++    	var = {"old" => "new"}
++    	it { expect(channel.viewer_percentages).to eq var }
++    end
++   end
++
++   describe '#throttle_subscriptions' do
++   	context 'throttle_subscriptions' do
++   		let(:attrs) { {seconds:  10} }
++   		it { expect(channel.throttle_subscriptions).to be_within(1.second).of(Time.now + 10) }
++   	end
++   end
++
++   describe '#unsubscribe!' do
++   		let(:attrs) { {subscribed?: true} }
++   		it { expect(channel.unsubscribe!).to be true }
++   end
++
++   describe '#delete_playlists' do
++  	context '#delete_playlists' do
++  		let(:attrs) { {playlists: {"blah" => "phah"}} }
++  		it { expect(channel.delete_playlists).to be_empty }
++  	end
++  end
+ end
+\ No newline at end of file

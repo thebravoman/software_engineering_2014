@@ -1,0 +1,175 @@
+kireto@kireto-laptop:~/tues/tp/software_engineering_2014/class016_evaluation$ ruby generate.rb ../class016
+["../class016/Moretti_Georgiev_A_19/generate.rb", "../class016/Hristiyan_Velyakov_A_28/generate.rb", "../class016/Stanislav_Valkanov_25_A/generate.rb", "../class016/Georgi_Velev_B_10/generate.rb", "../class016/Valentin_Varbanov_B_4/generate.rb", "../class016/Simeon_Shopkin_23_A/generate.rb", "../class016/Nikolay_Mihailov_25_B/generate.rb", "../class016/Petko_Bozhinov_21_A/generate.rb", "../class016/Georgi_Ivanov_3_A/generate.rb", "../class016/Konstantin_Kostov_B_21/generate.rb", "../class016/ Lili_Kokalova_22_B/generate.rb", "../class016/Stanislav_Gospodinov_26_A/generate.rb", "../class016/Iosyf_Saleh_18_B.rb/generate.rb", "../class016/Stanislav_Iliev_26_B/generate.rb", "../class016/Emiliqn_Sokolov_15_B/generate.rb", "../class016/Hristo_Dachev_29_A/generate.rb", "../class016/Marian_Belchev_17_A/generate.rb", "../class016/Iliyan_Germanov_17_B/generate.rb", "../class016/Veselina_Kolova_8_B/generate.rb", "../class016/Dimitar_Matev_5_A/generate.rb", "../class016/Kristina_Pironkova_15_A/generate.rb", "../class016/Velislav_Kostov_B_7/generate.rb", "../class016/Elena_Karakoleva_8_A/generate.rb", "../class016/Radoslav_Kostadinov_22_A/generate.rb", "../class016/Nikola_Marinov_20_A/generate.rb", "../class016/Atanaska_Ivancheva_1_B/generate.rb", "../class016/Ivo_Stratev_16_B/generate.rb", "../class016/Kaloyan_Nikov_19_B/generate.rb", "../class016/Krassen_Angelov_14_A/generate.rb", "../class016/Valentin_Georgiev_3_B/generate.rb", "../class016/Stefan_Iliev_B_28/generate.rb", "../class016/Ivo_Valchev_A_11/generate.rb", "../class016/Mladen_Karadimov_B_24/generate.rb", "../class016/Dimitar_Terziev_6_A/generate.rb", "../class016/Denis_Stoinev_13_B/generate.rb", "../class016/Vladimir_Yordanov_9_B/generate.rb", "../class016/Kamena_Dacheva_13_A/generate.rb", "../class016/Lubomir_Yankov_16_A/generate.rb", "../class016/Ivailo_Ivanov_A_9/generate.rb", "../class016/Momchil_Angelov_18_A/generate.rb", "../class016/Borislav_Stratev_2_B/generate.rb", "../class016/Veselin_Dechev_2_A/generate.rb", "../class016/Borislav_Rusinov_A_1/generate.rb", "../class016/Dimitar_Nestorov_7_A/generate.rb", "../class016/Denis_Trenchev_4_A/generate.rb", "../class016/Kalin_Marinov_12_A/generate.rb", "../class016/Hristiyan_Dodov_29_B/generate.rb", "../class016/Martin_Grigorov_23_B/generate.rb", "../class016/Vanya_Santeva_5_B/generate.rb", "../class016/Ivelin_Slavchev_10_A/generate.rb", "../class016/Konstantin_Vekilski_B_20/generate.rb", "../class016/Stefan_Radev_B_27/generate.rb", "../class016/Stanimir_Bogdanov_24_A/generate.rb"]
+"cd ../class016/Emiliqn_Sokolov_15_B && ruby generate.rb 9679 41081 1351"
+"cd ../class016/Stanislav_Gospodinov_26_A && ruby generate.rb 57702 31670 43406"
+"cd ../class016/Iliyan_Germanov_17_B && ruby generate.rb 57541 8873 20156"
+"cd ../class016/Stanimir_Bogdanov_24_A && ruby generate.rb 29622 32615 57676"
+/home/kireto/tues/tp/software_engineering_2014/class016/Stanimir_Bogdanov_24_A/task.rb:17:in `initialize': No such file or directory - tests/32615_a92cf1a6.txt (Errno::ENOENT)
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Stanimir_Bogdanov_24_A/task.rb:17:in `open'
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Stanimir_Bogdanov_24_A/task.rb:17:in `generate'
+	from generate.rb:10:in `<main>'
+"cd ../class016/Elena_Karakoleva_8_A && ruby generate.rb 47419 47736 46291"
+/home/kireto/tues/tp/software_engineering_2014/class016/Elena_Karakoleva_8_A/task.rb:18:in `initialize': No such file or directory - tests/47736_4b614f.txt (Errno::ENOENT)
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Elena_Karakoleva_8_A/task.rb:18:in `open'
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Elena_Karakoleva_8_A/task.rb:18:in `generate'
+	from generate.rb:10:in `<main>'
+"cd ../class016/Ivo_Valchev_A_11 && ruby generate.rb 28617 35754 53783"
+/home/kireto/tues/tp/software_engineering_2014/class016/Ivo_Valchev_A_11/task.rb:17:in `initialize': No such file or directory - tests/35754_e8b1ea8c.txt (Errno::ENOENT)
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Ivo_Valchev_A_11/task.rb:17:in `open'
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Ivo_Valchev_A_11/task.rb:17:in `generate'
+	from generate.rb:10:in `<main>'
+"cd ../class016/Stanislav_Iliev_26_B && ruby generate.rb 9022 50322 12336"
+"cd ../class016/Iosyf_Saleh_18_B.rb && ruby generate.rb 48600 50015 18567"
+"cd ../class016/Ivailo_Ivanov_A_9 && ruby generate.rb 56618 27886 6311"
+"cd ../class016/ Lili_Kokalova_22_B && ruby generate.rb 28595 47721 19579"
+ruby: No such file or directory -- generate.rb (LoadError)
+"cd ../class016/Radoslav_Kostadinov_22_A && ruby generate.rb 25821 56436 7569"
+"cd ../class016/Stanislav_Valkanov_25_A && ruby generate.rb 44171 25247 57502"
+/home/kireto/tues/tp/software_engineering_2014/class016/Stanislav_Valkanov_25_A/task.rb:14:in `initialize': No such file or directory - tests/29_176c7e.txt (Errno::ENOENT)
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Stanislav_Valkanov_25_A/task.rb:14:in `open'
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Stanislav_Valkanov_25_A/task.rb:14:in `generate'
+	from generate.rb:9:in `<main>'
+"cd ../class016/Martin_Grigorov_23_B && ruby generate.rb 22630 30811 7258"
+"cd ../class016/Hristo_Dachev_29_A && ruby generate.rb 57809 4609 25218"
+/home/kireto/tues/tp/software_engineering_2014/class016/Hristo_Dachev_29_A/task.rb:19:in `initialize': No such file or directory - tests/4609_94e971.txt (Errno::ENOENT)
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Hristo_Dachev_29_A/task.rb:19:in `open'
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Hristo_Dachev_29_A/task.rb:19:in `generate'
+	from generate.rb:11:in `block in <main>'
+	from generate.rb:10:in `each'
+	from generate.rb:10:in `<main>'
+"cd ../class016/Dimitar_Matev_5_A && ruby generate.rb 28532 11871 18612"
+generate.rb:60:in `initialize': No such file or directory - tasks/28532_84ccbdbd.txt (Errno::ENOENT)
+	from generate.rb:60:in `open'
+	from generate.rb:60:in `block in <main>'
+	from generate.rb:51:in `each'
+	from generate.rb:51:in `<main>'
+"cd ../class016/Ivo_Stratev_16_B && ruby generate.rb 3658 36594 7579"
+mkdir: cannot create directory ‘tests’: File exists
+mkdir: cannot create directory ‘tests’: File exists
+"cd ../class016/Georgi_Velev_B_10 && ruby generate.rb 15531 29409 37474"
+generate.rb:7: syntax error, unexpected ']', expecting $end
+"cd ../class016/Hristiyan_Velyakov_A_28 && ruby generate.rb 35998 43129 12781"
+generate.rb:3:in `require_relative': cannot load such file -- /home/kireto/tues/tp/software_engineering_2014/class016/Hristiyan_Velyakov_A_28/task1.rb (LoadError)
+	from generate.rb:3:in `<main>'
+"cd ../class016/Denis_Stoinev_13_B && ruby generate.rb 34503 20047 27465"
+"cd ../class016/Konstantin_Vekilski_B_20 && ruby generate.rb 21170 26661 830"
+/home/kireto/tues/tp/software_engineering_2014/class016/Konstantin_Vekilski_B_20/task.rb:17:in `initialize': No such file or directory - tests/830_c2eb5a.txt (Errno::ENOENT)
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Konstantin_Vekilski_B_20/task.rb:17:in `open'
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Konstantin_Vekilski_B_20/task.rb:17:in `generate'
+	from generate.rb:11:in `<main>'
+"cd ../class016/Denis_Trenchev_4_A && ruby generate.rb 23032 48547 17092"
+"cd ../class016/Nikola_Marinov_20_A && ruby generate.rb 2021 37770 26223"
+/home/kireto/tues/tp/software_engineering_2014/class016/Nikola_Marinov_20_A/task1.rb:42:in `init_contexts': undefined local variable or method `context1_2' for #<Task1:0x00000002a9b0f8 @template="task1.eruby"> (NameError)
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Nikola_Marinov_20_A/task.rb:9:in `initialize'
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Nikola_Marinov_20_A/task1.rb:46:in `initialize'
+	from generate.rb:12:in `new'
+	from generate.rb:12:in `<main>'
+"cd ../class016/Dimitar_Nestorov_7_A && ruby generate.rb 49028 39781 29091"
+"cd ../class016/Stefan_Iliev_B_28 && ruby generate.rb 19337 42532 21501"
+"cd ../class016/Vladimir_Yordanov_9_B && ruby generate.rb 27012 43589 2786"
+"cd ../class016/Momchil_Angelov_18_A && ruby generate.rb 47913 5822 11412"
+"cd ../class016/Stefan_Radev_B_27 && ruby generate.rb 30902 18166 7417"
+generate.rb:5:in `require_relative': /home/kireto/tues/tp/software_engineering_2014/class016/Stefan_Radev_B_27/task3.rb:80: syntax error, unexpected '\n', expecting tASSOC (SyntaxError)
+	from generate.rb:5:in `<main>'
+"cd ../class016/Krassen_Angelov_14_A && ruby generate.rb 19926 12388 23632"
+/home/kireto/tues/tp/software_engineering_2014/class016/Krassen_Angelov_14_A/task.rb:17:in `initialize': No such file or directory - tasks/12388_87399934.txt (Errno::ENOENT)
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Krassen_Angelov_14_A/task.rb:17:in `open'
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Krassen_Angelov_14_A/task.rb:17:in `generate'
+	from generate.rb:11:in `<main>'
+"cd ../class016/Marian_Belchev_17_A && ruby generate.rb 29366 15411 41698"
+/home/kireto/tues/tp/software_engineering_2014/class016/Marian_Belchev_17_A/task.rb:19:in `initialize': No such file or directory - tests/41698_2ce815.txt (Errno::ENOENT)
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Marian_Belchev_17_A/task.rb:19:in `open'
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Marian_Belchev_17_A/task.rb:19:in `generate'
+	from generate.rb:11:in `block in <main>'
+	from generate.rb:10:in `each'
+	from generate.rb:10:in `<main>'
+"cd ../class016/Georgi_Ivanov_3_A && ruby generate.rb 56804 49819 40361"
+"cd ../class016/Hristiyan_Dodov_29_B && ruby generate.rb 10574 40408 24109"
+generate.rb:6:in `<main>': uninitialized constant Task2 (NameError)
+"cd ../class016/Velislav_Kostov_B_7 && ruby generate.rb 21635 13574 30436"
+generate.rb:3:in `require_relative': /home/kireto/tues/tp/software_engineering_2014/class016/Velislav_Kostov_B_7/task1.rb:12: syntax error, unexpected tSYMBEG, expecting '}' (SyntaxError)
+			:format=>"html",
+			 ^
+/home/kireto/tues/tp/software_engineering_2014/class016/Velislav_Kostov_B_7/task1.rb:12: syntax error, unexpected ',', expecting keyword_end
+/home/kireto/tues/tp/software_engineering_2014/class016/Velislav_Kostov_B_7/task1.rb:21: syntax error, unexpected '}', expecting keyword_end
+/home/kireto/tues/tp/software_engineering_2014/class016/Velislav_Kostov_B_7/task1.rb:28: syntax error, unexpected tSYMBEG, expecting '}'
+			:format=>"xml",
+			 ^
+/home/kireto/tues/tp/software_engineering_2014/class016/Velislav_Kostov_B_7/task1.rb:28: syntax error, unexpected ',', expecting keyword_end
+/home/kireto/tues/tp/software_engineering_2014/class016/Velislav_Kostov_B_7/task1.rb:34: syntax error, unexpected '}', expecting keyword_end
+	from generate.rb:3:in `<main>'
+"cd ../class016/Kamena_Dacheva_13_A && ruby generate.rb 30148 12810 42881"
+/home/kireto/tues/tp/software_engineering_2014/class016/Kamena_Dacheva_13_A/task.rb:18:in `initialize': No such file or directory - tests/42881_addbc2.txt (Errno::ENOENT)
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Kamena_Dacheva_13_A/task.rb:18:in `open'
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Kamena_Dacheva_13_A/task.rb:18:in `generate'
+	from generate.rb:10:in `<main>'
+"cd ../class016/Lubomir_Yankov_16_A && ruby generate.rb 40801 40714 212"
+/home/kireto/tues/tp/software_engineering_2014/class016/Lubomir_Yankov_16_A/task.rb:17:in `initialize': No such file or directory - tasks/212_fe180f8c.txt (Errno::ENOENT)
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Lubomir_Yankov_16_A/task.rb:17:in `open'
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Lubomir_Yankov_16_A/task.rb:17:in `generate'
+	from generate.rb:11:in `<main>'
+"cd ../class016/Kaloyan_Nikov_19_B && ruby generate.rb 33188 13723 23457"
+"cd ../class016/Simeon_Shopkin_23_A && ruby generate.rb 37715 8367 26319"
+/home/kireto/tues/tp/software_engineering_2014/class016/Simeon_Shopkin_23_A/task.rb:17:in `initialize': No such file or directory - tests/10_1e6a94.txt (Errno::ENOENT)
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Simeon_Shopkin_23_A/task.rb:17:in `open'
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Simeon_Shopkin_23_A/task.rb:17:in `generate'
+	from generate.rb:10:in `<main>'
+"cd ../class016/Kalin_Marinov_12_A && ruby generate.rb 18660 43616 28855"
+generate.rb:60:in `initialize': No such file or directory - tasks/18660_37dd964d.txt (Errno::ENOENT)
+	from generate.rb:60:in `open'
+	from generate.rb:60:in `block in <main>'
+	from generate.rb:51:in `each'
+	from generate.rb:51:in `<main>'
+"cd ../class016/Nikolay_Mihailov_25_B && ruby generate.rb 42112 39205 52068"
+"cd ../class016/Ivelin_Slavchev_10_A && ruby generate.rb 33689 41997 33599"
+/home/kireto/tues/tp/software_engineering_2014/class016/Ivelin_Slavchev_10_A/task.rb:17:in `initialize': No such file or directory - tasks/33689_f6ea4902.txt (Errno::ENOENT)
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Ivelin_Slavchev_10_A/task.rb:17:in `open'
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Ivelin_Slavchev_10_A/task.rb:17:in `generate'
+	from generate.rb:11:in `<main>'
+"cd ../class016/Mladen_Karadimov_B_24 && ruby generate.rb 55634 17645 52637"
+"cd ../class016/Valentin_Georgiev_3_B && ruby generate.rb 57242 32341 54544"
+/home/kireto/tues/tp/software_engineering_2014/class016/Valentin_Georgiev_3_B/task.rb:17:in `initialize': No such file or directory - tests/23_645c26.txt (Errno::ENOENT)
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Valentin_Georgiev_3_B/task.rb:17:in `open'
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Valentin_Georgiev_3_B/task.rb:17:in `generate'
+	from generate.rb:10:in `<main>'
+"cd ../class016/Moretti_Georgiev_A_19 && ruby generate.rb 47133 43184 16779"
+"cd ../class016/Veselin_Dechev_2_A && ruby generate.rb 47284 14666 8030"
+/home/kireto/tues/tp/software_engineering_2014/class016/Veselin_Dechev_2_A/task.rb:3:in `initialize': wrong number of arguments (2 for 1) (ArgumentError)
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Veselin_Dechev_2_A/task1.rb:55:in `initialize'
+	from generate.rb:10:in `new'
+	from generate.rb:10:in `<main>'
+"cd ../class016/Konstantin_Kostov_B_21 && ruby generate.rb 8134 51390 23567"
+generate.rb:7: syntax error, unexpected ']', expecting $end
+"cd ../class016/Kristina_Pironkova_15_A && ruby generate.rb 1536 28943 174"
+/home/kireto/tues/tp/software_engineering_2014/class016/Kristina_Pironkova_15_A/task.rb:18:in `initialize': No such file or directory - tests/1536_1c7ea6.txt (Errno::ENOENT)
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Kristina_Pironkova_15_A/task.rb:18:in `open'
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Kristina_Pironkova_15_A/task.rb:18:in `generate'
+	from generate.rb:10:in `<main>'
+"cd ../class016/Atanaska_Ivancheva_1_B && ruby generate.rb 43065 52583 8956"
+generate.rb:3:in `require_relative': /home/kireto/tues/tp/software_engineering_2014/class016/Atanaska_Ivancheva_1_B/task1.rb:80: syntax error, unexpected '}', expecting keyword_end (SyntaxError)
+	from generate.rb:3:in `<main>'
+"cd ../class016/Borislav_Rusinov_A_1 && ruby generate.rb 31945 11001 35654"
+/home/kireto/tues/tp/software_engineering_2014/class016/Borislav_Rusinov_A_1/task.rb:18:in `initialize': No such file or directory - tests/35654_8c7eb2.txt (Errno::ENOENT)
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Borislav_Rusinov_A_1/task.rb:18:in `open'
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Borislav_Rusinov_A_1/task.rb:18:in `generate'
+	from generate.rb:10:in `<main>'
+"cd ../class016/Vanya_Santeva_5_B && ruby generate.rb 5893 6053 53373"
+"cd ../class016/Dimitar_Terziev_6_A && ruby generate.rb 35276 23494 14108"
+/home/kireto/tues/tp/software_engineering_2014/class016/Dimitar_Terziev_6_A/task.rb:17:in `initialize': No such file or directory - tests/14108_36c26cb1.txt (Errno::ENOENT)
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Dimitar_Terziev_6_A/task.rb:17:in `open'
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Dimitar_Terziev_6_A/task.rb:17:in `generate'
+	from generate.rb:10:in `<main>'
+"cd ../class016/Borislav_Stratev_2_B && ruby generate.rb 28655 14424 31113"
+mkdir: cannot create directory ‘tests’: File exists
+mkdir: cannot create directory ‘tests’: File exists
+"cd ../class016/Petko_Bozhinov_21_A && ruby generate.rb 39617 17946 12365"
+/home/kireto/tues/tp/software_engineering_2014/class016/Petko_Bozhinov_21_A/task1.rb:42:in `init_contexts': undefined local variable or method `context1_2' for #<Task1:0x000000023f2be8 @template="task1.eruby"> (NameError)
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Petko_Bozhinov_21_A/task.rb:9:in `initialize'
+	from /home/kireto/tues/tp/software_engineering_2014/class016/Petko_Bozhinov_21_A/task1.rb:46:in `initialize'
+	from generate.rb:12:in `new'
+	from generate.rb:12:in `<main>'
+"cd ../class016/Valentin_Varbanov_B_4 && ruby generate.rb 36364 48095 2875"
+"cd ../class016/Veselina_Kolova_8_B && ruby generate.rb 29523 9112 24437"
+generate.rb:5:in `require_relative': /home/kireto/tues/tp/software_engineering_2014/class016/Veselina_Kolova_8_B/task3.rb:80: syntax error, unexpected '}', expecting keyword_end (SyntaxError)
+	from generate.rb:5:in `<main>'
+
