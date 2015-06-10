@@ -1,8 +1,8 @@
 require 'prime.rb'
+require_relative 'symbol.rb'
 
 module Rsa
-	class Key_generator
-
+	class Generator
 		def generate_e which, g
 			j = i = 0	
 			while j < which
@@ -31,36 +31,32 @@ module Rsa
 			
 			puts "public key: #{e}"
 			puts "private key: #{d}"
+			puts "n: #{n}"
 			generated = {"public_key" => e, "private_key" => d, "n" => n}
 		end
 	end
 
 	class Crypter
 		def encrypt message, public_key, n
-			encrypted_message = Array.new
+			s = Sym.new
+			encrypted_message = String.new
 			message.each_byte do |symbol|
-				result = symbol ** public_key % n 
-				encrypted_message.push(result)
+				result = s.sym(symbol ** public_key % n)
+				encrypted_message << result
 			end
 			puts "encrypted message: #{encrypted_message}"
 			return encrypted_message
 		end
 
 		def decrypt crypted_message, private_key, n
+			s = Sym.new
 			decrypted_message = String.new
-			crypted_message.each do |crypted_symbol|
-				result = crypted_symbol ** private_key % n 
-				decrypted_message.insert(-1, result.chr)
+			crypted_message.each_byte do |crypted_symbol|
+				result = s.sym(crypted_symbol ** private_key % n) 
+				decrypted_message << result
 			end
 			puts "decrypted message: #{decrypted_message}"
 			return decrypted_message
 		end	
 	end
 end
-
-generator = Rsa::Key_generator.new
-crypt = Rsa::Crypter.new
-result = generator.generate_keys 7, 13, 1
-message = "#I'M THE@MASTER OF   RU-BY."
-encrypted_message = crypt.encrypt message, result['public_key'], result['n']
-decrypted_message = crypt.decrypt encrypted_message, result['private_key'], result['n']
