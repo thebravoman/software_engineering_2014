@@ -28,10 +28,12 @@ module Rsa
 			g = (p - 1)*(q - 1)
 			e = generate_e which_e, g
 			d = generate_d e, g
-			
-			puts "public key: #{e}"
-			puts "private key: #{d}"
-			puts "n: #{n}"
+			puts "public key:"
+			puts e
+			puts "private key:"
+			puts d
+			puts "n:"
+			puts n
 			generated = {"public_key" => e, "private_key" => d, "n" => n}
 		end
 	end
@@ -44,7 +46,8 @@ module Rsa
 				result = s.sym(symbol ** public_key % n)
 				encrypted_message << result
 			end
-			puts "encrypted message: #{encrypted_message}"
+			puts "encrypted message:"
+			puts encrypted_message
 			return encrypted_message
 		end
 
@@ -55,7 +58,8 @@ module Rsa
 				result = s.sym(crypted_symbol ** private_key % n) 
 				decrypted_message << result
 			end
-			puts "decrypted message: #{decrypted_message}"
+			puts "decrypted message:"
+			puts decrypted_message
 			return decrypted_message
 		end	
 	end
