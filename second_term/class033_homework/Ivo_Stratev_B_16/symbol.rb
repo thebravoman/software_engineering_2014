@@ -5,15 +5,15 @@ class Sym
 		inc	
 	end
 	def inc
-		for i in 0..255
+		for i in 32..126
 			@value.push(i.chr)
 		end
-		@n += 256
+		@n += 94
 	end
 	def sym n
 		while n >= @n
 			inc
 		end
-		@value[n % 256]
+		@value[(n%94) - 32]
 	end	
 end
