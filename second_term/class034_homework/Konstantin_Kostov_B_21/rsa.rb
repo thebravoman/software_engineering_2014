@@ -14,7 +14,7 @@ end
 def badArgs
     puts "Bad Arguments!"
     puts " ruby rsa.rb -e BAD  12 65!"
-    puts "ruby rsa.rb -d Hello 1019 3337"
+    puts "ruby rsa.rb -d 5654  1225 1019 3337"
     exit
 end
 
